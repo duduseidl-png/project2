@@ -1,0 +1,17 @@
+/node_modules
+/public/build
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+docker-compose.override.yml
+user.ini
+
+# Se o seu banco for o padrão do Laravel, ele costuma ignorar assim:
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-shm
+/database/*.sqlite-wal
