@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('questoes', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria');
+            $table->string('categoria', 100);
+            $table->text('contextualizacao');
             $table->text('enunciado');
+            $table->string('referencia');
             $table->string('opcao_a');
             $table->string('opcao_b');
             $table->string('opcao_c');
             $table->string('opcao_d');
             $table->string('opcao_e');
-            $table->string('resposta_correta');
+            $table->string('alternativa_correta');
             $table->timestamps();
         });
     }
