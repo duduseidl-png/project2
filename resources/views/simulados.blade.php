@@ -10,8 +10,6 @@
             <option>Engenharia Elétrica</option>
             <option>Engenharia Mecânica</option>
             <option>Engenharia Química</option>
-            <option>TESTE</option>
-            <option>TESTE2</option>
         </select>
         <div>
             <a href="{{ route('simulado_em_andamento') }}" style="margin-top: 30px;" class="btn btn-soft btn-primary">
