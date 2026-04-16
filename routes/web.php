@@ -13,5 +13,10 @@ Route::get('/sobre', function () {
 
 Route::get('/simulados', function () {
     $questoes = Questao::all();
-    return view('simulados', compact('questoes'));
+    return view('simulados');
 });
+
+Route::get('/simulado_em_andamento', function () {
+    $questoes = Questao::all();
+    return view('simulado_em_andamento', compact('questoes'));
+})->name('simulado_em_andamento');

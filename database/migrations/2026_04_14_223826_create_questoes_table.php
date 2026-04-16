@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('questoes', function (Blueprint $table) {
             $table->id();
-            $table->string('questao_id');
             $table->string('categoria');
             $table->text('enunciado');
             $table->string('opcao_a');

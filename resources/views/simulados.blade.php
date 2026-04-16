@@ -1,45 +1,20 @@
 <x-layout title="Simulados">
-    <h1>Simulados</h1>
-    <div>
-        <form>
-            <ul class="space-y-6">
-                @foreach ($questoes as $questao)
-                    <li class="p-4 border rounded-xl bg-white shadow-sm">
-                        <p class="text-sm font-semibold text-gray-600 mb-1">{{ $questao->questao_id }}</p>
-                        <p class="font-semibold mb-3">{!! nl2br(e($questao->enunciado)) !!}</p>
-                        <ul style="list-style-type: none;" class="mb-3 space-y-1 list-disc pl-5 text-sm text-gray-700">
-                            <li>A) {{ $questao->opcao_a }}</li>
-                            <li>B) {{ $questao->opcao_b }}</li>
-                            <li>C) {{ $questao->opcao_c }}</li>
-                            <li>D) {{ $questao->opcao_d }}</li>
-                            <li>E) {{ $questao->opcao_e }}</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-3 text-sm">
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="A" class="form-radio">
-                                A
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="B" class="form-radio">
-                                B
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="C" class="form-radio">
-                                C
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="D" class="form-radio">
-                                D
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="E" class="form-radio">
-                                E
-                            </label>
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
-            <button type="submit" class="mt-6 px-4 py-2 bg-blue-600 text-white rounded">Enviar Respostas</button>
-        </form>
+    <h1 style="text-align:center;font-size:200%;padding: 30px">Gerador de Simulados</h1>
+    <div style="text-align:center;margin: 20px;">
+        <select class="select">
+            <option disabled selected>Selecione o curso</option>
+            <option>Engenharia Civil</option>
+            <option>Engenharia da Computação</option>
+            <option>Engenharia de Controle e Automação</option>
+            <option>Engenharia de Produção</option>
+            <option>Engenharia Elétrica</option>
+            <option>Engenharia Mecânica</option>
+            <option>Engenharia Química</option>
+        </select>
+        <div>
+            <a href="{{ route('simulado_em_andamento') }}" style="margin-top: 30px;" class="btn btn-soft btn-primary">
+                Gerar simulado
+            </a>
+        </div>
     </div>
 </x-layout>

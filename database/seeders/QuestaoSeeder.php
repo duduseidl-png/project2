@@ -10,7 +10,6 @@ class QuestaoSeeder extends Seeder
     public function run(): void
     {
         Questao::create([
-            'questao_id' => 'QUESTÃO 1',
             'categoria' => 'FORMAÇÃO GERAL',
             'enunciado' => 'O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injusti ças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela signifi cati va da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade. O atendimento integral e universalizado junto às populações periféricas e em situação de vulnerabilidade consti tui um grande desafi o, por demandar políti cas públicas e investi mentos subsidiados e permanentes.
 
