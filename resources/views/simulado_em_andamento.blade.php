@@ -5,10 +5,10 @@
                 @foreach ($questoes as $questao)
                     <li class="p-4 border rounded-xl bg-white shadow-sm" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
                         <h2 class="text-lg font-bold mb-2">Questão {{ $loop->iteration }}</h2>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{{ $questao->contextualizacao }}</p>
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->contextualizacao)) !!}</p>
                         <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{{ $questao->enunciado }}</p>
-                        <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-1 list-disc pl-5 text-sm text-gray-700">
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}</p>
+                        <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-1 list-disc pl-5 text-md">
                             <li>A) {{ $questao->opcao_a }}</li>
                             <li>B) {{ $questao->opcao_b }}</li>
                             <li>C) {{ $questao->opcao_c }}</li>
