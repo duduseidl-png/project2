@@ -11,12 +11,14 @@ class Questao extends Model
     protected $fillable = [
         'questao_id',
         'categoria',
+        'contextualizacao',
         'enunciado',
+        'referencia',
         'opcao_a',
         'opcao_b',
         'opcao_c',
         'opcao_d',
         'opcao_e',
-        'resposta_correta',
+        'alternativa_correta',
     ];
 }
