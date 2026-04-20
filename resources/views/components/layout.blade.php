@@ -71,7 +71,7 @@
       </svg>
     </label>
     <div>
-      <img width="100" height="100" padding="10"
+      <img class="mx-5" width="100" height="100" padding="10"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRC31VQwOBNjaNSb1EDgEgUJtg6cGkGnJc6A&s" alt="Logo">
     </div>
     <div class="dropdown dropdown-end">

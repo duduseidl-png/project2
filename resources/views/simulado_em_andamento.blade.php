@@ -2,64 +2,103 @@
     <div>
         <h1 class="text-5xl font-bold text-center mt-10 mb-10">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <style>
+            /* Define colors based on theme */
+            :root[data-theme="light"] {
+                --correct-bg: #dcfce7;
+                --correct-border: #34d399;
+                --correct-text: #15803d;
+                --wrong-bg: #fee2e2;
+                --wrong-border: #f87171;
+                --wrong-text: #b91c1c;
+                --hover-bg: #f1f5f9;
+            }
+
+            :root[data-theme="dark"] {
+                --correct-bg: #064e3b;
+                --correct-border: #10b981;
+                --correct-text: #6ee7b7;
+                --wrong-bg: #7f1d1d;
+                --wrong-border: #ef4444;
+                --wrong-text: #fca5a5;
+                --hover-bg: #374151;
+            }
+
             .option-label {
                 transition: background-color 0.2s ease, border-color 0.2s ease;
             }
+
+            .option-label:hover {
+                background-color: var(--hover-bg);
+            }
+
             .option-correct {
-                background-color: #dcfce7;
-                border-color: #34d399;
+                background-color: var(--correct-bg);
+                border-color: var(--correct-border);
             }
+
             .option-wrong {
-                background-color: #fee2e2;
-                border-color: #f87171;
+                background-color: var(--wrong-bg);
+                border-color: var(--wrong-border);
             }
+
             .question-result {
                 font-weight: 600;
             }
+
             .question-result.correct {
-                color: #15803d;
+                color: var(--correct-text);
             }
+
             .question-result.wrong {
-                color: #b91c1c;
+                color: var(--wrong-text);
             }
         </style>
         <form id="simulado-form">
             <ul class="space-y-6">
                 @foreach ($questoes as $questao)
-                    <li class="p-4 border rounded-xl shadow-sm questao-item" data-correct="{{ $questao->alternativa_correta }}" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+                    <li class="p-4 border rounded-xl shadow-sm questao-item"
+                        data-correct="{{ $questao->alternativa_correta }}"
+                        style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
                         <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->contextualizacao)) !!}</p>
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">
+                            {!! nl2br(e($questao->contextualizacao)) !!}</p>
                         <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}</p>
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}
+                        </p>
                         <p class="question-result mb-3 ml-5"></p>
                         <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-2 pl-0 text-md">
                             <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer hover:bg-slate-100" data-value="A">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="A" class="form-radio mr-2">
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="A">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="A"
+                                        class="form-radio mr-2">
                                     <span class="font-semibold">A)</span> {{ $questao->opcao_a }}
                                 </label>
                             </li>
                             <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer hover:bg-slate-100" data-value="B">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="B" class="form-radio mr-2">
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="B">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="B"
+                                        class="form-radio mr-2">
                                     <span class="font-semibold">B)</span> {{ $questao->opcao_b }}
                                 </label>
                             </li>
                             <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer hover:bg-slate-100" data-value="C">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="C" class="form-radio mr-2">
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="C">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="C"
+                                        class="form-radio mr-2">
                                     <span class="font-semibold">C)</span> {{ $questao->opcao_c }}
                                 </label>
                             </li>
                             <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer hover:bg-slate-100" data-value="D">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="D" class="form-radio mr-2">
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="D">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="D"
+                                        class="form-radio mr-2">
                                     <span class="font-semibold">D)</span> {{ $questao->opcao_d }}
                                 </label>
                             </li>
                             <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer hover:bg-slate-100" data-value="E">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="E" class="form-radio mr-2">
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="E">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="E"
+                                        class="form-radio mr-2">
                                     <span class="font-semibold">E)</span> {{ $questao->opcao_e }}
                                 </label>
                             </li>
@@ -67,7 +106,8 @@
                     </li>
                 @endforeach
             </ul>
-            <button type="submit" class="my-6 mx-auto display: block px-4 py-2 bg-blue-600 text-white rounded" style="width: 200px;">Enviar Respostas</button>
+            <button type="submit" class="my-6 mx-auto display: block px-4 py-2 bg-blue-600 text-white rounded"
+                style="width: 200px;">Enviar Respostas</button>
         </form>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -131,5 +171,5 @@
             });
         </script>
     </div>
-<x-countdown/>
+    <x-countdown />
 </x-layout>
