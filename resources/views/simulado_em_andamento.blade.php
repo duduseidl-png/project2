@@ -1,6 +1,6 @@
 <x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     <div>
-        <h1 class="text-5xl font-bold text-black text-center mt-10 mb-10">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+        <h1 class="text-5xl font-bold text-center mt-10 mb-10">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <style>
             .option-label {
                 transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -26,7 +26,7 @@
         <form id="simulado-form">
             <ul class="space-y-6">
                 @foreach ($questoes as $questao)
-                    <li class="p-4 border rounded-xl bg-white shadow-sm questao-item" data-correct="{{ $questao->alternativa_correta }}" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+                    <li class="p-4 border rounded-xl shadow-sm questao-item" data-correct="{{ $questao->alternativa_correta }}" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
                         <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
                         <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->contextualizacao)) !!}</p>
                         <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
@@ -131,4 +131,5 @@
             });
         </script>
     </div>
+<x-countdown/>
 </x-layout>
