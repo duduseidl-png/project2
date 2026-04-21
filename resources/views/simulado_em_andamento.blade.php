@@ -56,7 +56,7 @@
         <form id="simulado-form">
             <ul class="space-y-6">
                 @foreach ($questoes as $questao)
-                    <li class="p-4 border rounded-xl shadow-sm questao-item"
+                    <li class="p-4 mb-20 border rounded-xl shadow-sm questao-item"
                         data-correct="{{ $questao->alternativa_correta }}"
                         style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
                         <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>

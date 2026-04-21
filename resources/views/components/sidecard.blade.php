@@ -6,7 +6,7 @@
             right: 20px;
             width: 20%;
             height: 70%;
-            z-index: 1000;
+            z-index: 900;
         }
     </style>
     <div class="card card-border bg-base-100">
