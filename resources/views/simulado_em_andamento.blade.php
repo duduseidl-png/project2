@@ -1,6 +1,6 @@
 <x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     <div>
-        <h1 class="text-5xl font-bold text-center mt-10 mb-10">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+        <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <style>
             /* Define colors based on theme */
             :root[data-theme="light"] {
@@ -58,10 +58,11 @@
                 @foreach ($questoes as $questao)
                     <li class="p-4 border rounded-xl shadow-sm questao-item"
                         data-correct="{{ $questao->alternativa_correta }}"
-                        style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+                        style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
                         <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
                         <p class="font-semibold mb-3 ml-5" style="text-align:justify">
-                            {!! nl2br(e($questao->contextualizacao)) !!}</p>
+                            {!! nl2br(e($questao->contextualizacao)) !!}
+                        </p>
                         <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
                         <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}
                         </p>
@@ -168,8 +169,22 @@
                         submitButton.classList.add('opacity-50');
                     }
                 });
+            })
+            
+            let isDirty = true; // Set to true when form is edited
+
+            window.addEventListener('beforeunload', (event) => {
+                if (isDirty) {
+                    event.preventDefault();
+                    event.returnValue = '';
+                }
+            });
+
+            // Reset isDirty on form submission
+            document.querySelector('form').addEventListener('submit', () => {
+                isDirty = false;
             });
         </script>
     </div>
-    <x-countdown />
+    <x-sidecard />
 </x-layout>
