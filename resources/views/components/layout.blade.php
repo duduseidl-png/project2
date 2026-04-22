@@ -1,7 +1,7 @@
 @props(['title' => 'Default Title'])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -49,10 +49,32 @@
     </ul>
   </div>
   <div class="navbar-end">
+    <label class="toggle text-base-content">
+      <input type="checkbox" value="dark" class="theme-controller" />
+      <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </g>
+      </svg>
+      <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </g>
+      </svg>
+    </label>
     <div>
-      <img width="100" height="100" padding="10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRC31VQwOBNjaNSb1EDgEgUJtg6cGkGnJc6A&s" alt="Logo">
+      <img class="mx-5" width="100" height="100" padding="10"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRC31VQwOBNjaNSb1EDgEgUJtg6cGkGnJc6A&s" alt="Logo">
     </div>
-    <div class="dropdown dropdown-end">
+    <div class="dropdown dropdown-end" style="z-index: 1000;">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component"
@@ -74,6 +96,37 @@
 </div>
 
 <body>
+  <script>
+    // Função para salvar o tema no localStorage
+    function saveTheme(theme) {
+      localStorage.setItem('theme', theme);
+    }
+
+    // Função para carregar o tema do localStorage
+    function loadTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const themeController = document.querySelector('.theme-controller');
+
+      if (savedTheme === 'dark') {
+        themeController.checked = true;
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        themeController.checked = false;
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    // Carregar tema salvo quando a página carrega
+    document.addEventListener('DOMContentLoaded', loadTheme);
+
+    // Salvar tema quando o toggle muda
+    document.querySelector('.theme-controller').addEventListener('change', function () {
+      const theme = this.checked ? 'dark' : 'light';
+      saveTheme(theme);
+      document.documentElement.setAttribute('data-theme', theme);
+    });
+  </script>
+
   <main>
     {{ $slot }}
 

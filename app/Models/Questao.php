@@ -9,7 +9,9 @@ class Questao extends Model
     protected $table = 'questoes';
 
     protected $fillable = [
+        'titulo',
         'questao_id',
+        'curso',
         'categoria',
         'contextualizacao',
         'enunciado',
