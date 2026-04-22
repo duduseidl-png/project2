@@ -52,6 +52,10 @@
             .question-result.wrong {
                 color: var(--wrong-text);
             }
+
+            html {
+                scroll-behavior: smooth;
+            }
         </style>
         <form id="simulado-form">
             <ul class="space-y-6">
@@ -59,7 +63,8 @@
                     <li class="p-4 mb-20 border rounded-xl shadow-sm questao-item"
                         data-correct="{{ $questao->alternativa_correta }}"
                         style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
-                        <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
+                        <h2 id="questao{{ $loop->iteration }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}
+                        </h2>
                         <p class="font-semibold mb-3 ml-5" style="text-align:justify">
                             {!! nl2br(e($questao->contextualizacao)) !!}
                         </p>
@@ -113,17 +118,35 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var form = document.getElementById('simulado-form');
+                var questoes = document.querySelectorAll('.questao-item');
+
+                // Event listener para detectar quando uma alternativa é selecionada
+                questoes.forEach(function (questao, index) {
+                    var inputs = questao.querySelectorAll('input[type="radio"]');
+                    var questionNumber = index + 1;
+                    var questionButton = document.getElementById('btn-questao-' + questionNumber);
+
+                    inputs.forEach(function (input) {
+                        input.addEventListener('change', function () {
+                            // Adiciona a classe 'answered' quando uma alternativa é selecionada
+                            if (questionButton) {
+                                questionButton.classList.add('answered');
+                                questionButton.classList.remove('answered-correct', 'answered-wrong');
+                            }
+                        });
+                    });
+                });
 
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
 
-                    var questoes = document.querySelectorAll('.questao-item');
-
-                    questoes.forEach(function (questao) {
+                    questoes.forEach(function (questao, index) {
                         var correctAlternative = questao.dataset.correct;
                         var selectedInput = questao.querySelector('input[type="radio"]:checked');
                         var labels = questao.querySelectorAll('.option-label');
                         var resultText = questao.querySelector('.question-result');
+                        var questionNumber = index + 1;
+                        var questionButton = document.getElementById('btn-questao-' + questionNumber);
 
                         labels.forEach(function (label) {
                             label.classList.remove('option-correct', 'option-wrong');
@@ -144,6 +167,13 @@
                             resultText.textContent = 'Correto!';
                             resultText.classList.add('correct');
                             resultText.classList.remove('wrong');
+                            
+                            // Atualiza o botão no sidecard
+                            if (questionButton) {
+                                questionButton.classList.remove('answered');
+                                questionButton.classList.add('answered-correct');
+                                questionButton.classList.remove('answered-wrong');
+                            }
                         } else {
                             selectedLabel.classList.add('option-wrong');
                             if (correctLabel) {
@@ -152,6 +182,13 @@
                             resultText.textContent = 'Errado. A resposta correta é ' + correctAlternative + '.';
                             resultText.classList.add('wrong');
                             resultText.classList.remove('correct');
+                            
+                            // Atualiza o botão no sidecard
+                            if (questionButton) {
+                                questionButton.classList.remove('answered');
+                                questionButton.classList.add('answered-wrong');
+                                questionButton.classList.remove('answered-correct');
+                            }
                         }
                     });
 
@@ -170,7 +207,7 @@
                     }
                 });
             })
-            
+
             let isDirty = true; // Set to true when form is edited
 
             window.addEventListener('beforeunload', (event) => {
@@ -185,6 +222,7 @@
                 isDirty = false;
             });
         </script>
+
     </div>
     <x-sidecard />
 </x-layout>

@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-100 shadow-sm" style="z-index: 1000;">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -74,7 +74,7 @@
       <img class="mx-5" width="100" height="100" padding="10"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRC31VQwOBNjaNSb1EDgEgUJtg6cGkGnJc6A&s" alt="Logo">
     </div>
-    <div class="dropdown dropdown-end" style="z-index: 1000;">
+    <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component"
