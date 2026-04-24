@@ -120,8 +120,6 @@
                     </li>
                 @endforeach
             </ul>
-            <button type="submit" class="my-6 mx-auto display: block px-4 py-2 bg-blue-600 text-white rounded"
-                style="width: 200px;">Enviar Respostas</button>
         </form>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
