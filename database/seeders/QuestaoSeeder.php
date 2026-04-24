@@ -73,11 +73,11 @@ class QuestaoSeeder extends Seeder
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 text-sm text-center items-center">
                     <div>
-                        <img src="/img/questoes/q1_img1.jpg" alt="Impacto dos conflitos" class="w-full h-48 object-cover mb-2 rounded">
+                        <img src="/img/questoes/q1_img1.jpg" class="w-full h-48 object-cover mb-2 rounded">
                         <p class="-mt-1">Foto: Unicef/Sayed Bidel. Impacto dos conflitos sobre pessoas mais vulneráveis.</p>
                     </div>
                     <div>
-                        <img src="/img/questoes/q1_img2.jpg" alt="Colheita de trigo" class="w-full h-48 object-cover mb-2 rounded">
+                        <img src="/img/questoes/q1_img2.jpg" class="w-full h-48 object-cover mb-2 rounded" style="margin-top: 1.05mm;">
                         <p>Foto: FAO/Anatolii Stepanov. Colheita de trigo perto da vila de Krasne, na Ucrânia.</p>
                     </div>
                 </div>
@@ -209,7 +209,7 @@ class QuestaoSeeder extends Seeder
                     
                 <p class="font-bold mb-2">TEXTO 3</p>
                 <div class="flex justify-center mb-4 text-sm text-center">
-                    <div class="w-full md:w-2/3">
+                    <div class="w-2/5 md:w-2/5">
                         <img src="/img/questoes/q1_img6.JPG" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
@@ -235,6 +235,33 @@ class QuestaoSeeder extends Seeder
             'opcao_d' => 'I e IV.',
             'opcao_e' => 'II e III.',
             'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Formação Geral',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Recentemente, a população carcerária feminina do Brasil tornou-se a terceira maior do mundo. A situação do encarceramento feminino por tráfico de drogas e outras situações que circundam o assunto foi tema de discussão da Secretaria de Políticas sobre Drogas do Ministério da Justiça e Segurança Pública (Senad/MJSP), em seminário realizado em abril de 2023. O evento contou com a participação de 23 países. Segundo os dados apresentados pela Senad, a incidência penal sobre drogas no Brasil é uma das principais causas de prisão de mulheres, chegando a 54% dos casos de encarceramento, contra 28% dos homens, índice que impacta em aspectos como maternidade e primeira infância.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Acerca do tema apresentado, avalie as asserções a seguir e a relação proposta entre elas.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. A maioria das mulheres envolvidas em atividades do tráfico encontra-se em posições hierarquicamente inferiores, sendo classificadas como “mulas e aviões”, o que revela a reprodução, no mercado ilegal, da divisão sexual do trabalho observada no mercado formal.</p>
+
+                <p class="text-center font-bold my-2">PORQUE</p>
+
+                <p class="mb-2 pl-6 text-justify">II. O sistema penal agrava a situação de vulnerabilidade das mulheres encarceradas, seja pela invisibilização com que as trata, seja por meio da violência institucional que reproduz a violência estrutural das relações sociais patriarcais.</p>
+
+                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
+            ',
+            'referencia' => 'Disponível em: https://www.gov.br/mj/pt-br/assuntos/noticias/senad-discute-situacao-de-mulheres-encarceradas-no-contexto-de-drogas-no-brasil. Acesso em: 15 jun. 2023 (adaptado).
+            ',
+            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
+            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
+            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
+            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
+            'opcao_e' => 'As asserções I e II são proposições falsas.',
+            'alternativa_correta' => 'B',
         ]);
 
     
