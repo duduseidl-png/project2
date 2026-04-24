@@ -60,15 +60,15 @@
                         data-correct="{{ $questao->alternativa_correta }}"
                         style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
                         <h2 class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
-                        <div class="mb-3 ml-5">
+                        <div class="mb-2 ml-5">
                             @if(str_contains($questao->contextualizacao, '<'))
                                 {!! html_entity_decode($questao->contextualizacao) !!}
                             @else
                                 {!! nl2br(e($questao->contextualizacao)) !!}
                             @endif
                         </div>
-                        <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
-                        <div class="mb-3 ml-5">
+                        <p class="mb-1 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
+                        <div class="mb-2 ml-5">
                             @if(str_contains($questao->enunciado, '<'))
                                 {!! html_entity_decode($questao->enunciado) !!}
                             @else
