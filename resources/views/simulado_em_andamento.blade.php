@@ -1,46 +1,228 @@
-<x-layout title="Simulado">
+<x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     <div>
-        <form>
+        <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+        <style>
+            /* Define colors based on theme */
+            :root[data-theme="light"] {
+                --correct-bg: #dcfce7;
+                --correct-border: #34d399;
+                --correct-text: #15803d;
+                --wrong-bg: #fee2e2;
+                --wrong-border: #f87171;
+                --wrong-text: #b91c1c;
+                --hover-bg: #f1f5f9;
+            }
+
+            :root[data-theme="dark"] {
+                --correct-bg: #064e3b;
+                --correct-border: #10b981;
+                --correct-text: #6ee7b7;
+                --wrong-bg: #7f1d1d;
+                --wrong-border: #ef4444;
+                --wrong-text: #fca5a5;
+                --hover-bg: #374151;
+            }
+
+            .option-label {
+                transition: background-color 0.2s ease, border-color 0.2s ease;
+            }
+
+            .option-label:hover {
+                background-color: var(--hover-bg);
+            }
+
+            .option-correct {
+                background-color: var(--correct-bg);
+                border-color: var(--correct-border);
+            }
+
+            .option-wrong {
+                background-color: var(--wrong-bg);
+                border-color: var(--wrong-border);
+            }
+
+            .question-result {
+                font-weight: 600;
+            }
+
+            .question-result.correct {
+                color: var(--correct-text);
+            }
+
+            .question-result.wrong {
+                color: var(--wrong-text);
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+        <form id="simulado-form">
             <ul class="space-y-6">
                 @foreach ($questoes as $questao)
-                    <li class="p-4 border rounded-xl bg-white shadow-sm" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
-                        <h2 class="text-lg font-bold mb-2">Questão {{ $loop->iteration }}</h2>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->contextualizacao)) !!}</p>
+                    <li class="p-4 mb-20 border rounded-xl shadow-sm questao-item"
+                        data-correct="{{ $questao->alternativa_correta }}"
+                        style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
+                        <h2 id="questao{{ $loop->iteration }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}
+                        </h2>
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">
+                            {!! nl2br(e($questao->contextualizacao)) !!}
+                        </p>
                         <p class="mb-3 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
-                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}</p>
-                        <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-1 list-disc pl-5 text-md">
-                            <li>A) {{ $questao->opcao_a }}</li>
-                            <li>B) {{ $questao->opcao_b }}</li>
-                            <li>C) {{ $questao->opcao_c }}</li>
-                            <li>D) {{ $questao->opcao_d }}</li>
-                            <li>E) {{ $questao->opcao_e }}</li>
+                        <p class="font-semibold mb-3 ml-5" style="text-align:justify">{!! nl2br(e($questao->enunciado)) !!}
+                        </p>
+                        <p class="question-result mb-3 ml-5"></p>
+                        <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-2 pl-0 text-md">
+                            <li>
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="A">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="A"
+                                        class="form-radio mr-2">
+                                    <span class="font-semibold">A)</span> {{ $questao->opcao_a }}
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="B">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="B"
+                                        class="form-radio mr-2">
+                                    <span class="font-semibold">B)</span> {{ $questao->opcao_b }}
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="C">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="C"
+                                        class="form-radio mr-2">
+                                    <span class="font-semibold">C)</span> {{ $questao->opcao_c }}
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="D">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="D"
+                                        class="form-radio mr-2">
+                                    <span class="font-semibold">D)</span> {{ $questao->opcao_d }}
+                                </label>
+                            </li>
+                            <li>
+                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="E">
+                                    <input type="radio" name="resposta_{{ $questao->id }}" value="E"
+                                        class="form-radio mr-2">
+                                    <span class="font-semibold">E)</span> {{ $questao->opcao_e }}
+                                </label>
+                            </li>
                         </ul>
-                        <div class="flex flex-wrap gap-3 text-sm">
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="A" class="form-radio">
-                                A
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="B" class="form-radio">
-                                B
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="C" class="form-radio">
-                                C
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="D" class="form-radio">
-                                D
-                            </label>
-                            <label class="inline-flex items-center gap-2">
-                                <input type="radio" name="resposta_{{ $questao->id }}" value="E" class="form-radio">
-                                E
-                            </label>
-                        </div>
                     </li>
                 @endforeach
             </ul>
-            <button type="submit" class="my-6 mx-auto display: block px-4 py-2 bg-blue-600 text-white rounded" style="width: 200px;">Enviar Respostas</button>
+            <button type="submit" class="my-6 mx-auto display: block px-4 py-2 bg-blue-600 text-white rounded"
+                style="width: 200px;">Enviar Respostas</button>
         </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('simulado-form');
+                var questoes = document.querySelectorAll('.questao-item');
+
+                // Event listener para detectar quando uma alternativa é selecionada
+                questoes.forEach(function (questao, index) {
+                    var inputs = questao.querySelectorAll('input[type="radio"]');
+                    var questionNumber = index + 1;
+                    var questionButton = document.getElementById('btn-questao-' + questionNumber);
+
+                    inputs.forEach(function (input) {
+                        input.addEventListener('change', function () {
+                            // Adiciona a classe 'answered' quando uma alternativa é selecionada
+                            if (questionButton) {
+                                questionButton.classList.add('answered');
+                                questionButton.classList.remove('answered-correct', 'answered-wrong');
+                            }
+                        });
+                    });
+                });
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    questoes.forEach(function (questao, index) {
+                        var correctAlternative = questao.dataset.correct;
+                        var selectedInput = questao.querySelector('input[type="radio"]:checked');
+                        var labels = questao.querySelectorAll('.option-label');
+                        var resultText = questao.querySelector('.question-result');
+                        var questionNumber = index + 1;
+                        var questionButton = document.getElementById('btn-questao-' + questionNumber);
+
+                        labels.forEach(function (label) {
+                            label.classList.remove('option-correct', 'option-wrong');
+                        });
+
+                        if (!selectedInput) {
+                            resultText.textContent = 'Selecione uma alternativa para ver o resultado.';
+                            resultText.classList.remove('correct', 'wrong');
+                            return;
+                        }
+
+                        var selectedValue = selectedInput.value;
+                        var selectedLabel = selectedInput.closest('.option-label');
+                        var correctLabel = questao.querySelector('.option-label[data-value="' + correctAlternative + '"]');
+
+                        if (selectedValue === correctAlternative) {
+                            selectedLabel.classList.add('option-correct');
+                            resultText.textContent = 'Correto!';
+                            resultText.classList.add('correct');
+                            resultText.classList.remove('wrong');
+                            
+                            // Atualiza o botão no sidecard
+                            if (questionButton) {
+                                questionButton.classList.remove('answered');
+                                questionButton.classList.add('answered-correct');
+                                questionButton.classList.remove('answered-wrong');
+                            }
+                        } else {
+                            selectedLabel.classList.add('option-wrong');
+                            if (correctLabel) {
+                                correctLabel.classList.add('option-correct');
+                            }
+                            resultText.textContent = 'Errado. A resposta correta é ' + correctAlternative + '.';
+                            resultText.classList.add('wrong');
+                            resultText.classList.remove('correct');
+                            
+                            // Atualiza o botão no sidecard
+                            if (questionButton) {
+                                questionButton.classList.remove('answered');
+                                questionButton.classList.add('answered-wrong');
+                                questionButton.classList.remove('answered-correct');
+                            }
+                        }
+                    });
+
+                    // Desabilita todas as alternativas após envio
+                    questoes.forEach(function (questao) {
+                        var inputs = questao.querySelectorAll('input[type="radio"]');
+                        inputs.forEach(function (input) {
+                            input.disabled = true;
+                        });
+                    });
+                    var submitButton = form.querySelector('button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Respostas Enviadas';
+                        submitButton.classList.add('opacity-50');
+                    }
+                });
+            })
+
+            let isDirty = true; // Set to true when form is edited
+
+            window.addEventListener('beforeunload', (event) => {
+                if (isDirty) {
+                    event.preventDefault();
+                    event.returnValue = '';
+                }
+            });
+
+            // Reset isDirty on form submission
+            document.querySelector('form').addEventListener('submit', () => {
+                isDirty = false;
+            });
+        </script>
+
     </div>
+    <x-sidecard />
 </x-layout>
