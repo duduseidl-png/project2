@@ -264,6 +264,154 @@ class QuestaoSeeder extends Seeder
             'alternativa_correta' => 'B',
         ]);
 
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Formação Geral',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">A sociedade do século XXI não é mais uma sociedade disciplinar, mas, sim, uma sociedade do desempenho. Os seus habitantes também não se chamam mais sujeitos de obediência, mas, sim, sujeitos de desempenho e produção. São empresários de si mesmos.</p>
+
+                <p class="text-sm text-right mb-4">BYUNG-CHUL HAN. <strong>Sociedade do Cansaço</strong>. Petrópolis: Vozes, 2015 (adaptado).</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando o texto apresentado, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Os recursos tecnológicos, como notificações de mensagens em tempo real e controle da velocidade de áudio em redes de mensagens, são fatores que podem contribuir para a precarização das relações de trabalho na sociedade contemporânea.</p>
+                <p class="mb-2 pl-6 text-justify">II. As medidas pessoais de proteção à saúde mental e de promoção da qualidade de vida incluem a desativação de aplicativos e mecanismos de notificações instantâneas, bem como a fixação de horários para uso profissional e uso recreativo das tecnologias digitais.</p>
+                <p class="mb-2 pl-6 text-justify">III.	As medidas públicas de prevenção das doenças e dos danos sociais associados ao uso excessivo dos recursos tecnológicos de comunicação envolvem estímulos ao letramento digital, à alfabetização midiática e à regulamentação do uso de plataformas digitais no ambiente de trabalho.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I, apenas.',
+            'opcao_b' => 'III, apenas.',
+            'opcao_c' => 'I e II, apenas.',
+            'opcao_d' => 'II e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Os resistores são dispositivos utilizados com finalidade de limitar a corrente elétrica em um circuito elétrico. Eles conseguem desempenhar essa função por apresentarem a propriedade da resistência elétrica, que é a capacidade de um corpo se opor à passagem de corrente elétrica. Diversos materiais podem ser utilizados como resistores, tais como níquel-cromo, carbono e grafite.</p>
+
+                <p class="mb-2 text-justify">Diante disso, considere uma situação hipotética em que seja preciso construir resistores cilíndricos na forma da figura a seguir, a fim de serem utilizados em um circuito de corrente contínua que possui tensão igual a 12 V. Na figura, L representa o comprimento do material e A representa a área de seção transversal.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/q1_img7.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+
+                <p class="mb-2 text-justify">Observe, também, a tabela a seguir, a qual especifica características de três tipos de materiais utilizados para fabricação dos resistores hipotéticos, como a resistividade <strong>ρ</strong>, o comprimento L e a área A.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/q1_img8.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>       
+            ',
+            'enunciado' => ' 
+                <p class="mb-2 text-justify">Com base nessas informações, é correto afirmar que, a fim de se obter a configuração de resistores viável para se ter uma corrente menor do que 300 mA, é preciso utilizar apenas</p>              
+            ',
+            'referencia' => '',
+            'opcao_a' => '2 resistores de grafite em série.',
+            'opcao_b' => '3 resistores de carbono em série.',
+            'opcao_c' => '2 resistores de grafite em paralelo.',
+            'opcao_d' => '2 resistores de carbono em paralelo.',
+            'opcao_e' => '3 resistores de níquel-cromo em série.',
+            'alternativa_correta' => 'B',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">O  protocolo  de  roteamento  interno  OSPF  (open  shortest  path  first)  representa  um sistema autônomo (SA) como um grafo ponderado, em que roteadores são os vértices, conexões entre os roteadores são as arestas e atrasos nas conexões são os pesos. No OSPF, a identificação de cada conexão e seu respectivo atraso são passados de roteador em roteador até que todos os roteadores formem uma base de dados com o grafo que descreve o SA. O OSPF utiliza uma versão distribuída do algoritmo de caminhos mínimos de Dijkstra para computar as melhores rotas para todos os possíveis destinos e para produzir as tabelas de rotas para cada roteador. Cada rota computada é a que apresenta o menor valor para a soma dos atrasos nas conexões usadas na rota entre a rede de origem e a rede de destino.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Acerca do protocolo OSPF e com base nas informações apresentadas no texto, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Quando há diferentes caminhos possíveis entre uma origem e um destino, a rota selecionada é a que apresenta o menor número de conexões.</p>
+                <p class="mb-2 pl-6 text-justify">II. Há uma instância da base de dados relativa a conexões e a atrasos, formando o grafo que descreve o SA em cada roteador que compõe o SA.</p>
+                <p class="mb-2 pl-6 text-justify">III. O algoritmo de Dijkstra é executado por um único roteador dentro do SA e a tabela de rotas resultante é passada para todos os roteadores no SA.</p>
+                <p class="mb-2 pl-6 text-justify">IV. Para todos os roteadores dentro de um SA, há a necessidade de tráfego de informações acerca de atrasos e de conexões entre roteadores.</p>
+
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
+            ',
+            'referencia' => 'Disponível em: https://memoria.rnp.br/newsgen/9705/n1-1.html. Acesso em: 1 mar. 2023 (adaptado).',
+            'opcao_a' => 'I e III.',
+            'opcao_b' => 'II e III.',
+            'opcao_c' => 'II e IV.',
+            'opcao_d' => 'I, II e IV.',
+            'opcao_e' => 'I, III e IV.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Uma relação <b>R</b> em um conjunto <b>S</b> é uma relação de equivalência se ela satisfizer todas as propriedades a seguir:</p>
+                <p class="mb-2 text-justify">1. Reflexividade. Para todo <i>a</i> &isin; <b>S</b>, <i>a</i> <b>R</b> <i>a</i>;</p>
+                <p class="mb-2 text-justify">2. Simetria. Para todos <i>a</i>, <i>b</i> &isin; <b>S</b>, a <b>R</b> <i>b</i> &hArr; <i>b</i> <b>R</b> <i>a</i>;
+                <p class="mb-2 text-justify">3. Transitividade. Para todos <i>a</i>, <i>b</i>, c &isin; <b>S</b>, se a <b>R</b> <i>b</i> e <i>b</i> <b>R</b> <i>c</i>, então, a <b>R</b> <i>c</i>.</p>
+
+                <p class="mb-2 text-justify">Uma partição de um conjunto <b>S</b> é uma coleção de subconjuntos disjuntos não vazios, cuja união é igual a <b>S</b>. Se <b>R</b> é uma relação de equivalência em um conjunto <b>S</b> e se <i>x</i> &isin; <b>S</b>, denota-se por [<i>x</i>] o conjunto de todos os elementos relacionados a <i>x</i> em <b>S</b> e chama-se esse conjunto de classe de equivalência de <i>x</i>.</p>
+
+                <p class="text-sm text-right mb-4">GERSTING, J. L. <b>Fundamentos matemáticos para a ciência da computação:</b> um tratamento moderno de matemática discreta. 5. ed. Rio de Janeiro: LTC, 2008 (adaptado).</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">A partir dessas informações, considere que, em um cluster computacional, haja 10 computadores com configurações de hardware diferentes. Os administradores desse cluster pretendem desenvolver um algoritmo de escalonamento de tarefas que mantenha processos de uma mesma aplicação sendo executados em máquinas semelhantes, mesmo com estruturas arquiteturais distintas. Assim, os administradores fizeram uma tabela relacionando os computadores. Essa tabela foi montada considerando pares de computadores. Dessa forma, dois computadores do cluster fazem parte de uma linha na tabela se possuem alguma característica semelhante, ou seja, se apresentam algum tipo de relacionamento (por exemplo, quantidade de memória ou de núcleos de processamento semelhantes). Obviamente, apesar de não estar evidente na tabela, um computador também tem relação consigo mesmo.</p>
+                <p class="mb-2 text-justify">Os computadores estão numerados de 1 até 10 e a tabela resultante pode ser vista a seguir.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-2/5 md:w-2/5">
+                        <img src="/img/questoes/q1_img9.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>  
+
+                <p class="mb-2 text-justify">Com base nesse cenário e no conceito de relações de equivalência, assinale a opção correta.</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'A relação descrita pela tabela é uma relação de equivalência.',
+            'opcao_b' => 'A relação descrita pela tabela apresenta a propriedade de simetria, mas não a de transitividade.',
+            'opcao_c' => 'A relação descrita pela tabela apresenta a propriedade de transitividade, mas não a de simetria.',
+            'opcao_d' => 'O subconjunto de computadores representados pelos números 1, 3, 5, 7 e 10 forma uma classe de equivalência.',
+            'opcao_e' => 'O subconjunto de computadores representados pelos números 2, 3, 4, 8 e 9 forma uma classe de equivalência.',
+            'alternativa_correta' => 'A',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Uma forma sistemática de analisar circuitos elétricos de qualquer tamanho, visando à simulação em computadores, consiste em representá-los por meio de grafos. Essa representação implica a substituição dos elementos do ramo do circuito por uma conexão orientada (arco) e de nós do circuito por vértices, resultando em um grafo orientado. A orientação dos arcos coincide com a orientação dos sentidos de referência associados de tensão e corrente, adotados pela convenção passiva.</p>
+                <p class="mb-2 text-justify">Grafos são ditos conexos se existir, ao menos, um caminho entre quaisquer dois nós. Corte refere-se a um conjunto de arcos que, se removido, divide o grafo (tornando-o desconexo). A lei de Kirchoff das correntes, usando a nomenclatura de grafos, pode ser enunciada como “para qualquer rede de parâmetros concentrados e para qualquer de seus cortes, a soma algébrica de todas as correntes através dos arcos do corte é zero.”</p>
+
+                <p class="text-sm text-right mb-4">Disponível em: http://www.peb.ufrj.br/. Acesso em: 16 jun. 2023 (adaptado).</p>
+
+                <p class="mb-2 text-justify">A figura a seguir representa um circuito elétrico e o seu grafo equivalente.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-2/5 md:w-2/5">
+                        <img src="/img/questoes/q1_img10.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div> 
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Após aplicar a lei de Kirchoff das correntes para os cortes <i>X</i> = {1, 4, 5}, <i>Y</i> = {1, 2, 3, 5} e <i>Z</i> = {1, 4, 3, 6}, assinale a opção que apresenta equações válidas para a soma algébrica das correntes em dois desses cortes.</p>       
+            ',
+            'referencia' => '',
+            'opcao_a' => '<p class="mb-2 text-justify"><i><sub>I1</sub></i> + <i><sub>I4</sub></i> - <i><sub>I5</sub></i> = </p>',
+            'opcao_b' => '',
+            'opcao_c' => '',
+            'opcao_d' => '',
+            'opcao_e' => '',
+            'alternativa_correta' => '',
+        ]);
+
     
 
 
