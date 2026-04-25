@@ -404,12 +404,12 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Após aplicar a lei de Kirchoff das correntes para os cortes <i>X</i> = {1, 4, 5}, <i>Y</i> = {1, 2, 3, 5} e <i>Z</i> = {1, 4, 3, 6}, assinale a opção que apresenta equações válidas para a soma algébrica das correntes em dois desses cortes.</p>       
             ',
             'referencia' => '',
-            'opcao_a' => '<p class="mb-2 text-justify"><i><sub>I1</sub></i> + <i><sub>I4</sub></i> - <i><sub>I5</sub></i> = </p>',
-            'opcao_b' => '',
-            'opcao_c' => '',
-            'opcao_d' => '',
-            'opcao_e' => '',
-            'alternativa_correta' => '',
+            'opcao_a' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i>',
+            'opcao_b' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_c' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_d' => '<i>I<sub>1</sub></i> - <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_e' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>2</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>6</sub></i> = <i>0</i>',
+            'alternativa_correta' => 'D',
         ]);
 
     

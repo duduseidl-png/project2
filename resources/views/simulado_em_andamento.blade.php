@@ -85,35 +85,35 @@
                                 <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="A">
                                     <input type="radio" name="resposta_{{ $questao->id }}" value="A"
                                         class="form-radio mr-2">
-                                    <span class="font-semibold">A)</span> {{ $questao->opcao_a }}
+                                    <span class="font-semibold">A)</span> {!! $questao->opcao_a !!}
                                 </label>
                             </li>
                             <li>
                                 <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="B">
                                     <input type="radio" name="resposta_{{ $questao->id }}" value="B"
                                         class="form-radio mr-2">
-                                    <span class="font-semibold">B)</span> {{ $questao->opcao_b }}
+                                    <span class="font-semibold">B)</span> {!! $questao->opcao_b !!}
                                 </label>
                             </li>
                             <li>
                                 <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="C">
                                     <input type="radio" name="resposta_{{ $questao->id }}" value="C"
                                         class="form-radio mr-2">
-                                    <span class="font-semibold">C)</span> {{ $questao->opcao_c }}
+                                    <span class="font-semibold">C)</span> {!! $questao->opcao_c !!}
                                 </label>
                             </li>
                             <li>
                                 <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="D">
                                     <input type="radio" name="resposta_{{ $questao->id }}" value="D"
                                         class="form-radio mr-2">
-                                    <span class="font-semibold">D)</span> {{ $questao->opcao_d }}
+                                    <span class="font-semibold">D)</span> {!! $questao->opcao_d !!}
                                 </label>
                             </li>
                             <li>
                                 <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="E">
                                     <input type="radio" name="resposta_{{ $questao->id }}" value="E"
                                         class="form-radio mr-2">
-                                    <span class="font-semibold">E)</span> {{ $questao->opcao_e }}
+                                    <span class="font-semibold">E)</span> {!! $questao->opcao_e !!}
                                 </label>
                             </li>
                         </ul>
