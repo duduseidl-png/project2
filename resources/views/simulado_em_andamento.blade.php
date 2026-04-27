@@ -63,7 +63,8 @@
                     <li class="p-4 mb-20 border rounded-xl shadow-sm questao-item"
                         data-correct="{{ $questao->alternativa_correta }}"
                         style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
-                        <h2 id="questao{{ $loop->iteration }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}</h2>
+                        <h2 id="questao{{ $loop->iteration }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}
+                        </h2>
                         <div class="mb-2 ml-5">
                             @if(str_contains($questao->contextualizacao, '<'))
                                 {!! html_entity_decode($questao->contextualizacao) !!}

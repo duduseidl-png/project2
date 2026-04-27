@@ -13,8 +13,12 @@ Route::get('/sobre', function () {
 });
 
 Route::get('/simulados', function () {
-    //$questoes = Questao::all();
     return view('simulados');
+});
+
+Route::get('/gerar_simulado', function () {
+    //$questoes = Questao::all();
+    return view('gerar_simulado');
 });
 
 Route::get('/simulado/{curso}', function ($curso) {

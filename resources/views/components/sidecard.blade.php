@@ -126,7 +126,7 @@
                     onclick="location.href='#questao38'">38</button>
 
             </div>
-            <button type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
+            <button onclick="stopCountdown()" type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
         </div>
     </div>
 </div>

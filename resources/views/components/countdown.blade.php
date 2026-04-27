@@ -29,12 +29,22 @@
 
             // Para o timer quando expira
             if (distance < 0) {
-                clearInterval(interval);
+                stopCountdown();
                 document.getElementById("timer").innerHTML = "EXPIRADO";
             }
         };
 
-        const interval = setInterval(updateTimer, 1000);
+        // Armazena o intervalo globalmente para poder parar
+        window.timerInterval = setInterval(updateTimer, 1000);
+        
+        // Função para parar o countdown
+        window.stopCountdown = () => {
+            if (window.timerInterval) {
+                clearInterval(window.timerInterval);
+                window.timerInterval = null;
+            }
+        };
+
         updateTimer(); // Executa imediatamente
     </script>
 </div>
