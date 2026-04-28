@@ -71,7 +71,13 @@
                                 {!! nl2br(e($questao->contextualizacao)) !!}
                             @endif
                         </div>
-                        <p class="mb-1 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
+                        <p class="mb-1 ml-5" style="text-align:right; font-size: small;">
+                            @if(str_contains($questao->referencia, '<'))
+                                {!! html_entity_decode($questao->referencia) !!}
+                            @else
+                                {{ $questao->referencia }}
+                            @endif
+                        </p>
                         <div class="mb-2 ml-5">
                             @if(str_contains($questao->enunciado, '<'))
                                 {!! html_entity_decode($questao->enunciado) !!}

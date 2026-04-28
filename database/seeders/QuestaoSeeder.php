@@ -405,11 +405,182 @@ class QuestaoSeeder extends Seeder
             ',
             'referencia' => '',
             'opcao_a' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i>',
-            'opcao_b' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
-            'opcao_c' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
-            'opcao_d' => '<i>I<sub>1</sub></i> - <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
-            'opcao_e' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>2</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_b' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>5</sub></i> = <i>0</i>',
+            'opcao_c' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_d' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_e' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
             'alternativa_correta' => 'D',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Uma lista pode ser dividida em duas partes: o primeiro elemento (a cabeça da lista) e os demais elementos (sua cauda). Por exemplo, em uma lista de inteiros [1, 2, 3, 4], a cabeça dessa lista é o valor inteiro 1, enquanto sua cauda é a lista de inteiros [2, 3, 4]. Uma lista vazia é representada por [ ].</p>
+                <p class="mb-2 text-justify">O código a seguir define duas funções descritas em uma linguagem de programação funcional que manipulam listas de inteiros. A função enade recebe uma lista de inteiros e produz uma nova lista de inteiros. A função auxiliar é chamada pela função enade e possui dois parâmetros: um número inteiro e uma lista de inteiros. Essa função produz uma lista de inteiros.</p>
+
+                <p class="mb-2 text-justify">enade :: [Int] -> [Int]</p>
+                <p class="mb-2 text-justify" style="color: #808080;">enade [ ] = [ ]</p>
+                <p class="mb-2 text-justify" style="color: #808080;">enade (cabeca:cauda) = auxiliar cabeca (enade cauda)</p>
+                <p class="mb-2 text-justify" style="color: #808080;">auxiliar :: Int -> [Int] -> [Int]</p>
+                <p class="mb-2 text-justify" style="color: #808080;">auxiliar x [ ] = [x]</p>
+                <p class="mb-2 text-justify" style="color: #808080;">auxiliar x (cabeca:cauda)</p>
+                <p class="mb-2 pl-6 text-justify" style="color: #808080;">| (x `mod` 2 == 0) = x:cabeca:cauda</p>
+                <p class="mb-2 pl-6 text-justify" style="color: #808080;">| otherwise = cabeca:auxiliar x cauda</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando o código apresentado, é correto afirmar que se a função enade for executada recebendo como parâmetro de entrada a lista [1, 2, 3, 4, 5, 6, 7, 8], o resultado será</p>       
+            ',
+            'referencia' => '',
+            'opcao_a' => '[ ].',
+            'opcao_b' => '[2, 4, 6, 8].',
+            'opcao_c' => '[1, 2, 3, 4, 5, 6, 7, 8].',
+            'opcao_d' => '[2, 4, 6, 8, 1, 3, 5, 7].',
+            'opcao_e' => '[2, 4, 6, 8, 7, 5, 3, 1].',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify"><i>Memory leak</i>, ou vazamento de memória, é um problema que ocorre em sistemas computacionais quando uma parte da memória, alocada para uma determinada operação, não é liberada quando se torna desnecessária. Na linguagem C, esse tipo de problema é quase sempre relacionado ao uso incorreto das funções malloc( ) e free( ). Esse erro de programação pode levar a falhas no sistema se a memória for completamente consumida.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">A partir dessas informações, assinale a opção que apresenta um trecho com <i>memory leak</i>.</p>       
+            ',
+            'referencia' => '',
+            'opcao_a' => 'void f( ) {
+                          <p class="mb-0 pl-16 text-justify">void *s;</p>
+                          <p class="mb-0 pl-16 text-justify">s = malloc(50);</p>
+                          <p class="mb-0 pl-16 text-justify">free(s);</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>
+            ',
+            'opcao_b' => 'int f( ) {
+                          <p class="mb-0 pl-16 text-justify">float *a;</p>
+                          <p class="mb-0 pl-16 text-justify">return 0;</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>
+            ',
+            'opcao_c' => 'int f(char *data) { 
+                          <p class="mb-0 pl-16 text-justify">void *s;</p>
+                          <p class="mb-0 pl-16 text-justify">s = malloc(50);</p>
+                          <p class="mb-0 pl-16 text-justify">int size = strlen(data);</p>
+                          <p class="mb-0 pl-16 text-justify">if (size > 50)</p>
+                          <p class="mb-0 pl-20 text-justify">return(-1);</p>
+                          <p class="mb-0 pl-16 text-justify">free(s);</p>
+                          <p class="mb-0 pl-16 text-justify">return 0;</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>                       
+            ',
+            'opcao_d' => 'int *f(int n) {
+                          <p class="mb-0 pl-16 text-justify">int *num = malloc(sizeof(int)*n);</p>
+                          <p class="mb-0 pl-16 text-justify">return num;</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>
+
+                          <p class="mb-0 pl-12 text-justify">int main(void){</p>
+                          <p class="mb-0 pl-16 text-justify">int *num;</p>
+                          <p class="mb-0 pl-16 text-justify">num = f(10);</p>
+                          <p class="mb-0 pl-16 text-justify">free(num);</p>
+                          <p class="mb-0 pl-16 text-justify">return 0;</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>                      
+            ',
+            'opcao_e' => 'void f(int n) {
+                          <p class="mb-0 pl-16 text-justify">char *m = malloc(10);</p>
+                          <p class="mb-0 pl-16 text-justify">char *n = malloc(10);</p>
+                          <p class="mb-0 pl-16 text-justify">free(m);</p>
+                          <p class="mb-0 pl-16 text-justify">m = n;</p>
+                          <p class="mb-0 pl-16 text-justify">free(m);</p>
+                          <p class="mb-0 pl-16 text-justify">free(n);</p>
+                          <p class="mb-0 pl-12 text-justify">}</p>
+            ',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Na programação de sistemas embarcados, algumas posições de memória servem para diferentes propósitos, não apenas para armazenar valores. Em algumas dessas memórias, cada um dos <i>bits</i> possui um significado diferente, sendo necessário manipulá-los individualmente ou em pequenos grupos. Por isso, o conhecimento da álgebra booliana, bem como dos operadores utilizados para realizar operações binárias nas linguagens de programação, é essencial para o desenvolvimento desse tipo de sistema.</p>               
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">A partir dessas informações, observe o código apresentado a seguir, escrito na linguagem C, que faz uso de operações binárias sobre variáveis inteiras.</p>
+                
+                <p class="mb-0 text-justify">#include <stdio.h></p>
+                <p class="mb-0 text-justify">int main()</p>
+                <p class="mb-0 text-justify">{</p>
+
+                <p class="mb-0 pl-6 text-justify">int a, b;</p>
+                <p class="mb-0 pl-6 text-justify">int x, y, z;</p>
+                <p class="mb-0 pl-6 text-justify">scanf("%d %d", &a, &b);</p>
+                <p class="mb-0 pl-6 text-justify">x = a; y = b; z = a + b;</p>
+                <p class="mb-0 pl-6 text-justify">while (a) {</p>
+                <p class="mb-0 pl-12 text-justify">x = x | b;</p>
+                <p class="mb-0 pl-12 text-justify">y = y ^ a;</p>
+                <p class="mb-0 pl-12 text-justify">z = z & (a+b);</p>
+                <p class="mb-0 pl-12 text-justify">a = a >> 1;</p>
+                <p class="mb-0 pl-12 text-justify">b = b << 1;</p>
+                <p class="mb-0 pl-6 text-justify">}</p>
+
+                <p class="mb-0 pl-6 text-justify">printf ("%d %d %d\n", x, y, z);</p>
+                <p class="mb-0 pl-6 text-justify">return 0;</p>
+                <p class="mb-0 text-justify">}</p>
+
+               <p class="mb-2 text-justify">Após a chamada desse programa, caso o usuário entre com os valores 10 e 1, nessa ordem, qual será, exatamente, o valor da saída do programa?</p>
+            ',
+            'referencia' => 'ALMEIDA, R. M.; MORAES, C. H. V.; SERAPHIM, T. F. P. <b>Programação de Sistemas Embarcados:</b> desenvolvendo software para microcontroladores em linguagem C. Rio de Janeiro: Elsevier, 2016 (adaptado).',
+            'opcao_a' => '10    1   0',
+            'opcao_b' => '10    1   11',
+            'opcao_c' => '11    11  11',
+            'opcao_d' => '15    12  2',
+            'opcao_e' => '15    13  0',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Dada uma sequência de caracteres <i>S</i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>n</sub></i>, uma subsequência de <i>S</i> é dada pela remoção de zero ou mais caracteres de <i>S</i>. Formalmente, a sequência <i>X</i> = <i>x<sub>1</sub>,</i> <i>x<sub>2</sub>,</i> <i>...,</i> <i>x<sub>k</sub></i> é subsequência de <i>S</i> se existe uma sequência crescente de índices <i>i<sub>1</sub>,</i> <i>...,</i> <i>i<sub>k</sub></i> de <i>S</i>, tal que <i>x<sub>j</sub></i> = <i>S<sub>ij</sub></i> para todo <i>j</i> = <i>1, 2, ..., k</i>. Define-se, também, um prefixo da sequência <i>S</i> com comprimento <i>i</i> para <i>i</i> = <i>0, ..., n,</i> como <i>S<sub>i</sub></i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>i</sub>,</i>.</p>
+                <p class="mb-2 text-justify">O problema da Subsequência Comum Mais Longa (LCS) e suas variações, definido a seguir, pode ser utilizado em análise de textos e em bioinformática. O problema da LCS pressupõe duas sequências de caracteres <i>A</i> = <i>a<sub>1</sub>,</i> <i>a<sub>2</sub>,</i> <i>...,</i> <i>a<sub>n</sub></i> e <i>B</i> = <i>b<sub>1</sub>,</i> <i>b<sub>2</sub>,</i> <i>...,</i> <i>b<sub>m</sub>,</i> de comprimentos <i>n</i> e <i>m</i>, respectivamente. Dadas essas duas sequências, é preciso encontrar uma sequência de maior comprimento possível que seja, simultaneamente, subsequência de <i>A</i> e de <i>B</i>.</p>
+                <p class="mb-0 text-justify">A partir dessas informações, considere que <i>Z</i> = <i>z<sub>1</sub>,</i> <i>z<sub>2</sub>,</i> <i>...,</i> <i>z<sub>k</sub></i> seja uma LCS das sequências <i>A</i> e <i>B</i>.</p>
+                <p class="mb-2 text-justify">Em relação ao problema da LCS, avalie as afirmações a seguir.</p>
+                
+               
+                <p class="mb-2 pl-6 text-justify">I. Se <i>a<sub>n</sub> = <i>b<sub>m</sub>,</i> então <i>z<sub>k</sub>,</i> = <i>a<sub>n</sub>,</i> <i>z<sub>k</sub></i> = <i>b<sub>m</sub></i> e <i>Z<sub>k-1</sub></i> é uma LCS de <i>A<sub>n-1</sub></i> e <i>B<sub>m-1</sub></i>.</p>
+                <p class="mb-2 pl-6 text-justify">II. Se <i>a<sub>n</sub> &ne; <i>b<sub>m</sub> e <i>z<sub>k</sub> &ne; <i>a<sub>n</sub>, então <i>Z</i> é uma LCS de <i>A<sub>n-1</sub> e <i>B</i>.</p>
+                <p class="mb-2 pl-6 text-justify">III. Seja <i>lcs(i,j)</i> o comprimento da LCS entre <i>A<sub>i</sub></i> e <i>B<sub>j</sub></i>. Para <i>i, j > 0,</i> se <i>a<sub>i</sub></i> &ne; <i>b<sub>j</sub></i>, então <i>lcs(i,j)</i> = <i>min{lcs(i, j-1), lcs(i-1, j)}</i>.</p>
+                <p class="mb-2 pl-6 text-justify">IV. Seja <i>lcs(i,j)</i> o comprimento da LCS entre <i>A<sub>i</sub></i> e <i>B<sub>j</sub></i>. Para <i>i, j > 0</i>, se <i>a<sub>i</sub></i> = <i>b<sub>j</sub></i>, então <i>lcs(i,j)</i> = <i>lcs(i-1,j-1)+1</i>.</p>    
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>       
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I e III.',
+            'opcao_b' => 'I e IV.',
+            'opcao_c' => 'II e III.',
+            'opcao_d' => 'I, II e IV.',
+            'opcao_e' => 'II, III e IV.',
+            'alternativa_correta' => '',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Vetores de tamanho dinâmico são muito utilizados como estruturas de dados para armazenar listas e tabelas de dispersão (tabelas <i>hash</i>). Essa representação permite que o número máximo de elementos a ser inserido não precise ser pré-determinado. Uma técnica para implementar vetores de tamanho dinâmico é aquela que dobra o tamanho do vetor quando o número de itens a ser armazenado ultrapassa o tamanho atual do vetor. Essa operação requer uma alocação de memória para conter o vetor com o dobro do tamanho atual e a realização de cópia dos elementos para o novo vetor. Com base nessas informações, considere uma lista linear implementada com um vetor dinâmico. Assuma que todos os itens inseridos na lista tenham o mesmo tamanho e que o vetor tenha tamanho inicial para comportar apenas 1 item.</p>
+                <p class="mb-2 text-justify"></p>
+
+                <p class="mb-2 text-justify"></p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando uma sequência de <i>n</i> inserções no final dessa lista, o tempo médio por inserção e o tempo total gasto para executar todas as <i>n</i> operações são, respectivamente, da ordem de</p>       
+            ',
+            'referencia' => '',
+            'opcao_a' => '&Theta;(log <i>n</i>) e &Theta;(<i>n</i> log <i>n</i>).',
+            'opcao_b' => '&Theta;(1) e &Theta;(<i>n</i>).',
+            'opcao_c' => '&Theta;(1) e &Theta;(<i>n</i><sup>2</sup>).',
+            'opcao_d' => '&Theta;(<i>n</i>) e &Theta;(<i>n</i><sup>2</sup>).',
+            'opcao_e' => '&Theta;(&radic;<i>n</i>) e &Theta;(<i>n</i><sup>3/2</sup>).',
+            'alternativa_correta' => 'B',
         ]);
 
     
