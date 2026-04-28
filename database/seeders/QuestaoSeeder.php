@@ -583,6 +583,168 @@ class QuestaoSeeder extends Seeder
             'alternativa_correta' => 'B',
         ]);
 
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">É chamado de compilação o processo de conversão do código escrito pelo programador para um arquivo binário que o computador consegue executar. Esse processo é realizado por um programa chamado compilador. Entre as diversas tarefas de um compilador, destaca-se a de identificar os possíveis erros sintáticos e semânticos. Com base nessas informações, considere uma linguagem de programação em que a sintaxe de uma operação aritmética seja dada pela seguinte gramática livre de contexto:</p>
+                <p class="mb-2 text-justify">S → var = E; | var = E; S</p>
+                <p class="mb-2 text-justify">E → E + E | E - E | E * E | E/E | E(E) | var</p>
+                <p class="mb-2 text-justify">Inspirado nessa gramática, um profissional submete a seguinte sentença ao compilador dessa linguagem de programação:</p>
+                <p class="mb-2 text-justify">a = a / (b - b);</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base na gramática da linguagem de programação e acerca do processo de análise sintática e semântica da sentença proposta pelo profissional, é correto afirmar que</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'a gramática gera a sentença apresentada e o erro presente na expressão está fora do escopo das análises sintática e semântica.',
+            'opcao_b' => 'a gramática gera a sentença apresentada, porém o analisador semântico transmitirá uma mensagem de erro.',
+            'opcao_c' => 'o analisador léxico transmitirá uma mensagem de erro, pois a gramática não gera a sentença apresentada.',
+            'opcao_d' => 'o analisador semântico transmitirá uma mensagem de erro, pois a gramática não gera a sentença apresentada.',
+            'opcao_e' => 'a gramática gera a sentença apresentada, porém o analisador léxico transmitirá uma mensagem de erro.',
+            'alternativa_correta' => 'B',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Computação em nuvem representa um conceito relativo ao compartilhamento de recursos, tais como capacidade de processamento, armazenamento, comunicação de dados e pessoal qualificado para manter sistemas computacionais disponíveis na internet. Quando esse compartilhamento constitui um serviço disponível para qualquer pessoa, o serviço é conhecido como nuvem pública. Quando as mesmas tecnologias são empregadas para uma única empresa, não permitindo que terceiros utilizem parte dos recursos, temos uma nuvem privada.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando as vantagens que o gerente de uma empresa espera obter na contratação de um serviço de nuvem pública, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Um serviço de nuvem pública proporciona a redução de custos operacionais, pois é possível dimensionar a necessidade desses recursos com base na demanda, visto que há momentos em que a empresa precisa de mais recursos e há momentos em que ela precisa de menos recursos.</p>
+                <p class="mb-2 pl-6 text-justify">II. Um serviço de nuvem pública gera aumento da velocidade de execução do <i>software</i> e de acesso ao <i>software</i> a partir de qualquer localidade, pois a nuvem pública garante acesso rápido em qualquer parte do mundo, o que contrasta com um servidor localizado na cidade da empresa.</p>
+                <p class="mb-2 pl-6 text-justify">III. Um serviço de nuvem pública viabiliza a redução do investimento inicial com equipamentos, com infraestrutura e com pessoal para iniciar a operação, visto que torna possível adiar a instalação desses recursos na empresa até que a operação se demonstre economicamente viável.</p>
+                <p class="mb-2 pl-6 text-justify">IV. Um serviço de nuvem pública propicia aumento de segurança da informação, pois as rotinas de segurança são responsabilidade do administrador da nuvem pública, não do contratante, o que contrasta com um servidor localizado dentro da empresa.</p>
+
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I e II.',
+            'opcao_b' => 'I e III.',
+            'opcao_c' => 'II e IV.',
+            'opcao_d' => 'I, III e IV.',
+            'opcao_e' => 'II, III e IV.',
+            'alternativa_correta' => 'B',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">A fim de melhorar a qualidade de vida de seus cidadãos e de criar eficiência nos serviços e nas operações urbanas, um grupo de vereadores de uma pequena cidade decidiu fazer algumas propostas de lei que, se aprovadas e devidamente implementadas, tendem a aproximar a cidade do conceito de “cidade inteligente” por meio da implementação de novos sistemas de <i>software</i>. O grupo de vereadores, preocupado com acessibilidade, consultou especialistas da área de interação humano-computador (IHC) e levantou informações a respeito de fundamentos de acessibilidade em IHC. Entre eles, estão os seguintes:</p>
+                <p class="mb-2 text-justify">Fundamento 1. Um produto ou serviço é <b>equitativo</b> quando é projetado de modo que possa atender a todos os usuários, independentemente de suas habilidades físicas, sensoriais ou cognitivas.</p>
+                <p class="mb-2 text-justify">Fundamento 2. Um produto ou serviço deve ter <b>informações perceptíveis</b>, o que pode envolver o uso de recursos como, por exemplo, texto alternativo para imagens ou contrastes de cores suficientes para usuários com deficiências visuais ou com daltonismo.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando esse contexto, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Uma lei que prevê que semáforos devem exibir ícones universais associados a cada uma de suas cores está relacionada ao Fundamento 1.</p>
+                <p class="mb-2 pl-6 text-justify">II. Ainda que esteja relacionado à acessibilidade em IHC, o Fundamento 1 deixa de tratar da inclusão de pessoas cegas.</p>
+                <p class="mb-2 pl-6 text-justify">III.	Dado que a cidade possui uma página na <i>web</i> para a obtenção de informações, uma lei que preveja a existência de telas digitais públicas que permitam o acesso às informações disponibilizadas é suficiente para caracterizar a aplicação do Fundamento 2.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I, apenas.',
+            'opcao_b' => 'II, apenas.',
+            'opcao_c' => 'I e III, apenas.',
+            'opcao_d' => 'II e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'A',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Considere um banco de dados relacional formado por três tabelas, conforme é apresentado na figura a seguir. As chaves primárias das tabelas cliente e funcionario são chaves estrangeiras da tabela pessoa.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/q1_img11.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+
+                <p class="mb-2 text-justify">A partir dessas informações, considere que se queira realizar uma consulta que liste o nome e o saldo devedor de um subconjunto dos clientes. Essa consulta tem por objetivo encontrar clientes que são funcionários e que possuem saldo devedor maior do que seu salário.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base nessas informações, assinale a opção que apresenta corretamente a consulta SQL, em ordem crescente por saldo devedor.</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'SELECT * FROM cliente as c INNER JOIN pessoa as p, funcionario as f WHERE c.saldo_devedor > f.salario AND c.id_cliente=p.id_pessoa AND f.id_funcionario=p.id_pessoa ORDER BY c.saldo_devedor ASC',
+            'opcao_b' => 'SELECT p.nome, c.saldo_devedor FROM cliente as c, pessoa as p WHERE c.saldo_devedor > f.salario AND c.id_cliente=p.id_pessoa AND f.id_funcionario=p.id_pessoa ORDER BY c.saldo_devedor DESC',
+            'opcao_c' => 'SELECT p.nome, c.saldo_devedor FROM cliente as c, pessoa as p, funcionario as f WHERE c.saldo_devedor < f.salario AND c.id_cliente=p.id_pessoa AND f.id_funcionario=p.id_pessoa ORDER BY c.saldo_devedor ASC',
+            'opcao_d' => 'SELECT p.nome, c.saldo_devedor FROM cliente as c LEFT OUTER JOIN pessoa as p on c.id_cliente=p.id_pessoa LEFT OUTER JOIN funcionario as f on p.id_pessoa=f.id_funcionario WHERE c.saldo_devedor > f.salario ORDER BY f.salario, c.saldo_devedor ASC',
+            'opcao_e' => 'SELECT p.nome, c.saldo_devedor FROM cliente as c RIGHT OUTER JOIN pessoa as p ON c.id_cliente=p.id_pessoa RIGHT OUTER JOIN funcionario as f on p.id_pessoa=f.id_funcionario WHERE c.saldo_devedor > f.salario ORDER BY c.saldo_devedor ASC',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">As figuras a seguir representam dois circuitos que possuem a finalidade de construção de filtros para sinais analógicos.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <img src="/img/questoes/q1_img12.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando que os amplificadores operacionais apresentados são ideais, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Existe uma faixa de frequências na qual a impedância de entrada do circuito da Figura 1 é inferior à do circuito da Figura 2.</p>
+                <p class="mb-2 pl-6 text-justify">II. Ambos os circuitos realizam a função de filtro passa-baixa de primeira ordem.</p>
+                <p class="mb-2 pl-6 text-justify">III. A frequência de corte de ambos os filtros é igual.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I, apenas.',
+            'opcao_b' => 'II, apenas.',
+            'opcao_c' => 'I e III, apenas.',
+            'opcao_d' => 'II e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'A',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Um determinado sistema embarcado possui uma porta paralela de 8 <i>bits</i>, na qual cada pino pode ser configurado individualmente como interface de entrada ou de saída. A direção de cada pino da porta é definida pelo <i>bit</i> correspondente do registrador de direção de 8 <i>bits</i> PORT_DIR da seguinte forma: valor 0 para configuração como entrada e valor 1 para configuração como saída.</p>
+                <p class="mb-2 text-justify">Os <i>bits</i> de entrada da porta são armazenados no registrador PORT_IN e os <i>bits</i> de saída da porta são armazenados no registrador PORT_OUT, ambos de 8 <i>bits</i>. Os pinos que correspondem ao <i>nibble</i> (conjunto de 4 <i>bits</i>) menos significativo da porta de I/O são conectados aos seguintes dispositivos externos: alarme (SPK1), chave 2 (CH2), LED (LED1) e chave 1 (CH1), conforme a figura a seguir.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <img src="/img/questoes/q1_img13.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+
+                <p class="mb-2 text-justify">Considere que uma tensão V<sub>DD</sub> na porta corresponda ao valor lógico 1 e que uma tensão próxima a 0 V corresponda ao valor lógico 0.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base nas informações apresentadas e no esquema da figura, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. O <i>nibble</i> menos significativo do registrador PORT_DIR deverá ser carregado com o valor 9 (decimal) pelo <i>software</i> do sistema para configuração adequada da porta de I/O.</p>
+                <p class="mb-2 pl-6 text-justify">II. Quando ambas as chaves (1 e 2) estiverem fechadas simultaneamente, o registrador PORT_IN possuirá o valor binário X1X0 no <i>nibble</i> menos significativo (X significa irrelevante).</p>
+                <p class="mb-2 pl-6 text-justify">III. Para acionar o alarme e o LED, simultaneamente, o registrador PORT_OUT deverá ser carregado com o valor binário 1X0X no <i>nibble</i> menos significativo (X significa irrelevante).</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I, apenas.',
+            'opcao_b' => 'II, apenas.',
+            'opcao_c' => 'I e III, apenas.',
+            'opcao_d' => 'II e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'D',
+        ]);
+
     
 
 
