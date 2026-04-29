@@ -44,8 +44,8 @@ Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
     
     $cursoTitulo = $cursos[$curso];
     $questoes = Questao::where('curso', $cursoTitulo)
-        ->inRandomOrder()
-        ->limit($limite)
+        /*->inRandomOrder()*/
+        ->limit(38)
         ->get();
     return view('simulado_em_andamento', compact('questoes', 'cursoTitulo'));
 
