@@ -13,11 +13,15 @@ Route::get('/sobre', function () {
 });
 
 Route::get('/simulados', function () {
-    //$questoes = Questao::all();
     return view('simulados');
 });
 
-Route::get('/simulado/{curso}', function ($curso) {
+Route::get('/gerar_simulado', function () {
+    //$questoes = Questao::all();
+    return view('gerar_simulado');
+});
+
+Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
     $cursos = [
         'engenharia-civil' => 'Engenharia Civil',
         'engenharia-de-computacao' => 'Engenharia de Computação',
@@ -30,6 +34,12 @@ Route::get('/simulado/{curso}', function ($curso) {
 
     if (! array_key_exists($curso, $cursos)) {
         abort(404);
+    }
+    
+    // Valida o limite para evitar valores inválidos
+    $limite = intval($limite);
+    if ($limite <= 0 || $limite > 100) {
+        $limite = 38;
     }
     
     $cursoTitulo = $cursos[$curso];

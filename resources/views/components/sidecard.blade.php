@@ -7,6 +7,13 @@
             width: 20%;
             height: 70%;
             z-index: 900;
+
+        }
+
+        .card.modal-active {
+            opacity: 0.5;
+            filter: brightness(0.6);
+            pointer-events: none;
         }
 
         /* Define colors based on theme */
