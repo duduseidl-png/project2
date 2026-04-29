@@ -7,6 +7,13 @@
             width: 20%;
             height: 70%;
             z-index: 900;
+
+        }
+
+        .card.modal-active {
+            opacity: 0.5;
+            filter: brightness(0.6);
+            pointer-events: none;
         }
 
         /* Define colors based on theme */
@@ -126,7 +133,7 @@
                     onclick="location.href='#questao38'">38</button>
 
             </div>
-            <button onclick="stopCountdown()" type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
+            <button type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
         </div>
     </div>
 </div>
