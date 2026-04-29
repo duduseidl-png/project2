@@ -419,14 +419,16 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Uma lista pode ser dividida em duas partes: o primeiro elemento (a cabeça da lista) e os demais elementos (sua cauda). Por exemplo, em uma lista de inteiros [1, 2, 3, 4], a cabeça dessa lista é o valor inteiro 1, enquanto sua cauda é a lista de inteiros [2, 3, 4]. Uma lista vazia é representada por [ ].</p>
                 <p class="mb-2 text-justify">O código a seguir define duas funções descritas em uma linguagem de programação funcional que manipulam listas de inteiros. A função enade recebe uma lista de inteiros e produz uma nova lista de inteiros. A função auxiliar é chamada pela função enade e possui dois parâmetros: um número inteiro e uma lista de inteiros. Essa função produz uma lista de inteiros.</p>
 
-                <p class="mb-2 text-justify">enade :: [Int] -> [Int]</p>
-                <p class="mb-2 text-justify" style="color: #808080;">enade [ ] = [ ]</p>
-                <p class="mb-2 text-justify" style="color: #808080;">enade (cabeca:cauda) = auxiliar cabeca (enade cauda)</p>
-                <p class="mb-2 text-justify" style="color: #808080;">auxiliar :: Int -> [Int] -> [Int]</p>
-                <p class="mb-2 text-justify" style="color: #808080;">auxiliar x [ ] = [x]</p>
-                <p class="mb-2 text-justify" style="color: #808080;">auxiliar x (cabeca:cauda)</p>
-                <p class="mb-2 pl-6 text-justify" style="color: #808080;">| (x `mod` 2 == 0) = x:cabeca:cauda</p>
-                <p class="mb-2 pl-6 text-justify" style="color: #808080;">| otherwise = cabeca:auxiliar x cauda</p>
+                <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
+                    <p class="mb-2 text-justify">enade :: [Int] -> [Int]</p>
+                    <p class="mb-2 text-justify">enade [ ] = [ ]</p>
+                    <p class="mb-2 text-justify">enade (cabeca:cauda) = auxiliar cabeca (enade cauda)</p>
+                    <p class="mb-2 text-justify">auxiliar :: Int -> [Int] -> [Int]</p>
+                    <p class="mb-2 text-justify">auxiliar x [ ] = [x]</p>
+                    <p class="mb-2 text-justify">auxiliar x (cabeca:cauda)</p>
+                    <p class="mb-2 pl-6 text-justify">| (x `mod` 2 == 0) = x:cabeca:cauda</p>
+                    <p class="mb-2 pl-6 text-justify">| otherwise = cabeca:auxiliar x cauda</p>
+                </div>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Considerando o código apresentado, é correto afirmar que se a função enade for executada recebendo como parâmetro de entrada a lista [1, 2, 3, 4, 5, 6, 7, 8], o resultado será</p>       
@@ -760,57 +762,59 @@ class QuestaoSeeder extends Seeder
 
                 <p class="mb-2 text-justify">Nesse contexto, considere que um engenheiro proponha as duas traduções desse circuito em Verilog e VHDL, equivalentes entre si, conforme observado a seguir.</p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">Verilog:</p>
-                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
-                <p class="mb-0 text-justify" style="color: #808080;">module contador_4bits (</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">input wire clk,</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">input wire reset,</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">output reg [1:0] count</p>
-                <p class="mb-0 text-justify" style="color: #808080;">);</p>
+                <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
+                    <p class="mb-0 text-justify">Verilog:</p>
+                    <p class="mb-0 text-justify">//-----------------------------------------------</p>
+                    <p class="mb-0 text-justify">module contador_4bits (</p>
+                    <p class="mb-0 pl-6 text-justify">input wire clk,</p>
+                    <p class="mb-0 pl-6 text-justify">input wire reset,</p>
+                    <p class="mb-0 pl-6 text-justify">output reg [1:0] count</p>
+                    <p class="mb-0 text-justify">);</p>
 
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">always @(posedge clk or posedge reset) begin</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">if (reset)</p>
-                <p class="mb-0 pl-14 text-justify" style="color: #808080;">count <= 0;</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">else</p>
-                <p class="mb-0 pl-14 text-justify" style="color: #808080;">count <= count + 1;</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">end</p>
-                <p class="mb-0 text-justify" style="color: #808080;">endmodule</p>
+                    <p class="mb-0 pl-6 text-justify">always @(posedge clk or posedge reset) begin</p>
+                    <p class="mb-0 pl-10 text-justify">if (reset)</p>
+                    <p class="mb-0 pl-14 text-justify">count <= 0;</p>
+                    <p class="mb-0 pl-10 text-justify">else</p>
+                    <p class="mb-0 pl-14 text-justify">count <= count + 1;</p>
+                    <p class="mb-0 pl-6 text-justify">end</p>
+                    <p class="mb-0 text-justify">endmodule</p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+                    <p class="mb-0 text-justify">//-----------------------------------------------</p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">VHDL:</p>
-                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+                    <p class="mb-0 text-justify">VHDL:</p>
+                    <p class="mb-0 text-justify">//-----------------------------------------------</p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">library ieee;</p>
-                <p class="mb-0 text-justify" style="color: #808080;">use ieee.std_logic_1164.all;</p>
+                    <p class="mb-0 text-justify">library ieee;</p>
+                    <p class="mb-0 text-justify">use ieee.std_logic_1164.all;</p>
             
-                <p class="mb-5 text-justify"></p>
+                    <p class="mb-5 text-justify"></p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">entity contador_4bits is</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">port (</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">clk : in std_logic;</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">reset : in std_logic;</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">count : out integer range 0 to 3</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">);</p>
-                <p class="mb-0 text-justify" style="color: #808080;">end entity contador_4bits;</p>
+                    <p class="mb-0 text-justify">entity contador_4bits is</p>
+                    <p class="mb-0 pl-6 text-justify">port (</p>
+                    <p class="mb-0 pl-10 text-justify">clk : in std_logic;</p>
+                    <p class="mb-0 pl-10 text-justify">reset : in std_logic;</p>
+                    <p class="mb-0 pl-10 text-justify">count : out integer range 0 to 3</p>
+                    <p class="mb-0 pl-6 text-justify");</p>
+                    <p class="mb-0 text-justify">end entity contador_4bits;</p>
 
-                <p class="mb-5 text-justify"></p>
+                    <p class="mb-5 text-justify"></p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">architecture behavioral of contador_4bits is</p>
-                <p class="mb-0 text-justify" style="color: #808080;">begin</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">process(clk, reset)</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">variable q : integer range 0 to 3;</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">begin</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">if reset = &apos;1&apos; then</p>
-                <p class="mb-0 pl-14 text-justify" style="color: #808080;">q := 0;</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">elsif rising_edge(clk) then</p>
-                <p class="mb-0 pl-14 text-justify" style="color: #808080;">q := q + 1;</p>
-                <p class="mb-0 pl-10 text-justify" style="color: #808080;">end if;</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">count <= q;</p>
-                <p class="mb-0 pl-6 text-justify" style="color: #808080;">end process;</p>
-                <p class="mb-0 text-justify" style="color: #808080;">end architecture behavioral;</p>
+                    <p class="mb-0 text-justify">architecture behavioral of contador_4bits is</p>
+                    <p class="mb-0 text-justify">begin</p>
+                    <p class="mb-0 pl-6 text-justify">process(clk, reset)</p>
+                    <p class="mb-0 pl-6 text-justify">variable q : integer range 0 to 3;</p>
+                    <p class="mb-0 pl-6 text-justify">begin</p>
+                    <p class="mb-0 pl-10 text-justify">if reset = &apos;1&apos; then</p>
+                    <p class="mb-0 pl-14 text-justify">q := 0;</p>
+                    <p class="mb-0 pl-10 text-justify">elsif rising_edge(clk) then</p>
+                    <p class="mb-0 pl-14 text-justify">q := q + 1;</p>
+                    <p class="mb-0 pl-10 text-justify">end if;</p>
+                    <p class="mb-0 pl-6 text-justify">count <= q;</p>
+                    <p class="mb-0 pl-6 text-justify">end process;</p>
+                    <p class="mb-0 text-justify">end architecture behavioral;</p>
 
-                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+                    <p class="mb-0 text-justify">//-----------------------------------------------</p>
+                </div>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
@@ -912,7 +916,7 @@ class QuestaoSeeder extends Seeder
 
                     <p class="mb-2 text-justify">O pseudocódigo apresentado a seguir foi projetado para solucionar o problema de classificação com valores de <i>w</i> e <i>b</i> obtidos a partir de um conjunto de dados de treinamento.</p>
 
-                <div style=" color: #3d3d3d; font-family: Courier New, monospace; font-size: inherit;">
+                <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
                     <p class="mb-0 text-justify">Início</p>
                     <p class="mb-0 pl-6 text-justify">w <- 0.4</p>
                     <p class="mb-0 pl-6 text-justify">b <- 2.7</p>

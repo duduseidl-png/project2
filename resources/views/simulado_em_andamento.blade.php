@@ -15,6 +15,7 @@
                 --modal-text: #1f2937;
                 --modal-warning-bg: #fff8b9;
                 --modal-warning-text: #78350f;
+                --text-color: #3d3d3d;
             }
 
             :root[data-theme="dark"] {
@@ -29,6 +30,7 @@
                 --modal-text: #f6f4f3;
                 --modal-warning-bg: #251919ce;
                 --modal-warning-text: #ffe4a1;
+                --text-color: #b1afaf;
             }
 
             .option-label {
