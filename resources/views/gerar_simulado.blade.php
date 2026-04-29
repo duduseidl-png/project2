@@ -1,7 +1,10 @@
 <x-layout title="Simulados">
-    <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">Gerador de Simulados</h1>
-    <h6 style="text-align:center; font-size: 120%; margin-top: 20px;">Pratique em um simulado personalizado do seu curso com o número de questões que preferir.</h6>
-    <p style="text-align:center; color: #9b9b9bc9; margin-bottom: 25px;">As questões são selecionadas aleatoriamente com base no conteúdo do seu curso.</p>
+    <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
+        Gerador de Simulados</h1>
+    <h6 style="text-align:center; font-size: 120%; margin-top: 20px;">Pratique em um simulado personalizado do seu curso
+        com o número de questões que preferir.</h6>
+    <p style="text-align:center; color: #9b9b9bc9; margin-bottom: 25px;">As questões são selecionadas aleatoriamente com
+        base no conteúdo do seu curso.</p>
     <div style="text-align:center">
         <div class="mb-5">
             <h3 style="text-align: left; margin-left: 39%; margin-bottom: 7px">Curso</h3>
@@ -44,10 +47,10 @@
 
             // Função para verificar se ambos os selects têm valor
             function checkIfBothSelected() {
-                if (!cursoSelect.value != !NQSelect.value) {
-                    button.disabled = true;
-                } else {
+                if (cursoSelect.value !== "" && NQSelect.value !== "") {
                     button.disabled = false;
+                } else {
+                    button.disabled = true;
                 }
             }
 

@@ -38,7 +38,7 @@
         <a href="/gerar_simulado" class="card-link">
             <div class="card bg-base-100 w-auto shadow-sm grid place-items-center">
                 <figure class="px-1 pt-1">
-                    <img src="/img/figuras/gears.jpg" alt="Exame" class="rounded-xl" height="100"/>
+                    <img src="/img/figuras/gears.jpg" alt="Exame" class="rounded-xl" height="100" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title">Gerador de simulados</h2>
@@ -48,7 +48,5 @@
                 </div>
             </div>
         </a>
-    </div>
-    </div>
     </div>
 </x-layout>
