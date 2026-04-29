@@ -545,8 +545,8 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Em relação ao problema da LCS, avalie as afirmações a seguir.</p>
                 
                
-                <p class="mb-2 pl-6 text-justify">I. Se <i>a<sub>n</sub> = <i>b<sub>m</sub>,</i> então <i>z<sub>k</sub>,</i> = <i>a<sub>n</sub>,</i> <i>z<sub>k</sub></i> = <i>b<sub>m</sub></i> e <i>Z<sub>k-1</sub></i> é uma LCS de <i>A<sub>n-1</sub></i> e <i>B<sub>m-1</sub></i>.</p>
-                <p class="mb-2 pl-6 text-justify">II. Se <i>a<sub>n</sub> &ne; <i>b<sub>m</sub> e <i>z<sub>k</sub> &ne; <i>a<sub>n</sub>, então <i>Z</i> é uma LCS de <i>A<sub>n-1</sub> e <i>B</i>.</p>
+                <p class="mb-2 pl-6 text-justify">I. Se <i>a<sub>n</sub></i> = <i>b<sub>m</sub>,</i> então <i>z<sub>k</sub>,</i> = <i>a<sub>n</sub>,</i> <i>z<sub>k</sub></i> = <i>b<sub>m</sub></i> e <i>Z<sub>k-1</sub></i> é uma LCS de <i>A<sub>n-1</sub></i> e <i>B<sub>m-1</sub></i>.</p>
+                <p class="mb-2 pl-6 text-justify">II. Se <i>a<sub>n</sub></i> &ne; <i>b<sub>m</sub></i> e <i>z<sub>k</sub></i> &ne; <i>a<sub>n</sub>,</i> então <i>Z</i> é uma LCS de <i>A<sub>n-1</sub></i> e <i>B</i>.</p>
                 <p class="mb-2 pl-6 text-justify">III. Seja <i>lcs(i,j)</i> o comprimento da LCS entre <i>A<sub>i</sub></i> e <i>B<sub>j</sub></i>. Para <i>i, j > 0,</i> se <i>a<sub>i</sub></i> &ne; <i>b<sub>j</sub></i>, então <i>lcs(i,j)</i> = <i>min{lcs(i, j-1), lcs(i-1, j)}</i>.</p>
                 <p class="mb-2 pl-6 text-justify">IV. Seja <i>lcs(i,j)</i> o comprimento da LCS entre <i>A<sub>i</sub></i> e <i>B<sub>j</sub></i>. Para <i>i, j > 0</i>, se <i>a<sub>i</sub></i> = <i>b<sub>j</sub></i>, então <i>lcs(i,j)</i> = <i>lcs(i-1,j-1)+1</i>.</p>    
             ',
@@ -720,7 +720,7 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Os <i>bits</i> de entrada da porta são armazenados no registrador PORT_IN e os <i>bits</i> de saída da porta são armazenados no registrador PORT_OUT, ambos de 8 <i>bits</i>. Os pinos que correspondem ao <i>nibble</i> (conjunto de 4 <i>bits</i>) menos significativo da porta de I/O são conectados aos seguintes dispositivos externos: alarme (SPK1), chave 2 (CH2), LED (LED1) e chave 1 (CH1), conforme a figura a seguir.</p>
 
                 <div class="flex justify-center mb-4 text-sm text-center">
-                    <div class="w-4/5 md:w-4/5">
+                    <div class="w-3/5 md:w-3/5">
                         <img src="/img/questoes/q1_img13.JPG" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
@@ -743,6 +743,192 @@ class QuestaoSeeder extends Seeder
             'opcao_d' => 'II e III, apenas.',
             'opcao_e' => 'I, II e III.',
             'alternativa_correta' => 'D',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Os sistemas digitais são componentes essenciais em uma ampla variedade de aplicações, desde dispositivos eletrônicos portáteis até sistemas de controle industrial. Um dos principais aspectos do projeto desse tipo de sistema é a descrição do circuito em uma <i>Hardware Description Language</i> (HDL), como Verilog ou VHDL. Essas linguagens permitem descrever o comportamento e a estrutura do circuito de forma abstrata, viabilizando a síntese e a simulação do sistema.</p>
+                <p class="mb-2 text-justify">Um exemplo de circuito sequencial é o contador de 4 bits assíncrono, mostrado na figura a seguir, o qual foi implementado utilizando <i>flip-flops</i> JK.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/q1_img14.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+
+                <p class="mb-2 text-justify">Nesse contexto, considere que um engenheiro proponha as duas traduções desse circuito em Verilog e VHDL, equivalentes entre si, conforme observado a seguir.</p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">Verilog:</p>
+                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+                <p class="mb-0 text-justify" style="color: #808080;">module contador_4bits (</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">input wire clk,</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">input wire reset,</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">output reg [1:0] count</p>
+                <p class="mb-0 text-justify" style="color: #808080;">);</p>
+
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">always @(posedge clk or posedge reset) begin</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">if (reset)</p>
+                <p class="mb-0 pl-14 text-justify" style="color: #808080;">count <= 0;</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">else</p>
+                <p class="mb-0 pl-14 text-justify" style="color: #808080;">count <= count + 1;</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">end</p>
+                <p class="mb-0 text-justify" style="color: #808080;">endmodule</p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">VHDL:</p>
+                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">library ieee;</p>
+                <p class="mb-0 text-justify" style="color: #808080;">use ieee.std_logic_1164.all;</p>
+            
+                <p class="mb-5 text-justify"></p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">entity contador_4bits is</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">port (</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">clk : in std_logic;</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">reset : in std_logic;</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">count : out integer range 0 to 3</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">);</p>
+                <p class="mb-0 text-justify" style="color: #808080;">end entity contador_4bits;</p>
+
+                <p class="mb-5 text-justify"></p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">architecture behavioral of contador_4bits is</p>
+                <p class="mb-0 text-justify" style="color: #808080;">begin</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">process(clk, reset)</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">variable q : integer range 0 to 3;</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">begin</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">if reset = &apos;1&apos; then</p>
+                <p class="mb-0 pl-14 text-justify" style="color: #808080;">q := 0;</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">elsif rising_edge(clk) then</p>
+                <p class="mb-0 pl-14 text-justify" style="color: #808080;">q := q + 1;</p>
+                <p class="mb-0 pl-10 text-justify" style="color: #808080;">end if;</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">count <= q;</p>
+                <p class="mb-0 pl-6 text-justify" style="color: #808080;">end process;</p>
+                <p class="mb-0 text-justify" style="color: #808080;">end architecture behavioral;</p>
+
+                <p class="mb-0 text-justify" style="color: #808080;">//-----------------------------------------------</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Qualquer um dos códigos corresponde ao circuito contador de 4 bits mostrado na figura.</p>
+
+                <p class="text-center font-bold my-2">PORQUE</p>
+
+                <p class="mb-2 pl-6 text-justify">II. Ao atingir o valor máximo da contagem, o valor da saída será zerado no próximo ciclo de <i>clock</i> e o processo será reiniciado.</p>
+
+                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
+            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
+            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
+            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
+            'opcao_e' => 'As asserções I e II são proposições falsas.',
+            'alternativa_correta' => 'D',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Considere um cenário em que um computador seja organizado com múltiplos processadores, os quais compartilham a mesma memória RAM. Cada processador possui múltiplos núcleos.</p>
+                <p class="mb-2 text-justify">Nesse arranjo, o sistema operacional permite múltiplas <i>threads</i>, as quais podem ser dinamicamente alocadas para execução em diferentes núcleos e processadores.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">A partir das informações apresentadas nessa situação, assinale a opção correta.</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'Sistemas com múltiplos processadores devem alocar a mesma quantidade de memória RAM para cada processador do arranjo.',
+            'opcao_b' => 'Como há múltiplos processadores, são desnecessários os semáforos, uma vez que não há acessos concorrentes a recursos compartilhados.',
+            'opcao_c' => 'Como a exclusão mútua não é possível em arquitetura de múltiplos processadores, apenas uma aplicação pode ser executada de cada vez, mas com múltiplas <i>threads</i>.',
+            'opcao_d' => 'Os processos que possuem múltiplas <i>threads</i> em execução são mantidos por meio de funções da biblioteca no código da aplicação e dispensam serviços do sistema operacional.',
+            'opcao_e' => 'Dados trocados durante a comunicação entre processos podem ser armazenados nas áreas de memória compartilhada, mas o acesso a essas áreas é intermediado pelo sistema operacional.',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">A técnica de virtualização de <i>hardware</i> consiste em emular um computador no qual a camada de <i>software</i> é executada sem que detalhes do computador físico e de seus componentes sejam expostos. Em um ambiente de computação distribuída, a técnica pode ser útil para que o sistema operacional e os <i>softwares</i> do usuário sejam executados em uma máquina virtual com características permanentes, em conformidade com o que foi projetado, verificado e validado, mesmo que um computador físico diferente seja empregado.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base nesse contexto, é correto afirmar que</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'adquirir licenças de <i>software</i> do usuário no volume de uma licença para cada computador físico, o que favorece a economia de licenças, pois <i>softwares</i> em máquinas virtuais não correspondem a cópias extras.',
+            'opcao_b' => 'utilizar um computador com capacidade extra de comunicação de dados para favorecer o seu desempenho, pois um sistema distribuído em máquinas virtuais consome mais recursos de rede do que o mesmo sistema distribuído sendo executado em um computador físico.',
+            'opcao_c' => 'utilizar um computador com capacidade extra de memória principal para favorecer o seu desempenho, pois um sistema distribuído em máquinas virtuais requer mais espaço de memória física do que o mesmo sistema distribuído sendo executado em um computador físico.',
+            'opcao_d' => 'adquirir computadores físicos com processadores similares para favorecer a compatibilidade, pois sistemas distribuídos fortemente acoplados compartilham recursos intensamente, funcionando de forma mais eficiente em máquinas virtuais quando os computadores físicos são compatíveis.',
+            'opcao_e' => 'adquirir dispositivos de armazenamento físico com, pelo menos, o dobro da capacidade do dispositivo virtual a ser usado a fim de favorecer a disponibilidade, pois os sistemas operacionais da máquina virtual e da máquina física devem ter espaço equivalente de dados para que exista o mapeamento direto entre o dispositivo virtual e o dispositivo físico.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Alguns sistemas com memória virtual utilizam uma técnica chamada de paginação. Nesses sistemas, existe um conjunto de endereços de memória, denominados endereços virtuais, que são gerados durante a execução dos programas, com o uso de indexação, de registradores-base, de registradores-segmento ou de outras técnicas. Um endereço virtual é dividido em número de página virtual e deslocamento. O número de página virtual é usado como índice dentro da tabela de páginas para encontrar o quadro correspondente. O endereço físico de memória é a concatenação entre o endereço do quadro com o deslocamento do endereço virtual.</p>
+                <p class="mb-2 text-justify">Um mecanismo denominado TLB (do inglês, <i>translation lookaside buffer</i>), tipicamente implementado em <i>hardware</i>, fornece auxílio durante a atividade de mapeamento de endereços virtuais para endereços físicos sem passar pela tabela de página. A função do TLB é agilizar o processo de tradução de endereços lógicos para físicos.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com relação à memória paginada, avalie as asserções a seguir e a relação proposta entre elas.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Quando um processo é escalonado para execução, tanto a MMU (<i>Memory Management Unit</i>) quanto o TLB são reconfigurados para o novo processo.</p>
+
+                <p class="text-center font-bold my-2">PORQUE</p>
+
+                <p class="mb-2 pl-6 text-justify">II. Para livrar-se de resíduos do processo executado anteriormente, a tabela de páginas do novo processo deve tornar-se a tabela atual, o que, em geral, é feito por meio da cópia da tabela ou de um ponteiro para ela em registradores em <i>hardware</i>.</p>
+
+                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
+            ',
+            'referencia' => 'TANENBAUM, A. S. <b>Sistemas Operacionais Modernos</b>. 3. ed. São Paulo: Pearson Prentice Hall, 2009 (adaptado).',
+            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
+            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
+            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
+            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
+            'opcao_e' => 'As asserções I e II são proposições falsas.',
+            'alternativa_correta' => 'A',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Considere que uma equipe de engenheiros projete um sistema robótico para reciclagem de resíduos sólidos, o qual utiliza visão computacional para separar objetos de plástico e de vidro. Com o objetivo de automatizar o processo de classificação, opta-se pela técnica <i>support vector machine</i> (SVM).</p>
+                <p class="mb-2 text-justify">No método SVM, <i>i</i> é o índice do vetor suporte <i>(1</i> ≤ <i>i</i> ≤ <i>5),</i> <i>w</i> é o coeficiente angular (peso) e <i>b</i> é o coeficiente linear (polarização) da reta de separação. O par ordenado (<i>x</i>, <i>y</i>) é a saída do sistema de Visão Computacional que representa os vetores de características dos supostos materiais, plástico ou vidro, com classificação normalizada em ƒ (<i>i</i>) &ne; {-1, +1} . A separação linear do material é resultado da diferença entre os pontos <i>P<sub>1</sub></i> = <i>w.x</i> + <i>b</i> e <i>P<sub>2</sub></i> = <i>y</i>, conforme a equação a seguir.</p>
+
+                <p class="mb-2 text-justify">$$
+                    f(i) = \begin{cases}
+                        +1 & \text{se } w x_i + b - y_i \ge 0 \\\\
+                        -1 & \text{se } w x_i + b - y_i < 0
+                    \end{cases}
+                $$</p>
+
+                <p class="mb-2 text-justify">O pseudocódigo apresentado a seguir foi projetado para solucionar o problema de classificação com valores de <i>w</i> e <i>b</i> obtidos a partir de um conjunto de dados de treinamento.</p>
+
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify"></p>
+                
+                <p class="mb-2 pl-6 text-justify"></p>
+                <p class="mb-2 pl-6 text-justify"></p>
+                <p class="mb-2 pl-6 text-justify"></p>
+
+                <p class="mb-2 text-justify"></p>
+            ',
+            'referencia' => '',
+            'opcao_a' => '',
+            'opcao_b' => '',
+            'opcao_c' => '',
+            'opcao_d' => '',
+            'opcao_e' => '',
+            'alternativa_correta' => '',
         ]);
 
     
