@@ -900,35 +900,59 @@ class QuestaoSeeder extends Seeder
             'curso' => 'Engenharia de Computação',
             'categoria' => 'Componente Específico',
             'contextualizacao'=> '
-                <p class="mb-2 text-justify">Considere que uma equipe de engenheiros projete um sistema robótico para reciclagem de resíduos sólidos, o qual utiliza visão computacional para separar objetos de plástico e de vidro. Com o objetivo de automatizar o processo de classificação, opta-se pela técnica <i>support vector machine</i> (SVM).</p>
-                <p class="mb-2 text-justify">No método SVM, <i>i</i> é o índice do vetor suporte <i>(1</i> ≤ <i>i</i> ≤ <i>5),</i> <i>w</i> é o coeficiente angular (peso) e <i>b</i> é o coeficiente linear (polarização) da reta de separação. O par ordenado (<i>x</i>, <i>y</i>) é a saída do sistema de Visão Computacional que representa os vetores de características dos supostos materiais, plástico ou vidro, com classificação normalizada em ƒ (<i>i</i>) &ne; {-1, +1} . A separação linear do material é resultado da diferença entre os pontos <i>P<sub>1</sub></i> = <i>w.x</i> + <i>b</i> e <i>P<sub>2</sub></i> = <i>y</i>, conforme a equação a seguir.</p>
+                    <p class="mb-2 text-justify">Considere que uma equipe de engenheiros projete um sistema robótico para reciclagem de resíduos sólidos, o qual utiliza visão computacional para separar objetos de plástico e de vidro. Com o objetivo de automatizar o processo de classificação, opta-se pela técnica <i>support vector machine</i> (SVM).</p>
+                    <p class="mb-2 text-justify">No método SVM, <i>i</i> é o índice do vetor suporte <i>(1</i> ≤ <i>i</i> ≤ <i>5),</i> <i>w</i> é o coeficiente angular (peso) e <i>b</i> é o coeficiente linear (polarização) da reta de separação. O par ordenado (<i>x</i>, <i>y</i>) é a saída do sistema de Visão Computacional que representa os vetores de características dos supostos materiais, plástico ou vidro, com classificação normalizada em ƒ (<i>i</i>) &isin; {-1, +1} . A separação linear do material é resultado da diferença entre os pontos <i>P<sub>1</sub></i> = <i>w.x</i> + <i>b</i> e <i>P<sub>2</sub></i> = <i>y</i>, conforme a equação a seguir.</p>
 
                 <p class="mb-2 text-justify">$$
                     f(i) = \begin{cases}
-                        +1 & \text{se } w x_i + b - y_i \ge 0 \\\\
-                        -1 & \text{se } w x_i + b - y_i < 0
+                        +1, & \text{se } w x_i + b - y_i \ge 0 \\\\
+                        -1, & \text{se } w x_i + b - y_i < 0
                     \end{cases}
                 $$</p>
 
-                <p class="mb-2 text-justify">O pseudocódigo apresentado a seguir foi projetado para solucionar o problema de classificação com valores de <i>w</i> e <i>b</i> obtidos a partir de um conjunto de dados de treinamento.</p>
+                    <p class="mb-2 text-justify">O pseudocódigo apresentado a seguir foi projetado para solucionar o problema de classificação com valores de <i>w</i> e <i>b</i> obtidos a partir de um conjunto de dados de treinamento.</p>
+
+                <div style=" color: #3d3d3d; font-family: Courier New, monospace; font-size: inherit;">
+                    <p class="mb-0 text-justify">Início</p>
+                    <p class="mb-0 pl-6 text-justify">w <- 0.4</p>
+                    <p class="mb-0 pl-6 text-justify">b <- 2.7</p>
+                    <p class="mb-0 pl-6 text-justify">para i de 1 até 5 faça</p>
+                    <p class="mb-0 pl-14 text-justify">yr <- w	* x[i] + b</p>
+                    <p class="mb-0 pl-14 text-justify">se yr - y[i] > 0 então</p>
+                    <p class="mb-0 pl-19 text-justify">f[i] <- 1</p>
+                    <p class="mb-0 pl-14 text-justify">senão</p>
+                    <p class="mb-0 pl-19 text-justify">f[i] <- -1</p>
+                    <p class="mb-0 pl-14 text-justify">fimse</p>
+                    <p class="mb-0 pl-6 text-justify">fimpara</p>
+                    <p class="mb-0 pl-6 text-justify">para i de 1 até 5 faça</p>
+                    <p class="mb-0 pl-12 text-justify">se f[i] = -1 então</p>
+                    <p class="mb-0 pl-17 text-justify">escreva("Plástico")</p>
+                    <p class="mb-0 pl-12 text-justify">senão</p>
+                    <p class="mb-0 pl-17 text-justify">escreva("Vidro")</p>
+                    <p class="mb-0 pl-6 text-justify">fimse</p>
+                    <p class="mb-0 pl-2 text-justify">fimpara</p>
+                    <p class="mb-2 text-justify">Fim</p>
+                </div>
+
+                <p class="mb-0 text-justify">Observe a seguinte tabela com dados de teste.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-1/5 md:w-1/5">
+                        <img src="/img/questoes/q1_img15.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
 
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify"></p>
-                
-                <p class="mb-2 pl-6 text-justify"></p>
-                <p class="mb-2 pl-6 text-justify"></p>
-                <p class="mb-2 pl-6 text-justify"></p>
-
-                <p class="mb-2 text-justify"></p>
+                <p class="mb-2 text-justify">Considerando essas informações, assinale a opção que apresenta a classificação correta da sequência dos materiais na saída do algoritmo.</p>
             ',
             'referencia' => '',
-            'opcao_a' => '',
-            'opcao_b' => '',
-            'opcao_c' => '',
-            'opcao_d' => '',
-            'opcao_e' => '',
-            'alternativa_correta' => '',
+            'opcao_a' => 'Plástico, Vidro, Vidro, Plástico, Vidro.',
+            'opcao_b' => 'Plástico, Plástico, Vidro, Vidro, Vidro.',
+            'opcao_c' => 'Plástico, Vidro, Plástico, Vidro, Vidro.',
+            'opcao_d' => 'Plástico, Plástico, Plástico, Vidro, Vidro.',
+            'opcao_e' => 'Plástico, Vidro, Vidro, Plástico, Plástico.',
+            'alternativa_correta' => 'B',
         ]);
 
     
