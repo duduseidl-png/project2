@@ -17,7 +17,6 @@ Route::get('/simulados', function () {
 });
 
 Route::get('/gerar_simulado', function () {
-    //$questoes = Questao::all();
     return view('gerar_simulado');
 });
 
@@ -45,7 +44,7 @@ Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
     $cursoTitulo = $cursos[$curso];
     $questoes = Questao::where('curso', $cursoTitulo)
         /*->inRandomOrder()*/
-        ->limit(38)
+        ->limit($limite)
         ->get();
     return view('simulado_em_andamento', compact('questoes', 'cursoTitulo'));
 
