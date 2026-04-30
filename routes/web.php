@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
-use App\Http\Controllers\countdown;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,10 +41,14 @@ Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
     }
     
     $cursoTitulo = $cursos[$curso];
-    $questoes = Questao::where('curso', $cursoTitulo)
+    $questoesFG = Questao::where('categoria', 'Formação Geral')
+        /*->inRandomOrder()*/
+        ->limit(9)
+        ->get();
+    $questoesCE = Questao::where('categoria', $cursoTitulo)
         /*->inRandomOrder()*/
         ->limit($limite)
         ->get();
-    return view('simulado_em_andamento', compact('questoes', 'cursoTitulo'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo'));
 
 })->name('simulado_curso');

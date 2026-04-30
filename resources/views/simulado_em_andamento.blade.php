@@ -1,6 +1,5 @@
 <x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     <div>
-        <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <style>
             /* Define colors based on theme */
             :root[data-theme="light"] {
@@ -77,27 +76,16 @@
                 background-color: rgba(0, 0, 0, 0.4);
             }
 
-            #confirmation-modal > div {
+            #confirmation-modal>div {
                 background-color: var(--modal-bg);
                 color: var(--modal-text);
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
                 animation: slideIn 0.3s ease-out;
             }
 
-            #confirmation-modal > div > section {
+            #confirmation-modal>div>section {
                 background-color: var(--modal-warning-bg);
                 color: var(--modal-warning-text);
-            }
-
-            @keyframes slideIn section
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
             }
 
             html {
@@ -108,15 +96,17 @@
         <div id="confirmation-modal" class="hidden fixed inset-0 flex items-center justify-center z-50">
             <div class="rounded-lg shadow-lg p-8 max-w-md mx-auto">
                 <h2 class="text-2xl font-bold mb-4">Confirmar Envio</h2>
-                <p class="mb-6">Tem certeza que deseja enviar suas respostas? Você não poderá alterá-las após o envio.</p>
-                
+                <p class="mb-6">Tem certeza que deseja enviar suas respostas? Você não poderá alterá-las após o envio.
+                </p>
+
                 <!-- Aviso de questões não respondidas -->
                 <section id="unanswered-warning" class="hidden mb-4 p-4 border border-yellow-400 rounded-lg">
                     <p class="text-sm">
-                        <strong>Aviso:</strong> Você tem <span id="unanswered-count">0</span> questão(ões) não respondida(s). Deseja continuar assim mesmo?
+                        <strong>Aviso:</strong> Você tem <span id="unanswered-count">0</span> questão(ões) não
+                        respondida(s). Deseja continuar assim mesmo?
                     </p>
                 </section>
-                
+
                 <div class="flex gap-4 justify-end">
                     <button id="cancel-btn" type="button" class="btn btn-outline">Cancelar</button>
                     <button id="confirm-btn" type="button" class="btn btn-primary">Confirmar</button>
@@ -124,77 +114,17 @@
             </div>
         </div>
 
+        <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+
         <form id="simulado-form">
-            <ul class="space-y-6">
-                @foreach ($questoes as $questao)
-                    <li class="p-4 mb-20 border rounded-xl shadow-sm questao-item"
-                        data-correct="{{ $questao->alternativa_correta }}"
-                        style="margin-left: 5%;margin-right: 22%;margin-top: 10px;">
-                        <h2 id="questao{{ $loop->iteration }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration }}
-                        </h2>
-                        <div class="mb-2 ml-5">
-                            @if(str_contains($questao->contextualizacao, '<'))
-                                {!! html_entity_decode($questao->contextualizacao) !!}
-                            @else
-                                {!! nl2br(e($questao->contextualizacao)) !!}
-                            @endif
-                        </div>
-                        <p class="mb-1 ml-5" style="text-align:right; font-size: small;">
-                            @if(str_contains($questao->referencia, '<'))
-                                {!! html_entity_decode($questao->referencia) !!}
-                            @else
-                                {{ $questao->referencia }}
-                            @endif
-                        </p>
-                        <div class="mb-2 ml-5">
-                            @if(str_contains($questao->enunciado, '<'))
-                                {!! html_entity_decode($questao->enunciado) !!}
-                            @else
-                                {!! nl2br(e($questao->enunciado)) !!}
-                            @endif
-                        </div>
-                        <p class="question-result mb-3 ml-5"></p>
-                        <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-2 pl-0 text-md">
-                            <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="A">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="A"
-                                        class="form-radio mr-2">
-                                    <span class="font-semibold">A)</span> {!! $questao->opcao_a !!}
-                                </label>
-                            </li>
-                            <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="B">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="B"
-                                        class="form-radio mr-2">
-                                    <span class="font-semibold">B)</span> {!! $questao->opcao_b !!}
-                                </label>
-                            </li>
-                            <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="C">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="C"
-                                        class="form-radio mr-2">
-                                    <span class="font-semibold">C)</span> {!! $questao->opcao_c !!}
-                                </label>
-                            </li>
-                            <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="D">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="D"
-                                        class="form-radio mr-2">
-                                    <span class="font-semibold">D)</span> {!! $questao->opcao_d !!}
-                                </label>
-                            </li>
-                            <li>
-                                <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="E">
-                                    <input type="radio" name="resposta_{{ $questao->id }}" value="E"
-                                        class="form-radio mr-2">
-                                    <span class="font-semibold">E)</span> {!! $questao->opcao_e !!}
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                @endforeach
-            </ul>
+            <div style="margin-left: 5%; margin-right: 22%; margin-top: 10px">
+                <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Formação Geral</h2>
+                <x-bloco-questoes :questoes="$questoesFG" :numero="0" />
+                <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Componente Específico</h2>
+                <x-bloco-questoes :questoes="$questoesCE" :numero="9" />
+            </div>
         </form>
+
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var form = document.getElementById('simulado-form');
@@ -228,7 +158,7 @@
                     submitButton.addEventListener('click', function (event) {
                         if (!formSubmitted) {
                             event.preventDefault();
-                            
+
                             // Contar questões não respondidas
                             var unansweredCount = 0;
                             questoes.forEach(function (questao) {
@@ -237,18 +167,18 @@
                                     unansweredCount++;
                                 }
                             });
-                            
+
                             // Mostrar ou ocultar aviso de questões não respondidas
                             var warningDiv = document.getElementById('unanswered-warning');
                             var unansweredCountSpan = document.getElementById('unanswered-count');
-                            
+
                             if (unansweredCount > 0) {
                                 unansweredCountSpan.textContent = unansweredCount;
                                 warningDiv.classList.remove('hidden');
                             } else {
                                 warningDiv.classList.add('hidden');
                             }
-                            
+
                             modal.classList.remove('hidden');
                             sidecard.classList.add('modal-active');
                         }

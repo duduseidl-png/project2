@@ -10,7 +10,6 @@ class QuestaoSeeder extends Seeder
     public function run(): void
     {
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injustiças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela significativa da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade.</p>
@@ -40,7 +39,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">No Brasil, os idosos têm sido cada vez mais obrigados a permanecer no trabalho formal ou informal, mesmo após a aposentadoria, visto que os recursos provenientes desta, na maioria dos casos, são insuficientes para a manutenção dos indivíduos. Um fator que pode ter agravado essa situação foi a aprovação da reforma previdenciária de 2019, que modificou as regras de idade e contribuição para o acesso ao direito ao benefício da aposentadoria. Tal mudança pode ter resultado em um número ainda maior de idosos que disputam com as populações jovens e com sistemas de automação, no mercado atual, o trabalho precarizado. Essa situação contribui para o acirramento do preconceito contra essa faixa etária, denominado etarismo.</p>
@@ -66,7 +64,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A fome e a insegurança alimentar, antigos problemas da sociedade, são agravados em regiões com elevados índices de desigualdade social. Propor soluções para esse quadro requer uma abordagem multidimensional, que possibilite a interação entre as dimensões sociais, culturais, políticas, econômicas e ambientais envolvidas na produção e na distribuição de alimentos.</p>
@@ -110,7 +107,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
          Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Estudos realizados em 2021 pelo Fundo das Nações Unidas para a Infância (Unicef), em parceria com a Organização Mundial da Saúde (OMS), mostraram que, no Brasil, houve uma queda brusca da taxa de vacinação infanti l nos últi mos anos: entre 2017 e 2021, a taxa caiu de 93,1% para 71,49%, considerando-se crianças com menos de um ano de idade.</p>
@@ -138,7 +134,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="font-bold mb-2">TEXTO 1</p>
@@ -162,7 +157,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os seguintes ícones foram utilizados em um estudo realizado por um grupo de trabalho de monitoramento da relação das mulheres com a mobilidade urbana na cidade de São Paulo. Na pesquisa, perguntou-se às mulheres como elas se sentiam nas situações representadas por tais imagens.</p>
@@ -193,7 +187,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao' => '
                 <p class="font-bold mb-1">TEXTO 1</p>
@@ -238,7 +231,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Recentemente, a população carcerária feminina do Brasil tornou-se a terceira maior do mundo. A situação do encarceramento feminino por tráfico de drogas e outras situações que circundam o assunto foi tema de discussão da Secretaria de Políticas sobre Drogas do Ministério da Justiça e Segurança Pública (Senad/MJSP), em seminário realizado em abril de 2023. O evento contou com a participação de 23 países. Segundo os dados apresentados pela Senad, a incidência penal sobre drogas no Brasil é uma das principais causas de prisão de mulheres, chegando a 54% dos casos de encarceramento, contra 28% dos homens, índice que impacta em aspectos como maternidade e primeira infância.</p>
@@ -265,7 +257,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
             'categoria' => 'Formação Geral',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A sociedade do século XXI não é mais uma sociedade disciplinar, mas, sim, uma sociedade do desempenho. Os seus habitantes também não se chamam mais sujeitos de obediência, mas, sim, sujeitos de desempenho e produção. São empresários de si mesmos.</p>
@@ -291,8 +282,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os resistores são dispositivos utilizados com finalidade de limitar a corrente elétrica em um circuito elétrico. Eles conseguem desempenhar essa função por apresentarem a propriedade da resistência elétrica, que é a capacidade de um corpo se opor à passagem de corrente elétrica. Diversos materiais podem ser utilizados como resistores, tais como níquel-cromo, carbono e grafite.</p>
 
@@ -325,8 +315,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">O  protocolo  de  roteamento  interno  OSPF  (open  shortest  path  first)  representa  um sistema autônomo (SA) como um grafo ponderado, em que roteadores são os vértices, conexões entre os roteadores são as arestas e atrasos nas conexões são os pesos. No OSPF, a identificação de cada conexão e seu respectivo atraso são passados de roteador em roteador até que todos os roteadores formem uma base de dados com o grafo que descreve o SA. O OSPF utiliza uma versão distribuída do algoritmo de caminhos mínimos de Dijkstra para computar as melhores rotas para todos os possíveis destinos e para produzir as tabelas de rotas para cada roteador. Cada rota computada é a que apresenta o menor valor para a soma dos atrasos nas conexões usadas na rota entre a rede de origem e a rede de destino.</p>
             ',
@@ -350,8 +339,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma relação <b>R</b> em um conjunto <b>S</b> é uma relação de equivalência se ela satisfizer todas as propriedades a seguir:</p>
                 <p class="mb-2 text-justify">1. Reflexividade. Para todo <i>a</i> &isin; <b>S</b>, <i>a</i> <b>R</b> <i>a</i>;</p>
@@ -384,8 +372,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma forma sistemática de analisar circuitos elétricos de qualquer tamanho, visando à simulação em computadores, consiste em representá-los por meio de grafos. Essa representação implica a substituição dos elementos do ramo do circuito por uma conexão orientada (arco) e de nós do circuito por vértices, resultando em um grafo orientado. A orientação dos arcos coincide com a orientação dos sentidos de referência associados de tensão e corrente, adotados pela convenção passiva.</p>
                 <p class="mb-2 text-justify">Grafos são ditos conexos se existir, ao menos, um caminho entre quaisquer dois nós. Corte refere-se a um conjunto de arcos que, se removido, divide o grafo (tornando-o desconexo). A lei de Kirchoff das correntes, usando a nomenclatura de grafos, pode ser enunciada como “para qualquer rede de parâmetros concentrados e para qualquer de seus cortes, a soma algébrica de todas as correntes através dos arcos do corte é zero.”</p>
@@ -413,8 +400,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma lista pode ser dividida em duas partes: o primeiro elemento (a cabeça da lista) e os demais elementos (sua cauda). Por exemplo, em uma lista de inteiros [1, 2, 3, 4], a cabeça dessa lista é o valor inteiro 1, enquanto sua cauda é a lista de inteiros [2, 3, 4]. Uma lista vazia é representada por [ ].</p>
                 <p class="mb-2 text-justify">O código a seguir define duas funções descritas em uma linguagem de programação funcional que manipulam listas de inteiros. A função enade recebe uma lista de inteiros e produz uma nova lista de inteiros. A função auxiliar é chamada pela função enade e possui dois parâmetros: um número inteiro e uma lista de inteiros. Essa função produz uma lista de inteiros.</p>
@@ -441,8 +427,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify"><i>Memory leak</i>, ou vazamento de memória, é um problema que ocorre em sistemas computacionais quando uma parte da memória, alocada para uma determinada operação, não é liberada quando se torna desnecessária. Na linguagem C, esse tipo de problema é quase sempre relacionado ao uso incorreto das funções malloc( ) e free( ). Esse erro de programação pode levar a falhas no sistema se a memória for completamente consumida.</p>
             ',
@@ -496,8 +481,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Na programação de sistemas embarcados, algumas posições de memória servem para diferentes propósitos, não apenas para armazenar valores. Em algumas dessas memórias, cada um dos <i>bits</i> possui um significado diferente, sendo necessário manipulá-los individualmente ou em pequenos grupos. Por isso, o conhecimento da álgebra booliana, bem como dos operadores utilizados para realizar operações binárias nas linguagens de programação, é essencial para o desenvolvimento desse tipo de sistema.</p>               
             ',
@@ -536,8 +520,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Dada uma sequência de caracteres <i>S</i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>n</sub></i>, uma subsequência de <i>S</i> é dada pela remoção de zero ou mais caracteres de <i>S</i>. Formalmente, a sequência <i>X</i> = <i>x<sub>1</sub>,</i> <i>x<sub>2</sub>,</i> <i>...,</i> <i>x<sub>k</sub></i> é subsequência de <i>S</i> se existe uma sequência crescente de índices <i>i<sub>1</sub>,</i> <i>...,</i> <i>i<sub>k</sub></i> de <i>S</i>, tal que <i>x<sub>j</sub></i> = <i>S<sub>ij</sub></i> para todo <i>j</i> = <i>1, 2, ..., k</i>. Define-se, também, um prefixo da sequência <i>S</i> com comprimento <i>i</i> para <i>i</i> = <i>0, ..., n,</i> como <i>S<sub>i</sub></i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>i</sub>,</i>.</p>
                 <p class="mb-2 text-justify">O problema da Subsequência Comum Mais Longa (LCS) e suas variações, definido a seguir, pode ser utilizado em análise de textos e em bioinformática. O problema da LCS pressupõe duas sequências de caracteres <i>A</i> = <i>a<sub>1</sub>,</i> <i>a<sub>2</sub>,</i> <i>...,</i> <i>a<sub>n</sub></i> e <i>B</i> = <i>b<sub>1</sub>,</i> <i>b<sub>2</sub>,</i> <i>...,</i> <i>b<sub>m</sub>,</i> de comprimentos <i>n</i> e <i>m</i>, respectivamente. Dadas essas duas sequências, é preciso encontrar uma sequência de maior comprimento possível que seja, simultaneamente, subsequência de <i>A</i> e de <i>B</i>.</p>
@@ -563,8 +546,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Vetores de tamanho dinâmico são muito utilizados como estruturas de dados para armazenar listas e tabelas de dispersão (tabelas <i>hash</i>). Essa representação permite que o número máximo de elementos a ser inserido não precise ser pré-determinado. Uma técnica para implementar vetores de tamanho dinâmico é aquela que dobra o tamanho do vetor quando o número de itens a ser armazenado ultrapassa o tamanho atual do vetor. Essa operação requer uma alocação de memória para conter o vetor com o dobro do tamanho atual e a realização de cópia dos elementos para o novo vetor. Com base nessas informações, considere uma lista linear implementada com um vetor dinâmico. Assuma que todos os itens inseridos na lista tenham o mesmo tamanho e que o vetor tenha tamanho inicial para comportar apenas 1 item.</p>
                 <p class="mb-2 text-justify"></p>
@@ -584,8 +566,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">É chamado de compilação o processo de conversão do código escrito pelo programador para um arquivo binário que o computador consegue executar. Esse processo é realizado por um programa chamado compilador. Entre as diversas tarefas de um compilador, destaca-se a de identificar os possíveis erros sintáticos e semânticos. Com base nessas informações, considere uma linguagem de programação em que a sintaxe de uma operação aritmética seja dada pela seguinte gramática livre de contexto:</p>
                 <p class="mb-2 text-justify">S → var = E; | var = E; S</p>
@@ -606,8 +587,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Computação em nuvem representa um conceito relativo ao compartilhamento de recursos, tais como capacidade de processamento, armazenamento, comunicação de dados e pessoal qualificado para manter sistemas computacionais disponíveis na internet. Quando esse compartilhamento constitui um serviço disponível para qualquer pessoa, o serviço é conhecido como nuvem pública. Quando as mesmas tecnologias são empregadas para uma única empresa, não permitindo que terceiros utilizem parte dos recursos, temos uma nuvem privada.</p>
             ',
@@ -631,8 +611,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A fim de melhorar a qualidade de vida de seus cidadãos e de criar eficiência nos serviços e nas operações urbanas, um grupo de vereadores de uma pequena cidade decidiu fazer algumas propostas de lei que, se aprovadas e devidamente implementadas, tendem a aproximar a cidade do conceito de “cidade inteligente” por meio da implementação de novos sistemas de <i>software</i>. O grupo de vereadores, preocupado com acessibilidade, consultou especialistas da área de interação humano-computador (IHC) e levantou informações a respeito de fundamentos de acessibilidade em IHC. Entre eles, estão os seguintes:</p>
                 <p class="mb-2 text-justify">Fundamento 1. Um produto ou serviço é <b>equitativo</b> quando é projetado de modo que possa atender a todos os usuários, independentemente de suas habilidades físicas, sensoriais ou cognitivas.</p>
@@ -657,8 +636,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere um banco de dados relacional formado por três tabelas, conforme é apresentado na figura a seguir. As chaves primárias das tabelas cliente e funcionario são chaves estrangeiras da tabela pessoa.</p>
 
@@ -683,8 +661,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">As figuras a seguir representam dois circuitos que possuem a finalidade de construção de filtros para sinais analógicos.</p>
 
@@ -713,8 +690,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Um determinado sistema embarcado possui uma porta paralela de 8 <i>bits</i>, na qual cada pino pode ser configurado individualmente como interface de entrada ou de saída. A direção de cada pino da porta é definida pelo <i>bit</i> correspondente do registrador de direção de 8 <i>bits</i> PORT_DIR da seguinte forma: valor 0 para configuração como entrada e valor 1 para configuração como saída.</p>
                 <p class="mb-2 text-justify">Os <i>bits</i> de entrada da porta são armazenados no registrador PORT_IN e os <i>bits</i> de saída da porta são armazenados no registrador PORT_OUT, ambos de 8 <i>bits</i>. Os pinos que correspondem ao <i>nibble</i> (conjunto de 4 <i>bits</i>) menos significativo da porta de I/O são conectados aos seguintes dispositivos externos: alarme (SPK1), chave 2 (CH2), LED (LED1) e chave 1 (CH1), conforme a figura a seguir.</p>
@@ -746,8 +722,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os sistemas digitais são componentes essenciais em uma ampla variedade de aplicações, desde dispositivos eletrônicos portáteis até sistemas de controle industrial. Um dos principais aspectos do projeto desse tipo de sistema é a descrição do circuito em uma <i>Hardware Description Language</i> (HDL), como Verilog ou VHDL. Essas linguagens permitem descrever o comportamento e a estrutura do circuito de forma abstrata, viabilizando a síntese e a simulação do sistema.</p>
                 <p class="mb-2 text-justify">Um exemplo de circuito sequencial é o contador de 4 bits assíncrono, mostrado na figura a seguir, o qual foi implementado utilizando <i>flip-flops</i> JK.</p>
@@ -833,8 +808,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere um cenário em que um computador seja organizado com múltiplos processadores, os quais compartilham a mesma memória RAM. Cada processador possui múltiplos núcleos.</p>
                 <p class="mb-2 text-justify">Nesse arranjo, o sistema operacional permite múltiplas <i>threads</i>, as quais podem ser dinamicamente alocadas para execução em diferentes núcleos e processadores.</p>
@@ -852,8 +826,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A técnica de virtualização de <i>hardware</i> consiste em emular um computador no qual a camada de <i>software</i> é executada sem que detalhes do computador físico e de seus componentes sejam expostos. Em um ambiente de computação distribuída, a técnica pode ser útil para que o sistema operacional e os <i>softwares</i> do usuário sejam executados em uma máquina virtual com características permanentes, em conformidade com o que foi projetado, verificado e validado, mesmo que um computador físico diferente seja empregado.</p>
             ',
@@ -870,8 +843,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Alguns sistemas com memória virtual utilizam uma técnica chamada de paginação. Nesses sistemas, existe um conjunto de endereços de memória, denominados endereços virtuais, que são gerados durante a execução dos programas, com o uso de indexação, de registradores-base, de registradores-segmento ou de outras técnicas. Um endereço virtual é dividido em número de página virtual e deslocamento. O número de página virtual é usado como índice dentro da tabela de páginas para encontrar o quadro correspondente. O endereço físico de memória é a concatenação entre o endereço do quadro com o deslocamento do endereço virtual.</p>
                 <p class="mb-2 text-justify">Um mecanismo denominado TLB (do inglês, <i>translation lookaside buffer</i>), tipicamente implementado em <i>hardware</i>, fornece auxílio durante a atividade de mapeamento de endereços virtuais para endereços físicos sem passar pela tabela de página. A função do TLB é agilizar o processo de tradução de endereços lógicos para físicos.</p>
@@ -897,8 +869,7 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                     <p class="mb-2 text-justify">Considere que uma equipe de engenheiros projete um sistema robótico para reciclagem de resíduos sólidos, o qual utiliza visão computacional para separar objetos de plástico e de vidro. Com o objetivo de automatizar o processo de classificação, opta-se pela técnica <i>support vector machine</i> (SVM).</p>
                     <p class="mb-2 text-justify">No método SVM, <i>i</i> é o índice do vetor suporte <i>(1</i> ≤ <i>i</i> ≤ <i>5),</i> <i>w</i> é o coeficiente angular (peso) e <i>b</i> é o coeficiente linear (polarização) da reta de separação. O par ordenado (<i>x</i>, <i>y</i>) é a saída do sistema de Visão Computacional que representa os vetores de características dos supostos materiais, plástico ou vidro, com classificação normalizada em ƒ (<i>i</i>) &isin; {-1, +1} . A separação linear do material é resultado da diferença entre os pontos <i>P<sub>1</sub></i> = <i>w.x</i> + <i>b</i> e <i>P<sub>2</sub></i> = <i>y</i>, conforme a equação a seguir.</p>
@@ -966,7 +937,6 @@ class QuestaoSeeder extends Seeder
 
         //ENGENHARIA CIVIL
         Questao::create([
-            'curso' => 'Engenharia Civil',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'Um projeto de ponte precisa considerar esforços de tração, compressão e flexão. A análise da seção transversal e das cargas é essencial para garantir a segurança estrutural.',
             'enunciado' => 'Qual dos seguintes materiais apresenta maior resistência à compressão para uso em pilares de concreto armado?',
@@ -980,7 +950,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Controle e Automação',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'Em sistemas automatizados, o uso de controladores PID é comum para ajustar a resposta dinâmica de processos industriais.',
             'enunciado' => 'O termo “integral” em um controlador PID serve principalmente para:',
@@ -994,7 +963,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Produção',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'Uma linha de montagem usa técnicas de melhoria contínua para reduzir desperdícios e aumentar eficiência.',
             'enunciado' => 'Qual ferramenta do Lean Manufacturing é usada para identificar os principais tipos de desperdício?',
@@ -1008,7 +976,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia Elétrica',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'Em circuitos de corrente alternada, a diferença de fase entre tensão e corrente influencia a potência real disponível.',
             'enunciado' => 'Quando a corrente está defasada 90° em relação à tensão em um circuito puramente reativo, a potência real é:',
@@ -1022,7 +989,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia Mecânica',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'O dimensionamento de molas helicoidais de compressão depende da constante elástica e das propriedades do material.',
             'enunciado' => 'Qual grandeza descreve a rigidez de uma mola?',
@@ -1036,7 +1002,6 @@ class QuestaoSeeder extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia Química',
             'categoria' => 'Formação Geral',
             'contextualizacao' => 'A análise de equilíbrio químico é essencial para processos industriais que dependem de conversão e rendimento.',
             'enunciado' => 'O princípio de Le Chatelier indica que um sistema em equilíbrio reage a uma perturbação:',
