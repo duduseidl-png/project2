@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Questao;
 
-class QuestaoSeeder extends Seeder
+class Questoes_Engenharia_de_Computacao extends Seeder
 {
     public function run(): void
     {
@@ -395,7 +395,7 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">A figura a seguir representa um circuito elétrico e o seu grafo equivalente.</p>
 
                 <div class="flex justify-center mb-4 text-sm text-center">
-                    <div class="w-2/5 md:w-2/5">
+                    <div class="w-3/5 md:w-3/5">
                         <img src="/img/questoes/q1_img10.JPG" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div> 
@@ -404,11 +404,11 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Após aplicar a lei de Kirchoff das correntes para os cortes <i>X</i> = {1, 4, 5}, <i>Y</i> = {1, 2, 3, 5} e <i>Z</i> = {1, 4, 3, 6}, assinale a opção que apresenta equações válidas para a soma algébrica das correntes em dois desses cortes.</p>       
             ',
             'referencia' => '',
-            'opcao_a' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i>',
-            'opcao_b' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>5</sub></i> = <i>0</i>',
-            'opcao_c' => '<i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
-            'opcao_d' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
-            'opcao_e' => '<i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i>',
+            'opcao_a' => '<div class="option-content inline-math" style="display: inline-block; font-family: \'Times New Roman\', serif; font-size: inherit;"><i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i></div>',
+            'opcao_b' => '<div class="option-content inline-math" style="display: inline-block; font-family: \'Times New Roman\', serif; font-size: inherit;"><i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>5</sub></i> = <i>0</i></div>',
+            'opcao_c' => '<div class="option-content inline-math" style="display: inline-block; font-family: \'Times New Roman\', serif; font-size: inherit;"><i>I<sub>1</sub></i> + <i>I<sub>4</sub></i> + <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i></div>',
+            'opcao_d' => '<div class="option-content inline-math" style="display: inline-block; font-family: \'Times New Roman\', serif; font-size: inherit;"><i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> + <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i></div>',
+            'opcao_e' => '<div class="option-content inline-math" style="display: inline-block; font-family: \'Times New Roman\', serif; font-size: inherit;"><i>I<sub>1</sub></i> + <i>I<sub>2</sub></i> - <i>I<sub>3</sub></i> - <i>I<sub>5</sub></i> = <i>0</i> e <i>I<sub>1</sub></i> - <i>I<sub>3</sub></i> + <i>I<sub>4</sub></i> - <i>I<sub>6</sub></i> = <i>0</i></div>',
             'alternativa_correta' => 'D',
         ]);
 
@@ -421,10 +421,10 @@ class QuestaoSeeder extends Seeder
 
                 <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
                     <p class="mb-2 text-justify">enade :: [Int] -> [Int]</p>
-                    <p class="mb-2 text-justify">enade [ ] = [ ]</p>
+                    <p class="mb-2 text-justify">enade [] = []</p>
                     <p class="mb-2 text-justify">enade (cabeca:cauda) = auxiliar cabeca (enade cauda)</p>
                     <p class="mb-2 text-justify">auxiliar :: Int -> [Int] -> [Int]</p>
-                    <p class="mb-2 text-justify">auxiliar x [ ] = [x]</p>
+                    <p class="mb-2 text-justify">auxiliar x [] = [x]</p>
                     <p class="mb-2 text-justify">auxiliar x (cabeca:cauda)</p>
                     <p class="mb-2 pl-6 text-justify">| (x `mod` 2 == 0) = x:cabeca:cauda</p>
                     <p class="mb-2 pl-6 text-justify">| otherwise = cabeca:auxiliar x cauda</p>
@@ -434,7 +434,7 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">Considerando o código apresentado, é correto afirmar que se a função enade for executada recebendo como parâmetro de entrada a lista [1, 2, 3, 4, 5, 6, 7, 8], o resultado será</p>       
             ',
             'referencia' => '',
-            'opcao_a' => '[ ].',
+            'opcao_a' => '[].',
             'opcao_b' => '[2, 4, 6, 8].',
             'opcao_c' => '[1, 2, 3, 4, 5, 6, 7, 8].',
             'opcao_d' => '[2, 4, 6, 8, 1, 3, 5, 7].',
@@ -452,47 +452,52 @@ class QuestaoSeeder extends Seeder
                 <p class="mb-2 text-justify">A partir dessas informações, assinale a opção que apresenta um trecho com <i>memory leak</i>.</p>       
             ',
             'referencia' => '',
-            'opcao_a' => 'void f( ) {
-                          <p class="mb-0 pl-16 text-justify">void *s;</p>
-                          <p class="mb-0 pl-16 text-justify">s = malloc(50);</p>
-                          <p class="mb-0 pl-16 text-justify">free(s);</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>
+            'opcao_a' => '<div style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">void f( ) {
+                            <p class="mb-0 pl-4 text-justify">void *s;</p>
+                            <p class="mb-0 pl-4 text-justify">s = malloc(50);</p>
+                            <p class="mb-0 pl-4 text-justify">free(s);</p>
+                            <p class="mb-0 text-justify">}</p>
+                        </div>
             ',
-            'opcao_b' => 'int f( ) {
-                          <p class="mb-0 pl-16 text-justify">float *a;</p>
-                          <p class="mb-0 pl-16 text-justify">return 0;</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>
+            'opcao_b' => '<div style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int f( ) {
+                            <p class="mb-0 pl-4 text-justify">float *a;</p>
+                            <p class="mb-0 pl-4 text-justify">return 0;</p>
+                            <p class="mb-0 text-justify">}</p>
+                        </div>
             ',
-            'opcao_c' => 'int f(char *data) { 
-                          <p class="mb-0 pl-16 text-justify">void *s;</p>
-                          <p class="mb-0 pl-16 text-justify">s = malloc(50);</p>
-                          <p class="mb-0 pl-16 text-justify">int size = strlen(data);</p>
-                          <p class="mb-0 pl-16 text-justify">if (size > 50)</p>
-                          <p class="mb-0 pl-20 text-justify">return(-1);</p>
-                          <p class="mb-0 pl-16 text-justify">free(s);</p>
-                          <p class="mb-0 pl-16 text-justify">return 0;</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>                       
+            'opcao_c' => '<div style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int f(char *data) { 
+                            <p class="mb-0 pl-4 text-justify">void *s;</p>
+                            <p class="mb-0 pl-4 text-justify">s = malloc(50);</p>
+                            <p class="mb-0 pl-4 text-justify">int size = strlen(data);</p>
+                            <p class="mb-0 pl-4 text-justify">if (size > 50)</p>
+                            <p class="mb-0 pl-10 text-justify">return(-1);</p>
+                            <p class="mb-0 pl-4 text-justify">free(s);</p>
+                            <p class="mb-0 pl-4 text-justify">return 0;</p>
+                            <p class="mb-0 text-justify">}</p>   
+                        </div>                    
             ',
-            'opcao_d' => 'int *f(int n) {
-                          <p class="mb-0 pl-16 text-justify">int *num = malloc(sizeof(int)*n);</p>
-                          <p class="mb-0 pl-16 text-justify">return num;</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>
+            'opcao_d' => '<div style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int *f(int n) {
+                            <p class="mb-0 pl-4 text-justify">int *num = malloc(sizeof(int)*n);</p>
+                            <p class="mb-0 pl-4 text-justify">return num;</p>
+                            <p class="mb-0 text-justify">}</p>
 
-                          <p class="mb-0 pl-12 text-justify">int main(void){</p>
-                          <p class="mb-0 pl-16 text-justify">int *num;</p>
-                          <p class="mb-0 pl-16 text-justify">num = f(10);</p>
-                          <p class="mb-0 pl-16 text-justify">free(num);</p>
-                          <p class="mb-0 pl-16 text-justify">return 0;</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>                      
+                            <p class="mb-0 text-justify">int main(void){</p>
+                            <p class="mb-0 pl-4 text-justify">int *num;</p>
+                            <p class="mb-0 pl-4 text-justify">num = f(10);</p>
+                            <p class="mb-0 pl-4 text-justify">free(num);</p>
+                            <p class="mb-0 pl-4 text-justify">return 0;</p>
+                            <p class="mb-0 text-justify">}</p> 
+                        </div>                     
             ',
-            'opcao_e' => 'void f(int n) {
-                          <p class="mb-0 pl-16 text-justify">char *m = malloc(10);</p>
-                          <p class="mb-0 pl-16 text-justify">char *n = malloc(10);</p>
-                          <p class="mb-0 pl-16 text-justify">free(m);</p>
-                          <p class="mb-0 pl-16 text-justify">m = n;</p>
-                          <p class="mb-0 pl-16 text-justify">free(m);</p>
-                          <p class="mb-0 pl-16 text-justify">free(n);</p>
-                          <p class="mb-0 pl-12 text-justify">}</p>
+            'opcao_e' => '<div style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">void f(int n) {
+                            <p class="mb-0 pl-4 text-justify">char *m = malloc(10);</p>
+                            <p class="mb-0 pl-4 text-justify">char *n = malloc(10);</p>
+                            <p class="mb-0 pl-4 text-justify">free(m);</p>
+                            <p class="mb-0 pl-4 text-justify">m = n;</p>
+                            <p class="mb-0 pl-4 text-justify">free(m);</p>
+                            <p class="mb-0 pl-4 text-justify">free(n);</p>
+                            <p class="mb-0 text-justify">}</p>
+                        </div>
             ',
             'alternativa_correta' => 'C',
         ]);
@@ -506,25 +511,28 @@ class QuestaoSeeder extends Seeder
             'enunciado' => '
                 <p class="mb-2 text-justify">A partir dessas informações, observe o código apresentado a seguir, escrito na linguagem C, que faz uso de operações binárias sobre variáveis inteiras.</p>
                 
-                <p class="mb-0 text-justify">#include <stdio.h></p>
-                <p class="mb-0 text-justify">int main()</p>
-                <p class="mb-0 text-justify">{</p>
+                <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
+                    <p class="mb-0 text-justify">#include <stdio.h></p>
+                    <p class="mb-0 text-justify">int main()</p>
+                    <p class="mb-0 text-justify">{</p>
 
-                <p class="mb-0 pl-6 text-justify">int a, b;</p>
-                <p class="mb-0 pl-6 text-justify">int x, y, z;</p>
-                <p class="mb-0 pl-6 text-justify">scanf("%d %d", &a, &b);</p>
-                <p class="mb-0 pl-6 text-justify">x = a; y = b; z = a + b;</p>
-                <p class="mb-0 pl-6 text-justify">while (a) {</p>
-                <p class="mb-0 pl-12 text-justify">x = x | b;</p>
-                <p class="mb-0 pl-12 text-justify">y = y ^ a;</p>
-                <p class="mb-0 pl-12 text-justify">z = z & (a+b);</p>
-                <p class="mb-0 pl-12 text-justify">a = a >> 1;</p>
-                <p class="mb-0 pl-12 text-justify">b = b << 1;</p>
-                <p class="mb-0 pl-6 text-justify">}</p>
+                    <p class="mb-0 pl-4 text-justify">int a, b;</p>
+                    <p class="mb-0 pl-4 text-justify">int x, y, z;</p>
+                    <p class="mb-0 pl-4 text-justify">scanf("%d %d", &a, &b);</p>
+                    <p class="mb-0 pl-4 text-justify">x = a; y = b; z = a + b;</p>
+                    <p class="mb-0 pl-4 text-justify">while (a) {</p>
 
-                <p class="mb-0 pl-6 text-justify">printf ("%d %d %d\n", x, y, z);</p>
-                <p class="mb-0 pl-6 text-justify">return 0;</p>
-                <p class="mb-0 text-justify">}</p>
+                    <p class="mb-0 pl-8 text-justify">x = x | b;</p>
+                    <p class="mb-0 pl-8 text-justify">y = y ^ a;</p>
+                    <p class="mb-0 pl-8 text-justify">z = z & (a+b);</p>
+                    <p class="mb-0 pl-8 text-justify">a = a >> 1;</p>
+                    <p class="mb-0 pl-8 text-justify">b = b << 1;</p>
+                    <p class="mb-0 pl-4 text-justify">}</p>
+
+                    <p class="mb-0 pl-4 text-justify">printf ("%d %d %d\n", x, y, z);</p>
+                    <p class="mb-0 pl-4 text-justify">return 0;</p>
+                    <p class="mb-0 text-justify">}</p>
+                </div>
 
                <p class="mb-2 text-justify">Após a chamada desse programa, caso o usuário entre com os valores 10 e 1, nessa ordem, qual será, exatamente, o valor da saída do programa?</p>
             ',
@@ -766,17 +774,17 @@ class QuestaoSeeder extends Seeder
                     <p class="mb-0 text-justify">Verilog:</p>
                     <p class="mb-0 text-justify">//-----------------------------------------------</p>
                     <p class="mb-0 text-justify">module contador_4bits (</p>
-                    <p class="mb-0 pl-6 text-justify">input wire clk,</p>
-                    <p class="mb-0 pl-6 text-justify">input wire reset,</p>
-                    <p class="mb-0 pl-6 text-justify">output reg [1:0] count</p>
+                    <p class="mb-0 pl-5 text-justify">input wire clk,</p>
+                    <p class="mb-0 pl-5 text-justify">input wire reset,</p>
+                    <p class="mb-0 pl-5 text-justify">output reg [1:0] count</p>
                     <p class="mb-0 text-justify">);</p>
 
-                    <p class="mb-0 pl-6 text-justify">always @(posedge clk or posedge reset) begin</p>
+                    <p class="mb-0 pl-5 text-justify">always @(posedge clk or posedge reset) begin</p>
                     <p class="mb-0 pl-10 text-justify">if (reset)</p>
                     <p class="mb-0 pl-14 text-justify">count <= 0;</p>
                     <p class="mb-0 pl-10 text-justify">else</p>
                     <p class="mb-0 pl-14 text-justify">count <= count + 1;</p>
-                    <p class="mb-0 pl-6 text-justify">end</p>
+                    <p class="mb-0 pl-5 text-justify">end</p>
                     <p class="mb-0 text-justify">endmodule</p>
 
                     <p class="mb-0 text-justify">//-----------------------------------------------</p>
@@ -790,27 +798,27 @@ class QuestaoSeeder extends Seeder
                     <p class="mb-5 text-justify"></p>
 
                     <p class="mb-0 text-justify">entity contador_4bits is</p>
-                    <p class="mb-0 pl-6 text-justify">port (</p>
-                    <p class="mb-0 pl-10 text-justify">clk : in std_logic;</p>
-                    <p class="mb-0 pl-10 text-justify">reset : in std_logic;</p>
-                    <p class="mb-0 pl-10 text-justify">count : out integer range 0 to 3</p>
-                    <p class="mb-0 pl-6 text-justify");</p>
+                    <p class="mb-0 pl-5 text-justify">port (</p>
+                    <p class="mb-0 pl-9 text-justify">clk : in std_logic;</p>
+                    <p class="mb-0 pl-9 text-justify">reset : in std_logic;</p>
+                    <p class="mb-0 pl-9 text-justify">count : out integer range 0 to 3</p>
+                    <p class="mb-0 pl-3 text-justify">);</p>
                     <p class="mb-0 text-justify">end entity contador_4bits;</p>
 
                     <p class="mb-5 text-justify"></p>
 
                     <p class="mb-0 text-justify">architecture behavioral of contador_4bits is</p>
                     <p class="mb-0 text-justify">begin</p>
-                    <p class="mb-0 pl-6 text-justify">process(clk, reset)</p>
-                    <p class="mb-0 pl-6 text-justify">variable q : integer range 0 to 3;</p>
-                    <p class="mb-0 pl-6 text-justify">begin</p>
-                    <p class="mb-0 pl-10 text-justify">if reset = &apos;1&apos; then</p>
-                    <p class="mb-0 pl-14 text-justify">q := 0;</p>
-                    <p class="mb-0 pl-10 text-justify">elsif rising_edge(clk) then</p>
-                    <p class="mb-0 pl-14 text-justify">q := q + 1;</p>
-                    <p class="mb-0 pl-10 text-justify">end if;</p>
-                    <p class="mb-0 pl-6 text-justify">count <= q;</p>
-                    <p class="mb-0 pl-6 text-justify">end process;</p>
+                    <p class="mb-0 pl-5 text-justify">process(clk, reset)</p>
+                    <p class="mb-0 pl-5 text-justify">variable q : integer range 0 to 3;</p>
+                    <p class="mb-0 pl-4 text-justify">begin</p>
+                    <p class="mb-0 pl-12 text-justify">if reset = &apos;1&apos; then</p>
+                    <p class="mb-0 pl-16 text-justify">q := 0;</p>
+                    <p class="mb-0 pl-12 text-justify">elsif rising_edge(clk) then</p>
+                    <p class="mb-0 pl-16 text-justify">q := q + 1;</p>
+                    <p class="mb-0 pl-12 text-justify">end if;</p>
+                    <p class="mb-0 pl-4 text-justify">count <= q;</p>
+                    <p class="mb-0 pl-4 text-justify">end process;</p>
                     <p class="mb-0 text-justify">end architecture behavioral;</p>
 
                     <p class="mb-0 text-justify">//-----------------------------------------------</p>
@@ -918,23 +926,23 @@ class QuestaoSeeder extends Seeder
 
                 <div style=" color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">
                     <p class="mb-0 text-justify">Início</p>
-                    <p class="mb-0 pl-6 text-justify">w <- 0.4</p>
-                    <p class="mb-0 pl-6 text-justify">b <- 2.7</p>
-                    <p class="mb-0 pl-6 text-justify">para i de 1 até 5 faça</p>
-                    <p class="mb-0 pl-14 text-justify">yr <- w	* x[i] + b</p>
-                    <p class="mb-0 pl-14 text-justify">se yr - y[i] > 0 então</p>
-                    <p class="mb-0 pl-19 text-justify">f[i] <- 1</p>
-                    <p class="mb-0 pl-14 text-justify">senão</p>
-                    <p class="mb-0 pl-19 text-justify">f[i] <- -1</p>
-                    <p class="mb-0 pl-14 text-justify">fimse</p>
-                    <p class="mb-0 pl-6 text-justify">fimpara</p>
-                    <p class="mb-0 pl-6 text-justify">para i de 1 até 5 faça</p>
-                    <p class="mb-0 pl-12 text-justify">se f[i] = -1 então</p>
-                    <p class="mb-0 pl-17 text-justify">escreva("Plástico")</p>
-                    <p class="mb-0 pl-12 text-justify">senão</p>
-                    <p class="mb-0 pl-17 text-justify">escreva("Vidro")</p>
-                    <p class="mb-0 pl-6 text-justify">fimse</p>
-                    <p class="mb-0 pl-2 text-justify">fimpara</p>
+                    <p class="mb-0 pl-10 text-justify">w <- 0.4</p>
+                    <p class="mb-0 pl-10 text-justify">b <- 2.7</p>
+                    <p class="mb-0 pl-10 text-justify">para i de 1 até 5 faça</p>
+                    <p class="mb-0 pl-20 text-justify">yr <- w * x[i] + b</p>
+                    <p class="mb-0 pl-20 text-justify">se yr - y[i] > 0 então</p>
+                    <p class="mb-0 pl-27 text-justify">f[i] <- 1</p>
+                    <p class="mb-0 pl-20 text-justify">senão</p>
+                    <p class="mb-0 pl-27 text-justify">f[i] <- -1</p>
+                    <p class="mb-0 pl-20 text-justify">fimse</p>
+                    <p class="mb-0 pl-10 text-justify">fimpara</p>
+                    <p class="mb-0 pl-10 text-justify">para i de 1 até 5 faça</p>
+                    <p class="mb-0 pl-17 text-justify">se f[i] = -1 então</p>
+                    <p class="mb-0 pl-24 text-justify">escreva("Plástico")</p>
+                    <p class="mb-0 pl-17 text-justify">senão</p>
+                    <p class="mb-0 pl-24 text-justify">escreva("Vidro")</p>
+                    <p class="mb-0 pl-10 text-justify">fimse</p>
+                    <p class="mb-0 pl-4 text-justify">fimpara</p>
                     <p class="mb-2 text-justify">Fim</p>
                 </div>
 
@@ -959,98 +967,242 @@ class QuestaoSeeder extends Seeder
             'alternativa_correta' => 'B',
         ]);
 
-    
-
-
-
-
-
-
-
-
-        //ENGENHARIA CIVIL
         Questao::create([
-            'curso' => 'Engenharia Civil',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'Um projeto de ponte precisa considerar esforços de tração, compressão e flexão. A análise da seção transversal e das cargas é essencial para garantir a segurança estrutural.',
-            'enunciado' => 'Qual dos seguintes materiais apresenta maior resistência à compressão para uso em pilares de concreto armado?',
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Considere que, para melhorar o desempenho de sistemas computacionais, projetistas de <i>hardware</i> decidam aumentar o número de processadores em vez de aumentar a frequência de <i>clock</i>. Dessa forma, surge a necessidade de utilizar <i>softwares</i> que explorem o paralelismo. Um problema típico encontrado no desenvolvimento desse tipo de <i>software</i> é a dependência de dados. Nesse contexto, considere que dois processadores precisem realizar, simultaneamente, o acesso a uma mesma matriz A.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base nas informações apresentadas, com relação aos trechos de código em linguagem C apresentados a seguir, assinale a opção que apresenta uma situação de conflito de dados.</p>
+            ',
             'referencia' => '',
-            'opcao_a' => 'Aço carbono simples.',
-            'opcao_b' => 'Concreto armado com fibras de vidro.',
-            'opcao_c' => 'Madeira laminada colada.',
-            'opcao_d' => 'Alumínio fundido.',
-            'opcao_e' => 'Plástico reforçado com fibra de carbono.',
+            'opcao_a' => '
+                        <span style="display: inline-block; vertical-align: top; font-size: inherit;">
+                            <span style="display: block; margin: 0; font-size: inherit;">Processador 1:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int a = &amp;A[0][0];</span>
+                            <span style="display: block; margin: 0.2rem 0 0 0; font-size: inherit;">Processador 2:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int b = &amp;A[0][0];</span>
+                        </span>
+            ',          
+            'opcao_b' => '
+                        <span style="display: inline-block; vertical-align: top; font-size: inherit;">
+                            <span style="display: block; margin: 0; font-size: inherit;">Processador 1:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][0] = 10;</span>
+                            <span style="display: block; margin: 0.2rem 0 0 0; font-size: inherit;">Processador 2:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][1] = 20;</span>
+                        </span>
+            ',
+            'opcao_c' => '
+                        <span style="display: inline-block; vertical-align: top; font-size: inherit;">
+                            <span style="display: block; margin: 0; font-size: inherit;">Processador 1:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][0] = 10;</span>
+                            <span style="display: block; margin: 0.2rem 0 0 0; font-size: inherit;">Processador 2:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int b = &A[0][0];</span>
+                        </span>
+            ',
+            'opcao_d' => '
+                        <span style="display: inline-block; vertical-align: top; font-size: inherit;">
+                            <span style="display: block; margin: 0; font-size: inherit;">Processador 1:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">int a = &A[0][0];</span>
+                            <span style="display: block; margin: 0.2rem 0 0 0; font-size: inherit;">Processador 2:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][0] = 20;</span>
+                        </span>            
+            ',
+            'opcao_e' => '
+                        <span style="display: inline-block; vertical-align: top; font-size: inherit;">
+                            <span style="display: block; margin: 0; font-size: inherit;">Processador 1:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][0] = 10;</span>
+                            <span style="display: block; margin: 0.2rem 0 0 0; font-size: inherit;">Processador 2:</span>
+                            <span style="display: block; margin: 0; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit;">*A[0][0] = 20;</span>
+                        </span>            
+            ',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Um sinal em tempo contínuo pode ser processado, a partir de suas amostras, por um sistema que opere em tempo discreto. Para isso, é importante manter a taxa de amostragem do sinal suficientemente alta para permitir a reconstrução do sinal original sem erro ou com um erro dentro de uma dada tolerância.</p>
+                <p class="mb-2 text-justify"></p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Nesse contexto, considerando o teorema da amostragem, avalie as asserções a seguir e a relação proposta entre elas.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. Para que um sinal contínuo seja reconstruído a partir de suas amostras é necessário que ele possua um espectro em frequência limitado e que a frequência de amostragem seja maior do que duas vezes a largura de faixa do sinal.</p>
+
+                <p class="text-center font-bold my-2">PORQUE</p>
+
+                <p class="mb-2 pl-6 text-justify">II. Na situação proposta, o espectro do sinal amostrado, será limitado em frequência, o que permitirá a reconstrução do sinal original antes da amostragem.</p>
+
+                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
+            ',
+            'referencia' => 'LATHI, B. P. <b>Sinais e Sistemas Lineares</b>, 2. ed., Porto Alegre: Bookman, 2007 (adaptado).',
+            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
+            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
+            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
+            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
+            'opcao_e' => 'As asserções I e II são proposições falsas.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Suponha que uma empresa de transportes deseje calcular uma rota de Manaus para São Paulo utilizando a estratégia da busca gulosa, técnica de busca local que seleciona a melhor alternativa disponível a cada passo. Observe, a seguir, um grafo de conexão de cidades até o destino final e o quadro com estimativas de distância de São Paulo até as demais cidades do grafo.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <img src="/img/questoes/q1_img16.JPG" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com base nessas informações, é correto afirmar que a solução encontrada a partir da utilização do algoritmo será</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'Manaus -> Macapá -> São Paulo',
+            'opcao_b' => 'Manaus -> Porto Velho -> Cuiabá -> Goiânia -> São Paulo',
+            'opcao_c' => 'Manaus -> Porto Velho -> Palmas -> Goiânia -> São Paulo',
+            'opcao_d' => 'Manaus -> Macapá -> Belém -> Palmas -> Goiânia -> São Paulo',
+            'opcao_e' => 'Manaus -> Macapá -> Belém -> Palmas -> Porto Velho -> Cuiabá -> Goiânia -> São Paulo',
             'alternativa_correta' => 'B',
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Controle e Automação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'Em sistemas automatizados, o uso de controladores PID é comum para ajustar a resposta dinâmica de processos industriais.',
-            'enunciado' => 'O termo “integral” em um controlador PID serve principalmente para:',
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Considere que uma empresa planeje desenvolver um sistema de controle automático para manter, em um ambiente industrial, a temperatura constante por meio de um controlador proporcional-integral-derivativo (PID). O controlador PID pode ser implementado em qualquer linguagem que possua estruturas de dados adequadas para a manutenção do histórico e da taxa de mudança do sinal de erro.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando essa situação, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. A implementação do componente Integral requer a soma de todos os erros acumulados desde o início da operação do sistema, o que torna necessário o uso de uma estrutura de dados do tipo fila.</p>
+                <p class="mb-2 pl-6 text-justify">II. A parte Proporcional do controlador PID é implementada ao ajustar, proporcionalmente, a variável de controle à diferença entre a temperatura desejada e a temperatura atual.</p>
+                <p class="mb-2 pl-6 text-justify">III. Uma pilha é adequada para o componente Derivativo, pois a taxa de mudança do erro é calculada apenas com a amostra mais recente e a anterior do sinal de erro.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
             'referencia' => '',
-            'opcao_a' => 'Reduzir o erro em regime permanente.',
-            'opcao_b' => 'Aumentar a velocidade de resposta do sistema.',
-            'opcao_c' => 'Filtrar ruídos de alta frequência.',
-            'opcao_d' => 'Limitar a saída do atuador.',
-            'opcao_e' => 'Compensar variações de carga instantâneas.',
+            'opcao_a' => 'I, apenas.',
+            'opcao_b' => 'II, apenas.',
+            'opcao_c' => 'I e III, apenas.',
+            'opcao_d' => 'II e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'D',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Cada roteador em redes de computadores precisa implementar alguma estratégia de enfileiramento para controlar como os pacotes são armazenados em <i>buffer</i> enquanto esperam para serem transmitidos, independentemente do mecanismo de alocação de recursos. O algoritmo de enfileiramento aloca tanto largura de banda, ao transmitir pacotes, quanto espaço de <i>buffer</i>, ao decidir quais pacotes são descartados.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. O algoritmo FIFO (<i>First-In, First-Out</i>) é adequado para situações em que o tráfego de dados com rajadas de longa duração provoca descarte de pacotes.</p>
+                <p class="mb-2 pl-6 text-justify">II. O algoritmo de enfileiramento justo ponderado (WFQ, do inglês <i>Weighted Fair Queuing</i>) permite definir um peso para cada fila, definindo quantos <i>bits</i> são transmitidos sempre que o roteador atender a uma determinada fila.</p>
+                <p class="mb-2 pl-6 text-justify">III. O algoritmo de enfileiramento por prioridade (PQ, do inglês <i>Priority Queuing</i>) evita que uma fila de menor prioridade fique indefinidamente sem ser atendida (<i>starvation</i>), utilizando o algoritmo <i>Round-Robin</i> para servir a todas as filas.</p>
+                <p class="mb-2 pl-6 text-justify">IV. Os roteadores que implementam o algoritmo de detecção antecipada aleatória (RED, do inglês <i>Random Early Detection</i>) mantêm a média acumulada do tamanho de suas filas e, quando esse tamanho ultrapassa, em algum enlace, um determinado limiar, uma fração dos pacotes é descartada aleatoriamente.</p>
+
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
+            ',
+            'referencia' => 'PETERSON, L. L.; DAVIE, B. S. <b>Redes de Computadores:</b> uma abordagem de sistemas. Rio de Janeiro: Elsevier, 2013 (adaptado).',
+            'opcao_a' => 'I e III.',
+            'opcao_b' => 'I e IV.',
+            'opcao_c' => 'II e IV.',
+            'opcao_d' => 'I, II e III.',
+            'opcao_e' => 'II, III e IV.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">O TCP (<i>Transmission Control Protocol</i>) e o UDP (<i>User Datagram Protocol</i>) são opções frequentemente usadas em sistemas distribuídos para realizar transferência de dados entre máquinas, ainda que não sejam os únicos protocolos que funcionam com base no protocolo IP (<i>Internet Protocol</i>).</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Com relação a esses protocolos, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. O protocolo TCP é usado para implementar o mecanismo de <i>sockets</i> utilizado em sistemas distribuídos, como mecanismo de troca de mensagens confiável.</p>
+                <p class="mb-2 pl-6 text-justify">II. O protocolo UDP é mais eficiente do que o protocolo TCP quanto ao tempo de envio de dados entre os nós de um sistema distribuído, pois gera menor <i>overhead</i>.</p>
+                <p class="mb-2 pl-6 text-justify">III. O protocolo UDP é uma escolha adequada para fluxos de dados em tempo real, especialmente daqueles dados que admitem perda ou corrupção de parte de seu conteúdo, tais como vídeos ou voz.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'II, apenas.',
+            'opcao_b' => 'III, apenas.',
+            'opcao_c' => 'I e II, apenas.',
+            'opcao_d' => 'I e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'E',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">A análise de desempenho de sistemas computacionais é uma atividade crítica para identificar gargalos, otimizar recursos e garantir a eficiência do <i>hardware</i> e do <i>software</i> utilizados.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Nesse contexto, a respeito do impacto de desempenho gerado pelo número de <i>threads</i> e de núcleos de processamento em <i>hardware</i> e em <i>software</i>, assinale a opção correta.</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'O desempenho do sistema aumenta de maneira linear em relação ao aumento do número de <i>threads</i> e de núcleos de processamento.',
+            'opcao_b' => 'O número de <i>threads</i> tem um impacto direto no desempenho do sistema, enquanto a influência do número de núcleos de processamento é insignificante.',
+            'opcao_c' => 'O desempenho do sistema é afetado positivamente pelo aumento do número de <i>threads</i> e de núcleos de processamento até um certo limite dependente da aplicação.',
+            'opcao_d' => 'O número de núcleos de processamento tem um impacto direto no desempenho do sistema, independentemente do número de <i>threads</i> utilizado.',
+            'opcao_e' => 'O número de <i>threads</i> e de núcleos de processamento não possui relação direta com o desempenho do sistema, pois esse resultado é determinado, exclusivamente, por técnicas e por algoritmos utilizados no <i>software</i>.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">A segurança de sistemas de computação é uma preocupação crescente devido à constante evolução das ameaças e das vulnerabilidades presentes no ambiente digital. Garantir a integridade, a confidencialidade e a disponibilidade de dados e de recursos é essencial para proteger os sistemas e as informações sensíveis. A segurança abrange, também, aspectos como autenticação, controle de acesso, criptografia, detecção e prevenção de intrusões, entre outros mecanismos de proteção.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">A respeito da segurança de sistemas de computação, avalie as afirmações a seguir.</p>
+                
+                <p class="mb-2 pl-6 text-justify">I. A criptografia é um mecanismo que permite detectar a vulnerabilidade dos dados, tornando-os ilegíveis para usuários não autorizados.</p>
+                <p class="mb-2 pl-6 text-justify">II. A auditoria de segurança é o processo de verificação de identidade de um usuário ou de um sistema, garantindo que apenas entidades confiáveis tenham acesso aos recursos.</p>
+                <p class="mb-2 pl-6 text-justify">III. O controle de acesso consiste em definir e em gerenciar as permissões de usuários e de sistemas para acessar recursos e para realizar operações específicas.</p>
+                <p class="mb-2 pl-6 text-justify">IV. A detecção e a prevenção de intrusão são técnicas utilizadas para identificar atividades maliciosas em um sistema e para tomar medidas a fim de evitar a ocorrência dessas atividades.</p>
+
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'I e II.',
+            'opcao_b' => 'I e IV.',
+            'opcao_c' => 'III e IV.',
+            'opcao_d' => 'I, II e III.',
+            'opcao_e' => 'II, III e IV.',
+            'alternativa_correta' => 'C',
+        ]);
+
+        Questao::create([
+            'curso' => 'Engenharia de Computação',
+            'categoria' => 'Componente Específico',
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">Os sistemas distribuídos consistem em múltiplos componentes de <i>software</i> que se comunicam e que cooperam entre si para realizar tarefas complexas. Um padrão arquitetural comumente utilizado em sistemas distribuídos é o de microsserviços, o qual divide o sistema em componentes independentes e escaláveis, cada um executando sua própria funcionalidade específica. Essa abordagem facilita a manutenção, o teste e a escalabilidade do sistema como um todo.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Em relação a esse tema, qual dos seguintes benefícios é associado à arquitetura de microsserviços em sistemas distribuídos?</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'Capacidade de escalabilidade.',
+            'opcao_b' => 'Garantia de consistência de dados.',
+            'opcao_c' => 'Melhor desempenho de processamento.',
+            'opcao_d' => 'Menor consumo de recursos de <i>hardware</i>.',
+            'opcao_e' => 'Redução da complexidade de comunicação entre os componentes.',
             'alternativa_correta' => 'A',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Produção',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'Uma linha de montagem usa técnicas de melhoria contínua para reduzir desperdícios e aumentar eficiência.',
-            'enunciado' => 'Qual ferramenta do Lean Manufacturing é usada para identificar os principais tipos de desperdício?',
-            'referencia' => '',
-            'opcao_a' => '5S.',
-            'opcao_b' => 'Kanban.',
-            'opcao_c' => 'Ishikawa.',
-            'opcao_d' => 'Just in Time.',
-            'opcao_e' => 'Poka-yoke.',
-            'alternativa_correta' => 'C',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia Elétrica',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'Em circuitos de corrente alternada, a diferença de fase entre tensão e corrente influencia a potência real disponível.',
-            'enunciado' => 'Quando a corrente está defasada 90° em relação à tensão em um circuito puramente reativo, a potência real é:',
-            'referencia' => '',
-            'opcao_a' => 'Máxima e positiva.',
-            'opcao_b' => 'Máxima e negativa.',
-            'opcao_c' => 'Zero.',
-            'opcao_d' => 'Indefinida.',
-            'opcao_e' => 'Metade da potência aparente.',
-            'alternativa_correta' => 'C',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia Mecânica',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'O dimensionamento de molas helicoidais de compressão depende da constante elástica e das propriedades do material.',
-            'enunciado' => 'Qual grandeza descreve a rigidez de uma mola?',
-            'referencia' => '',
-            'opcao_a' => 'Módulo de elasticidade.',
-            'opcao_b' => 'Constante de molas.',
-            'opcao_c' => 'Coeficiente de atrito.',
-            'opcao_d' => 'Densidade do material.',
-            'opcao_e' => 'Taxa de deformação.',
-            'alternativa_correta' => 'B',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia Química',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => 'A análise de equilíbrio químico é essencial para processos industriais que dependem de conversão e rendimento.',
-            'enunciado' => 'O princípio de Le Chatelier indica que um sistema em equilíbrio reage a uma perturbação:',
-            'referencia' => '',
-            'opcao_a' => 'Aumentando a temperatura sempre.',
-            'opcao_b' => 'Mudando para favorecer a direção de menor energia.',
-            'opcao_c' => 'Alterando as concentrações para reduzir a perturbação.',
-            'opcao_d' => 'Diminuindo a pressão em todos os casos.',
-            'opcao_e' => 'Mantendo o equilíbrio inalterado.',
-            'alternativa_correta' => 'C',
-        ]);
+        ]);   
     }
 }

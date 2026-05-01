@@ -197,6 +197,39 @@
                 @endforeach
             </ul>
         </form>
+
+        <section id="resultado-panel" class="hidden rounded-2xl border shadow-lg bg-base-100 p-6 mb-10" style="margin-left: 5%; margin-right: 22%;">
+            <h2 class="text-2xl font-bold mb-4">Resultado do simulado</h2>
+            <div class="grid gap-4 lg:grid-cols-2">
+                <div class="rounded-xl border p-4 bg-green-50">
+                    <p class="text-5xl font-extrabold text-green-700" id="resultado-acertos">0</p>
+                    <p class="text-sm uppercase tracking-wide text-green-900">Acertos</p>
+                </div>
+                <div class="rounded-xl border p-4 bg-red-50">
+                    <p class="text-5xl font-extrabold text-red-700" id="resultado-erradas">0</p>
+                    <p class="text-sm uppercase tracking-wide text-red-900">Erradas</p>
+                </div>
+                <div class="rounded-xl border p-4 bg-slate-50">
+                    <p class="text-5xl font-extrabold text-slate-700" id="resultado-nao-respondidas">0</p>
+                    <p class="text-sm uppercase tracking-wide text-slate-900">Não respondidas</p>
+                </div>
+                <div class="rounded-xl border p-4 bg-blue-50">
+                    <p class="text-5xl font-extrabold text-blue-700" id="resultado-porcentagem">0%</p>
+                    <p class="text-sm uppercase tracking-wide text-blue-900">Porcentagem de respostas certas</p>
+                </div>
+            </div>
+            <div class="mt-6 grid gap-4 lg:grid-cols-3">
+                <div class="rounded-xl border p-4 bg-base-200">
+                    <p class="text-2xl font-bold" id="resultado-nota">0 / 0</p>
+                    <p class="text-sm text-slate-600">Nota</p>
+                </div>
+                <div class="rounded-xl border p-4 bg-base-200 lg:col-span-2">
+                    <p class="text-2xl font-bold" id="resultado-tempo">00h 00m 00s</p>
+                    <p class="text-sm text-slate-600">Tempo de simulado</p>
+                </div>
+            </div>
+        </section>
+
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var form = document.getElementById('simulado-form');
@@ -206,7 +239,23 @@
                 var confirmBtn = document.getElementById('confirm-btn');
                 var submitButton = document.querySelector('button[form="simulado-form"]');
                 var sidecard = document.querySelector('.card');
+                var resultPanel = document.getElementById('resultado-panel');
+                var resultadoAcertos = document.getElementById('resultado-acertos');
+                var resultadoErradas = document.getElementById('resultado-erradas');
+                var resultadoNaoRespondidas = document.getElementById('resultado-nao-respondidas');
+                var resultadoNota = document.getElementById('resultado-nota');
+                var resultadoPorcentagem = document.getElementById('resultado-porcentagem');
+                var resultadoTempo = document.getElementById('resultado-tempo');
                 var formSubmitted = false;
+                var startTime = Date.now();
+
+                function formatDuration(duration) {
+                    var totalSeconds = Math.floor(duration / 1000);
+                    var hours = Math.floor(totalSeconds / 3600);
+                    var minutes = Math.floor((totalSeconds % 3600) / 60);
+                    var seconds = totalSeconds % 60;
+                    return String(hours).padStart(2, '0') + 'h ' + String(minutes).padStart(2, '0') + 'm ' + String(seconds).padStart(2, '0') + 's';
+                }
 
                 // Event listener para detectar quando uma alternativa é selecionada
                 questoes.forEach(function (questao, index) {
@@ -278,6 +327,9 @@
                     }
 
                     var questoes = document.querySelectorAll('.questao-item');
+                    var correctCount = 0;
+                    var wrongCount = 0;
+                    var unansweredCount = 0;
 
                     questoes.forEach(function (questao, index) {
                         var correctAlternative = questao.dataset.correct;
@@ -292,8 +344,14 @@
                         });
 
                         if (!selectedInput) {
-                            resultText.textContent = 'Selecione uma alternativa para ver o resultado.';
-                            resultText.classList.remove('correct', 'wrong');
+                            unansweredCount++;
+                            resultText.textContent = 'Sem resposta. A resposta correta é ' + correctAlternative + '.';
+                            resultText.classList.remove('correct');
+                            resultText.classList.add('wrong');
+                            if (questionButton) {
+                                questionButton.classList.remove('answered', 'answered-correct', 'answered-wrong');
+                                questionButton.classList.add('unanswered');
+                            }
                             return;
                         }
 
@@ -302,18 +360,22 @@
                         var correctLabel = questao.querySelector('.option-label[data-value="' + correctAlternative + '"]');
 
                         if (selectedValue === correctAlternative) {
+                            correctCount++;
                             selectedLabel.classList.add('option-correct');
                             resultText.textContent = 'Correto!';
                             resultText.classList.add('correct');
                             resultText.classList.remove('wrong');
 
-                            // Atualiza o botão no sidecard
                             if (questionButton) {
-                                questionButton.classList.remove('answered');
+                                questionButton.classList.remove('answered', 'answered-wrong', 'unanswered');
                                 questionButton.classList.add('answered-correct');
-                                questionButton.classList.remove('answered-wrong');
                             }
                         } else {
+                            if (questionButton) {
+                                questionButton.classList.remove('answered', 'answered-correct', 'unanswered');
+                                questionButton.classList.add('answered-wrong');
+                            }
+                            wrongCount++;
                             selectedLabel.classList.add('option-wrong');
                             if (correctLabel) {
                                 correctLabel.classList.add('option-correct');
@@ -321,15 +383,22 @@
                             resultText.textContent = 'Errado. A resposta correta é ' + correctAlternative + '.';
                             resultText.classList.add('wrong');
                             resultText.classList.remove('correct');
-
-                            // Atualiza o botão no sidecard
-                            if (questionButton) {
-                                questionButton.classList.remove('answered');
-                                questionButton.classList.add('answered-wrong');
-                                questionButton.classList.remove('answered-correct');
-                            }
                         }
                     });
+
+                    var totalQuestions = questoes.length;
+                    var score = correctCount;
+                    var percentage = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
+                    var elapsedTime = formatDuration(Date.now() - startTime);
+
+                    resultadoAcertos.textContent = correctCount;
+                    resultadoErradas.textContent = wrongCount;
+                    resultadoNaoRespondidas.textContent = unansweredCount;
+                    resultadoNota.textContent = score + ' / ' + totalQuestions;
+                    resultadoPorcentagem.textContent = percentage + '%';
+                    resultadoTempo.textContent = elapsedTime;
+                    resultPanel.classList.remove('hidden');
+                    resultPanel.scrollIntoView({ behavior: 'smooth' });
 
                     // Desabilita todas as alternativas após envio
                     questoes.forEach(function (questao) {
@@ -339,9 +408,23 @@
                         });
                     });
                     if (submitButton) {
-                        submitButton.disabled = true;
-                        submitButton.textContent = 'Respostas Enviadas';
-                        submitButton.classList.add('opacity-50');
+                        submitButton.disabled = false;
+                        submitButton.type = 'button';
+                        submitButton.textContent = 'Tentar Novamente';
+                        submitButton.classList.remove('opacity-50');
+                        submitButton.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            isDirty = false;
+                            window.location.href = window.location.href.split('#')[0] + '#questao1';
+                            window.location.reload();
+                        }, { once: true });
+                    }
+                });
+
+                window.addEventListener('load', function () {
+                    var firstQuestion = document.getElementById('questao1');
+                    if (firstQuestion) {
+                        firstQuestion.scrollIntoView();
                     }
                 });
             })

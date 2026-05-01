@@ -48,6 +48,12 @@
             color: white !important;
             border-color: var(--button-wrong) !important;
         }
+
+        .btn-questao.unanswered {
+            background-color: #e2e8f0 !important;
+            color: #334155 !important;
+            border-color: #cbd5e1 !important;
+        }
     </style>
     <div class="card bg-base-100">
         <div class="card-body">
