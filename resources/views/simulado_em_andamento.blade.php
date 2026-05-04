@@ -121,7 +121,7 @@
                 <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Formação Geral</h2>
                 <x-bloco-questoes :questoes="$questoesFG" :numero="0" />
                 <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Componente Específico</h2>
-                <x-bloco-questoes :questoes="$questoesCE" :numero="9" />
+                <x-bloco-questoes :questoes="$questoesCE" :numero="$limitece" />
             </div>
         </form>
 

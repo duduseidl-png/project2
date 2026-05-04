@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,7 +19,7 @@ Route::get('/gerar_simulado', function () {
     return view('gerar_simulado');
 });
 
-Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
+Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
     $cursos = [
         'engenharia-civil' => 'Engenharia Civil',
         'engenharia-de-computacao' => 'Engenharia de Computação',
@@ -33,22 +33,27 @@ Route::get('/simulado/{curso}/{limite?}', function ($curso, $limite = 38) {
     if (! array_key_exists($curso, $cursos)) {
         abort(404);
     }
-    
+
     // Valida o limite para evitar valores inválidos
-    $limite = intval($limite);
-    if ($limite <= 0 || $limite > 100) {
-        $limite = 38;
+    $limitefg = intval($limitefg);
+    $limitece = intval($limitece);
+    if ($limitefg <= 0 || $limitefg > 100) {
+        $limitefg = 38;
     }
-    
+    if ($limitece <= 0 || $limitece > 100) {
+        $limitece = 38;
+    }
+
     $cursoTitulo = $cursos[$curso];
     $questoesFG = Questao::where('categoria', 'Formação Geral')
-        /*->inRandomOrder()*/
-        ->limit(9)
+        /* ->inRandomOrder() */
+        ->limit($limitefg)
         ->get();
     $questoesCE = Questao::where('categoria', $cursoTitulo)
-        /*->inRandomOrder()*/
-        ->limit($limite)
+        /* ->inRandomOrder() */
+        ->limit($limitece)
         ->get();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo'));
+
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitece'));
 
 })->name('simulado_curso');
