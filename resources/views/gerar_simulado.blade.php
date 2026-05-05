@@ -1,7 +1,7 @@
-<x-layout title="Simulados">
+<x-layout title="Gerar Simulado">
     <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
         Gerador de Simulados</h1>
-    <h6 style="text-align:center; font-size: 120%; margin-top: 20px;">Pratique em um simulado personalizado do seu curso
+    <h6 class="text-center text-lg mt-8">Pratique em um simulado personalizado do seu curso
         com o número de questões que preferir.</h6>
     <p class="text-center text-gray-600 mb-8">As questões de componente específico são
         selecionadas aleatoriamente com

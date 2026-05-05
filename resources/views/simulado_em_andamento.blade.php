@@ -114,14 +114,14 @@
             </div>
         </div>
 
-        <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+        <h1 class="text-3xl text-left inline-block ml-16 mb-5 p-4 bg-green-100 rounded-b-2xl ring-15 ring-green-50">Simulado: <strong>{{ $cursoTitulo ?? 'Simulado' }}</strong></h1>
 
         <form id="simulado-form">
-            <div style="margin-left: 5%; margin-right: 22%; margin-top: 10px">
-                <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Formação Geral</h2>
+            <div class="ml-16 mr-76">
+                <h2 class="text-center mb-3 text-2xl">Formação Geral</h2>
                 <x-bloco-questoes :questoes="$questoesFG" :numero="0" />
-                <h2 style="text-align: center; margin-bottom: 5px; font-size: 1.5em;">Componente Específico</h2>
-                <x-bloco-questoes :questoes="$questoesCE" :numero="$limitece" />
+                <h2 class="text-center mb-3 text-2xl">Componente Específico</h2>
+                <x-bloco-questoes :questoes="$questoesCE" :numero="$limitefg" />
             </div>
         </form>
 

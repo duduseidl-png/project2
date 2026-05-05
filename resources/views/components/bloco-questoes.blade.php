@@ -14,7 +14,7 @@
                         {!! nl2br(e($questao->contextualizacao)) !!}
                     @endif
                 </div>
-                <p class="mb-1 ml-5" style="text-align:right; font-size: small;">{{ $questao->referencia }}</p>
+                <p class="mb-1 ml-5 text-right text-xs">{{ $questao->referencia }}</p>
                 <div class="mb-2 ml-5">
                     @if(str_contains($questao->enunciado, '<'))
                         {!! html_entity_decode($questao->enunciado) !!}
@@ -23,7 +23,7 @@
                     @endif
                 </div>
                 <p class="question-result mb-3 ml-5"></p>
-                <ul style="list-style-type: none; text-align:justify" class="mb-3 ml-5 space-y-2 pl-0 text-md">
+                <ul class="list-none space-y-2 mb-3 ml-5 pl-0 text-justify text-md">
                     <li>
                         <label class="option-label block p-3 border rounded-lg cursor-pointer" data-value="A">
                             <input type="radio" name="resposta_{{ $questao->id }}" value="A" class="form-radio mr-2">

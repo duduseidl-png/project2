@@ -15,8 +15,12 @@ Route::get('/simulados', function () {
     return view('simulados');
 });
 
-Route::get('/gerar_simulado', function () {
+Route::get('/simulados/gerar_simulado', function () {
     return view('gerar_simulado');
+});
+
+Route::get('/simulados/simulados_passados', function () {
+    return view('simulados_passados');
 });
 
 Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
@@ -54,6 +58,6 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
         ->limit($limitece)
         ->get();
 
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitece'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg'));
 
 })->name('simulado_curso');
