@@ -232,6 +232,9 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
+                // Previne que o navegador restaure a posição anterior de scroll
+                window.history.scrollRestoration = 'manual';
+                
                 var form = document.getElementById('simulado-form');
                 var questoes = document.querySelectorAll('.questao-item');
                 var modal = document.getElementById('confirmation-modal');
@@ -415,17 +418,14 @@
                         submitButton.addEventListener('click', function (event) {
                             event.preventDefault();
                             isDirty = false;
-                            window.location.href = window.location.href.split('#')[0] + '#questao1';
                             window.location.reload();
                         }, { once: true });
                     }
                 });
 
                 window.addEventListener('load', function () {
-                    var firstQuestion = document.getElementById('questao1');
-                    if (firstQuestion) {
-                        firstQuestion.scrollIntoView();
-                    }
+                    // Inicia no topo da página
+                    window.scrollTo({ top: 0, behavior: 'auto' });
                 });
             })
 
@@ -439,5 +439,5 @@
             });
         </script>
     </div>
-    <x-sidecard />
+    <x-sidecard :limite="$limite ?? 38" />
 </x-layout>
