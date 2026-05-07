@@ -6,6 +6,12 @@
     <p style="text-align:center; color: #9b9b9bc9; margin-bottom: 25px;">As questões são selecionadas aleatoriamente com
         base no conteúdo do seu curso.</p>
     <div style="text-align:center">
+        <form id="simulado-form" method="POST" action="/gerar_simulado" style="display: none;">
+            @csrf
+            <input type="hidden" name="curso" id="form-curso">
+            <input type="hidden" name="limite" id="form-limite">
+        </form>
+        
         <div class="mb-5">
             <h3 style="text-align: left; margin-left: 39%; margin-bottom: 7px">Curso</h3>
             <select id="curso-select" class="select">
@@ -42,6 +48,9 @@
             var cursoSelect = document.getElementById('curso-select');
             var NQSelect = document.getElementById('numero-questoes-select');
             var button = document.getElementById('gerar-simulado');
+            var form = document.getElementById('simulado-form');
+            var formCurso = document.getElementById('form-curso');
+            var formLimite = document.getElementById('form-limite');
 
             button.disabled = true;
 
@@ -61,7 +70,10 @@
                 if (!cursoSelect.value || !NQSelect.value) {
                     return;
                 }
-                window.location.href = '/simulado/' + cursoSelect.value + '/' + NQSelect.value;
+                // Preenche o formulário oculto e submete
+                formCurso.value = cursoSelect.value;
+                formLimite.value = NQSelect.value;
+                form.submit();
             });
         });
     </script>
