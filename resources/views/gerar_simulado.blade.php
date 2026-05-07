@@ -9,7 +9,13 @@
 
     <div class="flex flex-col items-center justify-center gap-6">
         <div class="flex flex-row items-center justify-center gap-10">
-            <div class="pb-25 w-80">
+            <form id="simulado-form" method="POST" action="/gerar_simulado" style="display: none;">
+            @csrf
+            <input type="hidden" name="curso" id="form-curso">
+            <input type="hidden" name="limite" id="form-limite">
+        </form>
+        
+        <div class="pb-25 w-80">
                 <h3 class="text-left mb-2 font-semibold">Curso</h3>
                 <select id="curso-select" class="select w-full">
                     <option disabled selected>-</option>
@@ -55,6 +61,9 @@
             var NQInputCE = document.getElementById('numero-questoes-input-ce');
             var NQBadgeCE = document.getElementById('numero-questoes-badge-ce');
             var button = document.getElementById('gerar-simulado');
+            var form = document.getElementById('simulado-form');
+            var formCurso = document.getElementById('form-curso');
+            var formLimite = document.getElementById('form-limite');
 
             button.disabled = true;
 
@@ -100,7 +109,13 @@
             updateColors(); // Aplica estilo inicial
 
             button.addEventListener('click', function () {
-                window.location.href = '/simulado/' + cursoSelect.value + '/' + NQInputFG.value + '/' + NQInputCE.value;
+                if (!cursoSelect.value || !NQSelect.value) {
+                    return;
+                }
+                // Preenche o formulário oculto e submete
+                formCurso.value = cursoSelect.value;
+                formLimite.value = NQSelect.value;
+                form.submit();
             });
         });
     </script>
