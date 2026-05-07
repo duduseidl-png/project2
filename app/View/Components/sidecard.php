@@ -8,14 +8,12 @@ use Illuminate\View\Component;
 
 class sidecard extends Component
 {
-    public $limite;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($limite = 38)
+    public function __construct()
     {
-        $this->limite = $limite;
+        //
     }
 
     /**
