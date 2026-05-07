@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Questao;
 use Illuminate\Support\Facades\Route;
+use App\Models\Questao;
+use App\Http\Controllers\countdown;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,7 +16,7 @@ Route::get('/simulados', function () {
     return view('simulados');
 });
 
-Route::get('/simulados/gerar_simulado', function () {
+Route::get('/gerar_simulado', function () {
     return view('gerar_simulado');
 });
 
@@ -53,13 +54,9 @@ Route::get('/simulado/{curso}', function ($curso) {
     $limite = session('simulado_limite', 38);
     
     $cursoTitulo = $cursos[$curso];
-    $questoesFG = Questao::where('categoria', 'Formação Geral')
-        /* ->inRandomOrder() */
-        ->limit($limitefg)
-        ->get();
-    $questoesCE = Questao::where('categoria', $cursoTitulo)
-        /* ->inRandomOrder() */
-        ->limit($limitece)
+    $questoes = Questao::where('curso', $cursoTitulo)
+        /*->inRandomOrder()*/
+        ->limit($limite)
         ->get();
     return view('simulado_em_andamento', compact('questoes', 'cursoTitulo', 'limite'));
 

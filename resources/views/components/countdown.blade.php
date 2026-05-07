@@ -1,5 +1,5 @@
 <div>
-    <div id="timer" class="text-2xl">
+    <div id="timer" style="font-size: xx-large">
         <span id="hours" >00</span>h : 
         <span id="minutes">00</span>m : 
         <span id="seconds">00</span>s

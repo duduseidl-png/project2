@@ -11,6 +11,7 @@ class Questao extends Model
     protected $fillable = [
         'titulo',
         'questao_id',
+        'curso',
         'categoria',
         'contextualizacao',
         'enunciado',
