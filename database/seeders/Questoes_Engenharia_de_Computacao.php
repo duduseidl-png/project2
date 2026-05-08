@@ -434,7 +434,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
                 <p class="mb-2 text-justify">Considerando o código apresentado, é correto afirmar que se a função enade for executada recebendo como parâmetro de entrada a lista [1, 2, 3, 4, 5, 6, 7, 8], o resultado será</p>       
             ',
             'referencia' => '',
-            'opcao_a' => '[].',
+            'opcao_a' => '[ ].',
             'opcao_b' => '[2, 4, 6, 8].',
             'opcao_c' => '[1, 2, 3, 4, 5, 6, 7, 8].',
             'opcao_d' => '[2, 4, 6, 8, 1, 3, 5, 7].',

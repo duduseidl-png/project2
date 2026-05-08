@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
-use App\Http\Controllers\countdown;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,11 +15,15 @@ Route::get('/simulados', function () {
     return view('simulados');
 });
 
-Route::get('/gerar_simulado', function () {
+Route::get('/simulados/simulados_passados', function () {
+    return view('simulados_passados');
+});
+
+Route::get('/simulados/gerar_simulado', function () {
     return view('gerar_simulado');
 });
 
-Route::post('/gerar_simulado', function () {
+Route::post('/simulados/gerar_simulado', function () {
     $curso = request('curso');
     $limite = intval(request('limite', 38));
     
@@ -35,7 +38,7 @@ Route::post('/gerar_simulado', function () {
     return redirect('/simulado/' . $curso);
 });
 
-Route::get('/simulado/{curso}', function ($curso) {
+Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
     $cursos = [
         'engenharia-civil' => 'Engenharia Civil',
         'engenharia-de-computacao' => 'Engenharia de Computação',
@@ -54,10 +57,14 @@ Route::get('/simulado/{curso}', function ($curso) {
     $limite = session('simulado_limite', 38);
     
     $cursoTitulo = $cursos[$curso];
-    $questoes = Questao::where('curso', $cursoTitulo)
-        /*->inRandomOrder()*/
-        ->limit($limite)
+    $questoesFG = Questao::where('categoria', 'Formação Geral')
+        /* ->inRandomOrder() */
+        ->limit($limitefg)
         ->get();
-    return view('simulado_em_andamento', compact('questoes', 'cursoTitulo', 'limite'));
+    $questoesCE = Questao::where('curso', $cursoTitulo)->where('categoria', 'Componente Específico')
+        /* ->inRandomOrder() */
+        ->limit($limitece)
+        ->get();
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg'));
 
 })->name('simulado_curso');
