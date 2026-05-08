@@ -27,7 +27,7 @@
             e teste seus conhecimentos em um ambiente que simula a experiência real do exame. Acesse agora e
             comece a se preparar para o sucesso no ENADE!
         </p>
-        <section style="background-color: var(--modal-bg)" class="w-full p-3 text-center">
+        <section style="background-color: var(--bg-blue)" class="w-full p-3 text-center">
             <button class="button-gradient">
                 <a href="/simulados">
                     COMEÇAR

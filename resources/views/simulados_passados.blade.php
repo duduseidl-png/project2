@@ -1,11 +1,10 @@
 <x-layout title="Simulados passados">
     <style>
-        /* The search field container 
+        /* The search field container */
         .search-container {
             position: relative;
-            display: inline-block;
             width: 100%;
-        }*/
+        }
 
         /* The search field */
         #inputField {
@@ -24,8 +23,8 @@
 
         /* Clear button inside search field */
         .clear-search {
-            position: relative;
-            right: 15px;
+            position: absolute;
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
             background: none;
@@ -33,7 +32,7 @@
             font-size: 20px;
             color: #999;
             cursor: pointer;
-            padding: 0;
+            padding: 5px 8px;
             line-height: 1;
         }
 
@@ -58,6 +57,8 @@
             min-width: 230px;
             border: 1px solid #ddd;
             z-index: 1;
+            max-height: 300px;
+            overflow-y: auto;
         }
 
         /* Links inside the searchbar */
@@ -78,7 +79,7 @@
             display: block;
         }
     </style>
-    
+
     <div class="grid grid-cols-3 gap-4">
         <div id="sb-content" class="searchbar-content col-start-2 mt-20">
             <div class="search-container">
@@ -86,43 +87,57 @@
                     class="w-auto md:w-100">
                 <button type="button" class="clear-search hidden" id="clearBtn">✕</button>
             </div>
-            <input type="hidden" id="selectedCourseId" value="">
-            <a href="#" data-id="1" class="course-option">Administração</a>
-            <a href="#" data-id="2" class="course-option">Ciências Contábeis</a>
-            <a href="#" data-id="3" class="course-option">Ciências Econômicas</a>
-            <a href="#" data-id="4" class="course-option">Comunicação Social - Jornalismo</a>
-            <a href="#" data-id="5" class="course-option">Comunicação Social - Publicidade</a>
-            <a href="#" data-id="6" class="course-option">Design</a>
-            <a href="#" data-id="7" class="course-option">Psicologia</a>
-            <a href="#" data-id="8" class="course-option">Relações Internacionais</a>
-            <a href="#" data-id="9" class="course-option">Gestão Comercial</a>
-            <a href="#" data-id="10" class="course-option">Gestão de Recursos Humanos</a>
-            <a href="#" data-id="11" class="course-option">Logística</a>
-            <a href="#" data-id="12" class="course-option">Marketing</a>
-            <a href="#" data-id="13" class="course-option">Comércio Exterior</a>
-            <a href="#" data-id="14" class="course-option">Artes Visuais</a>
-            <a href="#" data-id="15" class="course-option">Ciências Biológicas</a>
-            <a href="#" data-id="16" class="course-option">Ciências Sociais</a>
-            <a href="#" data-id="17" class="course-option">Computação</a>
-            <a href="#" data-id="18" class="course-option">Educação Física</a>
-            <a href="#" data-id="19" class="course-option">Filosofia</a>
-            <a href="#" data-id="20" class="course-option">Física</a>
-            <a href="#" data-id="21" class="course-option">Geografia</a>
-            <a href="#" data-id="22" class="course-option">História</a>
-            <a href="#" data-id="23" class="course-option">Letras</a>
-            <a href="#" data-id="24" class="course-option">Matemática</a>
-            <a href="#" data-id="25" class="course-option">Música</a>
-            <a href="#" data-id="26" class="course-option">Pedagogia</a>
-            <a href="#" data-id="27" class="course-option">Química</a>
-            <a href="#" data-id="28" class="course-option">Agronomia</a>
-            <a href="#" data-id="29" class="course-option">Arquitetura e Urbanismo</a>
-            <a href="#" data-id="30" class="course-option">Biomedicina</a>
-            <a href="#" data-id="31" class="course-option">Enfermagem</a>
-            <a href="#" data-id="32" class="course-option">Engenharia Ambiental</a>
-            <a href="#" data-id="33" class="course-option">Engenharia Civil</a>
-            <a href="#" data-id="34" class="course-option">Engenharia de Alimentos</a>
-            <a href="#" data-id="35" class="course-option">Medicina</a>
-            <a href="#" data-id="36" class="course-option">Nutrição</a>
+            <section id="optionBox">
+                <input type="hidden" id="selectedCourseId" value="">
+                <a href="#" data-id="1" class="course-option">Administração</a>
+                <a href="#" data-id="2" class="course-option">Ciências Contábeis</a>
+                <a href="#" data-id="3" class="course-option">Ciências Econômicas</a>
+                <a href="#" data-id="4" class="course-option">Comunicação Social - Jornalismo</a>
+                <a href="#" data-id="5" class="course-option">Comunicação Social - Publicidade</a>
+                <a href="#" data-id="6" class="course-option">Design</a>
+                <a href="#" data-id="7" class="course-option">Psicologia</a>
+                <a href="#" data-id="8" class="course-option">Relações Internacionais</a>
+                <a href="#" data-id="9" class="course-option">Gestão Comercial</a>
+                <a href="#" data-id="10" class="course-option">Gestão de Recursos Humanos</a>
+                <a href="#" data-id="11" class="course-option">Logística</a>
+                <a href="#" data-id="12" class="course-option">Marketing</a>
+                <a href="#" data-id="13" class="course-option">Comércio Exterior</a>
+                <a href="#" data-id="14" class="course-option">Artes Visuais</a>
+                <a href="#" data-id="15" class="course-option">Ciências Biológicas</a>
+                <a href="#" data-id="16" class="course-option">Ciências Sociais</a>
+                <a href="#" data-id="17" class="course-option">Computação</a>
+                <a href="#" data-id="18" class="course-option">Educação Física</a>
+                <a href="#" data-id="19" class="course-option">Filosofia</a>
+                <a href="#" data-id="20" class="course-option">Física</a>
+                <a href="#" data-id="21" class="course-option">Geografia</a>
+                <a href="#" data-id="22" class="course-option">História</a>
+                <a href="#" data-id="23" class="course-option">Letras</a>
+                <a href="#" data-id="24" class="course-option">Matemática</a>
+                <a href="#" data-id="25" class="course-option">Música</a>
+                <a href="#" data-id="26" class="course-option">Pedagogia</a>
+                <a href="#" data-id="27" class="course-option">Química</a>
+                <a href="#" data-id="28" class="course-option">Agronomia</a>
+                <a href="#" data-id="29" class="course-option">Arquitetura e Urbanismo</a>
+                <a href="#" data-id="30" class="course-option">Biomedicina</a>
+                <a href="#" data-id="31" class="course-option">Enfermagem</a>
+                <a href="#" data-id="32" class="course-option">Engenharia Ambiental</a>
+                <a href="#" data-id="33" class="course-option">Engenharia Civil</a>
+                <a href="#" data-id="34" class="course-option">Engenharia de Alimentos</a>
+                <a href="#" data-id="35" class="course-option">Medicina</a>
+                <a href="#" data-id="36" class="course-option">Nutrição</a>
+                {{-- @foreach ($cursos as $curso)
+                <a href="#" class="course-option" data-id="{{ $curso->id }}">{{ $curso->nome }}</a>
+                @endforeach --}}
+            </section>
+        </div>
+
+        <div>
+            {{-- <ul class="menu bg-base-200 rounded-box w-56">
+                @foreach ( as )
+                    <li><a>Item 1</a></li>
+                @endforeach
+               
+            </ul> --}}
         </div>
     </div>
 
@@ -133,6 +148,7 @@
 
         // Controlar visibilidade do botão de limpar
         inputField.addEventListener('input', function () {
+            document.getElementById("optionBox").classList.remove("hidden");
             if (this.value.trim() !== '') {
                 clearBtn.classList.remove('hidden');
             } else {
@@ -147,12 +163,8 @@
             document.getElementById('selectedCourseId').value = '';
             clearBtn.classList.add('hidden');
             filterFunction();
+            document.getElementById("optionBox").classList.remove("hidden");
         });
-
-        /* When the user clicks on the button, toggle between hiding and showing the searchbar content */
-        function myFunction() {
-            document.getElementById("sb-content").classList.toggle("show");
-        }
 
         function filterFunction() {
             var input, filter, a, i;
@@ -189,8 +201,8 @@
                 // Mostrar o botão de limpar
                 clearBtn.classList.remove('hidden');
 
-                // Limpar a busca para mostrar todos os cursos novamente
-                filterFunction();
+                // Esconder a caixa de opções
+                document.getElementById("optionBox").classList.add("hidden");
 
                 console.log('Curso selecionado:', courseName, 'ID:', courseId);
             });

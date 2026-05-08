@@ -27,6 +27,7 @@
   --modal-warning-bg: #fff8b9;
   --modal-warning-text: #78350f;
   --text-color: #3d3d3d;
+  --bg-blue: #d8efff;
 }
 
 :root[data-theme="dark"] {
@@ -42,4 +43,5 @@
   --modal-warning-bg: #251919ce;
   --modal-warning-text: #ffe4a1;
   --text-color: #b1afaf;
+  --bg-blue: #1f2937;
 }
