@@ -2,37 +2,6 @@
     <div>
         <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <style>
-            /* Define colors based on theme */
-            :root[data-theme="light"] {
-                --correct-bg: #b6ffd0;
-                --correct-border: #34d399;
-                --correct-text: #15803d;
-                --wrong-bg: #fee2e2;
-                --wrong-border: #f87171;
-                --wrong-text: #b91c1c;
-                --hover-bg: #f1f5f9;
-                --modal-bg: #ffffff;
-                --modal-text: #1f2937;
-                --modal-warning-bg: #fff8b9;
-                --modal-warning-text: #78350f;
-                --text-color: #3d3d3d;
-            }
-
-            :root[data-theme="dark"] {
-                --correct-bg: #064e3b;
-                --correct-border: #10b981;
-                --correct-text: #6ee7b7;
-                --wrong-bg: #7f1d1d;
-                --wrong-border: #ef4444;
-                --wrong-text: #fca5a5;
-                --hover-bg: #374151;
-                --modal-bg: #1f2937;
-                --modal-text: #f6f4f3;
-                --modal-warning-bg: #251919ce;
-                --modal-warning-text: #ffe4a1;
-                --text-color: #b1afaf;
-            }
-
             .option-label {
                 transition: background-color 0.2s ease, border-color 0.2s ease;
             }
@@ -91,7 +60,7 @@
                 color: var(--modal-warning-text);
             }
 
-            @keyframes slideIn section
+            @keyframes slideIn section {
                 from {
                     opacity: 0;
                     transform: translateY(-20px);

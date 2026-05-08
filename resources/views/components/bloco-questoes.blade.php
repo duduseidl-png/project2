@@ -6,7 +6,6 @@
             <li class="px-4 pt-2 questao-item"
                 data-correct="{{ $questao->alternativa_correta }}">
                 <h2 id="questao{{ $loop->iteration + $numero }}" class="text-lg font-bold mb-2">QUESTÃO {{ $loop->iteration + $numero }}
-                    <span class="pl-4 text-xs text-gray-400">↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹↹</span>
                 </h2>
                 <div class="mb-2 ml-5">
                     @if(str_contains($questao->contextualizacao, '<'))

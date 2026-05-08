@@ -1,4 +1,84 @@
 <x-layout title="Simulados passados">
+    <style>
+        /* The search field container 
+        .search-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }*/
+
+        /* The search field */
+        #inputField {
+            box-sizing: border-box;
+            font-size: 16px;
+            padding: 14px 45px 12px 12px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+
+        /* The search field when it gets focus/clicked on */
+        #inputField:focus {
+            outline: 3px solid #ddd;
+        }
+
+        /* Clear button inside search field */
+        .clear-search {
+            position: relative;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .clear-search:hover {
+            color: #666;
+        }
+
+        .clear-search.hidden {
+            display: none;
+        }
+
+        /* The container <div> - needed to position the searchbar content 
+        .searchbar {
+            position: relative;
+            display: inline-block;
+        }*/
+
+        /* Dropdown Content (Hidden by Default) */
+        .searchbar-content {
+            position: relative;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        /* Links inside the searchbar */
+        .searchbar-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of searchbar links on hover */
+        .searchbar-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the searchbar menu (use JS to add this class to the .searchbar-content container when the user clicks on the searchbar button) */
+        .show {
+            display: block;
+        }
+    </style>
+    
     <div class="grid grid-cols-3 gap-4">
         <div id="sb-content" class="searchbar-content col-start-2 mt-20">
             <div class="search-container">
