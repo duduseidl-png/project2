@@ -25,16 +25,18 @@ Route::get('/simulados/gerar_simulado', function () {
 
 Route::post('/simulados/gerar_simulado', function () {
     $curso = request('curso');
-    $limite = intval(request('limite', 38));
-    
-    // Valida o limite
-    if ($limite <= 0 || $limite > 100) {
-        $limite = 38;
+    $limitefg = intval(request('limitefg', 38));
+    $limitece = intval(request('limitece', 38));
+
+    if ($limitefg <= 0 || $limitefg > 100) {
+        $limitefg = 38;
     }
-    
-    // Armazena na sessão
-    session(['simulado_limite' => $limite]);
-    
+    if ($limitece <= 0 || $limitece > 100) {
+        $limitece = 38;
+    }
+
+    session(['simulado_limite_fg' => $limitefg, 'simulado_limite_ce' => $limitece]);
+
     return redirect('/simulado/' . $curso);
 });
 
@@ -53,8 +55,8 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
         abort(404);
     }
     
-    // Pega o limite da sessão, padrão 38
-    $limite = session('simulado_limite', 38);
+    $limitefg = session('simulado_limite_fg', $limitefg);
+    $limitece = session('simulado_limite_ce', $limitece);
     
     $cursoTitulo = $cursos[$curso];
     $questoesFG = Questao::where('categoria', 'Formação Geral')
@@ -65,6 +67,8 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
         /* ->inRandomOrder() */
         ->limit($limitece)
         ->get();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg'));
+
+    $totalQuestions = $questoesFG->count() + $questoesCE->count();
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions'));
 
 })->name('simulado_curso');

@@ -135,7 +135,7 @@
             </div>
         </form>
 
-        <section id="resultado-panel" class="hidden rounded-2xl border shadow-lg bg-base-100 p-6 my-10" style="margin-left: 5%; margin-right: 22%;">
+        <section id="resultado-panel" class="hidden rounded-2xl border shadow-lg bg-base-100 p-6 my-10 ml-16 mr-76">
             <h2 class="text-2xl font-bold mb-4">Resultado do simulado</h2>
             <div class="grid gap-4 lg:grid-cols-2">
                 <div class="rounded-xl border p-4 bg-green-50">
@@ -376,5 +376,5 @@
             });
         </script>
     </div>
-    <x-sidecard :limite="$limite ?? 38" />
+    <x-sidecard :limite="$totalQuestions ?? ($questoesFG->count() + $questoesCE->count())" />
 </x-layout>

@@ -7,10 +7,11 @@
         selecionadas aleatoriamente com
         base no conteúdo do seu curso.</p>
     <div style="text-align:center">
-        <form id="simulado-form" method="POST" action="/gerar_simulado" style="display: none;">
+        <form id="simulado-form" method="POST" action="/simulados/gerar_simulado" style="display: none;">
             @csrf
             <input type="hidden" name="curso" id="form-curso">
-            <input type="hidden" name="limite" id="form-limite">
+            <input type="hidden" name="limitefg" id="form-limite-fg">
+            <input type="hidden" name="limitece" id="form-limite-ce">
         </form>
         
         <div class="flex flex-col items-center justify-center gap-6">
@@ -108,18 +109,14 @@
             updateColors(); // Aplica estilo inicial
 
             button.addEventListener('click', function () {
-                window.location.href = '/simulado/' + cursoSelect.value + '/' + NQInputFG.value + '/' + NQInputCE.value;
-            });
-
-            /*button.addEventListener('click', function () {
-                if (!cursoSelect.value || !NQSelect.value) {
+                if (!cursoSelect.value) {
                     return;
                 }
-                // Preenche o formulário oculto e submete
                 formCurso.value = cursoSelect.value;
-                formLimite.value = NQSelect.value;
+                document.getElementById('form-limite-fg').value = NQInputFG.value;
+                document.getElementById('form-limite-ce').value = NQInputCE.value;
                 form.submit();
-            });*/
+            });
         });
     </script>
 </x-layout>
