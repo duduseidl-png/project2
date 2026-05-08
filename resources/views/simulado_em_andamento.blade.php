@@ -1,124 +1,25 @@
 <x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     <div>
         <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+
         <style>
-            /* Define colors based on theme */
-            :root[data-theme="light"] {
-                --correct-bg: #b6ffd0;
-                --correct-border: #34d399;
-                --correct-text: #15803d;
-                --wrong-bg: #fee2e2;
-                --wrong-border: #f87171;
-                --wrong-text: #b91c1c;
-                --hover-bg: #f1f5f9;
-                --modal-bg: #ffffff;
-                --modal-text: #1f2937;
-                --modal-warning-bg: #fff8b9;
-                --modal-warning-text: #78350f;
-                --text-color: #3d3d3d;
-            }
-
-            :root[data-theme="dark"] {
-                --correct-bg: #064e3b;
-                --correct-border: #10b981;
-                --correct-text: #6ee7b7;
-                --wrong-bg: #7f1d1d;
-                --wrong-border: #ef4444;
-                --wrong-text: #fca5a5;
-                --hover-bg: #374151;
-                --modal-bg: #1f2937;
-                --modal-text: #f6f4f3;
-                --modal-warning-bg: #251919ce;
-                --modal-warning-text: #ffe4a1;
-                --text-color: #b1afaf;
-            }
-
-            .option-label {
-                transition: background-color 0.2s ease, border-color 0.2s ease;
-            }
-
-            .option-label:hover {
-                background-color: var(--hover-bg);
-            }
-
-            .option-correct {
-                background-color: var(--correct-bg);
-                border-color: var(--correct-border);
-            }
-
-            .option-wrong {
-                background-color: var(--wrong-bg);
-                border-color: var(--wrong-border);
-            }
-
-            .question-result {
-                font-weight: 600;
-            }
-
-            .question-result.correct {
-                color: var(--correct-text);
-            }
-
-            .question-result.wrong {
-                color: var(--wrong-text);
-            }
-
-            /* Modal de Confirmação */
-            #confirmation-modal {
-                backdrop-filter: blur(1px);
-                -webkit-backdrop-filter: blur(1px);
-                transition: opacity 0.3s ease;
-            }
-
-            #confirmation-modal.hidden {
-                display: none;
-            }
-
-            #confirmation-modal:not(.hidden) {
-                display: flex;
-                background-color: rgba(0, 0, 0, 0.4);
-            }
-
-            #confirmation-modal > div {
-                background-color: var(--modal-bg);
-                color: var(--modal-text);
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-                animation: slideIn 0.3s ease-out;
-            }
-
-            #confirmation-modal > div > section {
-                background-color: var(--modal-warning-bg);
-                color: var(--modal-warning-text);
-            }
-
-            @keyframes slideIn section
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            html {
-                scroll-behavior: smooth;
-            }
+            
         </style>
         <!-- Modal de Confirmação -->
         <div id="confirmation-modal" class="hidden fixed inset-0 flex items-center justify-center z-50">
             <div class="rounded-lg shadow-lg p-8 max-w-md mx-auto">
                 <h2 class="text-2xl font-bold mb-4">Confirmar Envio</h2>
-                <p class="mb-6">Tem certeza que deseja enviar suas respostas? Você não poderá alterá-las após o envio.</p>
-                
+                <p class="mb-6">Tem certeza que deseja enviar suas respostas? Você não poderá alterá-las após o envio.
+                </p>
+
                 <!-- Aviso de questões não respondidas -->
                 <section id="unanswered-warning" class="hidden mb-4 p-4 border border-yellow-400 rounded-lg">
                     <p class="text-sm">
-                        <strong>Aviso:</strong> Você tem <span id="unanswered-count">0</span> questão(ões) não respondida(s). Deseja continuar assim mesmo?
+                        <strong>Aviso:</strong> Você tem <span id="unanswered-count">0</span> questão(ões) não
+                        respondida(s). Deseja continuar assim mesmo?
                     </p>
                 </section>
-                
+
                 <div class="flex gap-4 justify-end">
                     <button id="cancel-btn" type="button" class="btn btn-outline">Cancelar</button>
                     <button id="confirm-btn" type="button" class="btn btn-primary">Confirmar</button>
@@ -135,7 +36,7 @@
             </div>
         </form>
 
-        <section id="resultado-panel" class="hidden rounded-2xl border shadow-lg bg-base-100 p-6 my-10" style="margin-left: 5%; margin-right: 22%;">
+        <section id="resultado-panel" class="hidden rounded-2xl border shadow-lg bg-base-100 p-6 my-10 ml-16 mr-76">
             <h2 class="text-2xl font-bold mb-4">Resultado do simulado</h2>
             <div class="grid gap-4 lg:grid-cols-2">
                 <div class="rounded-xl border p-4 bg-green-50">
@@ -171,7 +72,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 // Previne que o navegador restaure a posição anterior de scroll
                 window.history.scrollRestoration = 'manual';
-                
+
                 var form = document.getElementById('simulado-form');
                 var questoes = document.querySelectorAll('.questao-item');
                 var modal = document.getElementById('confirmation-modal');
@@ -219,7 +120,7 @@
                     submitButton.addEventListener('click', function (event) {
                         if (!formSubmitted) {
                             event.preventDefault();
-                            
+
                             // Contar questões não respondidas
                             var unansweredCount = 0;
                             questoes.forEach(function (questao) {
@@ -228,18 +129,18 @@
                                     unansweredCount++;
                                 }
                             });
-                            
+
                             // Mostrar ou ocultar aviso de questões não respondidas
                             var warningDiv = document.getElementById('unanswered-warning');
                             var unansweredCountSpan = document.getElementById('unanswered-count');
-                            
+
                             if (unansweredCount > 0) {
                                 unansweredCountSpan.textContent = unansweredCount;
                                 warningDiv.classList.remove('hidden');
                             } else {
                                 warningDiv.classList.add('hidden');
                             }
-                            
+
                             modal.classList.remove('hidden');
                             sidecard.classList.add('modal-active');
                         }
@@ -376,5 +277,5 @@
             });
         </script>
     </div>
-    <x-sidecard :limite="$limite ?? 38" />
+    <x-sidecard :limite="$limitefg+$limitece" />
 </x-layout>

@@ -65,6 +65,6 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
         /* ->inRandomOrder() */
         ->limit($limitece)
         ->get();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'limitece'));
 
 })->name('simulado_curso');

@@ -62,7 +62,8 @@
             <x-countdown />
             <div class="join-horizontal w-60 flex-wrap">
                 @for ($i = 1; $i <= $limite; $i++)
-                    <button id="btn-questao-{{ $i }}" class="btn-questao join-item btn mb-1 h-7 w-3" data-questao="{{ $i }}" type="button">{{ $i }}</button>
+                    <button id="btn-questao-{{ $i }}" class="btn-questao join-item btn mb-1 h-7 w-3" data-questao="{{ $i }}"
+                        type="button">{{ $i }}</button>
                 @endfor
             </div>
             <button type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
@@ -72,10 +73,10 @@
 
     <script>
         // Event listeners para os botões de questão - scroll sem alterar URL
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const questaoButtons = document.querySelectorAll('.btn-questao');
             questaoButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
+                button.addEventListener('click', function (e) {
                     e.preventDefault();
                     const questaoNumber = this.getAttribute('data-questao');
                     const questaoElement = document.getElementById('questao' + questaoNumber);

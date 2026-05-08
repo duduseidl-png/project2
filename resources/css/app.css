@@ -1,123 +1,123 @@
 @import 'tailwindcss';
 
-@plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
-}
-
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
 @theme {
-  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+/* simulado_em_andamento --------------------------------------------------------------*/
 :root[data-theme="light"] {
-  --correct-bg: #b6ffd0;
-  --correct-border: #34d399;
-  --correct-text: #15803d;
-  --wrong-bg: #fee2e2;
-  --wrong-border: #f87171;
-  --wrong-text: #b91c1c;
-  --hover-bg: #f1f5f9;
-  --modal-bg: #ffffff;
-  --modal-text: #1f2937;
-  --modal-warning-bg: #fff8b9;
-  --modal-warning-text: #78350f;
-  --text-color: #3d3d3d;
+    --correct-bg: #b6ffd0;
+    --correct-border: #34d399;
+    --correct-text: #15803d;
+    --wrong-bg: #fee2e2;
+    --wrong-border: #f87171;
+    --wrong-text: #b91c1c;
+    --hover-bg: #f1f5f9;
+    --modal-bg: #ffffff;
+    --modal-text: #1f2937;
+    --modal-warning-bg: #fff8b9;
+    --modal-warning-text: #78350f;
+    --text-color: #3d3d3d;
 }
 
 :root[data-theme="dark"] {
-  --correct-bg: #064e3b;
-  --correct-border: #10b981;
-  --correct-text: #6ee7b7;
-  --wrong-bg: #7f1d1d;
-  --wrong-border: #ef4444;
-  --wrong-text: #fca5a5;
-  --hover-bg: #374151;
-  --modal-bg: #1f2937;
-  --modal-text: #f6f4f3;
-  --modal-warning-bg: #251919ce;
-  --modal-warning-text: #ffe4a1;
-  --text-color: #b1afaf;
+    --correct-bg: #064e3b;
+    --correct-border: #10b981;
+    --correct-text: #6ee7b7;
+    --wrong-bg: #7f1d1d;
+    --wrong-border: #ef4444;
+    --wrong-text: #fca5a5;
+    --hover-bg: #374151;
+    --modal-bg: #1f2937;
+    --modal-text: #f6f4f3;
+    --modal-warning-bg: #251919ce;
+    --modal-warning-text: #ffe4a1;
+    --text-color: #b1afaf;
 }
 
 .option-label {
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .option-label:hover {
-  background-color: var(--hover-bg);
+    background-color: var(--hover-bg);
 }
 
 .option-correct {
-  background-color: var(--correct-bg);
-  border-color: var(--correct-border);
+    background-color: var(--correct-bg);
+    border-color: var(--correct-border);
 }
 
 .option-wrong {
-  background-color: var(--wrong-bg);
-  border-color: var(--wrong-border);
+    background-color: var(--wrong-bg);
+    border-color: var(--wrong-border);
 }
 
 .question-result {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .question-result.correct {
-  color: var(--correct-text);
+    color: var(--correct-text);
 }
 
 .question-result.wrong {
-  color: var(--wrong-text);
+    color: var(--wrong-text);
 }
 
 /* Modal de Confirmação */
 #confirmation-modal {
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  transition: opacity 0.3s ease;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transition: opacity 0.3s ease;
 }
 
 #confirmation-modal.hidden {
-  display: none;
+    display: none;
 }
 
 #confirmation-modal:not(.hidden) {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #confirmation-modal>div {
-  background-color: var(--modal-bg);
-  color: var(--modal-text);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  animation: slideIn 0.3s ease-out;
+    background-color: var(--modal-bg);
+    color: var(--modal-text);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
 }
 
 #confirmation-modal>div>section {
-  background-color: var(--modal-warning-bg);
-  color: var(--modal-warning-text);
+    background-color: var(--modal-warning-bg);
+    color: var(--modal-warning-text);
 }
 
-@keyframes slideIn section from {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+/* simulado_em_andamento --------------------------------------------------------------*/
 
+
+/* simulados_passados -----------------------------------------------------------------*/
 /* The search field container 
         .search-container {
             position: relative;
@@ -127,40 +127,40 @@ html {
 
 /* The search field */
 #inputField {
-  box-sizing: border-box;
-  font-size: 16px;
-  padding: 14px 45px 12px 12px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 14px 45px 12px 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
 }
 
 /* The search field when it gets focus/clicked on */
 #inputField:focus {
-  outline: 3px solid #ddd;
+    outline: 3px solid #ddd;
 }
 
 /* Clear button inside search field */
 .clear-search {
-  position: relative;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: #999;
-  cursor: pointer;
-  padding: 0;
-  line-height: 1;
+    position: relative;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
 }
 
 .clear-search:hover {
-  color: #666;
+    color: #666;
 }
 
 .clear-search.hidden {
-  display: none;
+    display: none;
 }
 
 /* The container <div> - needed to position the searchbar content 
@@ -171,27 +171,72 @@ html {
 
 /* Dropdown Content (Hidden by Default) */
 .searchbar-content {
-  position: relative;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  border: 1px solid #ddd;
-  z-index: 1;
+    position: relative;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
 }
 
 /* Links inside the searchbar */
 .searchbar-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 /* Change color of searchbar links on hover */
 .searchbar-content a:hover {
-  background-color: #f1f1f1
+    background-color: #f1f1f1
 }
 
 /* Show the searchbar menu (use JS to add this class to the .searchbar-content container when the user clicks on the searchbar button) */
 .show {
-  display: block;
+    display: block;
 }
+
+/* simulados_passados -----------------------------------------------------------------*/
+
+
+/* simulados --------------------------------------------------------------------------*/
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #85858542;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth animation */
+    cursor: pointer;
+}
+
+/* The Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    /* Moves the card up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Deepens the shadow */
+}
+
+/* simulados --------------------------------------------------------------------------*/
+
+
+/* home -------------------------------------------------------------------------------*/
+.button-gradient {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* home -------------------------------------------------------------------------------*/
