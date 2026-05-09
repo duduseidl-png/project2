@@ -73,18 +73,18 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 text-sm text-center items-center">
                     <div>
-                        <img src="/img/questoes/q1_img1.jpg" class="w-full h-48 object-cover mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img1.jpg" class="w-full h-48 object-cover mb-2 rounded">
                         <p class="-mt-1">Foto: Unicef/Sayed Bidel. Impacto dos conflitos sobre pessoas mais vulneráveis.</p>
                     </div>
                     <div>
-                        <img src="/img/questoes/q1_img2.jpg" class="w-full h-48 object-cover mb-2 rounded" style="margin-top: 1.05mm;">
+                        <img src="/img/questoes/engenharia_de_computacao/img2.jpg" class="w-full h-48 object-cover mb-2 rounded" style="margin-top: 1.05mm;">
                         <p>Foto: FAO/Anatolii Stepanov. Colheita de trigo perto da vila de Krasne, na Ucrânia.</p>
                     </div>
                 </div>
 
                 <div class="flex justify-center mb-3 text-sm text-center">
                     <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/q1_img3.jpg" alt="Secas em Madagascar" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img3.jpg" alt="Secas em Madagascar" class="w-full h-auto mb-2 rounded">
                         <p>Foto: Unicef/Safidy Andriananten. Secas em Madagascar colocam o país africano entre aqueles onde há mais fome.</p>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-6 text-sm text-center">
                     <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/q1_img4.jpg" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img4.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -170,7 +170,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/q1_img5.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img5.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -210,7 +210,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
                 <p class="font-bold mb-2">TEXTO 3</p>
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-2/5 md:w-2/5">
-                        <img src="/img/questoes/q1_img6.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img6.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -300,7 +300,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img7.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img7.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -308,7 +308,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img8.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img8.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>       
             ',
@@ -368,7 +368,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-2/5 md:w-2/5">
-                        <img src="/img/questoes/q1_img9.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img9.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>  
 
@@ -396,7 +396,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img10.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img10.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div> 
             ',
@@ -674,7 +674,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img11.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img11.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -700,7 +700,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-4/5 md:w-4/5">
-                        <img src="/img/questoes/q1_img12.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img12.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -731,7 +731,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img13.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img13.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -764,7 +764,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <img src="/img/questoes/q1_img14.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img14.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -950,7 +950,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-1/5 md:w-1/5">
-                        <img src="/img/questoes/q1_img15.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img15.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -1055,7 +1055,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-4/5 md:w-4/5">
-                        <img src="/img/questoes/q1_img16.JPG" class="w-full h-auto mb-2 rounded">
+                        <img src="/img/questoes/engenharia_de_computacao/img16.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -1206,3 +1206,6 @@ class Questoes_Engenharia_de_Computacao extends Seeder
         ]);   
     }
 }
+
+
+

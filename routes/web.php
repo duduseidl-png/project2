@@ -59,11 +59,11 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
     $limitece = session('simulado_limite_ce', $limitece);
     
     $cursoTitulo = $cursos[$curso];
-    $questoesFG = Questao::where('categoria', 'Formação Geral')
+    $questoesFG = Questao::query()->where('categoria', 'Formação Geral')
         /* ->inRandomOrder() */
         ->limit($limitefg)
         ->get();
-    $questoesCE = Questao::where('curso', $cursoTitulo)->where('categoria', 'Componente Específico')
+    $questoesCE = Questao::query()->where('curso', $cursoTitulo)->where('categoria', 'Componente Específico')
         /* ->inRandomOrder() */
         ->limit($limitece)
         ->get();

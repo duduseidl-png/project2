@@ -11,7 +11,7 @@ class Questoes_Engenharia_de_Controle_e_Automacao extends Seeder
     {
         Questao::create([
             'curso' => 'Engenharia de Controle e Automação',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Componente Específico',
             'contextualizacao' => 'Em sistemas automatizados, o uso de controladores PID é comum para ajustar a resposta dinâmica de processos industriais.',
             'enunciado' => 'O termo “integral” em um controlador PID serve principalmente para:',
             'referencia' => '',

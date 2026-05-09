@@ -11,7 +11,7 @@ class Questoes_Engenharia_Quimica extends Seeder
     {
         Questao::create([
             'curso' => 'Engenharia Química',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Componente Específico',
             'contextualizacao' => 'A análise de equilíbrio químico é essencial para processos industriais que dependem de conversão e rendimento.',
             'enunciado' => 'O princípio de Le Chatelier indica que um sistema em equilíbrio reage a uma perturbação:',
             'referencia' => '',

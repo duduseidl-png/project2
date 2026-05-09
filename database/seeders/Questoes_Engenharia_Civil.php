@@ -11,7 +11,7 @@ class Questoes_Engenharia_Civil extends Seeder
     {
         Questao::create([
             'curso' => 'Engenharia Civil',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Componente Específico',
             'contextualizacao' => 'Um projeto de ponte precisa considerar esforços de tração, compressão e flexão. A análise da seção transversal e das cargas é essencial para garantir a segurança estrutural.',
             'enunciado' => 'Qual dos seguintes materiais apresenta maior resistência à compressão para uso em pilares de concreto armado?',
             'referencia' => '',

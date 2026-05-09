@@ -11,7 +11,7 @@ class Questoes_Engenharia_Mecanica extends Seeder
     {
         Questao::create([
             'curso' => 'Engenharia Mecânica',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Componente Específico',
             'contextualizacao' => 'O dimensionamento de molas helicoidais de compressão depende da constante elástica e das propriedades do material.',
             'enunciado' => 'Qual grandeza descreve a rigidez de uma mola?',
             'referencia' => '',

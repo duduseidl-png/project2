@@ -11,7 +11,7 @@ class Questoes_Engenharia_de_Producao extends Seeder
     {
         Questao::create([
             'curso' => 'Engenharia de Produção',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Componente Específico',
             'contextualizacao' => 'Uma linha de montagem usa técnicas de melhoria contínua para reduzir desperdícios e aumentar eficiência.',
             'enunciado' => 'Qual ferramenta do Lean Manufacturing é usada para identificar os principais tipos de desperdício?',
             'referencia' => '',
