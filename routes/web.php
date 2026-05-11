@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
+use App\Http\Controllers\SimPas_Controller;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,9 +16,7 @@ Route::get('/simulados', function () {
     return view('simulados');
 });
 
-Route::get('/simulados/simulados_passados', function () {
-    return view('simulados_passados');
-});
+Route::get('/simulados/simulados_passados', SimPas_Controller::class);
 
 Route::get('/simulados/gerar_simulado', function () {
     return view('gerar_simulado');

@@ -1,7 +1,7 @@
 @props(['title' => 'Default Title'])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="light">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="teste">
 
 <head>
   <meta charset="UTF-8">
@@ -56,7 +56,7 @@
   </div>
   <div class="navbar-end">
     <label class="toggle text-base-content">
-      <input type="checkbox" value="dark" class="theme-controller" />
+      <input type="checkbox" value="teste" class="theme-controller" />
       <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
           <circle cx="12" cy="12" r="4"></circle>
@@ -118,7 +118,7 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         themeController.checked = false;
-        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'teste');
       }
     }
 
@@ -127,7 +127,7 @@
 
     // Salvar tema quando o toggle muda
     document.querySelector('.theme-controller').addEventListener('change', function () {
-      const theme = this.checked ? 'dark' : 'light';
+      const theme = this.checked ? 'dark' : 'teste';
       saveTheme(theme);
       document.documentElement.setAttribute('data-theme', theme);
     });
