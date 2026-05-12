@@ -146,11 +146,11 @@ class Questoes_Engenharia_Eletrica extends Seeder
                 <p class="mb-2 text-justify">A partir dessas informações, é correto afirmar que, quando a propagação ocorrer no espaço livre (vácuo) (1), os valores de <i>&alpha;</i> e <i>&beta;</i> serão, respectivamente,</p>
             ',
             'referencia' => '',
-            'opcao_a' => '<i>&alpha;</i> = 0 e <i>&beta;</i> = 0',
-            'opcao_b' => '<i>&alpha;</i> &ne; 0 e <i>&beta;</i> &ne; 0',
-            'opcao_c' => '<i>&alpha;</i> = 0 e $$\beta = \omega \sqrt{\mu_0 \varepsilon_0}$$',
-            'opcao_d' => '$$\alpha = \omega \sqrt{\mu_0 \varepsilon_0}$$ e <i>&beta;</i> = 0',
-            'opcao_e' => '<i>&alpha;</i> &ne; 0 e $$\beta = \omega \sqrt{\mu_0 \varepsilon_0}$$',
+            'opcao_a' => '\(\alpha = 0 \text{ e } \beta = 0\)',
+            'opcao_b' => '\(\alpha \neq 0 \text{ e } \beta \neq 0\)',
+            'opcao_c' => '\(\alpha = 0 \text{ e } \beta = \omega \sqrt{\mu_0 \varepsilon_0}\)',
+            'opcao_d' => '\(\alpha = \omega \sqrt{\mu_0 \varepsilon_0} \text{ e } \beta = 0\)',
+            'opcao_e' => '\(\alpha \neq 0 \text{ e } \beta = \omega \sqrt{\mu_0 \varepsilon_0}\)',
             'alternativa_correta' => 'C',
         ]);
     }

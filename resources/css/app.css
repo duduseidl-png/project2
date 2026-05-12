@@ -43,3 +43,11 @@
   --modal-warning-text: #ffe4a1;
   --text-color: #b1afaf;
 }
+
+.katex,
+.katex .katex-html,
+.katex .katex-mathml {
+  font-weight: normal !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
