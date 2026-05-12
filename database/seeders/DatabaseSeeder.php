@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             Questoes_Engenharia_Eletrica::class,
             Questoes_Engenharia_Mecanica::class,
             Questoes_Engenharia_Quimica::class,
+            Questoes_Administracao::class,
         ]);
     }
 }

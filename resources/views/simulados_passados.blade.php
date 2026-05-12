@@ -95,7 +95,7 @@
             </section>
         </div>
         <div class="col-start-2">
-            <ul class=" bg-base-200 rounded-box w-56" id="yearsList">
+            <ul class="menu bg-base-200 rounded-box w-56" id="yearsList">
                 @foreach ($anos as $cursoId => $yearList)
                     <li class="years-group" data-course-id="{{ $cursoId }}" style="display: none;">
                         @foreach ($yearList as $year)

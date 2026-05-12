@@ -20,6 +20,7 @@
                 <h3 class="text-left mb-2 font-semibold">Curso</h3>
                 <select id="curso-select" class="select w-full">
                     <option disabled selected>-</option>
+                    <option value="administracao">Administração</option>
                     <option value="engenharia-civil">Engenharia Civil</option>
                     <option value="engenharia-de-computacao">Engenharia de Computação</option>
                     <option value="engenharia-de-controle-e-automacao">Engenharia de Controle e Automação</option>

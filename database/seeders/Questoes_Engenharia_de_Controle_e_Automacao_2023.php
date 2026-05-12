@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Questao;
 
-class Questoes_Engenharia_de_Controle_e_Automacao extends Seeder
+class Questoes_Engenharia_de_Controle_e_Automacao_2023 extends Seeder
 {
     public function run(): void
     {

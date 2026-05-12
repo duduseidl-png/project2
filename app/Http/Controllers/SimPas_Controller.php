@@ -19,7 +19,7 @@ class SimPas_Controller extends Controller
     
     // Array de anos por curso ID
     $anos = [
-        1 => [2023, 2019, 2017, 2014], //Engenharia de Computação
+        1 => [2023, 2019, 2017, 2014], // Engenharia de Computação
         2 => [2024, 2023, 2022, 2021, 2020],
         3 => [2024, 2023, 2022],
         4 => [2024, 2023, 2022, 2021, 2020, 2019],

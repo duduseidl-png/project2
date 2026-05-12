@@ -1,7 +1,7 @@
 @props(['title' => 'Default Title'])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="teste">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -118,7 +118,7 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         themeController.checked = false;
-        document.documentElement.setAttribute('data-theme', 'teste');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     }
 
@@ -127,7 +127,7 @@
 
     // Salvar tema quando o toggle muda
     document.querySelector('.theme-controller').addEventListener('change', function () {
-      const theme = this.checked ? 'dark' : 'teste';
+      const theme = this.checked ? 'dark' : 'light';
       saveTheme(theme);
       document.documentElement.setAttribute('data-theme', theme);
     });

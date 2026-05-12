@@ -41,6 +41,7 @@ Route::post('/simulados/gerar_simulado', function () {
 
 Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
     $cursos = [
+        'administracao' => 'Administração',
         'engenharia-civil' => 'Engenharia Civil',
         'engenharia-de-computacao' => 'Engenharia de Computação',
         'engenharia-de-controle-e-automacao' => 'Engenharia de Controle e Automação',

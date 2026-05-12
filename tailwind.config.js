@@ -3,7 +3,7 @@ export default {
     daisyui: {
         themes: [
             {
-                teste: {
+                light: {
                     'primary': '#cc0000',      // Azul
                     'secondary': '#ff6b6b',    // Vermelho
                     'accent': '#fbbf24',       // Amarelo
