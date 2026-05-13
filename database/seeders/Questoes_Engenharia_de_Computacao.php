@@ -205,7 +205,7 @@ class Questoes_Engenharia_de_Computacao extends Seeder
                 <p class="mb-1 text-justify">— A gente combinamos de não morrer!</p>
                 <p class="mb-1 text-justify">Balas enfeitam o coração da noite. Não gosto de filmes da tevê. Morre e mata de menti ra. Aqui, não. Às vezes a morte é leve como a poeira. E a vida se confunde com um pó branco qualquer. Às vezes é uma fumaça adocicada enchendo o pulmão da gente.</p> 
 
-                <p class="text-sm text-right mb-4">EVARISTO, C. <strong>Olhos d´agua</strong>. Rio de Janeiro: Pallas. Fundação Biblioteca Nacional, 2016 (adaptado).</p>
+                <p class="text-sm text-right mb-4">EVARISTO, C. <strong>Olhos d‘agua</strong>. Rio de Janeiro: Pallas. Fundação Biblioteca Nacional, 2016 (adaptado).</p>
                     
                 <p class="font-bold mb-2">TEXTO 3</p>
                 <div class="flex justify-center mb-4 text-sm text-center">
