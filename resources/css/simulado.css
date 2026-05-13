@@ -1,0 +1,73 @@
+.option-label {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.option-label:hover {
+    background-color: var(--hover-bg);
+}
+
+.option-correct {
+    background-color: var(--correct-bg);
+    border-color: var(--correct-border);
+}
+
+.option-wrong {
+    background-color: var(--wrong-bg);
+    border-color: var(--wrong-border);
+}
+
+.question-result {
+    font-weight: 600;
+}
+
+.question-result.correct {
+    color: var(--correct-text);
+}
+
+.question-result.wrong {
+    color: var(--wrong-text);
+}
+
+/* Modal de Confirmação */
+#confirmation-modal {
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transition: opacity 0.3s ease;
+}
+
+#confirmation-modal.hidden {
+    display: none;
+}
+
+#confirmation-modal:not(.hidden) {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#confirmation-modal>div {
+    background-color: var(--modal-bg);
+    color: var(--modal-text);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+#confirmation-modal>div>section {
+    background-color: var(--modal-warning-bg);
+    color: var(--modal-warning-text);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -6,15 +6,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
+
   <title>{{ $title }}</title>
+
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  @vite('resources/css/app.css')
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  <link rel="stylesheet" href="resources/css/app.css">
-  @vite('resources/css/app.css')
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <div class="navbar bg-base-100 shadow-sm" style="z-index: 1000;">
@@ -77,8 +78,7 @@
       </svg>
     </label>
     <div>
-      <img class="mx-5" width="100" height="100" padding="10" 
-            src="/img/figuras/Feevale.png" alt="Logo">
+      <img class="mx-5" width="100" height="100" padding="10" src="/img/figuras/Feevale.png" alt="Logo">
     </div>
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -138,19 +138,16 @@
 
   </main>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       if (typeof renderMathInElement === 'function') {
         renderMathInElement(document.body, {
           delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '\\(', right: '\\)', display: false}
+            { left: '$$', right: '$$', display: true },
+            { left: '\\(', right: '\\)', display: false }
           ]
         });
       }
     });
   </script>
-
-  <script src="resources/js/app.js"></script>
 </body>
-
 </html>
