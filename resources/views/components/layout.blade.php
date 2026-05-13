@@ -102,6 +102,11 @@
 </div>
 
 <body>
+
+  <main>
+    {{ $slot }}
+  </main>
+
   <script>
     // Função para salvar o tema no localStorage
     function saveTheme(theme) {
@@ -131,13 +136,7 @@
       saveTheme(theme);
       document.documentElement.setAttribute('data-theme', theme);
     });
-  </script>
 
-  <main>
-    {{ $slot }}
-
-  </main>
-  <script>
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof renderMathInElement === 'function') {
         renderMathInElement(document.body, {
@@ -149,5 +148,7 @@
       }
     });
   </script>
+
 </body>
+
 </html>
