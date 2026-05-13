@@ -27,10 +27,10 @@ Route::post('/simulados/gerar_simulado', function () {
     $limitefg = intval(request('limitefg', 38));
     $limitece = intval(request('limitece', 38));
 
-    if ($limitefg <= 0 || $limitefg > 100) {
+    if ($limitefg < 0 || $limitefg > 100) {
         $limitefg = 38;
     }
-    if ($limitece <= 0 || $limitece > 100) {
+    if ($limitece < 0 || $limitece > 100) {
         $limitece = 38;
     }
 

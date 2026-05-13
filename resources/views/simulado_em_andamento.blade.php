@@ -97,9 +97,13 @@
 
         <form id="simulado-form">
             <div class="ml-16 mr-76">
-                <h2 class="text-center mb-3 text-2xl">Formação Geral</h2>
+                @if (!$questoesFG->isEmpty())
+                <h2 class="text-center mb-3 text-2xl">Formação Geral</h2>                    
+                @endif
                 <x-bloco-questoes :questoes="$questoesFG" :numero="0" />
+                @if (!$questoesCE->isEmpty())
                 <h2 class="text-center mb-3 text-2xl">Componente Específico</h2>
+                @endif
                 <x-bloco-questoes :questoes="$questoesCE" :numero="$limitefg" />
             </div>
         </form>
