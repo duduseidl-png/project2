@@ -330,8 +330,11 @@
                 });
 
                 window.addEventListener('load', function () {
-                    // Inicia no topo da página
-                    window.scrollTo({ top: 0, behavior: 'auto' });
+                    // Scroll para topo apenas na primeira carga, não em reloads
+                    if (!sessionStorage.getItem('pageLoaded')) {
+                        window.scrollTo({ top: 0, behavior: 'auto' });
+                        sessionStorage.setItem('pageLoaded', 'true');
+                    }
                 });
             })
 

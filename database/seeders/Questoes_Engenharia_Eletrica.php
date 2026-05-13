@@ -195,12 +195,12 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um engenheiro projetou um novo sistema de sensoriamento de temperatura para a linha de produção de uma fábrica. No circuito eletrônico projetado, mostrado na figura a seguir, um sensor, baseado no detector resistivo de temperatura (RTD), foi escolhido e ligado a uma ponte de Wheatstone por meio dos resistores R<sub>2</sub>, R<sub>3</sub> e R<sub>4</sub>. Acerca desse projeto, tem-se as seguintes informações: a ponte é ligada a uma fonte de alimentação de 12 V; uma tensão V<sub>0</sub> é medida na saída da ponte quando o circuito é exposto a uma variação de temperatura; e o RTD apresenta uma resistência de 100 ohms a 0 °C com coeficiente térmico de +0,4 ohm/°C.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/10 md:w-3/10">
                         <p class="font-semibold mb-2">Circuito eletrônico projetado</p>
-                        <img src="/img/questoes/engenharia_eletrica/q15_ponte_wheatstone.png" alt="Circuito eletrônico com ponte de Wheatstone" class="max-w-xs mx-auto">
+                        <img src="/img/questoes/engenharia_eletrica/img6.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
-                </div>
+                </div>    
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Com base nos dados apresentados, considerando R<sub>2</sub> = R<sub>3</sub> = R<sub>4</sub> = 100 ohms, avalie as afirmações a seguir.</p>
@@ -231,24 +231,24 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'curso' => 'Engenharia Elétrica',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
-                <p class="mb-2 text-justify">Considere que o sistema apresentado na figura a seguir possua entrada x(t), saída y(t), sinal de erro e(t), as correspondentes transformadas de Laplace, X(s), Y(s), E(s), e as constantes K e T maiores do que zero.</p>
+                <p class="mb-2 text-justify">Considere que o sistema apresentado na figura a seguir possua entrada <span>\(x(t)\)</span>, saída <span>\(y(t)\)</span>, sinal de erro <span>\(e(t)\)</span>, as correspondentes transformadas de Laplace, <span>\(X(s), Y(s), E(s),\)</span> e as constantes <span>\(K\)</span> e <span>\(T\)</span> maiores do que zero.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
                         <p class="font-semibold mb-2">Diagrama de blocos do sistema</p>
-                        <img src="/img/questoes/engenharia_eletrica/q16_diagrama_blocos.png" alt="Diagrama de blocos do sistema de controle" class="max-w-md mx-auto">
+                        <img src="/img/questoes/engenharia_eletrica/img7.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">Com base nessas informações, qual será o sinal de saída em regime permanente, y(t), para a entrada degrau unitário?</p>
+                <p class="mb-2 text-justify">Com base nessas informações, qual será o sinal de saída em regime permanente, <span>\(y(t)\)</span>, para a entrada degrau unitário?</p>
             ',
             'referencia' => '',
-            'opcao_a' => '0',
-            'opcao_b' => 'K',
-            'opcao_c' => 'K / (K·T + 1)',
-            'opcao_d' => 'K / (K + 1)',
-            'opcao_e' => '∞',
+            'opcao_a' => '<span>\(0\)</span>',
+            'opcao_b' => '<span>\(K\)</span>',
+            'opcao_c' => '<span>\(\frac{K}{K + T + 1}\)</span>',
+            'opcao_d' => '<span>\(\frac{K}{K + 1}\)</span>',
+            'opcao_e' => '<span>\(\infty\)</span>',
             'alternativa_correta' => 'D',
         ]);
 
@@ -384,11 +384,11 @@ class Questoes_Engenharia_Eletrica extends Seeder
                 <p class="mb-2 text-justify">Com base nessas informações, qual é a função de transferência, H(ω), do sistema apresentado no diagrama?</p>
             ',
             'referencia' => '',
-            'opcao_a' => '$H(\omega) = \frac{k_1 k_2 e^{-j \omega T}}{1 + k_2 e^{-2j \omega T}(1 + k_1)}$',
-            'opcao_b' => 'H(ω) = k₁(1 + k₂e<sup>−jωT</sup>) / (2k₂e<sup>−jωT</sup> + k₁ + 1)',
-            'opcao_c' => 'H(ω) = k₁k₂e<sup>−jωT</sup> / (k₂e<sup>−jωT</sup> + k₁ + 1)',
-            'opcao_d' => 'H(ω) = k₁k₂e<sup>−jωT</sup> / (2k₁e<sup>−jωT</sup> + k₂ + 1)',
-            'opcao_e' => 'H(ω) = k₁k₂e<sup>jωT</sup> / (2k₂e<sup>jωT</sup> + k₁ + 1)',
+            'opcao_a' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-j \omega T}}{1 + k_2 e^{-2j \omega T} (1 + k_1)}\)</span>',
+            'opcao_b' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-2j \omega T}}{1 + k_2 e^{-j \omega T} (1 + k_1)}\)</span>',
+            'opcao_c' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-j \omega T}}{1 + k_1 e^{-2j \omega T} (1 + k_2)}\)</span>',
+            'opcao_d' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-2j \omega T}}{1 + k_1 e^{-j \omega T} (1 + k_2)}\)</span>',
+            'opcao_e' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{j \omega T}}{1 + k_1 e^{2j \omega T} (1 + k_2)}\)</span>',
             'alternativa_correta' => 'A',
         ]);
 

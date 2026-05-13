@@ -14,7 +14,7 @@
                         {!! nl2br(e($questao->contextualizacao)) !!}
                     @endif
                 </div>
-                <p class="mb-1 ml-5 text-right text-xs">{{ $questao->referencia }}</p>
+                <p class="mb-1 ml-5 text-right text-xs">{!! html_entity_decode($questao->referencia) !!}</p>
                 <div class="mb-2 ml-5">
                     @if(str_contains($questao->enunciado, '<'))
                         {!! html_entity_decode($questao->enunciado) !!}

@@ -51,3 +51,8 @@
   color: inherit !important;
   text-shadow: none !important;
 }
+
+p .katex,
+span .katex {
+  font-size: 1em !important;
+}
