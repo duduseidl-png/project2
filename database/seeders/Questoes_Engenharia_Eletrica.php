@@ -161,18 +161,18 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'curso' => 'Engenharia Elétrica',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
-                <p class="mb-2 text-justify">Seja a saída y(t) de um sistema dada por</p>
+                <p class="mb-2 text-justify">Seja a saída <span>\(\text{y}(\text{t})\)</span> de um sistema dada por</p>
 
-                <p class="text-center my-3 font-medium">y(t) = (x(t))<sup>a</sup> + b x(t) + c</p>
+                <p class="text-center my-3 font-normal"><span>\(\text{y}(\text{t}) = (\text{x}(\text{t}))^{\text{a}} + \text{b} \text{x}(\text{t}) + \text{c}\)</span></p>
 
-                <p class="mb-2 text-justify">em que x(t) é a entrada.</p>
+                <p class="mb-2 text-justify">em que <span>\(\text{x}(\text{t})\)</span> é a entrada.</p>
 
                 <p class="mb-2 text-justify">A partir disso, considere os valores das constantes em cada um dos casos:</p>
 
-                <p class="mb-2 pl-6 text-justify">I. a = 0, b = 1, c = 0.</p>
-                <p class="mb-2 pl-6 text-justify">II. a = 1, b = 0, c = 0.</p>
-                <p class="mb-2 pl-6 text-justify">III. a = 1, b = 1, c = 0.</p>
-                <p class="mb-2 pl-6 text-justify">IV. a = 2, b = 0, c = 1.</p>
+                <p class="mb-2 pl-6 text-justify">I. <span>\(\text{a} = 0, \text{b} = 1, \text{c} = 0\)</span>.</p>
+                <p class="mb-2 pl-6 text-justify">II. <span>\(\text{a} = 1, \text{b} = 0, \text{c} = 0\)</span>.</p>
+                <p class="mb-2 pl-6 text-justify">III. <span>\(\text{a} = 1, \text{b} = 1, \text{c} = 0\)</span>.</p>
+                <p class="mb-2 pl-6 text-justify">IV. <span>\(\text{a} = 2, \text{b} = 0, \text{c} = 1\)</span>.</p>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Com base nessas informações, é correto afirmar que o sistema será não linear apenas nos casos</p>
@@ -197,7 +197,7 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/10 md:w-3/10">
-                        <p class="font-semibold mb-2">Circuito eletrônico projetado</p>
+                        <p class="font-bold mb-2">Circuito eletrônico projetado</p>
                         <img src="/img/questoes/engenharia_eletrica/img6.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>    
@@ -235,7 +235,7 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <div class="flex justify-center mb-4 text-sm text-center">
                     <div class="w-3/5 md:w-3/5">
-                        <p class="font-semibold mb-2">Diagrama de blocos do sistema</p>
+                        <p class="font-bold mb-2">Diagrama de blocos do sistema</p>
                         <img src="/img/questoes/engenharia_eletrica/img7.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
@@ -246,8 +246,8 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'referencia' => '',
             'opcao_a' => '<span>\(0\)</span>',
             'opcao_b' => '<span>\(K\)</span>',
-            'opcao_c' => '<span>\(\frac{K}{K + T + 1}\)</span>',
-            'opcao_d' => '<span>\(\frac{K}{K + 1}\)</span>',
+            'opcao_c' => '<span class="larger-math">\(\frac{K}{K + T + 1}\)</span>',
+            'opcao_d' => '<span class="larger-math">\(\frac{K}{K + 1}\)</span>',
             'opcao_e' => '<span>\(\infty\)</span>',
             'alternativa_correta' => 'D',
         ]);
@@ -263,25 +263,25 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
                     <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 1</p>
-                        <img src="/img/questoes/engenharia_eletrica/q17_figura1.png" alt="Strain Gauge - Figura 1" class="max-w-xs mx-auto">
+                        <p class="font-bold mb-2">Figura 1</p>
+                        <img src="/img/questoes/engenharia_eletrica/img8.jpg" class="max-w-xs mx-auto">
                     </div>
                     <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 2</p>
-                        <img src="/img/questoes/engenharia_eletrica/q17_figura2.png" alt="Strain Gauge - Figura 2" class="max-w-xs mx-auto">
+                        <p class="font-bold mb-2">Figura 2</p>
+                        <img src="/img/questoes/engenharia_eletrica/img9.jpg" class="max-w-xs mx-auto">
                     </div>
                 </div>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Com base nessas informações, avalie as afirmações a seguir.</p>
 
-                <p class="mb-2 pl-6 text-justify">I. Na figura 1, à medida que a força vertical F atuar, a viga que está engastada do lado esquerdo e livre do lado direito, será flexionada de maneira que os extensômetros superiores (1 e 3) serão alongados e suas resistências aumentarão.</p>
+                <p class="mb-2 pl-6 text-justify">I. Na figura 1, à medida que a força vertical <i>F</i> atuar, a viga que está engastada do lado esquerdo e livre do lado direito, será flexionada de maneira que os extensômetros superiores (1 e 3) serão alongados e suas resistências aumentarão.</p>
 
-                <p class="mb-2 pl-6 text-justify">II. Na figura 2, se o corpo de prova for tracionado pela força horizontal F, a resistência dos extensômetros 1 e 3 reduzirá.</p>
+                <p class="mb-2 pl-6 text-justify">II. Na figura 2, se o corpo de prova for tracionado pela força horizontal <i>F</i>, a resistência dos extensômetros 1 e 3 reduzirá.</p>
 
                 <p class="mb-2 pl-6 text-justify">III. Na figura 1, os extensômetros se deformam igualmente sob ação de forças verticais ou horizontais.</p>
 
-                <p class="mb-2 pl-6 text-justify">IV. Na figura 2, os extensômetros 2 e 4 não são sensíveis às deformações do corpo de prova na direção de F, horizontal.</p>
+                <p class="mb-2 pl-6 text-justify">IV. Na figura 2, os extensômetros 2 e 4 não são sensíveis às deformações do corpo de prova na direção de <i>F</i>, horizontal.</p>
 
                 <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
             ',
@@ -305,10 +305,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">Para realizar o trabalho, esse engenheiro resolveu utilizar amplificadores operacionais (supostos ideais e operando com a alimentação adequada) com uma estrutura que está esquematizada no diagrama a seguir. A corrente CA é medida por um sensor que fornece uma corrente de saída na proporção de 1.000:1, ou seja, a cada 1 A medido, tem-se 1 mA disponível para o processamento eletrônico. Esse sensor tem capacidade de medir até 10 A (valor instantâneo máximo).</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Diagrama do circuito para medição de corrente</p>
-                        <img src="/img/questoes/engenharia_eletrica/q18_diagrama_corrente.png" alt="Diagrama do circuito para medição de corrente" class="max-w-lg mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <p class="font-bold mb-2">Diagrama do circuito para medição de corrente</p>
+                        <img src="/img/questoes/engenharia_eletrica/img10.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -323,11 +323,11 @@ class Questoes_Engenharia_Eletrica extends Seeder
                 <p class="mb-2 text-justify">Para que a saída represente melhor o valor eficaz correspondente à corrente CA senoidal medida, assinale a opção que apresenta o circuito mais adequado para o bloco de ajuste do ganho.</p>
             ',
             'referencia' => '',
-            'opcao_a' => 'Amplificador inversor com R<sub>f</sub> = 100 kΩ e R<sub>in</sub> = 141 kΩ, resultando em ganho de –100/141 ≈ –0,707.',
-            'opcao_b' => 'Amplificador inversor com R<sub>f</sub> = 100 kΩ e R<sub>in</sub> = 222 kΩ.',
-            'opcao_c' => 'Amplificador inversor com R<sub>f</sub> = 100 kΩ e R<sub>in</sub> = 122 kΩ.',
-            'opcao_d' => 'Amplificador não-inversor com R<sub>f</sub> = 100 kΩ e R<sub>in</sub> = 222 kΩ.',
-            'opcao_e' => 'Amplificador não-inversor com R<sub>f</sub> = 141 kΩ e R<sub>in</sub> = 100 kΩ, resultando em ganho de 1 + 141/100 = 2,41.',
+            'opcao_a' => '<img src="/img/questoes/engenharia_eletrica/img11.jpg" class="max-w-sm h-auto">',
+            'opcao_b' => '<img src="/img/questoes/engenharia_eletrica/img12.jpg" class="max-w-sm h-auto">',
+            'opcao_c' => '<img src="/img/questoes/engenharia_eletrica/img13.jpg" class="max-w-sm h-auto">',
+            'opcao_d' => '<img src="/img/questoes/engenharia_eletrica/img14.jpg" class="max-w-sm h-auto">',
+            'opcao_e' => '<img src="/img/questoes/engenharia_eletrica/img15.jpg" class="max-w-sm h-auto">',
             'alternativa_correta' => 'E',
         ]);
 
@@ -369,26 +369,26 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'curso' => 'Engenharia Elétrica',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
-                <p class="mb-2 text-justify">Considere o sistema representado pelo diagrama de blocos a seguir, em que T representa um atraso no tempo e em que k<sub>1</sub> e k<sub>2</sub> são constantes reais positivas.</p>
+                <p class="mb-2 text-justify">Considere o sistema representado pelo diagrama de blocos a seguir, em que <span>\(T\)</span> representa um atraso no tempo e em que <span>\(k{1}\)</span> e <span>\(k{2}\)</span> são constantes reais positivas.</p>
 
                 <div class="flex justify-center my-4">
                     <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Diagrama de blocos do sistema</p>
-                        <img src="/img/questoes/engenharia_eletrica/q20_diagrama_blocos.png" alt="Diagrama de blocos do sistema com atraso" class="max-w-md mx-auto">
+                        <p class="font-bold mb-2">Diagrama de blocos do sistema</p>
+                        <img src="/img/questoes/engenharia_eletrica/img16.jpg" class="max-w-md mx-auto">
                     </div>
                 </div>
 
-                <p class="mb-2 text-justify">Pode-se obter a saída y(t) desse sistema para qualquer entrada arbitrária x(t) por meio da convolução entre o sinal de entrada e a sua resposta ao impulso. O Teorema da Convolução estabelece que a operação de convolução é equivalente ao produto, em frequência, entre a transformada de Fourier do sinal de entrada e a função de transferência do sistema (com transformada de Fourier da sua resposta ao impulso).</p>
+                <p class="mb-2 text-justify">Pode-se obter a saída <span>\(y(t)\)</span> desse sistema para qualquer entrada arbitrária <span>\(x(t)\)</span> por meio da convolução entre o sinal de entrada e a sua resposta ao impulso. O Teorema da Convolução estabelece que a operação de convolução é equivalente ao produto, em frequência, entre a transformada de Fourier do sinal de entrada e a função de transferência do sistema (com transformada de Fourier da sua resposta ao impulso).</p>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">Com base nessas informações, qual é a função de transferência, H(ω), do sistema apresentado no diagrama?</p>
+                <p class="mb-2 text-justify">Com base nessas informações, qual é a função de transferência, <span>\(H(\omega)\)</span>, do sistema apresentado no diagrama?</p>
             ',
             'referencia' => '',
-            'opcao_a' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-j \omega T}}{1 + k_2 e^{-2j \omega T} (1 + k_1)}\)</span>',
-            'opcao_b' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-2j \omega T}}{1 + k_2 e^{-j \omega T} (1 + k_1)}\)</span>',
-            'opcao_c' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-j \omega T}}{1 + k_1 e^{-2j \omega T} (1 + k_2)}\)</span>',
-            'opcao_d' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{-2j \omega T}}{1 + k_1 e^{-j \omega T} (1 + k_2)}\)</span>',
-            'opcao_e' => '<span>\(H(\omega) = \frac{k_1 k_2 e^{j \omega T}}{1 + k_1 e^{2j \omega T} (1 + k_2)}\)</span>',
+            'opcao_a' => '<span>\(H(\omega) =\)</span><span class="larger-math">\(\frac{k_1 k_2 e^{-j \omega T}}{1 + k_2 e^{-2j \omega T} (1 + k_1)}\)</span>',
+            'opcao_b' => '<span>\(H(\omega) =\)</span><span class="larger-math">\(\frac{k_1 k_2 e^{-2j \omega T}}{1 + k_2 e^{-j \omega T} (1 + k_1)}\)</span>',
+            'opcao_c' => '<span>\(H(\omega) =\)</span><span class="larger-math">\(\frac{k_1 k_2 e^{-j \omega T}}{1 + k_1 e^{-2j \omega T} (1 + k_2)}\)</span>',
+            'opcao_d' => '<span>\(H(\omega) =\)</span><span class="larger-math">\(\frac{k_1 k_2 e^{-2j \omega T}}{1 + k_1 e^{-j \omega T} (1 + k_2)}\)</span>',
+            'opcao_e' => '<span>\(H(\omega) =\)</span><span class="larger-math">\(\frac{k_1 k_2 e^{j \omega T}}{1 + k_1 e^{2j \omega T} (1 + k_2)}\)</span>',
             'alternativa_correta' => 'A',
         ]);
 
@@ -401,17 +401,20 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Os materiais ferromagnéticos, frequentemente compostos de ferro e de ligas de ferro com cobalto, níquel, alumínio e outros metais, possuem um momento magnético permanente mesmo na ausência de um campo externo e se imantam fortemente se colocados na presença de um campo magnético. Sabe-se que a permeabilidade magnética, grandeza característica de cada material, refere-se à sua capacidade de "permitir" a existência de linhas de indução em seu interior e que, quanto maior for a permeabilidade de um material, mais fácil será a obtenção dessas linhas de indução.</p>
 
-                <p class="mb-2 text-justify">No circuito magnético representado na figura 1 a seguir, as dimensões geométricas estão em centímetros. A corrente de excitação CC, i, percorrendo a bobina, estabelece a circulação de um fluxo magnético de 9,6 mWb no núcleo magnético, o qual é feito de chapas de aço silício de grão orientado (GO) do tipo M-5, cuja curva de magnetização é apresentada na figura 2. O fator de laminação do núcleo é igual a 1 e o fluxo de dispersão é desprezível.</p>
+                <p class="mb-2 text-justify">No circuito magnético representado na figura 1 a seguir, as dimensões geométricas estão em centímetros. A corrente de excitação CC, <i>i</i>, percorrendo a bobina, estabelece a circulação de um fluxo magnético de 9,6 mWb no núcleo magnético, o qual é feito de chapas de aço silício de grão orientado (GO) do tipo M-5, cuja curva de magnetização é apresentada na figura 2. O fator de laminação do núcleo é igual a 1 e o fluxo de dispersão é desprezível.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 1 – Circuito magnético com núcleo de aço laminado</p>
-                        <img src="/img/questoes/engenharia_eletrica/q21_circuito_magnetico.png" alt="Circuito magnético com núcleo de aço laminado" class="max-w-xs mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Figura 1 – Circuito magnético com núcleo de aço laminado</p>
+                        <img src="/img/questoes/engenharia_eletrica/img17.jpg" class="w-full h-auto mb-2 rounded">
                         <p class="text-sm mt-2">UMANS, S. D. <b>Máquinas Elétricas de Fitzgerald e Kingsley</b> 7. ed. Porto Alegre: AMGH, 2014 (adaptado).</p>
                     </div>
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 2 – Curva de magnetização CC para o aço silício de grão orientado (GO) do tipo M-5</p>
-                        <img src="/img/questoes/engenharia_eletrica/q21_curva_magnetizacao.png" alt="Curva de magnetização para aço M-5" class="max-w-xs mx-auto">
+                </div>
+            
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <p class="font-bold mb-2">Figura 2 – Curva de magnetização CC para o aço silício de grão orientado (GO) do tipo M-5</p>
+                        <img src="/img/questoes/engenharia_eletrica/img18.jpg" class="w-full h-auto mb-2 rounded">
                         <p class="text-sm mt-2">UMANS, S. D. <b>Máquinas Elétricas de Fitzgerald e Kingsley</b> 7. ed. Porto Alegre: AMGH, 2014 (adaptado).</p>
                     </div>
                 </div>
@@ -435,53 +438,27 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'curso' => 'Engenharia Elétrica',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
-                <p class="mb-2 text-justify">O circuito esquematizado na figura 1 tem como entradas os sinais Q<sub>1</sub> e Q<sub>2</sub>, que são gerados pelo circuito apresentado na figura 2. De acordo com o sinal de clock (CLK), um conjunto de símbolos do painel é "ativado". Cada um dos quatro símbolos do painel está associado a uma saída do circuito lógico, ou seja, o quadrado está associado à letra a, o losango à letra b, o círculo à letra c, e o triângulo à letra d. Sabe-se, também, que os flip-flops (FFs) são inicializados com nível zero.</p>
+                <p class="mb-2 text-justify">O circuito esquematizado na figura 1 tem como entradas os sinais <i>Q<sub>1</sub></i> e <i>Q<sub>2</sub></i>, que são gerados pelo circuito apresentado na figura 2. De acordo com o sinal de <i>clock</i> (CLK), um conjunto de símbolos do painel é "ativado". Cada um dos quatro símbolos do painel está associado a uma saída do circuito lógico, ou seja, o quadrado está associado à letra <b>a</b>, o losango à letra <b>b</b>, o círculo à letra <b>c</b>, e o triângulo à letra <b>d</b>. Sabe-se, também, que os <i>flip-flops</i> (FFs) são inicializados com nível zero.</p>
 
                 <p class="mb-2 text-justify">A tabela funcional dos FFs é apresentada na figura 3.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 1 – Circuito para acionamento dos símbolos do painel</p>
-                        <img src="/img/questoes/engenharia_eletrica/q22_figura1_painel.png" alt="Circuito para acionamento dos símbolos do painel" class="max-w-xs mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-2/5 md:w-2/5">
+                        <p class="font-bold mb-2">Figura 1 – Circuito para acionamento dos símbolos do painel</p>
+                        <img src="/img/questoes/engenharia_eletrica/img19.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 2 – Circuito gerador dos sinais Q1 e Q2</p>
-                        <img src="/img/questoes/engenharia_eletrica/q22_figura2_flipflop.png" alt="Circuito gerador com flip-flops JK" class="max-w-xs mx-auto">
+                </div>
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-2/5 md:w-2/5">
+                        <p class="font-bold mb-2">Figura 2 – Circuito gerador dos sinais Q1 e Q2</p>
+                        <img src="/img/questoes/engenharia_eletrica/img20.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 3 – Tabela funcional dos flip-flops</p>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full border border-gray-300 text-sm text-center">
-                                <thead class="bg-gray-100">
-                                    <tr>
-                                        <th class="border border-gray-300 px-3 py-2" colspan="5">Entradas</th>
-                                        <th class="border border-gray-300 px-3 py-2" colspan="2">Saídas</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="border border-gray-300 px-3 py-2">PR</th>
-                                        <th class="border border-gray-300 px-3 py-2">CLR</th>
-                                        <th class="border border-gray-300 px-3 py-2">CLK</th>
-                                        <th class="border border-gray-300 px-3 py-2">J</th>
-                                        <th class="border border-gray-300 px-3 py-2">K</th>
-                                        <th class="border border-gray-300 px-3 py-2">Q</th>
-                                        <th class="border border-gray-300 px-3 py-2">Q̄</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">L</td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">H</td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">X</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">↓</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">Q<sub>0</sub></td><td class="border border-gray-300 px-3 py-1">Q̄<sub>0</sub></td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">↓</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">L</td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">↓</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">L</td><td class="border border-gray-300 px-3 py-1">H</td></tr>
-                                    <tr><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">↓</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1">H</td><td class="border border-gray-300 px-3 py-1" colspan="2">Toggle</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="text-xs mt-2 text-left">H = Nível lógico ALTO &nbsp;|&nbsp; L = Nível lógico BAIXO &nbsp;|&nbsp; X = Condição Irrelevante</p>
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-1/2 md:w-1/2">
+                        <p class="font-bold mb-2">Figura 3 – Tabela funcional dos flip-flops</p>
+                        <img src="/img/questoes/engenharia_eletrica/img21.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -489,11 +466,11 @@ class Questoes_Engenharia_Eletrica extends Seeder
                 <p class="mb-2 text-justify">Com base nessas informações, assinale a opção que apresenta a sequência correta de símbolos ativados no painel em cor amarela, a partir da primeira borda ativa de clock.</p>
             ',
             'referencia' => '',
-            'opcao_a' => 'Sequência: d → a → b → c (losango, quadrado, triângulo, círculo).',
-            'opcao_b' => 'Sequência: b → c → d → a (losango, círculo, triângulo, quadrado).',
-            'opcao_c' => 'Sequência: a → b → c → d (quadrado, losango, círculo, triângulo).',
-            'opcao_d' => 'Sequência: c → d → a → b (círculo, triângulo, quadrado, losango).',
-            'opcao_e' => 'Sequência: b → a → d → c (losango, quadrado, triângulo, círculo).',
+            'opcao_a' => '<img src="/img/questoes/engenharia_eletrica/img22.jpg" class="max-w-sm h-auto">',
+            'opcao_b' => '<img src="/img/questoes/engenharia_eletrica/img23.jpg" class="max-w-sm h-auto">',
+            'opcao_c' => '<img src="/img/questoes/engenharia_eletrica/img24.jpg" class="max-w-sm h-auto">',
+            'opcao_d' => '<img src="/img/questoes/engenharia_eletrica/img25.jpg" class="max-w-sm h-auto">',
+            'opcao_e' => '<img src="/img/questoes/engenharia_eletrica/img26.jpg" class="max-w-sm h-auto">',
             'alternativa_correta' => 'D',
         ]);
 
@@ -504,12 +481,12 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'curso' => 'Engenharia Elétrica',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
-                <p class="mb-2 text-justify">A figura a seguir apresenta um circuito para medir e para indicar a posição angular do eixo θ de um potenciômetro. Esse circuito utiliza fontes de alimentação de +10 V e −5 V, um potenciômetro e os resistores de 4 e 16 ohms para obter uma tensão (V<sub>IN</sub>) na entrada do circuito amplificador. O modelo do potenciômetro utilizado no circuito é linear, com ângulo medido a partir da posição central, conforme os detalhes mostrados a seguir. O amplificador é composto por 2 resistores e uma fonte dependente, de ganho β.</p>
+                <p class="mb-2 text-justify">A figura a seguir apresenta um circuito para medir e para indicar a posição angular do eixo <i>θ</i> de um potenciômetro. Esse circuito utiliza fontes de alimentação de +10 V e −5 V, um potenciômetro e os resistores de 4 e 16 ohms para obter uma tensão (V<sub>IN</sub>) na entrada do circuito amplificador. O modelo do potenciômetro utilizado no circuito é linear, com ângulo medido a partir da posição central, conforme os detalhes mostrados a seguir. O amplificador é composto por 2 resistores e uma fonte dependente, de ganho β.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Circuito para medir e para indicar a posição angular θ do eixo de um potenciômetro</p>
-                        <img src="/img/questoes/engenharia_eletrica/q23_circuito_potenciometro.png" alt="Circuito para medir posição angular do potenciômetro" class="max-w-lg mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <p class="font-bold mb-2">Circuito para medir e para indicar a posição angular <i>θ</i> do eixo de um potenciômetro</p>
+                        <img src="/img/questoes/engenharia_eletrica/img27.jpg" class="w-full h-auto mb-2 rounded">
                         <p class="text-sm mt-2">DORF, R. C.; SVOBODA, J. A. <b>Introdução aos circuitos elétricos.</b> 7. ed. Rio de Janeiro: LTC, 2008 (adaptado).</p>
                     </div>
                 </div>
@@ -517,7 +494,7 @@ class Questoes_Engenharia_Eletrica extends Seeder
                 <p class="mb-2 text-justify">Esse circuito foi obtido modelando as fontes de alimentação como fontes ideais e o voltímetro como um circuito aberto. O potenciômetro tem curso de −180° a +180°.</p>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">A partir das informações apresentadas e considerando que o potenciômetro se encontra na posição angular de 36°, qual deve ser o valor do ganho β, indicado na figura, para que a tensão V<sub>SAIDA</sub> do circuito seja 3,6 V?</p>
+                <p class="mb-2 text-justify">A partir das informações apresentadas e considerando que o potenciômetro se encontra na posição angular de 36°, qual deve ser o valor do ganho <i>b</i>, indicado na figura, para que a tensão V<sub>SAIDA</sub> do circuito seja 3,6 V?</p>
             ',
             'referencia' => '',
             'opcao_a' => '0,72.',
@@ -537,10 +514,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere um sistema elétrico de potência representado pelo diagrama unifilar a seguir. A potência injetada na barra 3 e as impedâncias das linhas que conectam a barra 1 à barra 2 bem como a barra 2 à barra 3 são mensuradas por unidade (pu). Tanto a tensão na barra 1 quanto a tensão na barra 3 são iguais a 1,0 pu.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Diagrama unifilar do sistema</p>
-                        <img src="/img/questoes/engenharia_eletrica/q24_diagrama_unifilar.png" alt="Diagrama unifilar do sistema elétrico de potência" class="max-w-sm mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Diagrama unifilar do sistema</p>
+                        <img src="/img/questoes/engenharia_eletrica/img28.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -549,10 +526,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
             ',
             'referencia' => '',
             'opcao_a' => '1,0 pu e 1,0 pu.',
-            'opcao_b' => '1,0 − j0,1 pu e 1,0 pu.',
-            'opcao_c' => '1,0 + j0,1 pu e 0,5 pu.',
-            'opcao_d' => '1,0 − j0,1 pu e 0,5 pu.',
-            'opcao_e' => '1,0 + j0,1 pu e 1,0 pu.',
+            'opcao_b' => '1,0 − <i>j</i>0,1 pu e 1,0 pu.',
+            'opcao_c' => '1,0 + <i>j</i>0,1 pu e 0,5 pu.',
+            'opcao_d' => '1,0 − <i>j</i>0,1 pu e 0,5 pu.',
+            'opcao_e' => '1,0 + <i>j</i>0,1 pu e 1,0 pu.',
             'alternativa_correta' => 'D',
         ]);
 
@@ -565,22 +542,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Auditoria energética é a análise sistemática dos fluxos de energia em um sistema particular, visando a discriminar as perdas e a orientar um programa de uso racional de insumos energéticos. Uma forma de desenvolver uma auditoria energética na indústria é implementá-la em etapas sequenciadas, sendo:</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full max-w-md">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-2/5 md:w-2/5">
                         <p class="font-semibold mb-3">Etapas de uma auditoria energética</p>
-                        <div class="space-y-1 text-sm">
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Levantamento de dados gerais da empresa</div>
-                            <div class="text-center">↓</div>
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Estudo dos fluxos de materiais e produtos</div>
-                            <div class="text-center">↓</div>
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Caracterização do consumo energético</div>
-                            <div class="text-center">↓</div>
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Avaliação das perdas de energia</div>
-                            <div class="text-center">↓</div>
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Desenvolvimento dos estudos técnicos e econômicos das alternativas de redução das perdas</div>
-                            <div class="text-center">↓</div>
-                            <div class="bg-gray-100 border border-gray-300 rounded px-4 py-2">Elaboração das recomendações e conclusões</div>
-                        </div>
+                        <img src="/img/questoes/engenharia_eletrica/img29.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -613,10 +578,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir apresenta um sistema fotovoltaico que visa a suprir uma parcela da demanda energética de uma residência, a qual também possui conexão com a rede pública de fornecimento de energia.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Diagrama de blocos do sistema fotovoltaico instalado na residência</p>
-                        <img src="/img/questoes/engenharia_eletrica/q26_sistema_fotovoltaico.png" alt="Diagrama de blocos do sistema fotovoltaico" class="max-w-lg mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Diagrama de blocos do sistema fotovoltaico instalado na residência</p>
+                        <img src="/img/questoes/engenharia_eletrica/img30.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -641,21 +606,15 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A rede <i>Actuator Sensor Interface</i> (AS-I) é um padrão de comunicação industrial concebido para tornar mais simples e rápida a conexão entre sensores e atuadores com os respectivos controladores. O controle de acesso ao meio dessa rede é do tipo <i>polling</i> e, nela, um terminal-mestre pode controlar até 30 terminais-escravos. Um ciclo completo ocorre após todos os escravos terem sido requisitados uma vez. A sequência binária correspondente à comunicação serial entre o terminal-mestre e cada um dos terminais-escravos é mostrada na figura a seguir.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Sequência binária da comunicação terminal-mestre do protocolo padrão AS-I</p>
-                        <img src="/img/questoes/engenharia_eletrica/q27_asi_sequencia.png" alt="Sequência binária AS-I" class="max-w-xl mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Sequência binária da comunicação terminal-mestre do protocolo padrão AS-I</p>
+                        <img src="/img/questoes/engenharia_eletrica/img31.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
-                </div>
-
-                <div class="text-sm mt-2">
-                    <p class="font-semibold mb-1">Legenda:</p>
-                    <p>BI: Bit de início &nbsp;|&nbsp; BC: Bit de Controle &nbsp;|&nbsp; A4–A0: Bits de Endereçamento &nbsp;|&nbsp; I4–I0: Bits de Informação &nbsp;|&nbsp; BP: Bits de Paridade &nbsp;|&nbsp; BF: Bits de Fim</p>
-                    <p class="mt-1"><b>MESTRE → ESCRAVO:</b> BI BC A4 A3 A2 A1 A0 I4 I3 I2 I1 I0 BP BF PAUSA &nbsp;&nbsp; <b>ESCRAVO → MESTRE:</b> BI I3 I2 I1 I0 BP BF PAUSA</p>
                 </div>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">A partir da análise da rede AS-I, após um ciclo completo de comunicação, com a rede em sua configuração máxima, qual será a sequência formada, respectivamente, pela quantidade de bits de informação recebida pelo mestre; pela quantidade de bits de informação transmitida pelo mestre; e pela quantidade total de bits trafegados?</p>
+                <p class="mb-2 text-justify">A partir da análise da rede AS-I, após um ciclo completo de comunicação, com a rede em sua configuração máxima, qual será a sequência formada, respectivamente, pela quantidade de <i>bits</i> de informação recebida pelo mestre; pela quantidade de <i>bits</i> de informação transmitida pelo mestre; e pela quantidade total de <i>bits</i> trafegados?</p>
             ',
             'referencia' => '',
             'opcao_a' => '4; 5; e 270.',
@@ -706,18 +665,18 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">Nesse contexto, considere que a equação de diferenças de um sistema seja a seguinte.</p>
 
-                <p class="text-center my-3 font-medium">6y[n] − y[n−1] − y[n−2] = 18x[n] + x[n−1]</p>
+                <p class="text-center my-3 font-normal"><span>\(6y[n] − y[n−1] − y[n−2] = 18x[n] + x[n−1]\)</span></p>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">Considerando que a transformada z da resposta ao impulso do sistema apresentado (H(z)) possa assumir diferentes regiões de convergência (RDC), avalie as afirmações a seguir.</p>
+                <p class="mb-2 text-justify">Considerando que a transformada <span>\(z\)</span> da resposta ao impulso do sistema apresentado <span>\((H(z))\)</span> possa assumir diferentes regiões de convergência (RDC), avalie as afirmações a seguir.</p>
 
                 <p class="mb-2 pl-6 text-justify">I. A função de transferência do sistema é</p>
-                <p class="text-center my-2 font-medium">H(z) = [3(1 + (1/6)z<sup>−1</sup>)] / [(1 − (1/3)z<sup>−1</sup>)(1 + (1/2)z<sup>−1</sup>)]</p>
+                <p class="text-center my-2 font-normal"> <span>\(H(z) =\)</span><span style="font-size:1.1em">\(\dfrac{3 + \dfrac{1}{6}z^{-1}}{\left(1 - \dfrac{1}{3}z^{-1}\right)\left(1 + \dfrac{1}{2}z^{-1}\right)}\)</span></p>
 
-                <p class="mb-2 pl-6 text-justify">II. Se |z| &gt; 1/3 for uma região de convergência possível, o sistema será estável.</p>
+                <p class="mb-2 pl-6 text-justify">II. Se |<span>\(z\)</span>| &gt; 1/3 for uma região de convergência possível, o sistema será estável.</p>
 
-                <p class="mb-2 pl-6 text-justify">III. Se |z| &gt; 1/2 for uma região de convergência possível, a resposta ao impulso do sistema causal será dada por</p>
-                <p class="text-center my-2 font-medium">h[n] = [((1/3)<sup>n</sup> + 2·(−1/2)<sup>n</sup>)] · u[n]</p>
+                <p class="mb-2 pl-6 text-justify">III. Se |<span>\(z\)</span>| &gt; 1/2 for uma região de convergência possível, a resposta ao impulso do sistema causal será dada por</p>
+                <p class="text-center my-2 font-normal"> <span>\(h[n] = \left[{\left(-\dfrac{1}{3}\right)^n + 2\left(\dfrac{1}{2}\right)^n}\right] u[n]\)</span></p>
 
                 <p class="mb-2 text-justify">É correto o que se afirma em</p>
             ',
@@ -770,10 +729,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O diagrama unifilar a seguir pertence a um projeto de instalação elétrica de baixa tensão, no qual o circuito C1 alimenta um fogão elétrico (220 V); o C2 alimenta um chuveiro (220 V); o C3 é um circuito de iluminação (127 V); o C4 é um circuito de tomada de uso geral (127 V); e o C5 é, também, um circuito de tomada de uso geral (127 V). Todos os circuitos estão em eletrodutos exclusivos. Sabe-se que a concessionária de energia elétrica local fornece eletricidade com níveis de tensão linha-linha de 220 V e tensão linha-neutro de 127 V. Considerando-se esses dados e analisando-se o diagrama elaborado, nota-se que ele apresenta alguns erros.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center w-full">
-                        <p class="font-semibold mb-2">Diagrama unifilar do projeto da instalação</p>
-                        <img src="/img/questoes/engenharia_eletrica/q31_diagrama_unifilar.png" alt="Diagrama unifilar do projeto de instalação elétrica" class="max-w-lg mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-4/5 md:w-4/5">
+                        <p class="font-bold mb-2">Diagrama unifilar do projeto da instalação</p>
+                        <img src="/img/questoes/engenharia_eletrica/img32.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -897,9 +856,9 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">A figura a seguir ilustra um conversor <i>buck</i> DC-DC, cuja chave é acionada por um sinal PWM e converte o sinal de entrada V<sub>DC</sub> de amplitude A<sub>1</sub> em um sinal de amplitude A<sub>2</sub> na carga resistiva R.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <img src="/img/questoes/engenharia_eletrica/q34_conversor_buck.png" alt="Conversor Buck DC-DC" class="max-w-sm mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/engenharia_eletrica/img33.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
             ',
@@ -928,9 +887,9 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">O ponto (Q<sub>0</sub>, P<sub>0</sub>) representa o ponto de equilíbrio dado pela intersecção da curva de demanda D2 com a curva de oferta O1. Os eixos representam a quantidade (Q) e o preço (P).</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <img src="/img/questoes/engenharia_eletrica/q35_oferta_demanda.png" alt="Gráfico de curvas de oferta e demanda" class="max-w-xs mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/engenharia_eletrica/img34.jpg"class="w-full h-auto mb-2 rounded">
                         <p class="text-sm mt-2">PINHO, D. B.; VASCONCELLOS, M. A. S. <b>Manual de Economia.</b> 5. ed. Saraiva, 2004 (adaptado).</p>
                     </div>
                 </div>
@@ -960,9 +919,9 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">Os componentes de um conversor A/D são apresentados na figura a seguir. A primeira etapa é o amostrador, referido algumas vezes como conversor contínuo-discreto (C/D). O conversor C/D extrai amostras do sinal contínuo a cada período de tempo, definido como período de amostragem. A segunda etapa é o quantizador, que atribui valores discretos predefinidos a essas amostras do sinal. Por fim, na terceira etapa, os valores quantizados são codificados em sequência de palavras binárias.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <img src="/img/questoes/engenharia_eletrica/q36_conversor_ad.png" alt="Componentes de um conversor A/D" class="max-w-lg mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/engenharia_eletrica/img35.jpg" class="w-full h-auto mb-2 rounded">
                         <p class="text-sm mt-2">HAYES, M. H. <b>Teoria e problemas de processamento digital de sinais.</b> Porto Alegre: Bookman, 2006 (adaptado).</p>
                     </div>
                 </div>
@@ -992,10 +951,10 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">Uma topologia simples, que pode ser utilizada em sistemas fotovoltaicos, é apresentada na figura 1, no qual, basicamente, são inseridos conversores em série entre o painel solar e a carga.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 1 – Conversores em série</p>
-                        <img src="/img/questoes/engenharia_eletrica/q37_figura1_conversores.png" alt="Conversores em série" class="max-w-sm mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Figura 1 – Conversores em série</p>
+                        <img src="/img/questoes/engenharia_eletrica/img36.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
@@ -1003,43 +962,25 @@ class Questoes_Engenharia_Eletrica extends Seeder
 
                 <p class="mb-2 text-justify">Com o objetivo de rastrear o ponto de máxima potência e de elevar a tensão de saída para 20 V, elaborou-se um projeto no qual se propõe utilizar o conversor CC-CC <i>boost</i>, apresentado na figura 2.</p>
 
-                <div class="flex justify-center my-4">
-                    <div class="text-center">
-                        <p class="font-semibold mb-2">Figura 2 – Projeto de conversor boost</p>
-                        <img src="/img/questoes/engenharia_eletrica/q37_figura2_boost.png" alt="Projeto de conversor boost" class="max-w-xs mx-auto">
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <p class="font-bold mb-2">Figura 2 – Projeto de conversor boost</p>
+                        <img src="/img/questoes/engenharia_eletrica/img37.jpg" class="w-full h-auto mb-2 rounded">
                     </div>
                 </div>
 
                 <p class="mb-2 text-justify">A Tabela 1 apresenta os dados de entrada para o projeto do conversor, de acordo com o conjunto de painéis solares a serem utilizados.</p>
 
                 <div class="overflow-x-auto my-4">
-                    <p class="font-semibold mb-2 text-center">Tabela 1 – Dados para o projeto do conversor boost</p>
-                    <table class="min-w-full border border-gray-300 text-sm">
-                        <thead class="bg-gray-100">
-                            <tr>
-                                <th class="border border-gray-300 px-4 py-2">Abreviação</th>
-                                <th class="border border-gray-300 px-4 py-2">Descrição</th>
-                                <th class="border border-gray-300 px-4 py-2">Especificação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td class="border border-gray-300 px-4 py-1">V<sub>in min</sub></td><td class="border border-gray-300 px-4 py-1">Tensão mínima de entrada</td><td class="border border-gray-300 px-4 py-1 text-center">10 V</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">V<sub>mp</sub></td><td class="border border-gray-300 px-4 py-1">Tensão no ponto de máxima potência</td><td class="border border-gray-300 px-4 py-1 text-center">12 V</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">V<sub>in max</sub></td><td class="border border-gray-300 px-4 py-1">Tensão máxima de entrada</td><td class="border border-gray-300 px-4 py-1 text-center">15 V</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">I<sub>mp</sub></td><td class="border border-gray-300 px-4 py-1">Corrente no ponto de máxima potência</td><td class="border border-gray-300 px-4 py-1 text-center">6 A</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">I<sub>in max</sub></td><td class="border border-gray-300 px-4 py-1">Corrente máxima de entrada</td><td class="border border-gray-300 px-4 py-1 text-center">10 A</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">P<sub>in max</sub></td><td class="border border-gray-300 px-4 py-1">Máxima potência de entrada</td><td class="border border-gray-300 px-4 py-1 text-center">100 W</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">V<sub>out</sub></td><td class="border border-gray-300 px-4 py-1">Tensão de saída</td><td class="border border-gray-300 px-4 py-1 text-center">20 V</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">f<sub>sw</sub></td><td class="border border-gray-300 px-4 py-1">Frequência de chaveamento</td><td class="border border-gray-300 px-4 py-1 text-center">8 kHz</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">ΔI<sub>L</sub></td><td class="border border-gray-300 px-4 py-1">Ondulação de corrente de entrada</td><td class="border border-gray-300 px-4 py-1 text-center">&lt; 20%</td></tr>
-                            <tr><td class="border border-gray-300 px-4 py-1">ΔV<sub>out</sub></td><td class="border border-gray-300 px-4 py-1">Ondulação da tensão de saída</td><td class="border border-gray-300 px-4 py-1 text-center">&lt; 1%</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="w-3/5 md:w-3/5 mx-auto">
+                        <p class="font-bold mb-2 text-center">Tabela 1 – Dados para o projeto do conversor boost</p>
+                        <img src="/img/questoes/engenharia_eletrica/img38.jpg" class="w-full h-auto mb-2 rounded">
+                    </div>
                 </div>
 
                 <p class="mb-2 text-justify">Nesse caso, o valor de indutância crítica (condução contínua) é determinado pela expressão:</p>
 
-                <p class="text-center my-3 font-medium">L<sub>cr</sub> = D · (1 − D)² · R / (2 · f<sub>sw</sub>)</p>
+                <p class="text-center my-3 font-normal"> <span style="font-size:1.1em">\(L_{cr} =\)</span><span style="font-size:1.05em">\(\dfrac{(1-D)^2 \cdot R \cdot D}{2 \cdot f_{sw}}\)</span></p>
 
                 <p class="mb-2 text-justify">em que: L<sub>cr</sub> é a indutância crítica (H); D é o ciclo de trabalho da chave; R é a resistência da carga (ohms); e f<sub>sw</sub> é a frequência de chaveamento (Hz).</p>
             ',

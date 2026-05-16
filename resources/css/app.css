@@ -56,3 +56,9 @@ p .katex,
 span .katex {
   font-size: 1em !important;
 }
+
+.larger-math .katex,
+.larger-math .katex-html,
+.larger-math .katex-mathml {
+  font-size: 1.2em !important;
+}
