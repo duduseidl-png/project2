@@ -30,8 +30,8 @@
 
 /* Modal de Confirmação */
 #confirmation-modal {
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     transition: opacity 0.3s ease;
 }
 
@@ -70,4 +70,32 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Tela Informativa */
+#tela-informativa-overlay {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+#tela-informativa-overlay.hidden {
+    display: none !important;
+}
+
+#tela-informativa-overlay:not(.hidden) {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Cronômetro na sidebar */
+.countdown-timer {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-align: center;
+    padding: 1rem;
+    background-color: #dbeafe;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }

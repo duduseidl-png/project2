@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.history.scrollRestoration = 'manual';
 
     var form = document.getElementById('simulado-form');
+    var telaInformativa = document.getElementById('tela-informativa-overlay');
+    var startButton = document.getElementById('btn-iniciar-simulado');
+    var cancelButton = document.getElementById('btn-cancelar-simulado');
     var questoes = document.querySelectorAll('.questao-item');
     var modal = document.getElementById('confirmation-modal');
     var cancelBtn = document.getElementById('cancel-btn');
@@ -18,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var resultadoTempo = document.getElementById('resultado-tempo');
     var formSubmitted = false;
     var startTime = Date.now();
+
+    // Tela informativa -> Iniciar simulado ou cancelar
+    startButton.addEventListener('click', function () {
+        telaInformativa.classList.add('hidden');
+        sidecard.classList.remove('modal-active');
+        
+        // Inicia o countdown se a função estiver disponível
+        if (typeof window.startCountdown === 'function') {
+            window.startCountdown();
+        }
+    });
+    cancelButton.addEventListener('click', function () {
+        return window.location.href = '/simulados/gerar_simulado';
+    });
 
     function formatDuration(duration) {
         var totalSeconds = Math.floor(duration / 1000);
@@ -88,7 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
         sidecard.classList.remove('modal-active');
         form.dispatchEvent(new Event('submit'));
-        stopCountdown();
+        
+        // Para o countdown se a função estiver disponível
+        if (typeof window.stopCountdown === 'function') {
+            window.stopCountdown();
+        }
     });
 
     form.addEventListener('submit', function (event) {
@@ -194,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Inicia no topo da página
         window.scrollTo({ top: 0, behavior: 'auto' });
     });
-})
+});
 
 let isDirty = true; // Set to true when form is edited
 

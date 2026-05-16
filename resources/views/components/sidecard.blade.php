@@ -12,23 +12,9 @@
 
         .card.modal-active {
             opacity: 0.5;
-            filter: brightness(0.6);
+            filter: brightness(0.6) blur(3px);
+            -webkit-filter: brightness(0.6) blur(3px);
             pointer-events: none;
-        }
-
-        /* Define colors based on theme */
-        :root[data-theme="light"] {
-            --button-answered: #d3d3d3e1;
-            --button-correct: #22c55e;
-            --button-wrong: #ef4444;
-            --button-answered-font-color: white;
-        }
-
-        :root[data-theme="dark"] {
-            --button-answered: #1e2227c7;
-            --button-correct: #005c3d;
-            --button-wrong: #9e2727;
-            --button-answered-font-color: grey;
         }
 
         .btn-questao.answered {
@@ -55,7 +41,8 @@
             border-color: #cbd5e1 !important;
         }
     </style>
-    <div class="card bg-base-100">
+
+    <div class="card bg-base-100 modal-active">
         <div class="card-body">
             <h2 class="card-title">Controle do simulado</h2>
             <h5>Tempo restante:</h5>
@@ -68,7 +55,6 @@
             <button type="submit" form="simulado-form" class="btn btn-primary">Enviar Respostas</button>
         </div>
     </div>
-
 
     <script>
         // Event listeners para os botões de questão - scroll sem alterar URL

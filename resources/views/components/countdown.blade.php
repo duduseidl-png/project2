@@ -6,36 +6,54 @@
     </div>
 
     <script>
-        // Recebe a data do Laravel e converte para milissegundos
-        const deadline = new Date("{{ $deadline }}").getTime();
+        // Variáveis globais para o countdown
+        window.countdownStartTime = null;
+        window.timerInterval = null;
+        window.timeLimit = {{ $timeLimit ?? '14400' }}; // Tempo limite em segundos (14400 = 4 horas, null = ilimitado)
 
-        // Função para atualizar o contador a cada segundo
+        // Função para atualizar o contador a cada segundo (tempo regressivo)
         const updateTimer = () => {
+            if (!window.countdownStartTime) return;
+            
             const now = new Date().getTime();
-            const distance = deadline - now;
+            const elapsed = now - window.countdownStartTime;
+            const elapsedSeconds = Math.floor(elapsed / 1000);
+            
+            let remainingSeconds;
+            if (window.timeLimit !== null) {
+                // Countdown regressivo
+                remainingSeconds = Math.max(0, window.timeLimit - elapsedSeconds);
+            } else {
+                // Cronômetro crescente (sem limite)
+                remainingSeconds = elapsedSeconds;
+            }
 
-            // Calcula tempo restante
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const hours = Math.floor(remainingSeconds / 3600);
+            const minutes = Math.floor((remainingSeconds % 3600) / 60);
+            const seconds = remainingSeconds % 60;
 
             // Exibe no HTML com formatação 00
             document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("hours").classList.toggle('style="--value:' + hours + ';"');
             document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("minutes").classList.toggle('style="--value:' + minutes + ';"');
             document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-            document.getElementById("seconds").classList.toggle('style="--value:' + seconds + ';"');
 
-            // Para o timer quando expira
-            if (distance < 0) {
-                stopCountdown();
-                document.getElementById("timer").innerHTML = "EXPIRADO";
+            // Se o tempo acabou
+            if (window.timeLimit !== null && remainingSeconds <= 0) {
+                window.stopCountdown();
+                document.getElementById("timer").innerHTML = "<span style='color: red;'>TEMPO ESGOTADO</span>";
             }
         };
 
-        // Armazena o intervalo globalmente para poder parar
-        window.timerInterval = setInterval(updateTimer, 1000);
+        // Função para iniciar o countdown
+        window.startCountdown = () => {
+            if (!window.countdownStartTime) {
+                window.countdownStartTime = new Date().getTime();
+                if (!window.timerInterval) {
+                    window.timerInterval = setInterval(updateTimer, 1000);
+                    updateTimer(); // Executa imediatamente
+                }
+            }
+        };
         
         // Função para parar o countdown
         window.stopCountdown = () => {
@@ -44,7 +62,5 @@
                 window.timerInterval = null;
             }
         };
-
-        updateTimer(); // Executa imediatamente
     </script>
 </div>
