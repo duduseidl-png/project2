@@ -1,20 +1,48 @@
 @props(['title' => 'Default Title'])
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }} " data-theme="light">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" id="html-root">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
+
   <title>{{ $title }}</title>
+
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  @vite('resources/css/app.css')
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  <link rel="stylesheet" href="resources/css/app.css">
-  @vite('resources/css/app.css')
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Script para gerenciar tema -->
+  <script>
+    (function () {
+      const htmlRoot = document.getElementById('html-root');
+      const savedTheme = localStorage.getItem('theme') || 'light';
+
+      function applyTheme(theme) {
+        htmlRoot.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          htmlRoot.classList.add('dark');
+        } else {
+          htmlRoot.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      applyTheme(savedTheme);
+
+      // Expor função global para ser usada pelo toggle
+      window.toggleTheme = function () {
+        const current = localStorage.getItem('theme') || 'light';
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+      };
+    })();
+  </script>
 </head>
 
 <div class="navbar bg-base-100 shadow-sm" style="z-index: 1000;">
@@ -56,7 +84,7 @@
   </div>
   <div class="navbar-end">
     <label class="toggle text-base-content">
-      <input type="checkbox" value="dark" class="theme-controller" />
+      <input type="checkbox" value="teste" class="theme-controller" id="theme-toggle" onchange="window.toggleTheme()" />
       <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
           <circle cx="12" cy="12" r="4"></circle>
@@ -77,8 +105,7 @@
       </svg>
     </label>
     <div>
-      <img class="mx-5" width="100" height="100" padding="10" 
-            src="/img/figuras/Feevale.png" alt="Logo">
+      <img class="mx-5" width="100" height="100" padding="10" src="/img/figuras/Feevale.png" alt="Logo">
     </div>
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -102,55 +129,32 @@
 </div>
 
 <body>
-  <script>
-    // Função para salvar o tema no localStorage
-    function saveTheme(theme) {
-      localStorage.setItem('theme', theme);
-    }
-
-    // Função para carregar o tema do localStorage
-    function loadTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      const themeController = document.querySelector('.theme-controller');
-
-      if (savedTheme === 'dark') {
-        themeController.checked = true;
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        themeController.checked = false;
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    }
-
-    // Carregar tema salvo quando a página carrega
-    document.addEventListener('DOMContentLoaded', loadTheme);
-
-    // Salvar tema quando o toggle muda
-    document.querySelector('.theme-controller').addEventListener('change', function () {
-      const theme = this.checked ? 'dark' : 'light';
-      saveTheme(theme);
-      document.documentElement.setAttribute('data-theme', theme);
-    });
-  </script>
 
   <main>
     {{ $slot }}
-
   </main>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    // Sincronizar o estado do toggle com o tema salvo no carregamento
+    document.addEventListener('DOMContentLoaded', function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.checked = (savedTheme === 'dark');
+      }
+
+      // Renderizar matemática do KaTeX
       if (typeof renderMathInElement === 'function') {
         renderMathInElement(document.body, {
           delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '\\(', right: '\\)', display: false}
+            { left: '$$', right: '$$', display: true },
+            { left: '\\(', right: '\\)', display: false }
           ]
         });
       }
     });
   </script>
 
-  <script src="resources/js/app.js"></script>
 </body>
 
 </html>

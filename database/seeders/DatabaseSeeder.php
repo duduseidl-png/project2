@@ -15,13 +15,13 @@ class DatabaseSeeder extends Seeder
     {
         // Este comando chama o seeder das questões
         $this->call([
-            Questoes_Engenharia_de_Computacao::class,
-            Questoes_Engenharia_Civil::class,
-            Questoes_Engenharia_de_Controle_e_Automacao::class,
-            Questoes_Engenharia_de_Producao::class,
-            Questoes_Engenharia_Eletrica::class,
-            Questoes_Engenharia_Mecanica::class,
-            Questoes_Engenharia_Quimica::class,
+            Questoes_Engenharia_de_Computacao_2023::class,
+            Questoes_Engenharia_Civil_2023::class,
+            Questoes_Engenharia_de_Producao_2023::class,
+            Questoes_Engenharia_Eletrica_2023::class,
+            Questoes_Engenharia_Mecanica_2023::class,
+            Questoes_Engenharia_Quimica_2023::class,
+            Questoes_Administracao_2022::class,
         ]);
     }
 }

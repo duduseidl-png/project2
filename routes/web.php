@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
+use App\Http\Controllers\SimPas_Controller;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,9 +16,7 @@ Route::get('/simulados', function () {
     return view('simulados');
 });
 
-Route::get('/simulados/simulados_passados', function () {
-    return view('simulados_passados');
-});
+Route::get('/simulados/simulados_passados', SimPas_Controller::class);
 
 Route::get('/simulados/gerar_simulado', function () {
     return view('gerar_simulado');
@@ -28,10 +27,10 @@ Route::post('/simulados/gerar_simulado', function () {
     $limitefg = intval(request('limitefg', 38));
     $limitece = intval(request('limitece', 38));
 
-    if ($limitefg <= 0 || $limitefg > 100) {
+    if ($limitefg < 0 || $limitefg > 100) {
         $limitefg = 38;
     }
-    if ($limitece <= 0 || $limitece > 100) {
+    if ($limitece < 0 || $limitece > 100) {
         $limitece = 38;
     }
 
@@ -42,6 +41,7 @@ Route::post('/simulados/gerar_simulado', function () {
 
 Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
     $cursos = [
+        'administracao' => 'Administração',
         'engenharia-civil' => 'Engenharia Civil',
         'engenharia-de-computacao' => 'Engenharia de Computação',
         'engenharia-de-controle-e-automacao' => 'Engenharia de Controle e Automação',
