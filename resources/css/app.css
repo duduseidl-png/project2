@@ -20,9 +20,11 @@
   --wrong-border: #f87171;
   --wrong-text: #b91c1c;
   --button-answered: #d3d3d3e1;
+  --button-unanswered: #e2e8f0;
   --button-correct: #22c55e;
   --button-wrong: #ef4444;
   --button-answered-font-color: white;
+  --button-unanswered-font-color: #334155;
   --hover-bg: #f1f5f9;
   --modal-bg: #ffffff;
   --modal-text: #1f2937;
@@ -42,9 +44,11 @@
   --wrong-border: #ef4444;
   --wrong-text: #fca5a5;
   --button-answered: #1e2227c7;
+  --button-unanswered: #374151;
   --button-correct: #005c3d;
   --button-wrong: #9e2727;
   --button-answered-font-color: grey;
+  --button-unanswered-font-color: #cbd5e1;
   --hover-bg: #374151;
   --modal-bg: #1f2937;
   --modal-text: #f6f4f3;

@@ -7,7 +7,6 @@
             width: 20%;
             height: 70%;
             z-index: 900;
-
         }
 
         .card.modal-active {
@@ -36,8 +35,8 @@
         }
 
         .btn-questao.unanswered {
-            background-color: #e2e8f0 !important;
-            color: #334155 !important;
+            background-color: var(--button-unanswered) !important;
+            color: var(--button-unanswered-font-color) !important;
             border-color: #cbd5e1 !important;
         }
     </style>
