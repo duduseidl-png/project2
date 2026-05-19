@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startButton.addEventListener('click', function () {
         telaInformativa.classList.add('hidden');
         sidecard.classList.remove('modal-active');
-        
+
         // Inicia o countdown se a função estiver disponível
         if (typeof window.startCountdown === 'function') {
             window.startCountdown();
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
         sidecard.classList.remove('modal-active');
         form.dispatchEvent(new Event('submit'));
-        
+
         // Para o countdown se a função estiver disponível
         if (typeof window.stopCountdown === 'function') {
             window.stopCountdown();
@@ -214,6 +214,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('load', function () {
         // Inicia no topo da página
         window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+
+    window.addEventListener('load', function () {
+        // Scroll para topo apenas na primeira carga, não em reloads
+        if (!sessionStorage.getItem('pageLoaded')) {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            sessionStorage.setItem('pageLoaded', 'true');
+        }
+
     });
 });
 
