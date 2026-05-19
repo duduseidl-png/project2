@@ -20,6 +20,7 @@
                 <h3 class="text-left mb-2 font-semibold">Curso</h3>
                 <select id="curso-select" class="select w-full">
                     <option disabled selected>-</option>
+                    <option value="administracao">Administração</option>
                     <option value="engenharia-civil">Engenharia Civil</option>
                     <option value="engenharia-de-computacao">Engenharia de Computação</option>
                     <option value="engenharia-de-controle-e-automacao">Engenharia de Controle e Automação</option>
@@ -33,16 +34,16 @@
                 <h3 class="text-left mb-2 font-semibold">Número de questões</h3>
                 <h4 class="mt-4 mb-2">Formação Geral</h4>
                 <div class="flex flex-wrap items-center gap-4 w-80">
-                    <section id="numero-questoes-badge-fg" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">9
+                    <section id="numero-questoes-badge-fg" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">10
                     </section>
-                    <input id="numero-questoes-input-fg" type="range" min="4" max="20" value="9" step="1"
+                    <input id="numero-questoes-input-fg" type="range" min="0" max="20" value="10" step="1"
                         class="range range-sm flex-1" />
                 </div>
                 <h4 class="mt-4 mb-2">Componente Específico</h4>
                 <div class="flex flex-wrap items-center gap-4 w-80">
-                    <section id="numero-questoes-badge-ce" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">29
+                    <section id="numero-questoes-badge-ce" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">30
                     </section>
-                    <input id="numero-questoes-input-ce" type="range" min="4" max="32" value="29" step="1"
+                    <input id="numero-questoes-input-ce" type="range" min="0" max="40" value="30" step="1"
                         class="range range-sm flex-1" />
                 </div>
             </div>
@@ -71,13 +72,13 @@
                 var fgValue = parseInt(NQInputFG.value);
                 var ceValue = parseInt(NQInputCE.value);
 
-                if (fgValue == 9) {
+                if (fgValue == 10) {
                     NQInputFG.classList.add('range-primary');
                 } else {
                     NQInputFG.classList.remove('range-primary');
                 }
 
-                if (ceValue == 29) {
+                if (ceValue == 30) {
                     NQInputCE.classList.add('range-primary');
                 } else {
                     NQInputCE.classList.remove('range-primary');

@@ -1,7 +1,8 @@
 @props(['questoes', 'numero'])
 
 <div>
-    <ul class="border rounded-xl shadow-sm space-y-6">
+    @if (!$questoes->isEmpty())
+    <ul class="border rounded-xl shadow-sm space-y-6 mb-6">
         @foreach ($questoes as $questao)
             <li class="px-4 pt-2 questao-item"
                 data-correct="{{ $questao->alternativa_correta }}">
@@ -89,9 +90,12 @@
                         </span>
                     </label>
                     </li>
-                    <hr>
+                    @if(!$loop->last)
+                        <hr>
+                    @endif
                 </ul>
             </li>
         @endforeach
     </ul>
+    @endif
 </div>
