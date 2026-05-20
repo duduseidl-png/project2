@@ -10,225 +10,11 @@ class Questoes_Administracao_2022 extends Seeder
     public function run(): void
     {
         // =====================================================================
-        // Administração – Questões 01 a 08
+        // Componente Específico – Questões 09 a 35
         // =====================================================================
 
         Questao::create([
             'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 font-bold">TEXTO 1</p>
-                <p class="mb-2 text-justify">A democracia representativa exige, para o seu funcionamento, um conjunto de características, as quais podem ser compreendidas como instituições. São elas: Funcionários eleitos; Eleições livres, justas e frequentes; Sufrágio inclusivo; Direito de concorrer a cargos eletivos; Liberdade de expressão; Fontes de informação diversificadas; Autonomia para as associações. Entre as categorias mencionadas, destacam-se duas como pilares do regime democrático.</p>
-                <p class="mb-2 text-justify"><b>Liberdade de expressão:</b> os cidadãos têm o direito de se expressar, sem o perigo de punições severas, quanto aos assuntos políticos de uma forma geral, o que inclui a liberdade de criticar os funcionários do governo, o governo em si, o regime, a ordem socioeconômica e a ideologia dominante.</p>
-                <p class="mb-2 text-justify"><b>Fontes de informação diversificadas:</b> os cidadãos têm o direito de buscar fontes de informação, alternativas, diversificadas e independentes. Ademais, a existência de fontes de informação alternativa deve ser protegida por lei.</p>
-                <p class="mb-2 text-right text-sm">DAHL, R. A. <b>Sobre a democracia</b>, EDU: UnB, 2001 (adaptado).</p>
-
-                <p class="mb-2 font-bold">TEXTO 2</p>
-                <p class="mb-2 text-justify">Embora os regimes políticos possam ser derrubados e as ideologias criticadas e destituídas de sua legitimidade, por trás de um regime e de sua ideologia há sempre um modo de pensar e de sentir, uma série de hábitos culturais, uma nebulosa de instintos obscuros e de pulsões insondáveis.</p>
-                <p class="mb-2 text-right text-sm">ECO, U. O Fascismo Eterno. <i>In</i>: <b>Cinco Escritos Morais</b>. Editora Record: Rio de Janeiro, 2002 (adaptado).</p>
-
-                <p class="mb-2 font-bold">TEXTO 3</p>
-                <p class="mb-2 text-justify">A figura a seguir exemplifica algumas condutas que, segundo Umberto Eco, podem ser consideradas contraditórias aos princípios democráticos.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://www.facebook.com/EditoraRecord/photos. Acesso em: 18 ago. 2022 (adaptado).</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Com base na concepção de regimes políticos, abordada pelos autores, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. A democracia é o sistema que se propõe a assegurar aos seus cidadãos uma liberdade pessoal mais ampla do que outros modelos.</p>
-                <p class="mb-2 pl-6 text-justify">II. A liberdade de expressão no sistema democrático garante que a manifestação de um agente político e de um cidadão possuam repercussões equivalentes.</p>
-                <p class="mb-2 pl-6 text-justify">III. As <i>fake news</i> são manifestações relacionadas à categoria de fontes de informação diversificadas e podem ser utilizadas como estratégia para fragilizar o sistema democrático de governo.</p>
-                <p class="mb-2 pl-6 text-justify">IV. O direito à liberdade de expressão permite a emissão de opinião crítica e discursos contrários à democracia e aos direitos humanos.</p>
-
-                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'I e II.',
-            'opcao_b' => 'I e III.',
-            'opcao_c' => 'II e IV.',
-            'opcao_d' => 'I, III e IV.',
-            'opcao_e' => 'II, III e IV.',
-            'alternativa_correta' => 'B',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 font-bold">TEXTO 1</p>
-                <p class="mb-2 text-justify">Dados do levantamento feito pelo <i>TransgenderEurope</i> (TGEU) mostram que o Brasil permaneceu pelo 13º ano consecutivo como o país que mais mata pessoas transgêneros.</p>
-                <p class="mb-2 text-right text-sm">TRANSGENDER EUROPE (TGEU). Disponível em: https://transrespect.org. Acesso em: 5 jul. 2022 (adaptado).</p>
-
-                <p class="mb-2 font-bold">TEXTO 2</p>
-                <p class="mb-2 text-justify">De acordo com dados do Sistema de Informação de Agravos de Notificação (Sinan), do Ministério da Saúde, houve um crescimento bruto de 5% nas violências contra homossexuais e 37,1% nas violências contra bissexuais, passando de 4 855 registros em 2018 para 5 330 em 2019. No gráfico a seguir são apresentados os dados percentuais de casos notificados em 2019, de acordo com a orientação sexual das vítimas de violência.</p>
-                <p class="mb-2 text-right text-sm">CERQUEIRA, D. <i>et al.</i> <b>Atlas da Violência 2021</b>. São Paulo: FBSP/IPEA, 2021.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando as informações apresentadas no mapa e no gráfico, bem como a situação social dos grupos LGBTQIAPN+, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. Os discursos e as práticas contra a diversidade sexual e de gênero são incompatíveis com as premissas éticas e dos direitos humanos que regem as sociedades democráticas.</p>
-                <p class="mb-2 pl-6 text-justify">II. A violência contra os grupos LGBTQIAPN+ é histórica, simbólica, psicológica e física, ocorrendo em razão de estereótipos e estigmas vigentes na sociedade e por meio de repressões e abusos.</p>
-                <p class="mb-2 pl-6 text-justify">III. A partir dos 40 anos de idade, há uma maior incidência de violência sobre pessoas heterossexuais em relação aos outros grupos, o que indica que a vulnerabilidade independe da orientação sexual.</p>
-                <p class="mb-2 pl-6 text-justify">IV. O Brasil é o país onde se identifica o maior número de mortes de pessoas <i>trans</i> entre os países analisados, situação que revela a necessidade de uma política pública mais assertiva de combate aos crimes cometidos contra os grupos LGBTQIAPN+.</p>
-
-                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'I e III.',
-            'opcao_b' => 'I e IV.',
-            'opcao_c' => 'II e III.',
-            'opcao_d' => 'I, II e IV.',
-            'opcao_e' => 'II, III e IV.',
-            'alternativa_correta' => 'D',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 text-justify">Em 2019, a violência armada foi três vezes maior para a população negra, em comparação com a não negra, tanto para a população geral quanto para o grupo jovem (entre 15 e 29 anos de idade). Quanto à taxa de mortalidade por 100 mil habitantes no grupo de pessoas com até 14 anos de idade, destaca-se, da mesma forma, a desigualdade na vitimização de crianças e adolescentes negros por agressão com arma de fogo, com taxa 3,6 vezes maior do que a de não negros em 2019.</p>
-                <p class="mb-2 text-right text-sm">INSTITUTO SOU DA PAZ. <b>Violência armada e racismo:</b> o papel da arma de fogo na desigualdade racial. Disponível em: https://soudapaz.org. Acesso em: 6 jul. 2022 (adaptado).</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. O fator racial é um importante condicionante na análise de dados relativos a homicídios e violência no Brasil na população de adolescentes e jovens.</p>
-
-                <p class="text-center font-bold my-2">PORQUE</p>
-
-                <p class="mb-2 pl-6 text-justify">II. A população negra sofre mais violência do que a população não negra, em razão do racismo estrutural existente no país, além de outras vulnerabilidades sociais associadas a essa forma de preconceito.</p>
-
-                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
-            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
-            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
-            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
-            'opcao_e' => 'As asserções I e II são proposições falsas.',
-            'alternativa_correta' => 'A',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 font-bold">TEXTO 1</p>
-                <p class="mb-2 text-justify">Além de tramitar no Judiciário um processo a respeito do Marco Temporal, há também, na Câmara dos Deputados, um projeto em que se tenta transformar a tese do Marco Temporal em lei. Trata-se do Projeto de Lei n. 490/2007, que determina que devem ter direito às terras consideradas ancestrais somente os povos que as estivessem ocupando no dia da promulgação da Constituição Federal, em 5 de outubro de 1988.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://g1.globo.com. Acesso em: 21 jun. 2022 (adaptado).</p>
-
-                <p class="mb-2 font-bold">TEXTO 2</p>
-                <p class="mb-2 text-justify">O assassinato do indigenista Bruno Pereira e do jornalista Dom Phillips expôs ao mundo a importância da demarcação dos territórios indígenas, assegurada pela Constituição Federal de 1988. Os territórios indígenas, além de preservarem identidades, modos de vida, tradições e culturas desses povos, também são fundamentais para a preservação ambiental. Eles contribuem para conter as emissões de gases de efeito estufa, promover a biodiversidade e potencializar sistemas.</p>
-                <p class="mb-2 text-justify">Se mantido o critério do Marco Temporal, a guerra fundiária poderá ser intensificada. Os territórios se tornarão zonas de mais conflitos entre fazendeiros, mineradores, garimpeiros, grileiros, produtores rurais, narcotraficantes, comerciantes de peixes, caçadores e madeireiros, o que resultará na morte de indígenas e de defensores da floresta e, por extensão, dos territórios indígenas.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Com base nos textos e na imagem apresentados, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. Os territórios indígenas, com a regulamentação do Marco Temporal, ficarão formalmente protegidos de invasões, e os povos originários poderão manter suas tradições culturais.</p>
-                <p class="mb-2 pl-6 text-justify">II. As ações de grupos de garimpeiros, de pescadores ilegais, de desmatadores e de alguns setores das atividades agropecuárias vêm confrontando os povos originários em disputas territoriais.</p>
-                <p class="mb-2 pl-6 text-justify">III. O aumento da criminalidade nos territórios indígenas está associado aos interesses econômicos de exploração insustentável do meio ambiente, como os relacionados aos garimpos ilegais e ao desmatamento de florestas.</p>
-                <p class="mb-2 pl-6 text-justify">IV. A existência dos movimentos sociais indígenas é essencial para a luta por direitos sociais, culturais e de acesso à terra pelos povos originários, assim como para a preservação do meio ambiente e do modo de vida dos indígenas.</p>
-                <p class="mb-2 pl-6 text-justify">V. O Estado brasileiro está impedido de intervir nas demarcações de territórios indígenas, em respeito à autonomia, à autogestão e à livre determinação dos povos originários, segundo a Constituição Federal de 1988.</p>
-
-                <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'I e V.',
-            'opcao_b' => 'I, III e V.',
-            'opcao_c' => 'II, III e IV.',
-            'opcao_d' => 'II, IV e V.',
-            'opcao_e' => 'I, II, III e IV.',
-            'alternativa_correta' => 'C',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 text-justify">Pesquisa realizada pelo Observatório Brasileiro de Políticas Públicas da Universidade Federal de Minas Gerais (UFMG) aponta que a população em situação de rua aumentou no Brasil em 2022. De janeiro a maio deste ano, mais de 26 mil novas pessoas nessa situação foram registradas no Cadastro Único (CadÚnico) do Governo Federal. No país, mais de 180 mil pessoas estão registradas no CadÚnico.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://g1.globo.com. Acesso em: 6 jul. 2022 (adaptado).</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. A existência de pessoas em situação de rua no Brasil deriva, sobretudo, das desigualdades sociais oriundas da pandemia de Covid-19.</p>
-
-                <p class="text-center font-bold my-2">PORQUE</p>
-
-                <p class="mb-2 pl-6 text-justify">II. Um dos efeitos da pandemia de Covid-19 foi a ampliação do número de pessoas em situação de rua no Brasil, o que evidencia a segregação socioespacial das cidades brasileiras.</p>
-
-                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
-            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
-            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
-            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
-            'opcao_e' => 'As asserções I e II são proposições falsas.',
-            'alternativa_correta' => 'D',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 text-justify">Ao final de 2021, cerca de 89,3 milhões de pessoas estavam deslocadas em todo o mundo, em decorrência de violência, perseguições, violações dos direitos humanos ou outros conflitos em seus locais de origem. Esse contingente de deslocamentos forçados já alcançava mais de 100 milhões de pessoas em maio de 2022, sendo motivados por instabilidades como as ocorridas no Afeganistão, em alguns países africanos e nas regiões da Ucrânia ocupadas pela Rússia, além de outros locais onde já perduravam confrontos armados, como, por exemplo, na Síria.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://www.acnur.org. Acesso em: 21 jun. 2022 (adaptado).</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://operamundi.uol.com.br. Acesso em 24 de jun. de 2022.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Com relação às atuais migrações internacionais forçadas, assinale a opção correta.</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'Os interesses em relação ao tipo de tratamento dispensado aos imigrantes no mundo independem de seus países de origem.',
-            'opcao_b' => 'A xenofobia, que consiste no preconceito contra estrangeiros, deve-se à falta de normas internacionais para o tratamento de situações de imigração.',
-            'opcao_c' => 'Os refugiados são migrantes de países subdesenvolvidos que se deslocam para países centrais do capitalismo global a fim de servir de mão de obra barata.',
-            'opcao_d' => 'As migrações internacionais forçadas surgem da globalização econômica, cujos processos são responsáveis pelo aumento do número de refugiados no mundo.',
-            'opcao_e' => 'A condição de migrante internacional forçado diferencia-se da condição geral de imigrante na medida em que se refere ao deslocamento motivado por fatores involuntários, que fogem ao controle do migrante e de sua família.',
-            'alternativa_correta' => 'E',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 font-bold">TEXTO 1</p>
-                <p class="mb-2 text-justify">Resultados de pesquisa da Comissão Econômica para a América Latina e o Caribe (CEPAL), vinculada à Organização das Nações Unidas (ONU), apontam que, além do feminicídio íntimo, aquele perpetrado por parceiros ou ex-parceiros da vítima, e do feminicídio sexual sistêmico, em que a vítima é sequestrada e estuprada, há o feminicídio lesbofóbico ou bifóbico, configurado quando a vítima é bissexual ou lésbica e é assassinada porque o agressor entende que deve puni-la por sua orientação sexual.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: http://agenciabrasil.ebc.com.br. Acesso em: 22 ago. 2022 (adaptado).</p>
-
-                <p class="mb-2 font-bold">TEXTO 2</p>
-                <p class="mb-2 text-justify">Gráfico: América Latina, Caribe (21 países): Feminicídio ou femicídio (2021) — em números absolutos e taxas por 100 mil mulheres.</p>
-                <p class="mb-2 text-right text-sm">Disponível em: https://oig.cepal.org. Acesso em: 20 abr. 2022.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">A partir do gráfico e das informações do texto, assinale a opção correta.</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'O gráfico apresentado ranqueia os países a partir de um cálculo de proporção e, nessa perspectiva, Santa Lúcia apresenta uma das taxas mais baixas de feminicídio na região.',
-            'opcao_b' => 'As políticas públicas voltadas às mulheres partem do pressuposto de que elas devem ser as principais responsáveis por sua própria segurança, evitando comportamentos de risco.',
-            'opcao_c' => 'Os países da América Latina que apresentam as maiores taxas de ocorrência de feminicídios a cada 100 mil mulheres, de acordo com o gráfico apresentado, são Brasil, México e Argentina.',
-            'opcao_d' => 'As formas de violência que afetam as mulheres são determinadas não somente pela condição sexual e de gênero, mas também por diferenças econômicas, etárias, raciais, culturais e religiosas.',
-            'opcao_e' => 'O número relativo a cada 100 mil mulheres vítimas de feminicídio no Brasil explica a posição elevada do país no ranking, diferentemente de Honduras, que registra, relativamente, menos ocorrências que o Brasil.',
-            'alternativa_correta' => 'D',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Administração',
-            'contextualizacao' => '
-                <p class="mb-2 text-justify">Inicialmente, a natureza transgressora do grafite foi encarada pelo Estado como vandalismo no espaço público e como um perigo para a conservação da propriedade privada, devendo-se, portanto, combatê-lo. Com o tempo, contudo, essa concepção marginal transformou-se, incidindo em uma valorização aceitável pelo Estado e positiva para a sociedade. Essa transição do grafite, de arte marginal para manifestação artística reconhecida e aceita, tem revelado aspectos importantes não somente para os profissionais do grafite, mas para a sociedade como um todo, pois incorpora a possibilidade de ele ser um produto artístico de valor cultural, econômico e ideológico.</p>
-                <p class="mb-2 text-right text-sm">PIRES, E. M.; SANTOS, F. A. A cidade de São Paulo e suas dinâmicas: graffiti, Lei Cidade Limpa e publicidade urbana. <b>Anais do Museu Paulista</b>: História e Cultura Material. v. 26, São Paulo, 2018 (adaptado).</p>
-                <p class="mb-2 text-right text-sm">Grafite: Eduardo Kobra. Foto: Charles Humpreys. São Paulo. Disponível em: https://www.bbc.com. Acesso em: 22 ago. 2022.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando-se o texto e a imagem apresentados, é correto afirmar que o grafite consiste em uma</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'expressão popular associada à contestação e, por isso, não é reconhecido como arte.',
-            'opcao_b' => 'expressão convencional de hierarquias consolidadas ao longo do tempo e ainda presentes na sociedade.',
-            'opcao_c' => 'expressão cultural que problematiza os valores e as relações da sociedade com os espaços onde é produzida.',
-            'opcao_d' => 'intervenção urbana que traz prejuízos para a sociedade porque gera conflitos latentes entre diferentes classes sociais.',
-            'opcao_e' => 'intervenção estética realizada com o propósito de embelezamento padronizado dos espaços urbanos pelo uso de cores intensas e contrastantes.',
-            'alternativa_correta' => 'C',
-        ]);
-
-        // =====================================================================
-        // COMPONENTE ESPECÍFICO – Questões 09 a 35
-        // =====================================================================
-
-        Questao::create([
-            'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As tabelas 1, 2 e 3 apresentam informações acerca dos investimentos financeiros A, B e C.</p>
 
@@ -296,7 +82,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Entre as teorias utilizadas na Administração, a Teoria Matemática é a que mantém o foco no processo decisório racional, baseado em procedimentos matemáticos, estatísticos e computacionais. Essa teoria surgiu entre os anos 1940 e 1950 e, desde então, está presente nas práticas e nas tendências gerenciais. A teoria dos jogos, a teoria das filas, a teoria das probabilidades e a programação linear, aplicadas aos problemas gerenciais de técnicas e métodos recorrentes nas ciências matemáticas originaram-se da Teoria Matemática.</p>
                 <p class="mb-2 text-justify">A evolução recente de usos da Teoria Matemática está evidenciada nos métodos e processos de <i>Big Data</i>, <i>Business Intelligence</i> e <i>Business Analytics</i>, que utilizam plataformas computacionais com grandes volumes de dados em diferentes formatos (numérico, textual, visual).</p>
@@ -321,7 +107,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O desenvolvimento das instituições no interior da sociedade capitalista, desencadeado por transformações tecnológicas no final do século XIX, levou à racionalização material e imaterial dos processos produtivos. Essas instituições foram minuciosamente estudadas por Max Weber (1864-1920), que focou na análise da organização cotidiana da sociedade, na divisão e na coordenação das mais diversas atividades laborais. Essas atividades eram baseadas na divisão racional do trabalho, na exigência de especialização e diferenciação das funções exercidas pelos trabalhadores, e classificadas de acordo com critérios técnicos, mediante a subordinação a uma autoridade hierarquicamente organizada e altamente especializada.</p>
                 <p class="mb-2 text-right text-sm">SANTOS, F. R. Max Weber e a racionalidade burocrática. <b>Revista Espaço Acadêmico</b>, n. 169, jun. 2015 (adaptado).</p>
@@ -345,7 +131,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Além dos resultados econômicos, a dimensão ética da atividade empresarial tornou-se uma das principais preocupações dos gestores. A adoção de uma conduta pautada em princípios morais de respeito ao ambiente e aos valores da comunidade é uma exigência incontornável das sociedades contemporâneas. O impacto social e ambiental das atividades empresariais pode influenciar, inclusive, a competitividade das organizações.</p>
                 <p class="mb-2 text-right text-sm">ALMEIDA, F. J. R. Ética e desempenho social das organizações: um modelo teórico de análise dos fatores culturais e contextuais. <b>RAC – Revista de Administração Contemporânea</b>, v. 11, n. 3, p. 105-25, 2007 (adaptado).</p>
@@ -363,7 +149,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A Teoria da Contingência propõe o pressuposto de que as organizações recebem influências do ambiente onde estão inseridas. Desse modo, o ambiente pode contribuir para remodelar características específicas da empresa em determinado momento.</p>
                 <p class="mb-2 text-justify">Nesses termos, uma mesma organização que possua diferentes sedes pode ser condicionada a planejar e a executar seu processo decisório de maneiras distintas para lugares distintos. A unificação de procedimentos, processos e decisões, que seria, a priori, adequada para facilitar o gerenciamento, torna-se pressionada por fatores como negociações com grupos locais, cultura local, disponibilidade de recursos e legislações locais.</p>
@@ -390,7 +176,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em virtude da crise ocasionada pela pandemia de Covid-19, uma empresa precisou demitir 20% de seus funcionários. No intuito de reduzir os impactos desse processo, a empresa buscará realizar a recolocação profissional desses funcionários por meio da contratação de consultoria.</p>
             ',
@@ -407,7 +193,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Os executivos da área de gestão de processos e serviços de uma multinacional de telefonia móvel estão analisando o aumento das consultas ao Serviço de Atendimento ao Cliente (SAC) em determinada região do Brasil. Durante três semanas consecutivas, os profissionais do Departamento de Pesquisa e Desenvolvimento da empresa coletaram dados do SAC relativos a dias úteis das três semanas estudadas.</p>
                 <p class="mb-2 text-justify">A gestão da empresa, após analisar o resultado da pesquisa, observou que havia necessidade de expansão do serviço, mesmo considerando o risco associado à implantação desse projeto de expansão, dadas as mudanças no cenário macroeconômico.</p>
@@ -431,7 +217,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao utilizar o modelo de análise de mercado proposto por Porter, procura-se identificar as forças que atuam em um mercado dinâmico e competitivo, determinando-se a intensidade da competição em dado setor.</p>
                 <p class="mb-2 text-right text-sm">PORTER, M. <b>Estratégias competitivas</b>. Técnicas de análise para indústrias e concorrência. São Paulo: Atlas, 2005.</p>
@@ -455,7 +241,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O relatório Focus, emitido semanalmente pelo Banco Central, reúne vários indicadores e estimativas de economistas das mais renomadas instituições financeiras do país. Três dos indicadores mais relevantes que compõem o relatório de mercado do Banco Central são: Produto Interno Bruto (PIB); Índice Nacional de Preços ao Consumidor Amplo (IPCA); Sistema Especial de Liquidação e de Custódia (Taxa Selic).</p>
                 <p class="mb-2 text-justify">Os gráficos apresentados mostram as estimativas do relatório Focus, em abril de 2022, relativas à taxa de crescimento percentual do PIB (%), ao IPCA (%) e à taxa Selic (%), respectivamente, para os anos de 2022 a 2025.</p>
@@ -480,7 +266,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Segundo o Instituto Ethos, em uma economia inclusiva, "os investimentos públicos e privados, as regras, as instituições, as tecnologias e os programas devem estar voltados também para o atendimento das necessidades e dos direitos de todos os seres humanos, sem o que não será possível construir ambientes sociais saudáveis em nenhuma atividade produtiva."</p>
                 <p class="mb-2 text-right text-sm">Disponível em: http://www3.ethos.org.br. Acesso em: 23 ago. 2022 (adaptado).</p>
@@ -498,7 +284,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao analisar o ambiente setorial para o planejamento estratégico da empresa onde trabalha, o diretor comercial da ABX Ltda. utilizou como ferramenta de análise o modelo das cinco forças proposto por Porter. Nessa análise, o diretor considerou, em valores percentuais, a medida de cada uma dessas forças para se tornarem favoráveis ou desfavoráveis à empresa, conforme tabela a seguir.</p>
                 <div class="overflow-x-auto mb-3">
@@ -529,7 +315,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A empresa XYZ adota um planejamento e controle de produção totalmente manual, em que não há integração entre as áreas. Por meio de uma consultoria, a XYZ está analisando a implantação de novas técnicas e filosofias de produção para aumentar a vantagem competitiva.</p>
             ',
@@ -552,7 +338,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O proprietário de uma clínica de estética realizou uma pesquisa de satisfação em que foram avaliados oito atributos. Os consumidores foram questionados sobre a importância de tais atributos na escolha de uma clínica de estética, atribuindo uma nota ao desempenho da clínica em relação aos atributos apresentados. Para tanto, foram atribuídas as seguintes escalas.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
@@ -613,7 +399,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O plano de negócios como parte fundamental do processo empreendedor é um instrumento que visa estruturar as principais concepções e alternativas para uma análise correta de viabilidade do negócio pretendido. A realização do plano de negócios envolve diversas etapas, sendo a análise do mercado e da competitividade importante para se reverem e se adaptarem estratégias aos novos desafios. A figura a seguir apresenta o modelo de estratégias competitivas genéricas concebido por Porter.</p>
                 <p class="mb-2 text-right text-sm">PORTER, M. <b>Estratégias competitivas</b>. Técnicas de análise para indústrias e concorrência. São Paulo: Atlas, 2005.</p>
@@ -637,7 +423,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Praticar a responsabilidade social empresarial requer atenção a múltiplas exigências no tocante a relações de parceria entre clientes e fornecedores, produção de qualidade, contribuições para o desenvolvimento da comunidade, investimentos em pesquisa tecnológica, preservação do meio ambiente, redução de ações predatórias, participação dos trabalhadores nos resultados organizacionais, qualificação profissional, respeito ao cidadão etc. Ao praticar conduta ética e socialmente responsável, a organização alcança o respeito das pessoas e das comunidades que atinge, engajando seus colaboradores e conquistando a preferência dos consumidores.</p>
                 <p class="mb-2 text-right text-sm">AMORIM, T. N. G. F. Responsabilidade social corporativa. <i>In</i>: ALBUQUERQUE, J. L. (org.) <b>Gestão ambiental e responsabilidade social:</b> conceitos, ferramentas e aplicações. São Paulo: Atlas, 2009 (adaptado).</p>
@@ -655,7 +441,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma cooperativa de produtores agrícolas deseja escoar sua produção de cocos advinda das fazendas de origem para os centros consumidores, com o objetivo de atender as demandas desses locais no mês seguinte. Devido ao aumento do custo de produção e transporte, a cooperativa decidiu contratar um administrador para ajudar a reduzir o custo de distribuição, definindo o volume a ser transportado de cada região de origem para cada centro consumidor.</p>
                 <p class="mb-2 text-justify">Suponha que 1 e 2 sejam as regiões de origem das fazendas de coco, e 3 e 4, os centros consumidores. A tabela 1 apresenta os valores dos fretes (em reais, por tonelada) para o referido transporte, entre cada par de origem-centro consumidor. A tabela 2 mostra os dados da oferta para cada ponto de origem, e a tabela 3, o volume para cada centro consumidor (destino).</p>
@@ -709,7 +495,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma <i>startup</i>, cuja missão é auxiliar estudantes de diversas áreas a encontrarem o seu primeiro emprego, tem um modelo de negócio cujas receitas são obtidas predominantemente a partir de anúncios pagos por recrutadores. Atualmente, a <i>startup</i> possui um cadastro com mais de 350 000 estudantes, que contém desde informações curriculares até dados pessoais dos candidatos. Visando expandir suas receitas, os fundadores estão cogitando a venda de dados dos usuários de sua base para outras empresas de varejo, que têm interesse em obter informações de perfil desse público. Após consulta à Lei n. 13.709/2018 (Lei Geral de Proteção de Dados – LGPD), descobriram que a comercialização de dados pessoais é proibida no ordenamento jurídico brasileiro.</p>
                 <p class="mb-2 text-justify">Entretanto, o artigo 12 da referida lei dispõe que dados anonimizados não serão considerados dados pessoais para os fins desta Lei, salvo quando o processo de anonimização puder ser revertido com esforços razoáveis. Considera-se dado anonimizado aquele relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento.</p>
@@ -727,7 +513,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A saúde financeira de uma empresa depende do bom controle de seus fluxos de caixa e ciclo financeiro, além de sua capacidade de gerar lucro e de definir boas estratégias de financiamento e de investimento. A liquidez se refere à agilidade com que um investidor consegue desfazer-se de um investimento para voltar a ter dinheiro na mão, sem que, para isso, tenha prejuízo. A liquidez imediata apenas considera valores já disponíveis em caixa, saldos bancários, aplicações, entre outros.</p>
                 <p class="mb-1 font-semibold text-sm">Informações financeiras sobre as empresas</p>
@@ -757,7 +543,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma fornecedora de itens de limpeza doméstica para supermercados optou por mudar o posicionamento estratégico de escala para o de diferenciação, investindo em matérias-primas mais eficientes, que melhorem a performance dos produtos, por meio da diversidade de fragrâncias e embalagens, visando atender clientes com maior poder aquisitivo.</p>
             ',
@@ -774,7 +560,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O fluxograma da Empresa XYV apresenta as etapas do processo de vendas, identificadas pelas letras A a J, desde o início até o fim, incluindo etapas como recebimento do pedido, verificação de disponibilidade do produto, seleção, emissão de cupom fiscal, entrega e informação ao cliente sobre prazo em caso de indisponibilidade.</p>
             ',
@@ -798,7 +584,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Embora praticada, pelo menos, desde os anos 1970, é a partir de 2010 que se verifica a intensificação da Gestão Baseada em Dados, que consiste em tomar dados de sistemas de informação transacionais ou de inteligência de mercado, que costumavam ficar depositados sem maior utilização, e transformá-los em informações e conhecimento de valor para decisões operacionais e estratégicas. Métodos de aprendizado de máquina e estatística avançada, antes ignorados, passaram a fazer parte do dia a dia de empresas e governos.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://www.ceara.gov.br. Acesso em: 24 jun. 2022 (adaptado).</p>
@@ -816,7 +602,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A pesquisa de marketing inclui identificação, coleta, análise, disseminação e uso de informações, e cada fase desse processo é importante. Identificamos ou definimos o problema ou oportunidade de pesquisa de marketing e, a seguir, determinamos as informações necessárias para investigá-lo. Em seguida, identificam-se as fontes relevantes de informações e avaliam-se os métodos de coleta de dados com sofisticação e complexidade variadas em função da sua utilidade.</p>
                 <p class="mb-2 text-right text-sm">MALHOTRA, N. K. <b>Pesquisa de marketing: uma orientação aplicada</b>. 6. ed. São Paulo: Prentice Hall, 2011 (adaptado).</p>
@@ -834,7 +620,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O termo cidades inteligentes surgiu na literatura referindo-se a aglomerações urbanas que fazem o uso integrado de Tecnologias da Informação e Comunicação, aliadas a uma gestão pública eficiente e dinâmica, com vistas a melhorar a qualidade de vida dos cidadãos. Apesar de ser um conceito ainda em construção, para caracterizar um município como uma cidade inteligente, há consenso entre pesquisadores de que é necessária a criação de políticas voltadas para o acesso público e gratuito aos dados, e também para a inovação e sustentabilidade.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://commons.wikimedia.org. Acesso em: 20 jun. 2022 (adaptado).</p>
@@ -859,7 +645,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Nos últimos anos, observou-se uma transformação rápida no ecossistema dos negócios de impacto no Brasil e no mundo. Diversos modelos e iniciativas surgiram com o propósito de minimizar um problema social e/ou ambiental por meio de sua atividade principal (seu produto/serviço e/ou sua forma de operação).</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://aliancapeloimpacto.org.br. Acesso em: 16 jul. 2022 (adaptado).</p>
@@ -885,7 +671,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">O binômio "ideia inovadora + tecnologia" não é a chave inequívoca para o sucesso, por quê? A chave da questão é o "modelo de negócios", que pode ser traduzido como o elemento que faz a conexão entre o que a tecnologia proporciona e o que o mercado quer. Uma nova tecnologia que não tenha um modelo específico de negócios deve saber como extrair valor da inovação tecnológica. Portanto, o empreendedor precisa estruturar bem o seu modelo de negócio, compreendendo como os vários recursos interagem e como a empresa pode criar e capturar valor a partir dessa interação. Os modelos de negócios inovadores que surgiram no segmento do turismo modificaram a estrutura do mercado, e as agências de turismo do passado que tinham como <i>business core</i> o cliente médio ficaram pelo caminho.</p>
@@ -916,7 +702,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Frente às dificuldades de avaliação de desempenho de pessoal durante o período de isolamento social em razão da pandemia de Covid-19, foi recomendada a adaptação de uma medida de uso consolidado em Marketing para a área de Gestão de pessoas. A proposta foi utilizar o que chamaram de "Net Performance Promoters Score (NPPS)", ou "Escore Líquido de Promotores de Desempenho (ELPD)", com avaliação a partir de três perguntas para cada trabalhador/colaborador.</p>
                 <p class="mb-2 text-justify">Concernente à primeira questão, respondentes que indicassem de 1 a 6 seriam categorizados como "detratores", os que indicassem 9 ou 10 seriam categorizados como "promotores", e os demais seriam categorizados como "passivos". O ELPD é definido como a diferença entre o percentual de promotores e o percentual de detratores.</p>
@@ -941,7 +727,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um dos principais fatores para o sucesso organizacional na atualidade é a adoção da liderança situacional. Entende-se por liderança situacional aquela pautada na adaptação da forma de liderar tomando-se como parâmetro o contexto em que a empresa e a equipe se encontram. Na liderança situacional, implementam-se mudanças de tal forma que seja possível promover a motivação, a produtividade e o engajamento da equipe, o que repercute nos resultados empresariais. Para a maioria das empresas, a liderança que reconhece e valoriza o mérito individual é altamente recomendável.</p>
                 <p class="mb-2 text-right text-sm">LONGENECKER, J. G.; PETTY, J. W.; PALICH, L. E.; HOY, F. <b>Administração de pequenas empresas:</b> lançando e desenvolvendo iniciativas empreendedoras. São Paulo: Cengage, 2018 (adaptado).</p>
