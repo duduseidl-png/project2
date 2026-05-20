@@ -10,10 +10,10 @@ class SimPas_Controller extends Controller
     public function __invoke()
     {
         $cursos = Questao::distinct()
-        ->select('id', 'curso')
-        ->orderBy('curso')
+        ->select('id', 'categoria')
+        ->orderBy('categoria')
         ->get()
-        ->map(fn($q) => ['id' => $q->id, 'nome' => $q->curso])
+        ->map(fn($q) => ['id' => $q->id, 'nome' => $q->categoria])
         ->unique('id')
         ->values();
     

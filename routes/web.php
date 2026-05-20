@@ -26,6 +26,10 @@ Route::post('/simulados/gerar_simulado', function () {
     $curso = request('curso');
     $limitefg = intval(request('limitefg', 38));
     $limitece = intval(request('limitece', 38));
+/*
+    if (! $curso) {
+        return redirect('/simulados/gerar_simulado');
+    }*/
 
     if ($limitefg < 0 || $limitefg > 100) {
         $limitefg = 38;
@@ -63,7 +67,7 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
         /* ->inRandomOrder() */
         ->limit($limitefg)
         ->get();
-    $questoesCE = Questao::query()->where('curso', $cursoTitulo)->where('categoria', 'Componente Específico')
+    $questoesCE = Questao::query()->where('categoria', $cursoTitulo)
         /* ->inRandomOrder() */
         ->limit($limitece)
         ->get();

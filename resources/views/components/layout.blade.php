@@ -23,6 +23,16 @@
       const htmlRoot = document.getElementById('html-root');
       const savedTheme = localStorage.getItem('theme') || 'light';
 
+      function updateLogo(theme) {
+        const logo = document.getElementById('feevale-logo');
+        if (!logo) {
+          return;
+        }
+        logo.src = theme === 'dark'
+          ? '/img/figuras/Feevale_White.png'
+          : '/img/figuras/Feevale_Black.png';
+      }
+
       function applyTheme(theme) {
         htmlRoot.setAttribute('data-theme', theme);
         if (theme === 'dark') {
@@ -30,6 +40,7 @@
         } else {
           htmlRoot.classList.remove('dark');
         }
+        updateLogo(theme);
         localStorage.setItem('theme', theme);
       }
 
@@ -69,8 +80,16 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/simulados">Simulados</a></li>
+      <li><a href="/">Início</a></li>
       <li>
+        <details><summary>Simulados</summary>
+          <ul class="p-2 bg-base-100 w-50 z-1">
+            <li><a href="/simulados/gerar_simulado">Gerador de Simulados</a></li>
+            <li><a href="/simulados/simulados_passados">Revisitar Provas Passadas</a></li>
+          </ul>
+        </details>
+      </li>
+      <!--<li>
         <details>
           <summary>Parent</summary>
           <ul class="p-2 bg-base-100 w-40 z-1">
@@ -79,6 +98,7 @@
           </ul>
         </details>
       </li>
+      -->
       <li><a href="/sobre">Sobre</a></li>
     </ul>
   </div>
@@ -105,9 +125,11 @@
       </svg>
     </label>
     <div>
-      <img class="mx-5" width="100" height="100" padding="10" src="/img/figuras/Feevale.png" alt="Logo">
+      <a href="https://www.feevale.br/" target="_blank">
+        <img id="feevale-logo" class="mx-5" width="100" height="100" padding="10" src="/img/figuras/Feevale_Black.png" alt="Logo">
+      </a>
     </div>
-    <div class="dropdown dropdown-end">
+    <!--<div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component"
@@ -124,7 +146,7 @@
         <li><a>Settings</a></li>
         <li><a>Logout</a></li>
       </ul>
-    </div>
+    </div>-->
   </div>
 </div>
 
@@ -141,6 +163,13 @@
       const themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {
         themeToggle.checked = (savedTheme === 'dark');
+      }
+
+      const logo = document.getElementById('feevale-logo');
+      if (logo) {
+        logo.src = savedTheme === 'dark'
+          ? '/img/figuras/Feevale_White.png'
+          : '/img/figuras/Feevale_Black.png';
       }
 
       // Renderizar matemática do KaTeX
