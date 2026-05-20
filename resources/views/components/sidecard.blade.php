@@ -45,7 +45,7 @@
         <div class="card-body">
             <h2 class="card-title">Controle do simulado</h2>
             <h5>Tempo restante:</h5>
-            <x-countdown />
+            <x-countdown :timePerQuestion="$timeLimit ?? $limite * 300" />
             <div class="join-horizontal w-60 flex-wrap">
                 @for ($i = 1; $i <= $limite; $i++)
                     <button id="btn-questao-{{ $i }}" class="btn-questao join-item btn mb-1 h-7 w-3" data-questao="{{ $i }}" type="button">{{ $i }}</button>

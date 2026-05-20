@@ -10,289 +10,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
     public function run(): void
     {
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injustiças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela significativa da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 text-justify">O atendimento integral e universalizado junto às populações periféricas e em situação de vulnerabilidade constitui um grande desafio, por demandar políticas públicas e investimentos subsidiados e permanentes.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Acerca do saneamento básico no Brasil, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. A grave desigualdade social, evidenciada pela segregação nos espaços urbanos, é uma das barreiras para a universalização do acesso aos serviços de saneamento básico.</p>
-
-                <p class="mb-2 pl-6 text-justify">II. O serviço de abastecimento de água no Brasil situa-se no mesmo patamar de fornecimento e de infraestrutura que o sistema de coleta e tratamento do esgoto.</p>
-
-                <p class="mb-2 pl-6 text-justify">III. A universalização do acesso aos serviços de saneamento básico requer investimentos em políticas públicas e em tecnologias sociais que priorizem a democratização e o atendimento às populações em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 pl-6 text-justify">IV. O aumento da incidência de doenças transmitidas pela água resulta não somente da inadequação dos serviços de saneamento, mas também da precariedade das condições de moradia da população em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 text-justify">É correto apenas o que se afirma em.</p>
-            ',
-            'referencia' => 'Disponível em: https://www.periodicos.unimontes.br/index.php/verdegrande/article/view/6018. Acesso em: 22 jun. 2023 (adaptado).',
-            'opcao_a' => 'I e II.',
-            'opcao_b' => 'I e IV.',
-            'opcao_c' => 'II e III.',
-            'opcao_d' => 'I, III e IV.',
-            'opcao_e' => 'II, III e IV.',
-            'alternativa_correta' => 'D',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">No Brasil, os idosos têm sido cada vez mais obrigados a permanecer no trabalho formal ou informal, mesmo após a aposentadoria, visto que os recursos provenientes desta, na maioria dos casos, são insuficientes para a manutenção dos indivíduos. Um fator que pode ter agravado essa situação foi a aprovação da reforma previdenciária de 2019, que modificou as regras de idade e contribuição para o acesso ao direito ao benefício da aposentadoria. Tal mudança pode ter resultado em um número ainda maior de idosos que disputam com as populações jovens e com sistemas de automação, no mercado atual, o trabalho precarizado. Essa situação contribui para o acirramento do preconceito contra essa faixa etária, denominado etarismo.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando o texto apresentado, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. O conceito de etarismo fundamenta-se no fato de os idosos terem capacidade de trabalho reduzida e imporem custo elevado à previdência social, o que compromete a sua sustentabilidade econômica.</p>
-
-                <p class="mb-2 pl-6 text-justify">II. As ações legislativas que visem ao prolongamento do tempo de atuação da população idosa no mercado de trabalho devem ser acompanhadas por uma política de promoção da saúde e da qualidade de vida.</p>
-
-                <p class="mb-2 pl-6 text-justify">III. As ações intergeracionais no mercado de trabalho têm como premissa o desenvolvimento de tecnologias que dotem o idoso de capacidade de trabalho equivalente à de seus colegas jovens.</p>
-
-                <p class="mb-2 text-justify">É correto o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'II, apenas.',
-            'opcao_b' => 'III, apenas.',
-            'opcao_c' => 'I e II, apenas.',
-            'opcao_d' => 'I e III, apenas.',
-            'opcao_e' => 'I, II e III.',
-            'alternativa_correta' => 'A',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => '
-                <p class="mb-2 text-justify">A fome e a insegurança alimentar, antigos problemas da sociedade, são agravados em regiões com elevados índices de desigualdade social. Propor soluções para esse quadro requer uma abordagem multidimensional, que possibilite a interação entre as dimensões sociais, culturais, políticas, econômicas e ambientais envolvidas na produção e na distribuição de alimentos.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 text-sm text-center items-center">
-                    <div>
-                        <img src="/img/questoes/engenharia_de_computacao/img1.jpg" class="w-full h-48 object-cover mb-2 rounded">
-                        <p class="-mt-1">Foto: Unicef/Sayed Bidel. Impacto dos conflitos sobre pessoas mais vulneráveis.</p>
-                    </div>
-                    <div>
-                        <img src="/img/questoes/engenharia_de_computacao/img2.jpg" class="w-full h-48 object-cover mb-2 rounded" style="margin-top: 1.05mm;">
-                        <p>Foto: FAO/Anatolii Stepanov. Colheita de trigo perto da vila de Krasne, na Ucrânia.</p>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mb-3 text-sm text-center">
-                    <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/engenharia_de_computacao/img3.jpg" alt="Secas em Madagascar" class="w-full h-auto mb-2 rounded">
-                        <p>Foto: Unicef/Safidy Andriananten. Secas em Madagascar colocam o país africano entre aqueles onde há mais fome.</p>
-                    </div>
-                </div>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando o texto e as imagens apresentados, avalie as asserções a seguir e a relação proposta entre elas.</p>
-                
-                <p class="mb-1 pl-6">I. A fome no mundo é um fenômeno biológico e sociológico inevitável.</p>
-                
-                <p class="text-center font-bold my-2">PORQUE</p>
-                
-                <p class="mb-2 pl-6">II. A disponibilidade desigual de alimentos, o acirramento de conflitos geopolíticos, a formação de cadeias agrícolas globais e o aumento das catástrofes climáticas são fatores que impactam a segurança alimentar de um grande número de populações.</p>
-                
-                <p class="mb-1">A respeito dessas asserções, assinale a opção correta.</p>
-            ',
-            'referencia' => 'Disponível em: https://news.un.org/pt/story/2022/05/1788102. Acesso em: 10 jun. 2023.',
-            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
-            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
-            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
-            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
-            'opcao_e' => 'As asserções I e II são proposições falsas.',
-            'alternativa_correta' => 'D',
-        ]);
-
-         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">Estudos realizados em 2021 pelo Fundo das Nações Unidas para a Infância (Unicef), em parceria com a Organização Mundial da Saúde (OMS), mostraram que, no Brasil, houve uma queda brusca da taxa de vacinação infanti l nos últi mos anos: entre 2017 e 2021, a taxa caiu de 93,1% para 71,49%, considerando-se crianças com menos de um ano de idade.</p>
-                
-                <p class="mb-2 text-justify">Essa redução da cobertura vacinal deixa a população infanti l muito vulnerável e exposta a doenças que já estavam prati camente erradicadas, tal como o sarampo, que em 2018 voltou a ser uma preocupaçãopara os brasileiros. Além do sarampo, corre-se o risco de outras doenças voltarem a acometer as crianças, como a poliomielite, a meningite, a rubéola e a difteria.</p>
-
-                <p class="mb-2 text-justify">O gráfico a seguir mostra as taxas de vacinação infantil, em crianças menores de um ano de idade, no período de 2017 a 2021.</p>
-
-                <div class="flex justify-center mb-6 text-sm text-center">
-                    <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/engenharia_de_computacao/img4.jpg" class="w-full h-auto mb-2 rounded">
-                    </div>
-                </div>
-            ',
-            'enunciado' => '
-                <p class="mb-2">Considerando as informações apresentadas no texto e no gráfico, assinale a opção correta.</p>
-            ',
-            'referencia' => 'Disponível em: https://portal.fiocruz.br/noticia/vacinacao-infantil-sofre-queda-brusca-no-brasil. Acesso em: 23 de jun. 2023 (adaptado).',
-            'opcao_a' => 'O percentual de vacinação com o imunizante da poliomielite se manteve constante na maior parte do período de 2017 a 2021.',
-            'opcao_b' => 'A baixa cobertura vacinal de crianças menores de um ano de idade é um dos indicadores de baixo desempenho das políticas públicas de atenção primária em saúde.',
-            'opcao_c' => 'A cobertura vacinal de crianças menores de um ano de idade foi muito variável, com alto índice vacinal da BCG e média cobertura da vacina tetraviral, no período de 2017 a 2021.',
-            'opcao_d' => 'O aumento da taxa de vacinação infantil contra a febre amarela em 2021, em comparação com o índice registrado em 2017, revela que as campanhas de conscientização da população foram bem-sucedidas quanto ao alcance da meta de vacinação contra essa enfermidade.',
-            'opcao_e' => 'A pandemia de Covid-19, ao ampliar a conscientização da população sobre a necessidade de manter alto índice vacinal para evitar o reaparecimento de doenças infectocontagiosas, contribuiu para o aumento da cobertura vacinal contra outras doenças, conforme indicado no gráfico.',
-            'alternativa_correta' => 'B',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="font-bold mb-2">TEXTO 1</p>
-                <p class="mb-2 text-justify">A Inteligência Artificial (IA) generativa é capaz de criar novos dados, únicos, que possibilitam aprender por conta própria, indo além do que a tecnologia tradicional proporciona, visto que esta precisa de intervenção humana. Um exemplo de IA generativa é o ChatGPT, que pode gerar imagens, músicas e textos completamente novos. Entre outras coisas, por meio da IA generativa, é possível elaborar modelos de previsão de testes clínicos, realizar a identificação de padrões em exames médicos e, ainda, auxiliar no diagnóstico de doenças.</p>
-                <p class="text-sm text-right mb-4">Disponível em: https://olhardigital.com.br/2023/07/12/internet-e-redes-sociais/inteligencia-artificial-generativa-o-que-e-como-funciona-e-onde-usar/. Acesso em: 2 ago. 2023 (adaptado).</p>
-
-                <p class="font-bold mb-2">TEXTO 2</p>
-                <p class="mb-2 text-justify">Acredita-se que a tecnologia de IA generativa será disruptiva e, portanto, capaz de alterar drasticamente a maneira como o ser humano se relaciona com as máquinas. O uso da IA generativa pode causar importante revolução no segmento de produção de conteúdo. Muitas dessas consequências poderão ser maléficas para diversos setores da sociedade. Além do mau uso dessa tecnologia e das questões éticas, avalia-se que ela pode agravar a desigualdade econômico-social, tanto entre nações quanto entre indivíduos da mesma nação.</p>
-                <p class="text-sm text-right mb-2">Disponível em: https://canaltech.com.br/inteligencia-artificial/o-que-e-ia-generativa/. Acesso em: 2 ago. 2023 (adaptado).</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2">Considerando os textos apresentados, é correto afirmar que a IA generativa</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'proporciona novos recursos de linguagem que geram tecnologias capazes de realizar interações próprias dos seres humanos.',
-            'opcao_b' => 'restringe o aprendizado ao que é legalmente estabelecido e úti l ao ser humano, o que facilita seu modo de agir no mundo do conhecimento e do trabalho.',
-            'opcao_c' => 'promove a igualdade econômico-social ao substituir o ser humano no exercício de profissões cujas atividades sejam repetitivas e exijam pouco conhecimento.',
-            'opcao_d' => 'gera pouco impacto socioeconômico em países com elevado desenvolvimento tecnológico, pois, neles, os processos de criação e inovação já estão bem consolidados.',
-            'opcao_e' => 'estimula o desenvolvimento intelectual dos seres humanos, uma vez que ela assume parte do conhecimento, resolvendo problemas antes delegados apenas a especialistas.',
-            'alternativa_correta' => 'A',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">Os seguintes ícones foram utilizados em um estudo realizado por um grupo de trabalho de monitoramento da relação das mulheres com a mobilidade urbana na cidade de São Paulo. Na pesquisa, perguntou-se às mulheres como elas se sentiam nas situações representadas por tais imagens.</p>
-                <p class="mb-2 text-justify">As respostas relativas a cada tipo de mobilidade urbana são apresentadas a seguir.</p>
-
-                <div class="flex justify-center mb-4 text-sm text-center">
-                    <div class="w-full md:w-2/3">
-                        <img src="/img/questoes/engenharia_de_computacao/img5.jpg" class="w-full h-auto mb-2 rounded">
-                    </div>
-                </div>
-
-                <p class="text-sm text-right mb-4">Coletivo Fórum Regional das Mulheres da Zona Norte, Rede MÁS, Sampapé! (2018). <strong>Relatório de Análises, Resultados e Recomendações</strong>. Projeto Mulheres Caminhantes! Auditoria de Segurança de Gênero e Caminhabilidade Terminal Santana, São Paulo, SP (adaptado).</p>
-                <p class="mb-2 text-justify">Considerando o estudo apresentado e relacionando o trabalho de monitoramento social das necessidades de mulheres no contexto urbano aos pressupostos do direito à cidade, avalie as afirmações a seguir.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 pl-6 text-justify">I. A predominância de comentários negativos indica o medo generalizado que as mulheres sentem ao se deslocarem ativamente pela cidade, inclusive quanto à percepção de seu corpo no espaço urbano.</p>
-                <p class="mb-2 pl-6 text-justify">II. Os comentários negativos sobre os modos coletivos de transporte estão relacionados à lotação nesses meios e a situações de assédio, tendo sido o metrô avaliado como um espaço um pouco mais seguro para as mulheres, em comparação com outras formas de mobilidade.</p>
-                <p class="mb-2 pl-6 text-justify">III. Os comentários negativos refletem a percepção das mulheres quanto ao perigo a que se expõem e sugerem que o medo relacionado à vulnerabilidade de gênero aponta para uma geografia particular nas cidades, em que os meios de transporte afetam os movimentos rotineiros das mulheres no espaço urbano.</p>
-                <p class="mb-1">É correto o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'I, apenas.',
-            'opcao_b' => 'III, apenas.',
-            'opcao_c' => 'I e II, apenas.',
-            'opcao_d' => 'II e III, apenas.',
-            'opcao_e' => 'I, II e III.',
-            'alternativa_correta' => 'E',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao' => '
-                <p class="font-bold mb-1">TEXTO 1</p>
-                <p class="mb-1 text-justify">Maria Bárbara tinha o verdadeiro tipo das velhas maranhenses criadas na fazenda. Tratava muito dos avós, quase todos portugueses. Quando falava dos pretos, dizia “os sujos” e, quando se referia a um mulato dizia “o cabra”. Maria Bárbara tinha grande admiração pelos portugueses, dedicava-lhes um entusiasmo sem limites, preferia-os em tudo aos brasileiros. Quando a filha foi pedida por Manuel Pedroso, então principiante no comércio da capital, ela dissera: “Bem! Ao menos tenho a certeza de que é branco!”</p>
-                <p class="text-sm text-right mb-4">AZEVEDO, A. <strong>O mulato</strong>. São Luís: Typografia o Paiz, 1881 (adaptado).</p>
-                
-                <p class="font-bold mb-1">TEXTO 2</p>
-                <p class="mb-1 text-justify">A morte brinca com balas nos dedos gatilhos dos meninos. Dorvi se lembrou do combinado, o juramento feito em voz uníssona, gritado sob o pipocar dos tiros:</p>
-                <p class="mb-1 text-justify">— A gente combinamos de não morrer!</p>
-                <p class="mb-1 text-justify">Balas enfeitam o coração da noite. Não gosto de filmes da tevê. Morre e mata de menti ra. Aqui, não. Às vezes a morte é leve como a poeira. E a vida se confunde com um pó branco qualquer. Às vezes é uma fumaça adocicada enchendo o pulmão da gente.</p> 
-
-                <p class="text-sm text-right mb-4">EVARISTO, C. <strong>Olhos d‘agua</strong>. Rio de Janeiro: Pallas. Fundação Biblioteca Nacional, 2016 (adaptado).</p>
-                    
-                <p class="font-bold mb-2">TEXTO 3</p>
-                <div class="flex justify-center mb-4 text-sm text-center">
-                    <div class="w-2/5 md:w-2/5">
-                        <img src="/img/questoes/engenharia_de_computacao/img6.jpg" class="w-full h-auto mb-2 rounded">
-                    </div>
-                </div>
-
-                <p class="text-sm text-right mb-4">DEL NUNES. <strong>O Cria</strong>. Disponível em: https://www.instagram.com/p/CgCSOKegX4J/. Acesso em: 13 jun. 2023.</p>
-                <p class="mb-2 text-justify">O Cria é uma releitura da pintura “O Mestiço” de Cândido Portinari. Em sua obra, Del Nunes personifica a identidade do jovem brasileiro das periferias do Brasil. Oriundo de São Cristóvão, bairro periférico de Salvador, o artista transmite em suas produções a essência da cultura preta, cria e recria momentos do povo negro apagados pela história, divulgando-as nas redes sociais.</p>
-                
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">A partir das informações apresentadas e tendo em vista a possibilidade das várias manifestações culturais estabelecerem relação com a construção da memória e a definição da identidade cultural de um povo, avalie as afirmações a seguir.</p>
-                
-                <p class="mb-2 pl-6 text-justify">I. Os trechos das obras apresentadas nos textos 1 e 2 e a ressignificação artística proposta no texto 3 resgatam uma reflexão acerca da condição histórica da maioria da população brasileira.</p>
-                <p class="mb-2 pl-6 text-justify">II. Ao longo do processo histórico de constituição da identidade do povo brasileiro, o convívio cooperativo e cordial entre as diferentes culturas contribuiu para a integração e o respeito às diferenças étnicas e religiosas.</p>
-                <p class="mb-2 pl-6 text-justify">III. A produção de conteúdo artístico que proponha a reflexão sobre a condição social da população negra provoca a quebra do silenciamento imposto pelo processo de segregação historicamente promovido pelo processo de colonização.</p>
-                <p class="mb-2 pl-6 text-justify">IV. A arte expressa no texto 3, ao imitar uma obra clássica de Portinari, apresenta limitação na promoção do empoderamento da população afrodescendente, provocando um acirramento cultural.</p>
-                
-                <p class="mb-1">É correto apenas o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'II.',
-            'opcao_b' => 'IV.',
-            'opcao_c' => 'I e III.',
-            'opcao_d' => 'I e IV.',
-            'opcao_e' => 'II e III.',
-            'alternativa_correta' => 'C',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">Recentemente, a população carcerária feminina do Brasil tornou-se a terceira maior do mundo. A situação do encarceramento feminino por tráfico de drogas e outras situações que circundam o assunto foi tema de discussão da Secretaria de Políticas sobre Drogas do Ministério da Justiça e Segurança Pública (Senad/MJSP), em seminário realizado em abril de 2023. O evento contou com a participação de 23 países. Segundo os dados apresentados pela Senad, a incidência penal sobre drogas no Brasil é uma das principais causas de prisão de mulheres, chegando a 54% dos casos de encarceramento, contra 28% dos homens, índice que impacta em aspectos como maternidade e primeira infância.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Acerca do tema apresentado, avalie as asserções a seguir e a relação proposta entre elas.</p>
-                
-                <p class="mb-2 pl-6 text-justify">I. A maioria das mulheres envolvidas em atividades do tráfico encontra-se em posições hierarquicamente inferiores, sendo classificadas como “mulas e aviões”, o que revela a reprodução, no mercado ilegal, da divisão sexual do trabalho observada no mercado formal.</p>
-
-                <p class="text-center font-bold my-2">PORQUE</p>
-
-                <p class="mb-2 pl-6 text-justify">II. O sistema penal agrava a situação de vulnerabilidade das mulheres encarceradas, seja pela invisibilização com que as trata, seja por meio da violência institucional que reproduz a violência estrutural das relações sociais patriarcais.</p>
-
-                <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
-            ',
-            'referencia' => 'Disponível em: https://www.gov.br/mj/pt-br/assuntos/noticias/senad-discute-situacao-de-mulheres-encarceradas-no-contexto-de-drogas-no-brasil. Acesso em: 15 jun. 2023 (adaptado).
-            ',
-            'opcao_a' => 'As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.',
-            'opcao_b' => 'As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.',
-            'opcao_c' => 'A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.',
-            'opcao_d' => 'A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.',
-            'opcao_e' => 'As asserções I e II são proposições falsas.',
-            'alternativa_correta' => 'B',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Formação Geral',
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">A sociedade do século XXI não é mais uma sociedade disciplinar, mas, sim, uma sociedade do desempenho. Os seus habitantes também não se chamam mais sujeitos de obediência, mas, sim, sujeitos de desempenho e produção. São empresários de si mesmos.</p>
-
-                <p class="text-sm text-right mb-4">BYUNG-CHUL HAN. <strong>Sociedade do Cansaço</strong>. Petrópolis: Vozes, 2015 (adaptado).</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando o texto apresentado, avalie as afirmações a seguir.</p>
-                
-                <p class="mb-2 pl-6 text-justify">I. Os recursos tecnológicos, como notificações de mensagens em tempo real e controle da velocidade de áudio em redes de mensagens, são fatores que podem contribuir para a precarização das relações de trabalho na sociedade contemporânea.</p>
-                <p class="mb-2 pl-6 text-justify">II. As medidas pessoais de proteção à saúde mental e de promoção da qualidade de vida incluem a desativação de aplicativos e mecanismos de notificações instantâneas, bem como a fixação de horários para uso profissional e uso recreativo das tecnologias digitais.</p>
-                <p class="mb-2 pl-6 text-justify">III.	As medidas públicas de prevenção das doenças e dos danos sociais associados ao uso excessivo dos recursos tecnológicos de comunicação envolvem estímulos ao letramento digital, à alfabetização midiática e à regulamentação do uso de plataformas digitais no ambiente de trabalho.</p>
-
-                <p class="mb-2 text-justify">É correto o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'I, apenas.',
-            'opcao_b' => 'III, apenas.',
-            'opcao_c' => 'I e II, apenas.',
-            'opcao_d' => 'II e III, apenas.',
-            'opcao_e' => 'I, II e III.',
-            'alternativa_correta' => 'E',
-        ]);
-
-        Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os resistores são dispositivos utilizados com finalidade de limitar a corrente elétrica em um circuito elétrico. Eles conseguem desempenhar essa função por apresentarem a propriedade da resistência elétrica, que é a capacidade de um corpo se opor à passagem de corrente elétrica. Diversos materiais podem ser utilizados como resistores, tais como níquel-cromo, carbono e grafite.</p>
 
@@ -325,8 +43,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">O  protocolo  de  roteamento  interno  OSPF  (open  shortest  path  first)  representa  um sistema autônomo (SA) como um grafo ponderado, em que roteadores são os vértices, conexões entre os roteadores são as arestas e atrasos nas conexões são os pesos. No OSPF, a identificação de cada conexão e seu respectivo atraso são passados de roteador em roteador até que todos os roteadores formem uma base de dados com o grafo que descreve o SA. O OSPF utiliza uma versão distribuída do algoritmo de caminhos mínimos de Dijkstra para computar as melhores rotas para todos os possíveis destinos e para produzir as tabelas de rotas para cada roteador. Cada rota computada é a que apresenta o menor valor para a soma dos atrasos nas conexões usadas na rota entre a rede de origem e a rede de destino.</p>
             ',
@@ -350,8 +67,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma relação <b>R</b> em um conjunto <b>S</b> é uma relação de equivalência se ela satisfizer todas as propriedades a seguir:</p>
                 <p class="mb-2 text-justify">1. Reflexividade. Para todo <i>a</i> &isin; <b>S</b>, <i>a</i> <b>R</b> <i>a</i>;</p>
@@ -384,8 +100,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma forma sistemática de analisar circuitos elétricos de qualquer tamanho, visando à simulação em computadores, consiste em representá-los por meio de grafos. Essa representação implica a substituição dos elementos do ramo do circuito por uma conexão orientada (arco) e de nós do circuito por vértices, resultando em um grafo orientado. A orientação dos arcos coincide com a orientação dos sentidos de referência associados de tensão e corrente, adotados pela convenção passiva.</p>
                 <p class="mb-2 text-justify">Grafos são ditos conexos se existir, ao menos, um caminho entre quaisquer dois nós. Corte refere-se a um conjunto de arcos que, se removido, divide o grafo (tornando-o desconexo). A lei de Kirchoff das correntes, usando a nomenclatura de grafos, pode ser enunciada como “para qualquer rede de parâmetros concentrados e para qualquer de seus cortes, a soma algébrica de todas as correntes através dos arcos do corte é zero.”</p>
@@ -413,8 +128,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma lista pode ser dividida em duas partes: o primeiro elemento (a cabeça da lista) e os demais elementos (sua cauda). Por exemplo, em uma lista de inteiros [1, 2, 3, 4], a cabeça dessa lista é o valor inteiro 1, enquanto sua cauda é a lista de inteiros [2, 3, 4]. Uma lista vazia é representada por [ ].</p>
                 <p class="mb-2 text-justify">O código a seguir define duas funções descritas em uma linguagem de programação funcional que manipulam listas de inteiros. A função enade recebe uma lista de inteiros e produz uma nova lista de inteiros. A função auxiliar é chamada pela função enade e possui dois parâmetros: um número inteiro e uma lista de inteiros. Essa função produz uma lista de inteiros.</p>
@@ -443,8 +157,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify"><i>Memory leak</i>, ou vazamento de memória, é um problema que ocorre em sistemas computacionais quando uma parte da memória, alocada para uma determinada operação, não é liberada quando se torna desnecessária. Na linguagem C, esse tipo de problema é quase sempre relacionado ao uso incorreto das funções malloc( ) e free( ). Esse erro de programação pode levar a falhas no sistema se a memória for completamente consumida.</p>
             ',
@@ -503,8 +216,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Na programação de sistemas embarcados, algumas posições de memória servem para diferentes propósitos, não apenas para armazenar valores. Em algumas dessas memórias, cada um dos <i>bits</i> possui um significado diferente, sendo necessário manipulá-los individualmente ou em pequenos grupos. Por isso, o conhecimento da álgebra booliana, bem como dos operadores utilizados para realizar operações binárias nas linguagens de programação, é essencial para o desenvolvimento desse tipo de sistema.</p>               
             ',
@@ -546,8 +258,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Dada uma sequência de caracteres <i>S</i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>n</sub></i>, uma subsequência de <i>S</i> é dada pela remoção de zero ou mais caracteres de <i>S</i>. Formalmente, a sequência <i>X</i> = <i>x<sub>1</sub>,</i> <i>x<sub>2</sub>,</i> <i>...,</i> <i>x<sub>k</sub></i> é subsequência de <i>S</i> se existe uma sequência crescente de índices <i>i<sub>1</sub>,</i> <i>...,</i> <i>i<sub>k</sub></i> de <i>S</i>, tal que <i>x<sub>j</sub></i> = <i>S<sub>ij</sub></i> para todo <i>j</i> = <i>1, 2, ..., k</i>. Define-se, também, um prefixo da sequência <i>S</i> com comprimento <i>i</i> para <i>i</i> = <i>0, ..., n,</i> como <i>S<sub>i</sub></i> = <i>s<sub>1</sub>,</i> <i>s<sub>2</sub>,</i> <i>...,</i> <i>s<sub>i</sub>,</i>.</p>
                 <p class="mb-2 text-justify">O problema da Subsequência Comum Mais Longa (LCS) e suas variações, definido a seguir, pode ser utilizado em análise de textos e em bioinformática. O problema da LCS pressupõe duas sequências de caracteres <i>A</i> = <i>a<sub>1</sub>,</i> <i>a<sub>2</sub>,</i> <i>...,</i> <i>a<sub>n</sub></i> e <i>B</i> = <i>b<sub>1</sub>,</i> <i>b<sub>2</sub>,</i> <i>...,</i> <i>b<sub>m</sub>,</i> de comprimentos <i>n</i> e <i>m</i>, respectivamente. Dadas essas duas sequências, é preciso encontrar uma sequência de maior comprimento possível que seja, simultaneamente, subsequência de <i>A</i> e de <i>B</i>.</p>
@@ -573,8 +284,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Vetores de tamanho dinâmico são muito utilizados como estruturas de dados para armazenar listas e tabelas de dispersão (tabelas <i>hash</i>). Essa representação permite que o número máximo de elementos a ser inserido não precise ser pré-determinado. Uma técnica para implementar vetores de tamanho dinâmico é aquela que dobra o tamanho do vetor quando o número de itens a ser armazenado ultrapassa o tamanho atual do vetor. Essa operação requer uma alocação de memória para conter o vetor com o dobro do tamanho atual e a realização de cópia dos elementos para o novo vetor. Com base nessas informações, considere uma lista linear implementada com um vetor dinâmico. Assuma que todos os itens inseridos na lista tenham o mesmo tamanho e que o vetor tenha tamanho inicial para comportar apenas 1 item.</p>
                 <p class="mb-2 text-justify"></p>
@@ -594,8 +304,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">É chamado de compilação o processo de conversão do código escrito pelo programador para um arquivo binário que o computador consegue executar. Esse processo é realizado por um programa chamado compilador. Entre as diversas tarefas de um compilador, destaca-se a de identificar os possíveis erros sintáticos e semânticos. Com base nessas informações, considere uma linguagem de programação em que a sintaxe de uma operação aritmética seja dada pela seguinte gramática livre de contexto:</p>
                 <p class="mb-2 text-justify">S → var = E; | var = E; S</p>
@@ -616,8 +325,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Computação em nuvem representa um conceito relativo ao compartilhamento de recursos, tais como capacidade de processamento, armazenamento, comunicação de dados e pessoal qualificado para manter sistemas computacionais disponíveis na internet. Quando esse compartilhamento constitui um serviço disponível para qualquer pessoa, o serviço é conhecido como nuvem pública. Quando as mesmas tecnologias são empregadas para uma única empresa, não permitindo que terceiros utilizem parte dos recursos, temos uma nuvem privada.</p>
             ',
@@ -641,8 +349,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A fim de melhorar a qualidade de vida de seus cidadãos e de criar eficiência nos serviços e nas operações urbanas, um grupo de vereadores de uma pequena cidade decidiu fazer algumas propostas de lei que, se aprovadas e devidamente implementadas, tendem a aproximar a cidade do conceito de “cidade inteligente” por meio da implementação de novos sistemas de <i>software</i>. O grupo de vereadores, preocupado com acessibilidade, consultou especialistas da área de interação humano-computador (IHC) e levantou informações a respeito de fundamentos de acessibilidade em IHC. Entre eles, estão os seguintes:</p>
                 <p class="mb-2 text-justify">Fundamento 1. Um produto ou serviço é <b>equitativo</b> quando é projetado de modo que possa atender a todos os usuários, independentemente de suas habilidades físicas, sensoriais ou cognitivas.</p>
@@ -667,8 +374,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere um banco de dados relacional formado por três tabelas, conforme é apresentado na figura a seguir. As chaves primárias das tabelas cliente e funcionario são chaves estrangeiras da tabela pessoa.</p>
 
@@ -693,8 +399,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">As figuras a seguir representam dois circuitos que possuem a finalidade de construção de filtros para sinais analógicos.</p>
 
@@ -723,8 +428,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Um determinado sistema embarcado possui uma porta paralela de 8 <i>bits</i>, na qual cada pino pode ser configurado individualmente como interface de entrada ou de saída. A direção de cada pino da porta é definida pelo <i>bit</i> correspondente do registrador de direção de 8 <i>bits</i> PORT_DIR da seguinte forma: valor 0 para configuração como entrada e valor 1 para configuração como saída.</p>
                 <p class="mb-2 text-justify">Os <i>bits</i> de entrada da porta são armazenados no registrador PORT_IN e os <i>bits</i> de saída da porta são armazenados no registrador PORT_OUT, ambos de 8 <i>bits</i>. Os pinos que correspondem ao <i>nibble</i> (conjunto de 4 <i>bits</i>) menos significativo da porta de I/O são conectados aos seguintes dispositivos externos: alarme (SPK1), chave 2 (CH2), LED (LED1) e chave 1 (CH1), conforme a figura a seguir.</p>
@@ -756,8 +460,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os sistemas digitais são componentes essenciais em uma ampla variedade de aplicações, desde dispositivos eletrônicos portáteis até sistemas de controle industrial. Um dos principais aspectos do projeto desse tipo de sistema é a descrição do circuito em uma <i>Hardware Description Language</i> (HDL), como Verilog ou VHDL. Essas linguagens permitem descrever o comportamento e a estrutura do circuito de forma abstrata, viabilizando a síntese e a simulação do sistema.</p>
                 <p class="mb-2 text-justify">Um exemplo de circuito sequencial é o contador de 4 bits assíncrono, mostrado na figura a seguir, o qual foi implementado utilizando <i>flip-flops</i> JK.</p>
@@ -845,8 +548,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere um cenário em que um computador seja organizado com múltiplos processadores, os quais compartilham a mesma memória RAM. Cada processador possui múltiplos núcleos.</p>
                 <p class="mb-2 text-justify">Nesse arranjo, o sistema operacional permite múltiplas <i>threads</i>, as quais podem ser dinamicamente alocadas para execução em diferentes núcleos e processadores.</p>
@@ -864,8 +566,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A técnica de virtualização de <i>hardware</i> consiste em emular um computador no qual a camada de <i>software</i> é executada sem que detalhes do computador físico e de seus componentes sejam expostos. Em um ambiente de computação distribuída, a técnica pode ser útil para que o sistema operacional e os <i>softwares</i> do usuário sejam executados em uma máquina virtual com características permanentes, em conformidade com o que foi projetado, verificado e validado, mesmo que um computador físico diferente seja empregado.</p>
             ',
@@ -882,8 +583,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Alguns sistemas com memória virtual utilizam uma técnica chamada de paginação. Nesses sistemas, existe um conjunto de endereços de memória, denominados endereços virtuais, que são gerados durante a execução dos programas, com o uso de indexação, de registradores-base, de registradores-segmento ou de outras técnicas. Um endereço virtual é dividido em número de página virtual e deslocamento. O número de página virtual é usado como índice dentro da tabela de páginas para encontrar o quadro correspondente. O endereço físico de memória é a concatenação entre o endereço do quadro com o deslocamento do endereço virtual.</p>
                 <p class="mb-2 text-justify">Um mecanismo denominado TLB (do inglês, <i>translation lookaside buffer</i>), tipicamente implementado em <i>hardware</i>, fornece auxílio durante a atividade de mapeamento de endereços virtuais para endereços físicos sem passar pela tabela de página. A função do TLB é agilizar o processo de tradução de endereços lógicos para físicos.</p>
@@ -909,8 +609,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                     <p class="mb-2 text-justify">Considere que uma equipe de engenheiros projete um sistema robótico para reciclagem de resíduos sólidos, o qual utiliza visão computacional para separar objetos de plástico e de vidro. Com o objetivo de automatizar o processo de classificação, opta-se pela técnica <i>support vector machine</i> (SVM).</p>
                     <p class="mb-2 text-justify">No método SVM, <i>i</i> é o índice do vetor suporte <i>(1</i> ≤ <i>i</i> ≤ <i>5),</i> <i>w</i> é o coeficiente angular (peso) e <i>b</i> é o coeficiente linear (polarização) da reta de separação. O par ordenado (<i>x</i>, <i>y</i>) é a saída do sistema de Visão Computacional que representa os vetores de características dos supostos materiais, plástico ou vidro, com classificação normalizada em ƒ (<i>i</i>) &isin; {-1, +1} . A separação linear do material é resultado da diferença entre os pontos <i>P<sub>1</sub></i> = <i>w.x</i> + <i>b</i> e <i>P<sub>2</sub></i> = <i>y</i>, conforme a equação a seguir.</p>
@@ -968,8 +667,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere que, para melhorar o desempenho de sistemas computacionais, projetistas de <i>hardware</i> decidam aumentar o número de processadores em vez de aumentar a frequência de <i>clock</i>. Dessa forma, surge a necessidade de utilizar <i>softwares</i> que explorem o paralelismo. Um problema típico encontrado no desenvolvimento desse tipo de <i>software</i> é a dependência de dados. Nesse contexto, considere que dois processadores precisem realizar, simultaneamente, o acesso a uma mesma matriz A.</p>
             ',
@@ -1021,8 +719,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Um sinal em tempo contínuo pode ser processado, a partir de suas amostras, por um sistema que opere em tempo discreto. Para isso, é importante manter a taxa de amostragem do sinal suficientemente alta para permitir a reconstrução do sinal original sem erro ou com um erro dentro de uma dada tolerância.</p>
                 <p class="mb-2 text-justify"></p>
@@ -1048,8 +745,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Suponha que uma empresa de transportes deseje calcular uma rota de Manaus para São Paulo utilizando a estratégia da busca gulosa, técnica de busca local que seleciona a melhor alternativa disponível a cada passo. Observe, a seguir, um grafo de conexão de cidades até o destino final e o quadro com estimativas de distância de São Paulo até as demais cidades do grafo.</p>
 
@@ -1072,8 +768,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Considere que uma empresa planeje desenvolver um sistema de controle automático para manter, em um ambiente industrial, a temperatura constante por meio de um controlador proporcional-integral-derivativo (PID). O controlador PID pode ser implementado em qualquer linguagem que possua estruturas de dados adequadas para a manutenção do histórico e da taxa de mudança do sinal de erro.</p>
             ',
@@ -1096,8 +791,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Cada roteador em redes de computadores precisa implementar alguma estratégia de enfileiramento para controlar como os pacotes são armazenados em <i>buffer</i> enquanto esperam para serem transmitidos, independentemente do mecanismo de alocação de recursos. O algoritmo de enfileiramento aloca tanto largura de banda, ao transmitir pacotes, quanto espaço de <i>buffer</i>, ao decidir quais pacotes são descartados.</p>
             ',
@@ -1121,8 +815,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">O TCP (<i>Transmission Control Protocol</i>) e o UDP (<i>User Datagram Protocol</i>) são opções frequentemente usadas em sistemas distribuídos para realizar transferência de dados entre máquinas, ainda que não sejam os únicos protocolos que funcionam com base no protocolo IP (<i>Internet Protocol</i>).</p>
             ',
@@ -1145,8 +838,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A análise de desempenho de sistemas computacionais é uma atividade crítica para identificar gargalos, otimizar recursos e garantir a eficiência do <i>hardware</i> e do <i>software</i> utilizados.</p>
             ',
@@ -1163,8 +855,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A segurança de sistemas de computação é uma preocupação crescente devido à constante evolução das ameaças e das vulnerabilidades presentes no ambiente digital. Garantir a integridade, a confidencialidade e a disponibilidade de dados e de recursos é essencial para proteger os sistemas e as informações sensíveis. A segurança abrange, também, aspectos como autenticação, controle de acesso, criptografia, detecção e prevenção de intrusões, entre outros mecanismos de proteção.</p>
             ',
@@ -1188,8 +879,7 @@ class Questoes_Engenharia_de_Computacao_2023 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Engenharia de Computação',
-            'categoria' => 'Componente Específico',
+            'categoria' => 'Engenharia de Computação',
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os sistemas distribuídos consistem em múltiplos componentes de <i>software</i> que se comunicam e que cooperam entre si para realizar tarefas complexas. Um padrão arquitetural comumente utilizado em sistemas distribuídos é o de microsserviços, o qual divide o sistema em componentes independentes e escaláveis, cada um executando sua própria funcionalidade específica. Essa abordagem facilita a manutenção, o teste e a escalabilidade do sistema como um todo.</p>
             ',

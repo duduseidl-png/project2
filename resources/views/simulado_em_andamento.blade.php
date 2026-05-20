@@ -13,7 +13,7 @@
                 @if (!$questoesCE->isEmpty())
                     <h2 class="text-center mb-3 text-2xl">Componente Específico</h2>
                 @endif
-                <x-bloco-questoes :questoes="$questoesCE" :numero="$limitefg" />
+                <x-bloco-questoes :questoes="$questoesCE" :numero="$questoesFG->count()" />
             </div>
         </form>
     </div>

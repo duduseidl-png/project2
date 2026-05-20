@@ -26,7 +26,7 @@
                 <p class="question-result mb-3 ml-5"></p>
                 <ul class="list-none space-y-2 mb-3 ml-5 pl-0 text-justify text-md">
                     <li>
-                    <label class="option-label flex items-start gap-3 p-3 border rounded-lg cursor-pointer" data-value="A">
+                    <label class="option-label flex items-center gap-3 p-3 border rounded-lg cursor-pointer" data-value="A">
                         <input type="radio" name="resposta_{{ $questao->id }}" value="A" class="form-radio mr-2 flex-shrink-0">
                         <span class="font-semibold flex-shrink-0">A)</span>
                         <span class="flex-1 min-w-0">
@@ -39,7 +39,7 @@
                     </label>
                     </li>
                     <li>
-                    <label class="option-label flex items-start gap-3 p-3 border rounded-lg cursor-pointer" data-value="B">
+                    <label class="option-label flex items-center gap-3 p-3 border rounded-lg cursor-pointer" data-value="B">
                         <input type="radio" name="resposta_{{ $questao->id }}" value="B" class="form-radio mr-2 flex-shrink-0">
                         <span class="font-semibold flex-shrink-0">B)</span>
                         <span class="flex-1 min-w-0">
@@ -52,7 +52,7 @@
                     </label>
                     </li>
                     <li>
-                    <label class="option-label flex items-start gap-3 p-3 border rounded-lg cursor-pointer" data-value="C">
+                    <label class="option-label flex items-center gap-3 p-3 border rounded-lg cursor-pointer" data-value="C">
                         <input type="radio" name="resposta_{{ $questao->id }}" value="C" class="form-radio mr-2 flex-shrink-0">
                         <span class="font-semibold flex-shrink-0">C)</span>
                         <span class="flex-1 min-w-0">
@@ -65,7 +65,7 @@
                     </label>
                     </li>
                     <li>
-                    <label class="option-label flex items-start gap-3 p-3 border rounded-lg cursor-pointer" data-value="D">
+                    <label class="option-label flex items-center gap-3 p-3 border rounded-lg cursor-pointer" data-value="D">
                         <input type="radio" name="resposta_{{ $questao->id }}" value="D" class="form-radio mr-2 flex-shrink-0">
                         <span class="font-semibold flex-shrink-0">D)</span>
                         <span class="flex-1 min-w-0">
@@ -78,7 +78,7 @@
                     </label>
                     </li>
                     <li class=" mb-10">
-                    <label class="option-label flex items-start gap-3 p-3 border rounded-lg cursor-pointer" data-value="E">
+                    <label class="option-label flex items-center gap-3 p-3 border rounded-lg cursor-pointer" data-value="E">
                         <input type="radio" name="resposta_{{ $questao->id }}" value="E" class="form-radio mr-2 flex-shrink-0">
                         <span class="font-semibold flex-shrink-0">E)</span>
                         <span class="flex-1 min-w-0">

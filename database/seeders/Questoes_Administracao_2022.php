@@ -10,12 +10,11 @@ class Questoes_Administracao_2022 extends Seeder
     public function run(): void
     {
         // =====================================================================
-        // FORMAÇÃO GERAL – Questões 01 a 08
+        // Administração – Questões 01 a 08
         // =====================================================================
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">A democracia representativa exige, para o seu funcionamento, um conjunto de características, as quais podem ser compreendidas como instituições. São elas: Funcionários eleitos; Eleições livres, justas e frequentes; Sufrágio inclusivo; Direito de concorrer a cargos eletivos; Liberdade de expressão; Fontes de informação diversificadas; Autonomia para as associações. Entre as categorias mencionadas, destacam-se duas como pilares do regime democrático.</p>
@@ -51,8 +50,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Dados do levantamento feito pelo <i>TransgenderEurope</i> (TGEU) mostram que o Brasil permaneceu pelo 13º ano consecutivo como o país que mais mata pessoas transgêneros.</p>
@@ -82,8 +80,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em 2019, a violência armada foi três vezes maior para a população negra, em comparação com a não negra, tanto para a população geral quanto para o grupo jovem (entre 15 e 29 anos de idade). Quanto à taxa de mortalidade por 100 mil habitantes no grupo de pessoas com até 14 anos de idade, destaca-se, da mesma forma, a desigualdade na vitimização de crianças e adolescentes negros por agressão com arma de fogo, com taxa 3,6 vezes maior do que a de não negros em 2019.</p>
                 <p class="mb-2 text-right text-sm">INSTITUTO SOU DA PAZ. <b>Violência armada e racismo:</b> o papel da arma de fogo na desigualdade racial. Disponível em: https://soudapaz.org. Acesso em: 6 jul. 2022 (adaptado).</p>
@@ -109,8 +106,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Além de tramitar no Judiciário um processo a respeito do Marco Temporal, há também, na Câmara dos Deputados, um projeto em que se tenta transformar a tese do Marco Temporal em lei. Trata-se do Projeto de Lei n. 490/2007, que determina que devem ter direito às terras consideradas ancestrais somente os povos que as estivessem ocupando no dia da promulgação da Constituição Federal, em 5 de outubro de 1988.</p>
@@ -141,8 +137,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Pesquisa realizada pelo Observatório Brasileiro de Políticas Públicas da Universidade Federal de Minas Gerais (UFMG) aponta que a população em situação de rua aumentou no Brasil em 2022. De janeiro a maio deste ano, mais de 26 mil novas pessoas nessa situação foram registradas no Cadastro Único (CadÚnico) do Governo Federal. No país, mais de 180 mil pessoas estão registradas no CadÚnico.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://g1.globo.com. Acesso em: 6 jul. 2022 (adaptado).</p>
@@ -168,8 +163,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao final de 2021, cerca de 89,3 milhões de pessoas estavam deslocadas em todo o mundo, em decorrência de violência, perseguições, violações dos direitos humanos ou outros conflitos em seus locais de origem. Esse contingente de deslocamentos forçados já alcançava mais de 100 milhões de pessoas em maio de 2022, sendo motivados por instabilidades como as ocorridas no Afeganistão, em alguns países africanos e nas regiões da Ucrânia ocupadas pela Rússia, além de outros locais onde já perduravam confrontos armados, como, por exemplo, na Síria.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://www.acnur.org. Acesso em: 21 jun. 2022 (adaptado).</p>
@@ -188,8 +182,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Resultados de pesquisa da Comissão Econômica para a América Latina e o Caribe (CEPAL), vinculada à Organização das Nações Unidas (ONU), apontam que, além do feminicídio íntimo, aquele perpetrado por parceiros ou ex-parceiros da vítima, e do feminicídio sexual sistêmico, em que a vítima é sequestrada e estuprada, há o feminicídio lesbofóbico ou bifóbico, configurado quando a vítima é bissexual ou lésbica e é assassinada porque o agressor entende que deve puni-la por sua orientação sexual.</p>
@@ -212,8 +205,7 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
-            'categoria' => 'Formação Geral',
+            'categoria' => 'Administração',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Inicialmente, a natureza transgressora do grafite foi encarada pelo Estado como vandalismo no espaço público e como um perigo para a conservação da propriedade privada, devendo-se, portanto, combatê-lo. Com o tempo, contudo, essa concepção marginal transformou-se, incidindo em uma valorização aceitável pelo Estado e positiva para a sociedade. Essa transição do grafite, de arte marginal para manifestação artística reconhecida e aceita, tem revelado aspectos importantes não somente para os profissionais do grafite, mas para a sociedade como um todo, pois incorpora a possibilidade de ele ser um produto artístico de valor cultural, econômico e ideológico.</p>
                 <p class="mb-2 text-right text-sm">PIRES, E. M.; SANTOS, F. A. A cidade de São Paulo e suas dinâmicas: graffiti, Lei Cidade Limpa e publicidade urbana. <b>Anais do Museu Paulista</b>: História e Cultura Material. v. 26, São Paulo, 2018 (adaptado).</p>
@@ -236,7 +228,6 @@ class Questoes_Administracao_2022 extends Seeder
         // =====================================================================
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As tabelas 1, 2 e 3 apresentam informações acerca dos investimentos financeiros A, B e C.</p>
@@ -305,7 +296,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Entre as teorias utilizadas na Administração, a Teoria Matemática é a que mantém o foco no processo decisório racional, baseado em procedimentos matemáticos, estatísticos e computacionais. Essa teoria surgiu entre os anos 1940 e 1950 e, desde então, está presente nas práticas e nas tendências gerenciais. A teoria dos jogos, a teoria das filas, a teoria das probabilidades e a programação linear, aplicadas aos problemas gerenciais de técnicas e métodos recorrentes nas ciências matemáticas originaram-se da Teoria Matemática.</p>
@@ -331,7 +321,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O desenvolvimento das instituições no interior da sociedade capitalista, desencadeado por transformações tecnológicas no final do século XIX, levou à racionalização material e imaterial dos processos produtivos. Essas instituições foram minuciosamente estudadas por Max Weber (1864-1920), que focou na análise da organização cotidiana da sociedade, na divisão e na coordenação das mais diversas atividades laborais. Essas atividades eram baseadas na divisão racional do trabalho, na exigência de especialização e diferenciação das funções exercidas pelos trabalhadores, e classificadas de acordo com critérios técnicos, mediante a subordinação a uma autoridade hierarquicamente organizada e altamente especializada.</p>
@@ -356,7 +345,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Além dos resultados econômicos, a dimensão ética da atividade empresarial tornou-se uma das principais preocupações dos gestores. A adoção de uma conduta pautada em princípios morais de respeito ao ambiente e aos valores da comunidade é uma exigência incontornável das sociedades contemporâneas. O impacto social e ambiental das atividades empresariais pode influenciar, inclusive, a competitividade das organizações.</p>
@@ -375,7 +363,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A Teoria da Contingência propõe o pressuposto de que as organizações recebem influências do ambiente onde estão inseridas. Desse modo, o ambiente pode contribuir para remodelar características específicas da empresa em determinado momento.</p>
@@ -403,7 +390,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em virtude da crise ocasionada pela pandemia de Covid-19, uma empresa precisou demitir 20% de seus funcionários. No intuito de reduzir os impactos desse processo, a empresa buscará realizar a recolocação profissional desses funcionários por meio da contratação de consultoria.</p>
@@ -421,7 +407,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Os executivos da área de gestão de processos e serviços de uma multinacional de telefonia móvel estão analisando o aumento das consultas ao Serviço de Atendimento ao Cliente (SAC) em determinada região do Brasil. Durante três semanas consecutivas, os profissionais do Departamento de Pesquisa e Desenvolvimento da empresa coletaram dados do SAC relativos a dias úteis das três semanas estudadas.</p>
@@ -446,7 +431,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao utilizar o modelo de análise de mercado proposto por Porter, procura-se identificar as forças que atuam em um mercado dinâmico e competitivo, determinando-se a intensidade da competição em dado setor.</p>
@@ -471,7 +455,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O relatório Focus, emitido semanalmente pelo Banco Central, reúne vários indicadores e estimativas de economistas das mais renomadas instituições financeiras do país. Três dos indicadores mais relevantes que compõem o relatório de mercado do Banco Central são: Produto Interno Bruto (PIB); Índice Nacional de Preços ao Consumidor Amplo (IPCA); Sistema Especial de Liquidação e de Custódia (Taxa Selic).</p>
@@ -497,7 +480,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Segundo o Instituto Ethos, em uma economia inclusiva, "os investimentos públicos e privados, as regras, as instituições, as tecnologias e os programas devem estar voltados também para o atendimento das necessidades e dos direitos de todos os seres humanos, sem o que não será possível construir ambientes sociais saudáveis em nenhuma atividade produtiva."</p>
@@ -516,7 +498,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao analisar o ambiente setorial para o planejamento estratégico da empresa onde trabalha, o diretor comercial da ABX Ltda. utilizou como ferramenta de análise o modelo das cinco forças proposto por Porter. Nessa análise, o diretor considerou, em valores percentuais, a medida de cada uma dessas forças para se tornarem favoráveis ou desfavoráveis à empresa, conforme tabela a seguir.</p>
@@ -548,7 +529,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A empresa XYZ adota um planejamento e controle de produção totalmente manual, em que não há integração entre as áreas. Por meio de uma consultoria, a XYZ está analisando a implantação de novas técnicas e filosofias de produção para aumentar a vantagem competitiva.</p>
@@ -572,7 +552,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O proprietário de uma clínica de estética realizou uma pesquisa de satisfação em que foram avaliados oito atributos. Os consumidores foram questionados sobre a importância de tais atributos na escolha de uma clínica de estética, atribuindo uma nota ao desempenho da clínica em relação aos atributos apresentados. Para tanto, foram atribuídas as seguintes escalas.</p>
@@ -634,7 +613,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O plano de negócios como parte fundamental do processo empreendedor é um instrumento que visa estruturar as principais concepções e alternativas para uma análise correta de viabilidade do negócio pretendido. A realização do plano de negócios envolve diversas etapas, sendo a análise do mercado e da competitividade importante para se reverem e se adaptarem estratégias aos novos desafios. A figura a seguir apresenta o modelo de estratégias competitivas genéricas concebido por Porter.</p>
@@ -659,7 +637,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Praticar a responsabilidade social empresarial requer atenção a múltiplas exigências no tocante a relações de parceria entre clientes e fornecedores, produção de qualidade, contribuições para o desenvolvimento da comunidade, investimentos em pesquisa tecnológica, preservação do meio ambiente, redução de ações predatórias, participação dos trabalhadores nos resultados organizacionais, qualificação profissional, respeito ao cidadão etc. Ao praticar conduta ética e socialmente responsável, a organização alcança o respeito das pessoas e das comunidades que atinge, engajando seus colaboradores e conquistando a preferência dos consumidores.</p>
@@ -678,7 +655,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma cooperativa de produtores agrícolas deseja escoar sua produção de cocos advinda das fazendas de origem para os centros consumidores, com o objetivo de atender as demandas desses locais no mês seguinte. Devido ao aumento do custo de produção e transporte, a cooperativa decidiu contratar um administrador para ajudar a reduzir o custo de distribuição, definindo o volume a ser transportado de cada região de origem para cada centro consumidor.</p>
@@ -733,7 +709,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma <i>startup</i>, cuja missão é auxiliar estudantes de diversas áreas a encontrarem o seu primeiro emprego, tem um modelo de negócio cujas receitas são obtidas predominantemente a partir de anúncios pagos por recrutadores. Atualmente, a <i>startup</i> possui um cadastro com mais de 350 000 estudantes, que contém desde informações curriculares até dados pessoais dos candidatos. Visando expandir suas receitas, os fundadores estão cogitando a venda de dados dos usuários de sua base para outras empresas de varejo, que têm interesse em obter informações de perfil desse público. Após consulta à Lei n. 13.709/2018 (Lei Geral de Proteção de Dados – LGPD), descobriram que a comercialização de dados pessoais é proibida no ordenamento jurídico brasileiro.</p>
@@ -752,7 +727,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A saúde financeira de uma empresa depende do bom controle de seus fluxos de caixa e ciclo financeiro, além de sua capacidade de gerar lucro e de definir boas estratégias de financiamento e de investimento. A liquidez se refere à agilidade com que um investidor consegue desfazer-se de um investimento para voltar a ter dinheiro na mão, sem que, para isso, tenha prejuízo. A liquidez imediata apenas considera valores já disponíveis em caixa, saldos bancários, aplicações, entre outros.</p>
@@ -783,7 +757,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma fornecedora de itens de limpeza doméstica para supermercados optou por mudar o posicionamento estratégico de escala para o de diferenciação, investindo em matérias-primas mais eficientes, que melhorem a performance dos produtos, por meio da diversidade de fragrâncias e embalagens, visando atender clientes com maior poder aquisitivo.</p>
@@ -801,7 +774,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O fluxograma da Empresa XYV apresenta as etapas do processo de vendas, identificadas pelas letras A a J, desde o início até o fim, incluindo etapas como recebimento do pedido, verificação de disponibilidade do produto, seleção, emissão de cupom fiscal, entrega e informação ao cliente sobre prazo em caso de indisponibilidade.</p>
@@ -826,7 +798,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Embora praticada, pelo menos, desde os anos 1970, é a partir de 2010 que se verifica a intensificação da Gestão Baseada em Dados, que consiste em tomar dados de sistemas de informação transacionais ou de inteligência de mercado, que costumavam ficar depositados sem maior utilização, e transformá-los em informações e conhecimento de valor para decisões operacionais e estratégicas. Métodos de aprendizado de máquina e estatística avançada, antes ignorados, passaram a fazer parte do dia a dia de empresas e governos.</p>
@@ -845,7 +816,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A pesquisa de marketing inclui identificação, coleta, análise, disseminação e uso de informações, e cada fase desse processo é importante. Identificamos ou definimos o problema ou oportunidade de pesquisa de marketing e, a seguir, determinamos as informações necessárias para investigá-lo. Em seguida, identificam-se as fontes relevantes de informações e avaliam-se os métodos de coleta de dados com sofisticação e complexidade variadas em função da sua utilidade.</p>
@@ -864,7 +834,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O termo cidades inteligentes surgiu na literatura referindo-se a aglomerações urbanas que fazem o uso integrado de Tecnologias da Informação e Comunicação, aliadas a uma gestão pública eficiente e dinâmica, com vistas a melhorar a qualidade de vida dos cidadãos. Apesar de ser um conceito ainda em construção, para caracterizar um município como uma cidade inteligente, há consenso entre pesquisadores de que é necessária a criação de políticas voltadas para o acesso público e gratuito aos dados, e também para a inovação e sustentabilidade.</p>
@@ -890,7 +859,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Nos últimos anos, observou-se uma transformação rápida no ecossistema dos negócios de impacto no Brasil e no mundo. Diversos modelos e iniciativas surgiram com o propósito de minimizar um problema social e/ou ambiental por meio de sua atividade principal (seu produto/serviço e/ou sua forma de operação).</p>
@@ -917,7 +885,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
@@ -949,7 +916,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Frente às dificuldades de avaliação de desempenho de pessoal durante o período de isolamento social em razão da pandemia de Covid-19, foi recomendada a adaptação de uma medida de uso consolidado em Marketing para a área de Gestão de pessoas. A proposta foi utilizar o que chamaram de "Net Performance Promoters Score (NPPS)", ou "Escore Líquido de Promotores de Desempenho (ELPD)", com avaliação a partir de três perguntas para cada trabalhador/colaborador.</p>
@@ -975,7 +941,6 @@ class Questoes_Administracao_2022 extends Seeder
         ]);
 
         Questao::create([
-            'curso' => 'Administração',
             'categoria' => 'Componente Específico',
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um dos principais fatores para o sucesso organizacional na atualidade é a adoção da liderança situacional. Entende-se por liderança situacional aquela pautada na adaptação da forma de liderar tomando-se como parâmetro o contexto em que a empresa e a equipe se encontram. Na liderança situacional, implementam-se mudanças de tal forma que seja possível promover a motivação, a produtividade e o engajamento da equipe, o que repercute nos resultados empresariais. Para a maioria das empresas, a liderança que reconhece e valoriza o mérito individual é altamente recomendável.</p>
