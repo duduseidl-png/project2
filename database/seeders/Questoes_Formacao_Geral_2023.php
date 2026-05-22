@@ -11,6 +11,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
     {
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injustiças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela significativa da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade.</p>
 
@@ -40,6 +41,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">No Brasil, os idosos têm sido cada vez mais obrigados a permanecer no trabalho formal ou informal, mesmo após a aposentadoria, visto que os recursos provenientes desta, na maioria dos casos, são insuficientes para a manutenção dos indivíduos. Um fator que pode ter agravado essa situação foi a aprovação da reforma previdenciária de 2019, que modificou as regras de idade e contribuição para o acesso ao direito ao benefício da aposentadoria. Tal mudança pode ter resultado em um número ainda maior de idosos que disputam com as populações jovens e com sistemas de automação, no mercado atual, o trabalho precarizado. Essa situação contribui para o acirramento do preconceito contra essa faixa etária, denominado etarismo.</p>
             ',
@@ -65,6 +67,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A fome e a insegurança alimentar, antigos problemas da sociedade, são agravados em regiões com elevados índices de desigualdade social. Propor soluções para esse quadro requer uma abordagem multidimensional, que possibilite a interação entre as dimensões sociais, culturais, políticas, econômicas e ambientais envolvidas na produção e na distribuição de alimentos.</p>
 
@@ -108,6 +111,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
          Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Estudos realizados em 2021 pelo Fundo das Nações Unidas para a Infância (Unicef), em parceria com a Organização Mundial da Saúde (OMS), mostraram que, no Brasil, houve uma queda brusca da taxa de vacinação infanti l nos últi mos anos: entre 2017 e 2021, a taxa caiu de 93,1% para 71,49%, considerando-se crianças com menos de um ano de idade.</p>
                 
@@ -135,6 +139,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="font-bold mb-2">TEXTO 1</p>
                 <p class="mb-2 text-justify">A Inteligência Artificial (IA) generativa é capaz de criar novos dados, únicos, que possibilitam aprender por conta própria, indo além do que a tecnologia tradicional proporciona, visto que esta precisa de intervenção humana. Um exemplo de IA generativa é o ChatGPT, que pode gerar imagens, músicas e textos completamente novos. Entre outras coisas, por meio da IA generativa, é possível elaborar modelos de previsão de testes clínicos, realizar a identificação de padrões em exames médicos e, ainda, auxiliar no diagnóstico de doenças.</p>
@@ -158,6 +163,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Os seguintes ícones foram utilizados em um estudo realizado por um grupo de trabalho de monitoramento da relação das mulheres com a mobilidade urbana na cidade de São Paulo. Na pesquisa, perguntou-se às mulheres como elas se sentiam nas situações representadas por tais imagens.</p>
                 <p class="mb-2 text-justify">As respostas relativas a cada tipo de mobilidade urbana são apresentadas a seguir.</p>
@@ -188,6 +194,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="font-bold mb-1">TEXTO 1</p>
                 <p class="mb-1 text-justify">Maria Bárbara tinha o verdadeiro tipo das velhas maranhenses criadas na fazenda. Tratava muito dos avós, quase todos portugueses. Quando falava dos pretos, dizia “os sujos” e, quando se referia a um mulato dizia “o cabra”. Maria Bárbara tinha grande admiração pelos portugueses, dedicava-lhes um entusiasmo sem limites, preferia-os em tudo aos brasileiros. Quando a filha foi pedida por Manuel Pedroso, então principiante no comércio da capital, ela dissera: “Bem! Ao menos tenho a certeza de que é branco!”</p>
@@ -232,6 +239,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Recentemente, a população carcerária feminina do Brasil tornou-se a terceira maior do mundo. A situação do encarceramento feminino por tráfico de drogas e outras situações que circundam o assunto foi tema de discussão da Secretaria de Políticas sobre Drogas do Ministério da Justiça e Segurança Pública (Senad/MJSP), em seminário realizado em abril de 2023. O evento contou com a participação de 23 países. Segundo os dados apresentados pela Senad, a incidência penal sobre drogas no Brasil é uma das principais causas de prisão de mulheres, chegando a 54% dos casos de encarceramento, contra 28% dos homens, índice que impacta em aspectos como maternidade e primeira infância.</p>
             ',
@@ -258,6 +266,7 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A sociedade do século XXI não é mais uma sociedade disciplinar, mas, sim, uma sociedade do desempenho. Os seus habitantes também não se chamam mais sujeitos de obediência, mas, sim, sujeitos de desempenho e produção. São empresários de si mesmos.</p>
 

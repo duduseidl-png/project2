@@ -89,8 +89,9 @@
             </div>
             <section id="optionBox">
                 <input type="hidden" id="selectedCourseId" value="">
+                <input type="hidden" id="selectedCourseSlug" value="">
                 @foreach ($cursos as $curso)
-                <a href="#" data-id="{{ $curso['id'] }}" class="course-option">{{ $curso['nome'] }}</a>
+                <a href="#" data-id="{{ $curso['id'] }}" data-slug="{{ $curso['slug'] }}" class="course-option">{{ $curso['nome'] }}</a>
                 @endforeach
             </section>
         </div>
@@ -154,13 +155,15 @@
             option.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                // Pegar o nome do curso e o ID
+                // Pegar o nome do curso, o ID e o slug
                 const courseName = this.textContent;
                 const courseId = this.getAttribute('data-id');
+                const courseSlug = this.getAttribute('data-slug');
 
-                // Salvar o ID na variável e no input hidden
+                // Salvar o ID e slug na variável e no input hidden
                 selectedCourseId = courseId;
                 document.getElementById('selectedCourseId').value = courseId;
+                document.getElementById('selectedCourseSlug').value = courseSlug;
 
                 // Preencher o input com o nome do curso
                 document.getElementById('inputField').value = courseName;
@@ -175,7 +178,7 @@
                 // Mostrar anos do curso selecionado
                 showYearsByEng(courseId);
 
-                console.log('Curso selecionado:', courseName, 'ID:', courseId);
+                console.log('Curso selecionado:', courseName, 'ID:', courseId, 'Slug:', courseSlug);
             });
         });
 
@@ -196,10 +199,12 @@
             option.addEventListener('click', function (e) {
                 e.preventDefault();
                 const year = this.getAttribute('data-year');
-                const courseId = document.getElementById('selectedCourseId').value;
+                const courseSlug = document.getElementById('selectedCourseSlug').value;
                 
-                console.log('Ano selecionado:', year, 'Curso ID:', courseId);
-                // Aqui você pode adicionar lógica para fazer algo com ano e curso selecionados
+                console.log('Ano selecionado:', year, 'Curso slug:', courseSlug);
+                
+                // Redirecionar para o simulado com o ano
+                window.location.href = `/simulado/${courseSlug}/${year}`;
             });
         });
     </script>

@@ -11,6 +11,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
     {
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">A democracia representativa exige, para o seu funcionamento, um conjunto de características, as quais podem ser compreendidas como instituições. São elas: Funcionários eleitos; Eleições livres, justas e frequentes; Sufrágio inclusivo; Direito de concorrer a cargos eletivos; Liberdade de expressão; Fontes de informação diversificadas; Autonomia para as associações. Entre as categorias mencionadas, destacam-se duas como pilares do regime democrático.</p>
@@ -47,6 +48,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Dados do levantamento feito pelo <i>TransgenderEurope</i> (TGEU) mostram que o Brasil permaneceu pelo 13º ano consecutivo como o país que mais mata pessoas transgêneros.</p>
@@ -77,6 +79,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em 2019, a violência armada foi três vezes maior para a população negra, em comparação com a não negra, tanto para a população geral quanto para o grupo jovem (entre 15 e 29 anos de idade). Quanto à taxa de mortalidade por 100 mil habitantes no grupo de pessoas com até 14 anos de idade, destaca-se, da mesma forma, a desigualdade na vitimização de crianças e adolescentes negros por agressão com arma de fogo, com taxa 3,6 vezes maior do que a de não negros em 2019.</p>
                 <p class="mb-2 text-right text-sm">INSTITUTO SOU DA PAZ. <b>Violência armada e racismo:</b> o papel da arma de fogo na desigualdade racial. Disponível em: https://soudapaz.org. Acesso em: 6 jul. 2022 (adaptado).</p>
@@ -103,6 +106,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Além de tramitar no Judiciário um processo a respeito do Marco Temporal, há também, na Câmara dos Deputados, um projeto em que se tenta transformar a tese do Marco Temporal em lei. Trata-se do Projeto de Lei n. 490/2007, que determina que devem ter direito às terras consideradas ancestrais somente os povos que as estivessem ocupando no dia da promulgação da Constituição Federal, em 5 de outubro de 1988.</p>
@@ -134,6 +138,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Pesquisa realizada pelo Observatório Brasileiro de Políticas Públicas da Universidade Federal de Minas Gerais (UFMG) aponta que a população em situação de rua aumentou no Brasil em 2022. De janeiro a maio deste ano, mais de 26 mil novas pessoas nessa situação foram registradas no Cadastro Único (CadÚnico) do Governo Federal. No país, mais de 180 mil pessoas estão registradas no CadÚnico.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://g1.globo.com. Acesso em: 6 jul. 2022 (adaptado).</p>
@@ -160,6 +165,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Ao final de 2021, cerca de 89,3 milhões de pessoas estavam deslocadas em todo o mundo, em decorrência de violência, perseguições, violações dos direitos humanos ou outros conflitos em seus locais de origem. Esse contingente de deslocamentos forçados já alcançava mais de 100 milhões de pessoas em maio de 2022, sendo motivados por instabilidades como as ocorridas no Afeganistão, em alguns países africanos e nas regiões da Ucrânia ocupadas pela Rússia, além de outros locais onde já perduravam confrontos armados, como, por exemplo, na Síria.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://www.acnur.org. Acesso em: 21 jun. 2022 (adaptado).</p>
@@ -179,6 +185,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 font-bold">TEXTO 1</p>
                 <p class="mb-2 text-justify">Resultados de pesquisa da Comissão Econômica para a América Latina e o Caribe (CEPAL), vinculada à Organização das Nações Unidas (ONU), apontam que, além do feminicídio íntimo, aquele perpetrado por parceiros ou ex-parceiros da vítima, e do feminicídio sexual sistêmico, em que a vítima é sequestrada e estuprada, há o feminicídio lesbofóbico ou bifóbico, configurado quando a vítima é bissexual ou lésbica e é assassinada porque o agressor entende que deve puni-la por sua orientação sexual.</p>
@@ -202,6 +209,7 @@ class Questoes_Formacao_Geral_2022 extends Seeder
 
         Questao::create([
             'categoria' => 'Formação Geral',
+            'ano' => 2022,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Inicialmente, a natureza transgressora do grafite foi encarada pelo Estado como vandalismo no espaço público e como um perigo para a conservação da propriedade privada, devendo-se, portanto, combatê-lo. Com o tempo, contudo, essa concepção marginal transformou-se, incidindo em uma valorização aceitável pelo Estado e positiva para a sociedade. Essa transição do grafite, de arte marginal para manifestação artística reconhecida e aceita, tem revelado aspectos importantes não somente para os profissionais do grafite, mas para a sociedade como um todo, pois incorpora a possibilidade de ele ser um produto artístico de valor cultural, econômico e ideológico.</p>
                 <p class="mb-2 text-right text-sm">PIRES, E. M.; SANTOS, F. A. A cidade de São Paulo e suas dinâmicas: graffiti, Lei Cidade Limpa e publicidade urbana. <b>Anais do Museu Paulista</b>: História e Cultura Material. v. 26, São Paulo, 2018 (adaptado).</p>
@@ -220,3 +228,4 @@ class Questoes_Formacao_Geral_2022 extends Seeder
         ]);
     }
 }
+

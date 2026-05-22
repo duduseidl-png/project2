@@ -15,6 +15,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma das preocupações dos gestores de instituições bancárias é o tempo de permanência do cliente na agência. Considere que o tempo gasto por um cliente em um banco, entre meio-dia e uma hora da tarde, apresente o comportamento de uma distribuição de probabilidade uniforme entre 0 e 30 minutos.</p>
             ',
@@ -32,6 +33,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">No Brasil, os principais produtos fabricados e comercializados por uma empresa são motosserras, roçadeiras e aparadores elétricos, cuja produção aproximada é de 50 000 unidades mensais. A empresa também produz cilindros para motores, fabricando em torno de 500 000 unidades por mês.</p>
                 <p class="mb-2 text-justify">Quanto à produção de cilindros para motores, identificou-se que a empresa compete na estratégia de liderança em custos, pois a produção é de alto volume, visto que esses produtos são destinados tanto para produção dos motores dos equipamentos produzidos internamente (motosserras, roçadeiras e aparadores elétricos) quanto para outras empresas que utilizam esses produtos no mercado interno e externo.</p>
@@ -59,6 +61,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Com o crescimento do mercado de pet shop, os estabelecimentos especializados passaram a gerenciar elevados níveis de estoque. Diante disso, o gestor de um estabelecimento comercial do ramo pet shop contratou um estagiário de Engenharia de Produção para auxiliá-lo na gestão de estoques.</p>
                 <p class="mb-2 text-justify">Para calcular o ponto de reposição (demanda média durante o tempo de reposição mais o estoque de segurança) do item ração canina em embalagens de 15 kg, definiu um nível de serviço igual a 99%, sendo essa a probabilidade de não esgotar o estoque em qualquer ciclo de pedido.</p>
@@ -95,6 +98,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As estacas pré-fabricadas de concreto são cravadas no terreno para a execução das fundações em profundidades suficientes para absorver as cargas estruturais. As peças podem ser fabricadas em qualquer forma geométrica em sua seção transversal.</p>
                 <p class="mb-2 text-justify">A tabela a seguir indica a demanda, a previsão de demanda pelo método da suavização exponencial, com parâmetro suavizador de 0,6, o erro da previsão, o erro absoluto e o sinal de rastreamento para a estaca de 420 mm para um período de 20 dias.</p>
@@ -158,6 +162,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma pequena fábrica, que produz artefatos plásticos injetados, possui três máquinas injetoras em suas instalações. Todas as máquinas têm a mesma capacidade de processamento e se encontram em plena operação. No entanto, clientes começaram a reclamar da qualidade dos produtos, pois, em muitos casos, as peças rachavam ao sofrerem pequenas quedas. A fim de verificar o ajuste das injetoras, foram selecionadas aleatoriamente 8 peças injetadas de cada máquina e, subsequentemente, o ensaio de resistência ao impacto foi conduzido em tais peças.</p>
                 <p class="mb-2 text-justify">Os resultados experimentais são apresentados por meio de um diagrama boxplot comparativo da resistência ao impacto (J/m) das três máquinas. Com base na análise do diagrama:</p>
@@ -176,6 +181,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que Leandro e seu irmão tenham resolvido fazer um macarrão ao alho e óleo seguindo uma sequência de atividades representada em um diagrama de rede, com os tempos das atividades dados em minutos:</p>
                 <div class="overflow-x-auto mb-3">
@@ -221,6 +227,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">PERT (Program Evaluation and Review Technique) e CPM (Critical Path Method) são técnicas utilizadas na gestão de projetos que foram desenvolvidas na década de 1950.</p>
                 <p class="mb-2 text-justify">Em um diagrama estão representadas as atividades, e suas respectivas durações em dias, para a instalação de um equipamento de produção. As atividades e seus nós são os seguintes (com durações em dias):</p>
@@ -265,6 +272,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O quadro a seguir lista as atividades de um projeto, com suas durações e a indicação das atividades predecessoras.</p>
                 <div class="overflow-x-auto mb-3">
@@ -302,6 +310,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A tabela a seguir apresenta os resultados de demanda real e quatro estimativas de previsão de demanda de uma empresa fabricante de bens de capital. A primeira estimativa foi obtida por meio da média móvel dos últimos três meses (n = 3), a segunda pela média exponencial (alfa = 0,5), as duas últimas considerando médias móvel e exponencial, ambas com sazonalidade (SZ).</p>
                 <div class="overflow-x-auto mb-3">
@@ -350,6 +359,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma empresa automobilística fabrica carros de passeio em três cores: branco, preto e cinza. A unidade fabril dessa empresa conta com três centros de trabalho: estruturação, pintura e acabamento, que operam em dois turnos de oito horas cada. A demanda agregada para este mês foi de 200 carros de passeio, e o setor de vendas prevê que a demanda irá aumentar 10% ao mês durante o próximo semestre. O engenheiro de produção responsável pela análise da capacidade acredita que os centros de trabalho para pintura e acabamento estão ociosos e, por isso, está preocupado momentaneamente apenas com o centro de estruturação.</p>
                 <div class="overflow-x-auto mb-3">
@@ -406,6 +416,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A tabela a seguir apresenta o histórico de consumo de um item em uma empresa.</p>
                 <div class="overflow-x-auto mb-3">
@@ -445,6 +456,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma fábrica planeja aumentar sua capacidade de produção para atender ao crescimento da demanda previsto para os próximos anos. Após considerar uma dezena de pacotes tecnológicos, o gerente de produção definiu três alternativas tecnológicas, com características diferentes de custo fixo anual, custo variável por unidade e volume de produção anual.</p>
                 <p class="mb-2 text-justify">Sabendo que o custo total anual = custo fixo anual + custo variável por unidade × volume de produção anual, o gráfico a seguir representa a relação custo × volume das três tecnologias avaliadas, com pontos de interseção V1, V2 e V3 ao longo do eixo de volume de produção. A Tecnologia 1 tem alto custo fixo e baixo custo variável; a Tecnologia 2 apresenta custo fixo e variável intermediários; a Tecnologia 3 tem baixo custo fixo e alto custo variável.</p>
@@ -463,6 +475,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O gestor de um estabelecimento comercial adota o modelo de previsão de demanda pela média móvel simples para ração canina para cães adultos e para filhotes. Para a semana atual, os resultados referentes à demanda e previsão de demanda, em kg, são apresentados no quadro a seguir.</p>
                 <div class="overflow-x-auto mb-3">
@@ -496,6 +509,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que um engenheiro tenha sido contratado para analisar a situação econômica de determinada empresa fabricante de produtos populares. A análise determinou que o custo total para a produção de x unidades pela empresa foi dado pela função C(x) = 15 + 3x + x²; o custo médio de produção foi estimado pela função Q(x) = C(x) / x; a receita total recebida pela venda de x unidades foi projetada pela função R(x) = 3x – x²/2.</p>
             ',
@@ -513,6 +527,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um fornecedor de buchas e cunhas recebeu de seu cliente a programação para as semanas 14 a 23, conforme apresentado na tabela a seguir. O fornecedor utilizou a regra de dimensionamento da quantidade fixa, correspondente à produção diária. Os lotes foram produzidos em múltiplos inteiros da produção diária. O fornecedor trabalha 6 dias por semana, não tendo restrição de capacidade para atender as demandas semanais previstas. O lead time para fabricação é de uma semana para todos os produtos.</p>
                 <div class="overflow-x-auto mb-3">
@@ -560,6 +575,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que a empresa Alfa apresente as seguintes características:</p>
                 <ul class="list-disc pl-6 mb-2">
@@ -583,6 +599,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Bolas para moagem forjadas em aço alto carbono são utilizadas em unidades de tratamento de minérios e na indústria cimenteira. Em uma empresa de produção de bolas para moagem, o fluxo do processo de fabricação inclui as seguintes operações: (i) aquecimento de barras de aço; (ii) cisalhamento de tarugos com dimensões de projeto e forjamento das bolas em recalcador horizontal; (iii) laminação para acabamento superficial das bolas; (iv) tratamento térmico de têmpera direta da temperatura final de laminação em tanque com solução aquosa; (v) tratamento de revenimento, para alívio das tensões térmicas originárias na etapa anterior, restrito a algumas aplicações específicas.</p>
                 <p class="mb-2 text-justify">Cada centro de trabalho possui capacidade máxima de processamento igual a 2 400 minutos por semana. Os produtos e suas taxas de processamento por estação são:</p>
@@ -623,6 +640,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma empresa produz derivados lácteos em sua unidade central, podendo atender clientes de quatro regiões: Norte, Sul, Leste e Oeste. Os vendedores Astolfo, Benício, Carlitos e Demóstenes serão alocados, no próximo semestre, para atender a essas localidades. A tabela a seguir apresenta o potencial de lucro, em milhões de reais, que pode ser gerado pelos vendedores em cada região. A empresa não possui recursos para enviar mais de um funcionário para atender a cada região.</p>
                 <div class="overflow-x-auto mb-3">
@@ -665,6 +683,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma fábrica pode produzir dois tipos de vidros blindados, o Alfa e o Beta, cujos lotes com 1 000 unidades contribuem para gerar um lucro de, respectivamente, R$ 15 000,00 e R$ 6 000,00. Entre os diversos insumos de produção, há dois que são limitantes: a sílica (vendida em kg) e o corante (vendido em litros). Sabe-se que, na produção unitária de cada um dos produtos, utiliza-se 1 kg de sílica. São, também, consumidos 2 litros de corante para cada unidade de vidro Alfa e 1 litro de corante para cada unidade de vidro Beta. Os fornecedores entregam, diariamente, 7 000 kg de sílica e 10 000 litros de corante.</p>
             ',
@@ -688,6 +707,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O Sistema Toyota de Produção (STP) é uma filosofia que objetiva a eliminação de desperdícios no processo produtivo, por meio de ações eficientes, sem interrupções no fluxo e sob a demanda do cliente.</p>
             ',
@@ -713,6 +733,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em um determinado sistema de produção, quando a demanda é maior que a capacidade de processamento, tem-se um recurso gargalo (interno) que condiciona a decisão de mix de produtos. No quadro a seguir, são apresentados dados para apoiar a decisão sobre os produtos de um sistema produtivo.</p>
                 <div class="overflow-x-auto mb-3">
@@ -743,6 +764,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O estoque de segurança corresponde a uma fração do estoque total em uma cadeia de suprimentos, afetando os custos logísticos.</p>
             ',
@@ -768,6 +790,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Determinada empresa fabricante de decodificadores para aparelhos de TV deve produzir 300 unidades desse material, por dia, para atender à demanda. Para otimizar o fluxo produtivo, o engenheiro da empresa decidiu realizar o balanceamento da linha de produção, estimando que 600 minutos por dia seria o tempo disponível para produção. A montagem do produto é composta por cinco operações (A, B, C, D e E), com durações (em minutos) e precedências conforme o diagrama a seguir:</p>
                 <div class="overflow-x-auto mb-3">
@@ -809,6 +832,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A Equação de Bernoulli, empregada para escoamento incompressível e sem viscosidade, é representada por:</p>
                 <p class="mb-2 text-center font-mono">P/γ + v²/2g + z = Constante</p>
@@ -832,6 +856,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Para garantir a eficácia da gestão da qualidade, uma organização deve determinar e aplicar critérios e métodos (incluídos monitoramento, medições e indicadores de desempenho) necessários para assegurar a operação e o controle dos seus processos, além de determinar os recursos necessários para esses processos e assegurar sua disponibilidade.</p>
                 <p class="mb-2 text-right text-sm">ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <i>NBR ISO 9001: Sistema de gestão da qualidade – requisitos</i>. Rio de Janeiro: ABNT Editora, 2015.</p>
@@ -858,6 +883,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As cartas de controle fornecem informações sobre o valor de parâmetros de processo e sobre o seu comportamento ao longo do tempo. Isso permite que se faça estimativa da capacidade do processo. Dessa forma, se o processo apresenta apenas variações aleatórias é possível, por meio das propriedades da curva de distribuição normal, determinar a sua capacidade.</p>
                 <p class="mb-2 text-right text-sm">MONTGOMERY, D. C. <i>Introdução ao controle estatístico da qualidade</i>. Rio de Janeiro: LTC Editora, 2004 (adaptado).</p>
@@ -883,6 +909,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">No desenvolvimento do trabalho manual feito na posição sentado ou que tenha de ser feito em pé, bancadas, mesas, escrivaninhas e painéis devem proporcionar ao trabalhador condições de boa postura, visualização e operação e devem atender aos seguintes requisitos mínimos: a) ter altura e características da superfície de trabalho compatíveis com o tipo de atividade, com a distância requerida dos olhos ao campo de trabalho e com a altura do assento; b) ter área de trabalho de fácil alcance e visualização pelo trabalhador; c) ter características dimensionais que possibilitem posicionamento e movimentação adequados dos segmentos corporais.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://enit.trabalho.gov.br/portal/images/Arquivos_SST/SST_NR/NR-17.pdf (adaptado). Acesso em: 31 jun. 2019.</p>
@@ -908,6 +935,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O método do payback simples considera o tempo de retorno do capital investido, quando o investidor estabelece um prazo máximo para recuperação do investimento, que servirá de padrão para a análise da viabilidade econômica do projeto. Nesse sentido, suponha que uma empresa pretende realizar um projeto de investimento com seis anos de duração, sendo de quatro anos o prazo estabelecido para a recuperação do capital investido. A tabela a seguir apresenta os valores para os fluxos de caixa anuais do mencionado projeto.</p>
                 <div class="overflow-x-auto mb-3">
@@ -961,6 +989,7 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia de Produção',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em um esquema, estão identificados cinco ambientes de trabalho de uma instalação industrial, onde foram identificados os seguintes riscos ambientais:</p>
                 <ul class="list-disc pl-6 mb-2">
@@ -984,3 +1013,4 @@ class Questoes_Engenharia_de_Producao_2023 extends Seeder
         ]);
     }
 }
+

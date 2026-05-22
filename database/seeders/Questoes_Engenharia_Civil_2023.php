@@ -17,6 +17,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em uma instalação elétrica, os dispositivos de proteção desempenham um papel importante. São eles que asseguram um funcionamento seguro das instalações. Como os riscos existentes são de natureza, de magnitudes e de resultados diversos, existem diferentes dispositivos que desempenham funções específicas. Entre eles, encontram-se os fusíveis, os disjuntores magnéticos e os termomagnéticos, os relés metálicos ou bimetálicos, os disjuntores DR (disjuntor diferencial residual), os para-raios e os relés de sobretensão. Uma classificação usual desses dispositivos é feita com base no tipo de proteção à qual são destinados.</p>
             ',
@@ -34,6 +35,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A beleza da orla brasileira com suas jangadas, piscinas naturais e coqueirais contrasta com a falta de saneamento básico. É comum, nas praias brasileiras, o surgimento das chamadas línguas negras (manchas de esgoto no encontro com as águas do mar) resultante da falta de tratamento sanitário.</p>
                 <p class="mb-2 text-justify">A solução para esse problema passa pela implantação de sistemas de esgotamento sanitário que incluam a coleta, o transporte, o tratamento e a disposição final dos esgotos domésticos. Nesse contexto, as estações de tratamento de esgoto (ETEs) são formadas por um conjunto intercalado de unidades integradas de tratamento, desempenhando, cada uma delas, funções específicas.</p>
@@ -52,6 +54,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A fim de promover o controle de enchentes ao longo de uma das principais avenidas de um município, será construído um canal de drenagem retangular cuja declividade de fundo (I<sub>o</sub>) é de 0,04 m/m e cujo coeficiente de rugosidade de Manning (n) é de 0,02, com largura de base de 4 m e altura da lâmina de água de 2 m.</p>
                 <p class="mb-2 text-justify">Sabe-se que a fórmula de Manning constitui a principal base de cálculo para os problemas de engenharia relacionados a escoamentos de superfície livre e é dada por:</p>
@@ -72,6 +75,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Na construção de um hotel em uma zona rural isolada, por erro no projeto estrutural, alguns pilares de concreto da estrutura necessitam ser reforçados. Para isso, eles devem ser encamisados com concreto (ou graute) de resistência superior à da estrutura original. A fim de viabilizar esse procedimento, o engenheiro executor propôs ao engenheiro estrutural que a dosagem do novo concreto fosse realizada na própria obra, pois o procedimento sairia mais barato, dada a localização isolada da edificação. Diante dessa sugestão, o engenheiro estrutural solicitou que fossem realizados ensaios de caracterização do novo concreto.</p>
             ',
@@ -97,6 +101,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Na construção de um grande empreendimento habitacional com 10 edifícios, os engenheiros utilizaram, nos pavimentos, lajes pré-moldadas de concreto do tipo vigota, usando lajota cerâmica como elemento de enchimento. Na entrega do primeiro prédio do empreendimento, o engenheiro executor identificou que as lajes apresentavam flechas imediatas iguais aos limites estabelecidos por norma para o estado limite de serviço na etapa de vistoria.</p>
             ',
@@ -114,6 +119,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um edifício de 15 pavimentos foi construído sobre um terreno argiloso, saturado, normalmente adensado, com planta quadrada de 20 m de largura. Admite-se que o carregamento aplicado no terreno é uniformemente distribuído na área da planta do edifício. Após 50 anos, construiu-se outro edifício de dimensões similares distante 6 m do primeiro.</p>
             ',
@@ -139,6 +145,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O concreto é um material de construção resultante da mistura, em quantidades racionais, de aglomerante (cimento), agregados (pedra e areia) e água. Após a mistura, o concreto deve possuir trabalhabilidade suficiente para as operações de manuseio, de transporte e de lançamento em formas, adquirindo coesão e resistência com o passar do tempo, devido às reações que se processam entre aglomerante e água. Em alguns casos, são adicionados aditivos que modificam suas características físicas e químicas.</p>
             ',
@@ -162,6 +169,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um canal hidráulico experimental de concreto foi construído de forma retangular, com 8 m de largura de base. Sabe-se que a altura do nível de água é de 4 m e que a velocidade média de escoamento é de 1 m/s.</p>
                 <p class="mb-2 text-justify">Para esse caso, as equações do Número de Froude (Fr) e do Número de Reynolds (Re) podem ser definidas como:</p>
@@ -186,6 +194,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O Bus Rapid Transit (BRT) é um tipo de transporte de média capacidade que busca melhorar o sistema de transporte coletivo nas cidades. A respeito desse assunto, sabe-se que Londres, Moscou, Tóquio e Nova Iorque têm, como principal sistema de transporte, o metrô; já Lyon opera, principalmente, com Light Rail Transit (LRT); e Istambul, Bogotá, Lima, Guangzhou e Jacarta operam, majoritariamente, com BRT. A tabela a seguir mostra a comparação de produtividade desses sistemas em cada uma dessas cidades.</p>
                 <div class="overflow-x-auto mb-3">
@@ -234,6 +243,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Treliça é uma estrutura de membros esbeltos ligados entre si pelas suas extremidades. Para analisar ou projetar uma treliça, deve-se calcular o valor da força atuante em cada um dos seus membros. A força no membro pode ser de tração, de compressão ou nula. A fim de se obter essas forças, dois métodos geralmente são utilizados: 1) o método dos nós; e/ou 2) o método das seções. A aplicação desses métodos torna-se mais simples se, primeiramente, os membros que não estão sujeitos a nenhum carregamento (membros de força nula) são identificados. Os membros de força nula são usados para dar mais estabilidade à treliça durante a construção ou são usados como apoio adicional caso o carregamento externo seja alterado. Alguns dos membros de força nula de uma treliça podem ser determinados apenas por observação de cada um dos nós, sem a necessidade de cálculos.</p>
                 <p class="mb-2 text-right text-sm">HIBBELER, R. C. <b>Estática: mecânica para engenharia</b>. 12. ed. São Paulo: Pearson Prentice Hall, 2011 (adaptado).</p>
@@ -253,6 +263,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As vigas Gerber isostáticas são constituídas por uma associação de vigas isostáticas que possuem estabilidade própria com outras vigas que se apoiam sobre as primeiras, dando estabilidade ao conjunto. A ligação entre as vigas componentes se dá por meio de rótulas internas, as quais transmitem forças verticais e horizontais, mas não transmitem momento fletor.</p>
                 <p class="mb-2 text-justify">A viga Gerber em questão é decomposta em quatro partes identificadas pelos algarismos 1, 2, 3 e 4, sendo que as partes com estabilidade própria sustentam as partes instáveis.</p>
@@ -271,6 +282,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As provas de carga em estacas podem fornecer dois tipos de curvas carga versus recalque, conforme se observa na figura a seguir. Dessa forma, o engenheiro, ao analisar os resultados deste ensaio, deverá ter o conhecimento para interpretar os resultados e para avaliar se as fundações da sua obra foram projetadas e executadas de forma adequada.</p>
                 <p class="mb-2 text-right text-sm">ALONSO, U.R. <b>Previsão e controle de fundações</b>. São Paulo: Blucher, 1991 (adaptado).</p>
@@ -296,6 +308,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As características de funcionamento de sistemas de elevação de água podem ser avaliadas por meio de curvas características da tubulação e da bomba, que são as representações cartesianas de curvas do tipo H=f(Q), em que H representa a altura manométrica e Q representa a vazão recalcada. Para a bomba, pode ser analisada, ainda, a curva de rendimento em função da vazão.</p>
                 <p class="mb-2 text-justify">Nesse contexto, suponha que uma bomba centrífuga será utilizada para elevar água entre dois reservatórios por meio de uma adutora. As curvas características do sistema indicam que:</p>
@@ -326,6 +339,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que um engenheiro está fazendo estudos para a ampliação do terminal rodoviário de um município com 400 mil habitantes, cuja população cresce 10% ao ano.</p>
                 <p class="mb-2 text-justify">Para o estudo, ele considerou as seguintes informações:</p>
@@ -349,6 +363,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O uso do sistema Light Wood Frame (LWF) no Brasil tem ganhado força com a busca de sistemas construtivos mais eficientes, seja pela redução do tempo de construção, seja pela padronização dos processos, ou até mesmo para contribuir com a sustentabilidade ambiental. De acordo com a NBR 16936, LWF são sistemas construtivos estruturados por peças leves de madeira maciça serrada, ou por produto derivado de madeira, com fechamentos em chapas unidas às peças de madeira, formando painéis com resistência e rigidez aplicadas tanto no plano do painel quanto de forma perpendicular a ele.</p>
             ',
@@ -374,6 +389,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A representação de objetos em desenho técnico e projetivo efetua-se por meio de um sistema apropriado de projeções. A representação deve ser clara e simples, de forma que seja facilmente compreendida por quem irá utilizá-la.</p>
                 <p class="mb-2 text-justify">A figura apresentada é um sólido tridimensional com cortes e recortes, cujas vistas ortogonais devem ser identificadas corretamente.</p>
@@ -392,6 +408,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A evolução dos Sistemas Inteligentes de Transporte (Intelligent Transport Systems — ITS) ocorreu de forma acelerada, multifacetada e, muitas vezes, baseada nos avanços tecnológicos considerados revolucionários para o setor de transportes. Inúmeras ferramentas estão hoje disponíveis para diversos contextos e escalas, com aplicações que geram impactos, de forma direta, tanto localmente quanto em toda a sociedade. Com a perspectiva do alto crescimento populacional nas cidades para os próximos anos, aumentam também as preocupações com problemas relacionados à mobilidade urbana e, consequentemente, aumenta a busca por soluções e por tecnologias que facilitem a vida das pessoas. Para tanto, existem diversas tecnologias disponíveis, cujo emprego tem sido gradualmente aceito e utilizado em gestão do tráfego e do transporte público, além do transporte de carga.</p>
                 <p class="mb-2 text-right text-sm">PANHAN, A.M.; MENDES, L.S.; BREDA, G.D. <b>Construindo Cidades Inteligentes</b>. Curitiba: Appris, 2016 (adaptado).</p>
@@ -416,6 +433,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A relação que existe entre uma força e a aceleração produzida por essa força foi descoberta por Isaac Newton, o que o levou à formulação de leis básicas de movimento da mecânica newtoniana, entre elas, a que estabelece que, se nenhuma força atua sobre um corpo, sua velocidade não pode mudar, ou seja, o corpo não pode sofrer aceleração. Lembre-se de que as leis de Newton são válidas apenas quando o observador está parado ou em movimento retilíneo uniforme.</p>
                 <p class="mb-2 text-right text-sm">HALLIDAY, D. <b>Fundamentos de Física: mecânica</b>. Tradução: Ronaldo Sérgio de Biasi. 10. ed. Rio de Janeiro: LTC, 2016 (adaptado).</p>
@@ -435,6 +453,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A equação de continuidade do fluxo de tráfego, que é conhecida, também, como relação fundamental do tráfego, é dada pela equação em que o fluxo é resultado do produto da velocidade (v) pela densidade (d). A velocidade de fluxo livre (V<sub>livre</sub>) representa a velocidade regulamentada para a via, enquanto a densidade de saturação (d<sub>saturação</sub>) representa a concentração máxima em regime de congestionamento. O Modelo Linear de Greenshields demonstra a relação linear entre a densidade e a velocidade.</p>
                 <p class="mb-2 text-right text-sm">ELFTERIADOU, L. <b>An Introduction to Traffic Flow Theory</b>. New York: Springer, 2014 (adaptado).</p>
@@ -454,6 +473,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A elaboração e a leitura de projetos fazem parte do dia a dia de todo engenheiro civil em seu exercício profissional, independentemente de sua área específica de atuação. A leitura e a análise desses documentos resultam em construções mais seguras e de maior durabilidade, garantindo a correta execução do que foi elaborado pelo projetista e evitando, assim, possíveis manifestações patológicas na construção.</p>
                 <p class="mb-2 text-justify">A figura apresenta o detalhamento da seção transversal de uma viga com armadura longitudinal inferior, armadura longitudinal superior e estribos, bem como o diagrama de momento fletor causado por um carregamento distribuído q (kN/m). O diagrama de momento fletor é positivo (côncavo para cima) ao longo do vão.</p>
@@ -472,6 +492,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A verificação do histórico de tensões a que um solo foi submetido pode ser feita por meio do ensaio de adensamento e do cálculo das tensões geostáticas efetivas de campo. Assim, é possível verificar em qual condição de adensamento o material se encontra nos dias atuais. O conhecimento do histórico de tensões é importante na engenharia geotécnica, pois, por meio dessas informações, pode-se avaliar as propriedades de compressibilidade de um solo, evitando possíveis problemas pós-conclusão das obras para a sociedade.</p>
                 <p class="mb-2 text-justify">O perfil de solo apresentado é composto por uma camada de argila não saturada (NA) com γ<sub>nat</sub> = 13 kN/m³ nos primeiros 2 m (acima do nível d\'água) e γ<sub>sat</sub> = 18 kN/m³ abaixo do nível d\'água. O ponto A encontra-se a 5 m de profundidade. O peso específico da água é igual a 10 kN/m³ e a tensão de pré-adensamento da amostra extraída a 5 m é igual a 100 kPa.</p>
@@ -490,6 +511,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que uma ferrovia, que cruza uma área urbana densamente habitada, é utilizada para transportar grãos a um terminal portuário. Sabe-se que as composições ferroviárias possuem um comprimento de 600 m e circulam a uma velocidade de 5 km/h. Os conflitos provocados pela passagem do trem por dentro da cidade ocorrem em uma passagem de nível, a qual é operada por cancelas e por semáforos.</p>
             ',
@@ -507,6 +529,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O tempo de concentração em bacias hidrográficas é definido como o tempo de viagem da gota de água da chuva que atinge a região mais remota da bacia, desde o início de seu escoamento, até o momento em que atinge o exutório.</p>
                 <p class="mb-2 text-right text-sm">COLLISCHONN, W.; DORNELLES, F. <b>Hidrologia para Engenharia e Ciências Ambientais</b>. Porto Alegre: ABRH, 2013 (adaptado).</p>
@@ -525,6 +548,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A capacidade de carga é a tensão que provoca a ruptura do maciço de solo em que a fundação está embutida. As fórmulas de capacidade de carga são instrumentos eficazes na previsão da tensão admissível, destacando-se, entre as inúmeras formulações, a de Terzaghi. As fórmulas de capacidade de carga são determinadas a partir do conhecimento do tipo de ruptura que o solo pode sofrer, dependendo das condições de carregamento. Se o solo apresenta ruptura geral, a tensão de ruptura do solo σ<sub>R</sub> pode ser obtida por:</p>
                 <p class="mb-2 text-center font-mono">σ<sub>R</sub> = c · N<sub>c</sub> · S<sub>c</sub> + (1/2) · γ · B · N<sub>γ</sub> · S<sub>γ</sub> + q · N<sub>q</sub> · S<sub>q</sub></p>
@@ -545,6 +569,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">No planejamento de um canteiro de obra, é preciso considerar que a disposição dos resíduos deve atender à Resolução CONAMA n. 307, a qual estabelece diretrizes, critérios e procedimentos para a gestão dos resíduos da construção civil.</p>
             ',
@@ -568,6 +593,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As figuras a seguir apresentam, respectivamente, a planta de duas lajes adjacentes e o diagrama de momento fletor para a direção x.</p>
                 <p class="mb-2 text-justify">A Laje 1 possui dimensões de 3,2 m × 4 m e a Laje 2 possui dimensões de 2,5 m × 4 m, compartilhando a borda interna na seção B. O diagrama de momento fletor para a direção x apresenta os seguintes valores (em kN·m):</p>
@@ -597,6 +623,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere a seguinte entrada de dados {13, 10, 50, 23, 15} para o pseudocódigo apresentado a seguir.</p>
                 <div class="bg-gray-50 border border-gray-200 rounded p-3 mb-2 font-mono text-sm">
@@ -637,6 +664,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Nas operações de terraplenagem, cortes são segmentos que requerem escavação no terreno natural para se alcançar a linha do greide projetado. Aterros constituem segmentos cuja implementação requer o depósito de materiais para a composição do corpo estradal segundo os gabaritos de projeto. É de grande importância para as operações de terraplenagem, tanto na etapa de projeto como na própria construção, que se tenha o adequado conhecimento das variações volumétricas ocorrentes durante a movimentação dos materiais envolvidos.</p>
                 <p class="mb-2 text-justify">A relação de volumes para o material considerado é:</p>
@@ -660,6 +688,7 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Civil',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A energia de deformação é adotada para avaliar os efeitos de forças de impacto sobre estruturas e é igual ao trabalho realizado por uma força (de compressão ou de tração) aplicada ao elemento estrutural a uma taxa constante. Com base na curva de tensão versus deformação de um material, são definidas duas outras propriedades adicionais: uma representa a energia por unidade de volume que o material pode absorver sem escoar; e a outra representa a energia por unidade de volume necessária para fazer o material entrar em ruptura. Ambas são determinadas a partir do gráfico tensão versus deformação, cuja área corresponde à energia de deformação.</p>
                 <p class="mb-2 text-justify">O gráfico de tensão (σ) versus deformação (ε) apresenta os pontos: O (origem), A (limite de proporcionalidade/escoamento), B (ruptura final, abaixo de A), C (tensão máxima, acima de A) e D (deformação na ruptura). A área OAB representa a energia até o escoamento, e a área total OACD representa a energia total até a ruptura.</p>
@@ -677,3 +706,4 @@ class Questoes_Engenharia_Civil_2023 extends Seeder
         ]);
     }
 }
+

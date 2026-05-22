@@ -43,7 +43,7 @@ Route::post('/simulados/gerar_simulado', function () {
     return redirect('/simulado/' . $curso);
 });
 
-Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limitefg = 38, $limitece = 38) {
+Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso, $ano = null, $limitefg = 38, $limitece = 38) {
     $cursos = [
         'administracao' => 'Administração',
         'engenharia-civil' => 'Engenharia Civil',
@@ -63,14 +63,18 @@ Route::get('/simulado/{curso}/{limitefg?}/{limitece?}', function ($curso, $limit
     $limitece = session('simulado_limite_ce', $limitece);
     
     $cursoTitulo = $cursos[$curso];
-    $questoesFG = Questao::query()->where('categoria', 'Formação Geral')
-        /* ->inRandomOrder() */
-        ->limit($limitefg)
-        ->get();
-    $questoesCE = Questao::query()->where('categoria', $cursoTitulo)
-        /* ->inRandomOrder() */
-        ->limit($limitece)
-        ->get();
+    
+    $queryFG = Questao::query()->where('categoria', 'Formação Geral');
+    $queryCE = Questao::query()->where('categoria', $cursoTitulo);
+    
+    // Se ano foi fornecido, filtrar por ano
+    if ($ano) {
+        $queryFG->where('ano', $ano);
+        $queryCE->where('ano', $ano);
+    }
+    
+    $questoesFG = $queryFG->limit($limitefg)->get();
+    $questoesCE = $queryCE->limit($limitece)->get();
 
     $totalQuestions = $questoesFG->count() + $questoesCE->count();
     return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions'));
