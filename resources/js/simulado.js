@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     cancelButton.addEventListener('click', function () {
-        return window.location.href = '/simulados/gerar_simulado';
+        window.history.back();
     });
 
     function formatDuration(duration) {
