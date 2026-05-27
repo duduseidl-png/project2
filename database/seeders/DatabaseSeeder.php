@@ -20,9 +20,12 @@ class DatabaseSeeder extends Seeder
             Questoes_Engenharia_de_Producao_2023::class,
             Questoes_Engenharia_Eletrica_2023::class,
             Questoes_Engenharia_Mecanica_2023::class,
+            Questoes_Engenharia_Mecanica_2019::class,
             Questoes_Engenharia_Quimica_2023::class,
             Questoes_Administracao_2022::class,
             Questoes_Formacao_Geral_2023::class,
+            Questoes_Formacao_Geral_2022::class,
+            Questoes_Formacao_Geral_2019::class,
         ]);
     }
 }
