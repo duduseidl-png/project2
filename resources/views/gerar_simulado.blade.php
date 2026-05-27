@@ -52,22 +52,24 @@
                 </div>
                 <div class="w-80">
                     <h3 class="text-left mb-2 font-semibold">Tempo limite</h3>
-                    <div class="flex flex-col flex-wrap items-left gap-4 w-80">
+                    <div class="flex flex-col flex-wrap items-start gap-4 w-80">
                         <div class="flex flex-wrap items-center gap-4 w-80">
                             <input id="tempo-toggle" type="checkbox" checked="checked"
-                                class="toggle checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800" />
+                                class="toggle checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800"/>
                             <section id="tempo-status-badge"
                                 class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">Ativado
                             </section>
                         </div>
-                        <div id="tempo-container" class="grid-cols-3 items-center gap-4 w-80 p-4 rounded-lg border-2 border-gray-500 border-transparent">
-                            <section id="tempo-badge"
-                                class="badge badge-soft badge-lg font-bold min-w-12 col-span-3">4h
-                            </section>
-                            <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
-                                class="input input-bordered w-32 col-span-3"/>
-                            <span class="text-sm text-gray-500">horas</span>
-                            <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-3 col-span-3">Deixe que o sistema
+                        <div id="tempo-container" class="grid justify-items-start items-center gap-2 w-80 border-gray-500 border-transparent">
+                            <div class="flex items-center gap-2">
+                                <section id="tempo-badge"
+                                    class="badge badge-soft badge-lg font-bold min-w-12">4h
+                                </section>
+                                <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
+                                    class="input input-bordered w-20"/>
+                                <span class="text-sm text-gray-500">horas</span>
+                            </div>
+                            <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-2">Deixe que o sistema
                                 decida</button>
                         </div>
                     </div>
@@ -177,18 +179,21 @@
                 if (tempoToggle.checked) {
                     tempoStatusBadge.textContent = 'Ativado';
                     tempoStatusBadge.classList.add('font-bold');
+                    tempoContainer.classList.remove('hidden');
                     tempoContainer.classList.remove('opacity-40');
-                    tempoContainer.classList.add('border-transparent');
                 } else {
                     tempoStatusBadge.textContent = 'Desativado';
                     tempoStatusBadge.classList.remove('font-bold');
-                    tempoContainer.classList.add('opacity-40');
-                    tempoContainer.classList.remove('border-transparent');
+                    tempoContainer.classList.add('hidden');
+                    tempoContainer.classList.remove('opacity-40');
                 }
             });
 
             updateColors(); // Aplica estilo inicial
             updateBadgeTempo();
+            if (!tempoToggle.checked) {
+                tempoContainer.classList.add('hidden');
+            }
 
             button.addEventListener('click', function () {
                 if (!cursoSelect.value) {
