@@ -14,53 +14,67 @@
             <input type="hidden" name="limitece" id="form-limite-ce">
             <input type="hidden" name="tempo" id="form-tempo" value="14400">
         </form>
-        
+
         <div class="flex flex-col items-center justify-center gap-6">
-        <div class="flex flex-wrap items-start justify-center gap-10">
-            <div class="pb-25 w-80">
-                <h3 class="text-left mb-2 font-semibold">Curso</h3>
-                <select id="curso-select" class="select w-full">
-                    <option disabled selected>-</option>
-                    <option value="administracao">Administração</option>
-                    <option value="engenharia-civil">Engenharia Civil</option>
-                    <option value="engenharia-de-computacao">Engenharia de Computação</option>
-                    <option value="engenharia-de-controle-e-automacao">Engenharia de Controle e Automação</option>
-                    <option value="engenharia-de-producao">Engenharia de Produção</option>
-                    <option value="engenharia-eletrica">Engenharia Elétrica</option>
-                    <option value="engenharia-mecanica">Engenharia Mecânica</option>
-                    <option value="engenharia-quimica">Engenharia Química</option>
-                </select>
-            </div>
-            <div class="w-80">
-                <h3 class="text-left mb-2 font-semibold">Número de questões</h3>
-                <h4 class="mt-4 mb-2">Formação Geral</h4>
-                <div class="flex flex-wrap items-center gap-4 w-80">
-                    <section id="numero-questoes-badge-fg" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">10
-                    </section>
-                    <input id="numero-questoes-input-fg" type="range" min="0" max="20" value="10" step="1"
-                        class="range range-sm flex-1" />
+            <div class="flex flex-wrap items-start justify-center gap-10">
+                <div class="pb-25 w-80">
+                    <h3 class="text-left mb-2 font-semibold">Curso</h3>
+                    <select id="curso-select" class="select w-full">
+                        <option disabled selected>-</option>
+                        <option value="administracao">Administração</option>
+                        <option value="engenharia-civil">Engenharia Civil</option>
+                        <option value="engenharia-de-computacao">Engenharia de Computação</option>
+                        <option value="engenharia-de-controle-e-automacao">Engenharia de Controle e Automação</option>
+                        <option value="engenharia-de-producao">Engenharia de Produção</option>
+                        <option value="engenharia-eletrica">Engenharia Elétrica</option>
+                        <option value="engenharia-mecanica">Engenharia Mecânica</option>
+                        <option value="engenharia-quimica">Engenharia Química</option>
+                    </select>
                 </div>
-                <h4 class="mt-4 mb-2">Componente Específico</h4>
-                <div class="flex flex-wrap items-center gap-4 w-80">
-                    <section id="numero-questoes-badge-ce" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">30
-                    </section>
-                    <input id="numero-questoes-input-ce" type="range" min="0" max="40" value="30" step="1"
-                        class="range range-sm flex-1" />
+                <div class="w-80">
+                    <h3 class="text-left mb-2 font-semibold">Quantidade de questões</h3>
+                    <h4 class="text-left mt-4 mb-2">Formação Geral</h4>
+                    <div class="flex flex-wrap items-center gap-4 w-80">
+                        <section id="numero-questoes-badge-fg"
+                            class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">10
+                        </section>
+                        <input id="numero-questoes-input-fg" type="range" min="0" max="20" value="10" step="1"
+                            class="range range-sm flex-1" />
+                    </div>
+                    <h4 class="text-left mt-4 mb-2">Componente Específico</h4>
+                    <div class="flex flex-wrap items-center gap-4 w-80">
+                        <section id="numero-questoes-badge-ce"
+                            class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">30
+                        </section>
+                        <input id="numero-questoes-input-ce" type="range" min="0" max="40" value="30" step="1"
+                            class="range range-sm flex-1" />
+                    </div>
+                </div>
+                <div class="w-80">
+                    <h3 class="text-left mb-2 font-semibold">Tempo limite</h3>
+                    <div class="flex flex-col flex-wrap items-left gap-4 w-80">
+                        <div class="flex flex-wrap items-center gap-4 w-80">
+                            <input id="tempo-toggle" type="checkbox" checked="checked"
+                                class="toggle checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800" />
+                            <section id="tempo-status-badge"
+                                class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">Ativado
+                            </section>
+                        </div>
+                        <div id="tempo-container" class="grid-cols-3 items-center gap-4 w-80 p-4 rounded-lg border-2 border-gray-500 border-transparent">
+                            <section id="tempo-badge"
+                                class="badge badge-soft badge-lg font-bold min-w-12 col-span-3">4h
+                            </section>
+                            <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
+                                class="input input-bordered w-32 col-span-3"/>
+                            <span class="text-sm text-gray-500">horas</span>
+                            <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-3 col-span-3">Deixe que o sistema
+                                decida</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-80">
-                <h3 class="text-left mb-2 font-semibold">Tempo do simulado</h3>
-                <div class="flex flex-wrap items-center gap-4 w-80">
-                    <section id="tempo-badge" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">4h</section>
-                    <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
-                        class="input input-bordered w-32" />
-                    <span class="text-sm text-gray-500">horas</span>
-                </div>
-                <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-3">Deixe que o sistema decida</button>
-            </div>
-        </div>
             <button id="gerar-simulado" type="button" class="btn btn-soft btn-primary mt-4">
-            Gerar simulado
+                Gerar simulado
             </button>
         </div>
     </div>
@@ -72,9 +86,12 @@
             var NQBadgeFG = document.getElementById('numero-questoes-badge-fg');
             var NQInputCE = document.getElementById('numero-questoes-input-ce');
             var NQBadgeCE = document.getElementById('numero-questoes-badge-ce');
+            var tempoToggle = document.getElementById('tempo-toggle');
+            var tempoStatusBadge = document.getElementById('tempo-status-badge');
             var tempoInput = document.getElementById('tempo-input');
             var tempoBadge = document.getElementById('tempo-badge');
             var tempoAutoBtn = document.getElementById('tempo-auto-btn');
+            var tempoContainer = document.getElementById('tempo-container');
             var button = document.getElementById('gerar-simulado');
             var form = document.getElementById('simulado-form');
             var formCurso = document.getElementById('form-curso');
@@ -136,18 +153,18 @@
             }
 
             cursoSelect.addEventListener('change', checkSelect);
-            NQInputFG.addEventListener('input', function() {
+            NQInputFG.addEventListener('input', function () {
                 updateBadgeFG();
                 updateColors();
                 if (useAutomaticTime) {
                     setAutomaticTime(false);
                 }
             });
-            NQInputCE.addEventListener('input', function() {
+            NQInputCE.addEventListener('input', function () {
                 updateBadgeCE();
                 updateColors();
             });
-            tempoInput.addEventListener('input', function() {
+            tempoInput.addEventListener('input', function () {
                 if (useAutomaticTime) {
                     setAutomaticTime(false);
                 }
@@ -155,6 +172,19 @@
             });
             tempoAutoBtn.addEventListener('click', function () {
                 setAutomaticTime(!useAutomaticTime);
+            });
+            tempoToggle.addEventListener('change', function () {
+                if (tempoToggle.checked) {
+                    tempoStatusBadge.textContent = 'Ativado';
+                    tempoStatusBadge.classList.add('font-bold');
+                    tempoContainer.classList.remove('opacity-40');
+                    tempoContainer.classList.add('border-transparent');
+                } else {
+                    tempoStatusBadge.textContent = 'Desativado';
+                    tempoStatusBadge.classList.remove('font-bold');
+                    tempoContainer.classList.add('opacity-40');
+                    tempoContainer.classList.remove('border-transparent');
+                }
             });
 
             updateColors(); // Aplica estilo inicial
