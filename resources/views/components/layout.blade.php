@@ -56,7 +56,7 @@
   </script>
 </head>
 
-<div class="navbar bg-base-100 shadow-sm" style="z-index: 1000;">
+<div class="navbar bg-base-100 shadow-sm py-2 px-4" style="z-index: 1000;">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -76,7 +76,7 @@
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl" href="/">Simulador ENADE</a>
+    <a class="btn btn-ghost text-base sm:text-lg" href="/">Simulador ENADE</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">

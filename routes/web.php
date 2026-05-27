@@ -26,6 +26,8 @@ Route::post('/simulados/gerar_simulado', function () {
     $curso = request('curso');
     $limitefg = intval(request('limitefg', 38));
     $limitece = intval(request('limitece', 38));
+    $tempoInput = request('tempo', null);
+    $tempo = is_numeric($tempoInput) ? intval($tempoInput) : null;
 /*
     if (! $curso) {
         return redirect('/simulados/gerar_simulado');
@@ -37,8 +39,15 @@ Route::post('/simulados/gerar_simulado', function () {
     if ($limitece < 0 || $limitece > 100) {
         $limitece = 38;
     }
+    if ($tempo !== null && ($tempo <= 0 || $tempo > 86400)) {
+        $tempo = null;
+    }
 
-    session(['simulado_limite_fg' => $limitefg, 'simulado_limite_ce' => $limitece]);
+    session([
+        'simulado_limite_fg' => $limitefg,
+        'simulado_limite_ce' => $limitece,
+        'simulado_tempo' => $tempo,
+    ]);
 
     return redirect('/simulado/' . $curso);
 });
@@ -61,6 +70,7 @@ Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso,
     
     $limitefg = session('simulado_limite_fg', $limitefg);
     $limitece = session('simulado_limite_ce', $limitece);
+    $timeLimit = session('simulado_tempo', null);
     
     $cursoTitulo = $cursos[$curso];
     
@@ -77,6 +87,6 @@ Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso,
     $questoesCE = $queryCE->limit($limitece)->get();
 
     $totalQuestions = $questoesFG->count() + $questoesCE->count();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions', 'timeLimit'));
 
 })->name('simulado_curso');

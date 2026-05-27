@@ -1,6 +1,6 @@
 @props(['cursoTitulo', 'numeroQuestoesFG', 'numeroQuestoesCE'])
 
-<div id="tela-informativa-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm">
+<div id="tela-informativa-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1100] backdrop-blur-sm">
     <div class="bg-standard rounded-lg shadow-2xl p-8 max-w-2xl w-full mx-4 transform duration-300">
         <div class="mb-4">
             <h1 class="text-3xl font-bold mb-4">Simulado de {{ $cursoTitulo }}</h1>
@@ -11,19 +11,19 @@
             <ul class="space-y-3">
                 <li class="flex items-start">
                     <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Você tem tempo ilimitado para completar o simulado</span>
+                    <span>Você tem tempo limitado para completar o simulado.</span>
                 </li>
                 <li class="flex items-start">
                     <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>{{ $numeroQuestoesFG }}</strong> questões de Formação Geral</span>
+                    <span><strong>{{ $numeroQuestoesFG }}</strong> questões de Formação Geral.</span>
                 </li>
                 <li class="flex items-start">
                     <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>{{ $numeroQuestoesCE }}</strong> questões de Componente Específico</span>
+                    <span><strong>{{ $numeroQuestoesCE }}</strong> questões de Componente Específico.</span>
                 </li>
                 <li class="flex items-start">
                     <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Você receberá os resultados e o gabarito ao finalizar</span>
+                    <span>Você receberá os resultados e o gabarito ao finalizar.</span>
                 </li>
             </ul>
         </div>

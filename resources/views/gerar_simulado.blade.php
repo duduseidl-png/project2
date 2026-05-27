@@ -12,10 +12,11 @@
             <input type="hidden" name="curso" id="form-curso">
             <input type="hidden" name="limitefg" id="form-limite-fg">
             <input type="hidden" name="limitece" id="form-limite-ce">
+            <input type="hidden" name="tempo" id="form-tempo" value="14400">
         </form>
         
         <div class="flex flex-col items-center justify-center gap-6">
-        <div class="flex flex-row items-center justify-center gap-10">
+        <div class="flex flex-wrap items-start justify-center gap-10">
             <div class="pb-25 w-80">
                 <h3 class="text-left mb-2 font-semibold">Curso</h3>
                 <select id="curso-select" class="select w-full">
@@ -47,6 +48,16 @@
                         class="range range-sm flex-1" />
                 </div>
             </div>
+            <div class="w-80">
+                <h3 class="text-left mb-2 font-semibold">Tempo do simulado</h3>
+                <div class="flex flex-wrap items-center gap-4 w-80">
+                    <section id="tempo-badge" class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">4h</section>
+                    <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
+                        class="input input-bordered w-32" />
+                    <span class="text-sm text-gray-500">horas</span>
+                </div>
+                <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-3">Deixe que o sistema decida</button>
+            </div>
         </div>
             <button id="gerar-simulado" type="button" class="btn btn-soft btn-primary mt-4">
             Gerar simulado
@@ -61,10 +72,13 @@
             var NQBadgeFG = document.getElementById('numero-questoes-badge-fg');
             var NQInputCE = document.getElementById('numero-questoes-input-ce');
             var NQBadgeCE = document.getElementById('numero-questoes-badge-ce');
+            var tempoInput = document.getElementById('tempo-input');
+            var tempoBadge = document.getElementById('tempo-badge');
+            var tempoAutoBtn = document.getElementById('tempo-auto-btn');
             var button = document.getElementById('gerar-simulado');
             var form = document.getElementById('simulado-form');
             var formCurso = document.getElementById('form-curso');
-            var formLimite = document.getElementById('form-limite');
+            var useAutomaticTime = false;
 
             button.disabled = true;
 
@@ -93,6 +107,30 @@
                 NQBadgeCE.textContent = NQInputCE.value;
             }
 
+            function updateBadgeTempo() {
+                tempoBadge.textContent = tempoInput.value + 'h';
+                if (useAutomaticTime) {
+                    tempoBadge.textContent = 'Auto';
+                }
+            }
+
+            function setAutomaticTime(value) {
+                useAutomaticTime = value;
+                tempoInput.disabled = value;
+                if (value) {
+                    tempoInput.classList.add('input-disabled');
+                    tempoAutoBtn.classList.remove('btn-outline');
+                    tempoAutoBtn.classList.add('btn-primary');
+                    tempoAutoBtn.textContent = 'Tempo decidido pelo sistema';
+                } else {
+                    tempoInput.classList.remove('input-disabled');
+                    tempoAutoBtn.classList.remove('btn-primary');
+                    tempoAutoBtn.classList.add('btn-outline');
+                    tempoAutoBtn.textContent = 'Deixe que o sistema decida';
+                }
+                updateBadgeTempo();
+            }
+
             function checkSelect() {
                 button.disabled = !cursoSelect.value;
             }
@@ -101,13 +139,26 @@
             NQInputFG.addEventListener('input', function() {
                 updateBadgeFG();
                 updateColors();
+                if (useAutomaticTime) {
+                    setAutomaticTime(false);
+                }
             });
             NQInputCE.addEventListener('input', function() {
                 updateBadgeCE();
                 updateColors();
             });
+            tempoInput.addEventListener('input', function() {
+                if (useAutomaticTime) {
+                    setAutomaticTime(false);
+                }
+                updateBadgeTempo();
+            });
+            tempoAutoBtn.addEventListener('click', function () {
+                setAutomaticTime(!useAutomaticTime);
+            });
 
             updateColors(); // Aplica estilo inicial
+            updateBadgeTempo();
 
             button.addEventListener('click', function () {
                 if (!cursoSelect.value) {
@@ -116,6 +167,17 @@
                 formCurso.value = cursoSelect.value;
                 document.getElementById('form-limite-fg').value = NQInputFG.value;
                 document.getElementById('form-limite-ce').value = NQInputCE.value;
+                if (useAutomaticTime) {
+                    document.getElementById('form-tempo').value = '';
+                } else {
+                    var tempoValue = parseInt(tempoInput.value, 10);
+                    if (isNaN(tempoValue) || tempoValue < 1) {
+                        tempoValue = 4;
+                        tempoInput.value = tempoValue;
+                        updateBadgeTempo();
+                    }
+                    document.getElementById('form-tempo').value = tempoValue * 3600;
+                }
                 form.submit();
             });
         });
