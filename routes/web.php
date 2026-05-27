@@ -87,6 +87,6 @@ Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso,
     $questoesCE = $queryCE->limit($limitece)->get();
 
     $totalQuestions = $questoesFG->count() + $questoesCE->count();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions', 'timeLimit'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions', 'timeLimit', 'ano'));
 
 })->name('simulado_curso');

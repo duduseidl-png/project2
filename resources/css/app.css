@@ -32,6 +32,7 @@
   --modal-warning-text: #78350f;
   --text-color: #3d3d3d;
   --bg-blue: #e0f2ff;
+  --bg-bluer: #9cd0ec;
 }
 
 :root[data-theme="dark"] {
@@ -56,19 +57,39 @@
   --modal-warning-text: #ffe4a1;
   --text-color: #b1afaf;
     --bg-blue: #2d3a4d;
+    --bg-bluer: #395074;
 }
 
 .bg-standard {
   background-color: var(--bg-standard);
 }
 
+.bg-blue {
+  background-color: var(--bg-blue);
+}
+
+.bg-hover {
+  background-color: var(--hover-bg);
+}
+
 .text-standard {
   color: var(--text-standard);
 }
 
-.bg-blue {
+.confirm-btn {
+  background-color: #2563EB;
+}
+.confirm-btn:hover {
+  background-color: #1D4ED8;
+}
+
+.cancel-btn {
   background-color: var(--bg-blue);
 }
+.cancel-btn:hover {
+  background-color: var(--bg-bluer);
+}
+
 
 .katex,
 .katex .katex-html,

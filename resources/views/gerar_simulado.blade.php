@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <button id="gerar-simulado" type="button" class="btn btn-soft btn-primary mt-4">
+            <button id="gerar-simulado" type="button" class="btn btn-primary mt-4">
                 Gerar simulado
             </button>
         </div>

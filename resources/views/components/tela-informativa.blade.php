@@ -1,9 +1,9 @@
-@props(['cursoTitulo', 'numeroQuestoesFG', 'numeroQuestoesCE'])
+@props(['cursoTitulo', 'numeroQuestoesFG', 'numeroQuestoesCE', 'anoSimulado'])
 
 <div id="tela-informativa-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1100] backdrop-blur-sm">
     <div class="bg-standard rounded-lg shadow-2xl p-8 max-w-2xl w-full mx-4 transform duration-300">
         <div class="mb-4">
-            <h1 class="text-3xl font-bold mb-4">Simulado de {{ $cursoTitulo }}</h1>
+            <h1 class="text-3xl font-bold mb-4">Simulado de {{ $cursoTitulo }} - {{ $anoSimulado }}</h1>
         </div>
 
         <div class="bg-blue border-l-4 border-blue-500 p-6 mb-8 rounded">
@@ -39,13 +39,13 @@
         <div class="flex flex-col gap-4 mt-10">
             <button 
                 id="btn-iniciar-simulado" 
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+                class="w-full confirm-btn text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
             >
                 Iniciar Simulado
             </button>
             <button 
                 id="btn-cancelar-simulado" 
-                class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+                class="w-full cancel-btn font-bold py-3 px-6 rounded-lg transition-colors duration-200"
             >
                 Voltar
             </button>

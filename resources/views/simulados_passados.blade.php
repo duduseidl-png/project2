@@ -53,9 +53,9 @@
         /* Dropdown Content (Hidden by Default) */
         .searchbar-content {
             position: relative;
-            background-color: #f6f6f6;
+            background-color: var(--bg-standard);
             min-width: 230px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--bg-blue);
             z-index: 1;
             max-height: 300px;
             overflow-y: auto;
@@ -63,7 +63,7 @@
 
         /* Links inside the searchbar */
         .searchbar-content a {
-            color: black;
+            color: ;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -71,17 +71,25 @@
 
         /* Change color of searchbar links on hover */
         .searchbar-content a:hover {
-            background-color: #f1f1f1
-        }
-
-        /* Show the searchbar menu (use JS to add this class to the .searchbar-content container when the user clicks on the searchbar button) */
-        .show {
-            display: block;
+            background-color: var(--hover-bg);
         }
     </style>
 
-    <div class="grid grid-cols-3 gap-4">
-        <div id="sb-content" class="searchbar-content col-start-2 mt-20">
+    <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
+        Revisitar provas passadas</h1>
+    <div class="grid grid-cols-4 gap-4">
+        <div role="alert" class="col-start-2 alert alert-vertical sm:alert-horizontal mt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="stroke-info h-6 w-6 shrink-0">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+                <h3 class="font-bold">Orientação</h3>
+                <div class="text-xs">Selecione o curso e o ano de prova para realizar um simulado com exatamente as mesmas questões objetivas.</div>
+            </div>
+        </div>
+        <div id="sb-content" class="searchbar-content col-start-3 mt-10">
             <div class="search-container">
                 <input type="text" placeholder="Encontrar curso" id="inputField" onkeyup="filterFunction()"
                     class="w-auto md:w-100">
@@ -91,12 +99,13 @@
                 <input type="hidden" id="selectedCourseId" value="">
                 <input type="hidden" id="selectedCourseSlug" value="">
                 @foreach ($cursos as $curso)
-                <a href="#" data-id="{{ $curso['id'] }}" data-slug="{{ $curso['slug'] }}" class="course-option">{{ $curso['nome'] }}</a>
+                    <a href="#" data-id="{{ $curso['id'] }}" data-slug="{{ $curso['slug'] }}"
+                        class="course-option">{{ $curso['nome'] }}</a>
                 @endforeach
             </section>
         </div>
-        <div class="col-start-2">
-            <ul class="menu bg-base-200 rounded-box w-56" id="yearsList">
+        <div class="col-start-3">
+            <ul class="menu menu-horizontal rounded-box w-56 hidden" id="yearsList">
                 @foreach ($anos as $cursoId => $yearList)
                     <li class="years-group" data-course-id="{{ $cursoId }}" style="display: none;">
                         @foreach ($yearList as $year)
@@ -174,7 +183,7 @@
                 // Esconder a caixa de opções
                 document.getElementById("optionBox").classList.add("hidden");
                 document.getElementById("yearsList").classList.remove("hidden");
-                
+
                 // Mostrar anos do curso selecionado
                 showYearsByEng(courseId);
 
@@ -200,9 +209,9 @@
                 e.preventDefault();
                 const year = this.getAttribute('data-year');
                 const courseSlug = document.getElementById('selectedCourseSlug').value;
-                
+
                 console.log('Ano selecionado:', year, 'Curso slug:', courseSlug);
-                
+
                 // Redirecionar para o simulado com o ano
                 window.location.href = `/simulado/${courseSlug}/${year}`;
             });
