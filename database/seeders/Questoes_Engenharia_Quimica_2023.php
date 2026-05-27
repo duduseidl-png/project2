@@ -14,6 +14,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O peneiramento é uma das operações mecânicas de separação mais simples e econômica. A tabela a seguir apresenta análises granulométricas de um experimento que subsidie o projeto de uma unidade para separar minério de maior granulometria de minério de menor granulometria, empregando-se uma peneira industrial com malha equivalente a 28 mesh Tyler. A unidade precisa ser projetada para gerar 1 000 kg/h de minério de maior granulometria. As análises granulométricas da alimentação, do minério de maior granulometria retido na peneira e do minério de menor granulometria, que passa através da peneira, são apresentadas, respectivamente, nas colunas A, B e C.</p>
 
@@ -60,6 +61,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O alcance de um sistema de controle com bom desempenho depende, inicialmente, da escolha adequada das variáveis controladas e manipuladas. Em uma coluna de destilação, há grande quantidade de possíveis estruturas de malhas envolvendo essas variáveis. A operação automática da coluna de destilação por meio de sistema de controle realimentado depende da escolha de cinco variáveis controladas e de cinco variáveis manipuladas.</p>
             ',
@@ -80,6 +82,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em diversos tipos de indústria, caldeiras aquatubulares são largamente utilizadas em processos que requerem geração de vapor superaquecido. São elementos básicos desse tipo de caldeira a parede tubular, constituída de feixe de tubos, e a fornalha. Essas caldeiras podem ter acessórios, como economizadores, superaquecedores e preaquecedores. Uma maneira de se reduzir a poluição causada pela queima de madeira em caldeiras é instalar um sistema de exaustão acoplado a um ciclone.</p>
             ',
@@ -100,6 +103,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em colunas de destilação fracionada, a corrente de alimentação (F) exerce grande influência na operação e na eficiência de um equipamento e é uma das variáveis importantes para a otimização da operação. Mudanças na condição de alimentação podem perturbar significativamente a coluna de destilação e, devido ao elevado tempo de resposta, podem ser necessárias várias horas para se recuperar o estado estacionário desejado do sistema. Dessa forma, é fundamental o entendimento do Engenheiro Químico sobre o impacto dessa variável na operação.</p>
 
@@ -131,6 +135,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um resíduo orgânico industrial é composto por 25% de fibras, em base seca, que podem ser processadas e aproveitadas como um subproduto com valor agregado. Uma pesquisa de mercado indicou que o teor de umidade de 10%, em base seca, é aceitável para a comercialização das fibras, uma vez que elas serão, primordialmente, utilizadas na confecção de mantas para contenção de encostas. No entanto, o resíduo gerado tem umidade inicial de 80%, em base úmida, e deve ser submetido a um processo de secagem.</p>
 
@@ -170,6 +175,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Para a análise da figura apresentada a seguir, considere um leito de sementes de soja, recém-chegadas do campo que começa a ser percolado por ar seco e quente. De acordo com a conveniência do engenheiro, o ar seco pode ser alimentado no secador isotérmico pela região A ou B. A cada uma das extremidades do leito de soja, está conectado um manômetro de tubo em U com a extremidade oposta aberta à atmosfera. Considere que a densidade do fluido do manômetro conectado à região A corresponde ao dobro da densidade do fluido do manômetro conectado à região B. Considere, ainda, que a altura do fluido no manômetro da região B corresponde ao triplo da verificada no manômetro da região A.</p>
 
@@ -196,6 +202,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O fluxograma a seguir representa uma unidade industrial em que é realizada a isomerização de xilenos.</p>
 
@@ -225,6 +232,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O diagrama apresentado a seguir mostra um sistema fotovoltaico domiciliar (SFD), onde podem ser observados dois componentes fundamentais, que o caracterizam: as cargas e o gerador fotovoltaico, sendo este denominado painel solar. No projeto de instalação dos painéis solares, devem ser analisados, entre outros itens, o espaço para a instalação, a localização geográfica da residência, a intensidade da radiação solar, o custo da energia elétrica convencional e os equipamentos e dispositivos que consomem energia elétrica (cargas).</p>
 
@@ -262,6 +270,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que, em uma indústria química, o vapor é fornecido por uma caldeira que queima gás natural à vazão de 2 000 m³/h, com poder calorífico inferior (PCI) médio de 8 000 kcal/m³. Nessa indústria, há uma corrente de gás residual rica em hidrogênio, cujo PCI é de 5 000 kcal/m³, e a vazão é de 800 m³/h. Essa corrente é vendida por R$ 2,00/m³ a outra empresa, para a recuperação de hidrogênio.</p>
 
@@ -292,6 +301,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O diagrama a seguir representa um sistema operando em malha fechada, numa situação de servo-controle, com variáveis de entrada e saída y<sub>d</sub> e y, respectivamente, escritas em forma de desvio. Esse sistema opera sob a ação de um controlador proporcional integral (PI), representado pela função de transferência g<sub>c</sub>. O comportamento dinâmico da planta, indicado no bloco g<sub>p</sub>, segue uma função de transferência de primeira ordem sem tempo morto.</p>
 
@@ -331,6 +341,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O esquema apresentado a seguir ilustra um aparato utilizado para se estudar transferência de calor em regime transiente. Considere que um banho com água quente, isolado termicamente do ambiente, tenha sua temperatura controlada por meio da dissipação de potência no aquecedor, que uma peça metálica, de formato esférico e com temperatura inicial igual a do ambiente, seja subitamente mergulhada na água, como indicado no esquema, e que a temperatura do banho, T<sub>1</sub>, é medida por um termopar, por meio do qual, também são medidas as temperaturas da superfície da esfera, T<sub>2</sub>, e do centro da esfera, T<sub>3</sub>. Como a peça tem dimensões reduzidas e elevada condutividade térmica, pode-se assumir a validade do método da capacitância, ou seja, não há variações espaciais de temperatura na esfera, o que faz com que T<sub>2</sub> seja, aproximadamente, igual a T<sub>3</sub>.</p>
 
@@ -380,6 +391,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que, em um centro de pesquisas, foi desenvolvido um novo catalisador metálico para reforma de metano. Estudos preliminares indicaram que o material possui propriedades satisfatórias quanto à estabilidade térmica e mecânica e à área superficial. De modo a investigar o desempenho catalítico e determinar quais são os mecanismos físicos que controlam o processo sob diversas condições operacionais, propôs-se uma série de ensaios em um reator de leito fixo em escala piloto, disponível no referido centro de pesquisas.</p>
             ',
@@ -408,6 +420,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em uma indústria química, é conduzido determinado processo ao qual deve ser adicionado óleo quente. Para o condicionamento desse fluido, dispõe-se de um tanque acumulador agitado contendo uma camisa de aquecimento, conforme demonstrado na figura a seguir.</p>
 
@@ -444,6 +457,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As figuras a seguir apresentam cilindros feitos de serragem prensada e úmida que foram postos em contato com ar seco. Nessas figuras, as áreas hachuradas representam as superfícies que foram impermeabilizadas usando-se uma resina especial. Considere as seguintes direções: radial, axial e angular.</p>
 
@@ -478,6 +492,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere o desenvolvimento de um produto cuja produção se dê pela reação de um reagente B. A reação é processada em um reator tubular empacotado com um catalisador apropriado. Com o objetivo de aumento de escala (<i>scale up</i>) do processo, das condições de laboratório para as de planta piloto, está sendo desenvolvido um modelo fenomenológico do reator. Foram consideradas as seguintes hipóteses no desenvolvimento do modelo:</p>
 
@@ -509,6 +524,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que uma torre de absorção reativa será usada na lavagem de um gás tóxico. Nessa torre, o gás solúvel A reativo dissolve-se numa interface plana de um corpo longo de líquido reagente, com o qual ele reage irreversivelmente, conforme a seguinte equação da taxa de reação.</p>
 
@@ -553,6 +569,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A refrigeração é uma operação importante no condicionamento do ar em ambientes como indústria, edificações comerciais e empresariais. Suponha que, em uma indústria de alimentos, queira-se remover 10 000 W de uma câmara refrigerada a –10 °C. Foi proposto usar-se, para tal fim, um ciclo de refrigeração com compressão de vapor com expansão em uma válvula de estrangulamento, conforme mostrado na figura a seguir.</p>
 
@@ -589,6 +606,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que um produto petroquímico B será produzido em um reator de mistura perfeita continuamente agitado, em fase líquida, a partir de um reagente A, segundo a reação A → 2B. Com o objetivo de se dimensionar o volume do reator necessário para se processar a reação de interesse, foram levantados dados, usando-se um ensaio de laboratório, para a taxa de geração r<sub>A</sub> em função da conversão X, conforme mostrado na tabela a seguir.</p>
 
@@ -663,6 +681,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir mostra o fluxograma de processo para produção de benzeno a partir da hidroalquilação do tolueno.</p>
 
@@ -691,6 +710,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere o esquema de um biorreator contínuo sem recirculação celular operando no estado estacionário, como mostrado na figura a seguir, em que F representa a vazão de entrada/saída em L/h; S<sub>0</sub> e S, a concentração de substrato em g/L na entrada e na saída do biorreator; X<sub>0</sub> e X, a concentração de células na entrada e na saída do biorreator em g/L; e P<sub>0</sub> e P, as concentrações de produto na entrada e na saída do biorreator em g/L.</p>
 
@@ -727,6 +747,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O fluxo de calor que atravessa determinado meio sólido é proporcional à razão entre a diferença de temperatura e a distância. Essa proporcionalidade é mensurada por um parâmetro denominado condutividade térmica. A variação dos valores de condutividade térmica com a temperatura é mostrada na figura a seguir.</p>
 
@@ -764,6 +785,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em 2016, a revista científica <i>Nature</i> apresentou um estudo em que se indicava que a emissão de metano, durante a produção e a utilização de gás natural, petróleo e carvão, é de 20% a 60% maior do que se julgava. Dado que o metano é 28 vezes mais eficiente na retenção do calor na atmosfera da Terra, constatou-se haver desafios adicionais na luta contra as mudanças climáticas. Nesse sentido, tem aumentado o número de pesquisas sobre como utilizar o gás metano, em vez de "lançá-lo" na atmosfera. Um pesquisador sugeriu que o metano fosse queimado como forma de se atenuar o problema. A tabela a seguir apresenta os dados de calor de formação padrão a 25 °C.</p>
 
@@ -821,6 +843,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">É difícil a separação de misturas azeotrópicas por destilação fracionada, tal como ocorre, por exemplo, no acetato de etila e etanol. Uma das possibilidades para resolver esse problema é alterar a pressão de operação, de modo a se conseguir uma diferença na composição da mistura azeotrópica.</p>
 
@@ -870,6 +893,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir mostra as curvas do diagrama tensão-deformação referentes aos ensaios de tração realizados com dois materiais (A e B).</p>
 
@@ -896,6 +920,7 @@ class Questoes_Engenharia_Quimica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Analise o pseudocódigo a seguir, em que <i>re</i> corresponde à resistência equivalente, considerando que os valores das variáveis r1, r2, r3, esc e nres estejam armazenados na memória.</p>
 
@@ -930,6 +955,7 @@ Fim</code></pre>
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um dos métodos para a obtenção do fator de atrito (<i>f</i>) é o uso do diagrama de Moody. Utilizando-se esse diagrama, é possível obter o fator de atrito para qualquer tipo de escoamento, fluido e rugosidade de uma tubulação. Para tal, é necessário o conhecimento da rugosidade relativa do tubo e do tipo de escoamento, por meio do número de Reynolds.</p>
 
@@ -967,6 +993,7 @@ Fim</code></pre>
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que, em uma unidade fabril, sejam geradas 40 t/h de uma corrente aquosa (densidade = 1 g/mL) contaminada com produtos orgânicos que dão DQO (demanda química de oxigênio) de 25 000 mg/L. O custo de tratamento realizado por uma empresa especializada é de R$ 2,00/kg de DQO.</p>
 
@@ -999,6 +1026,7 @@ Fim</code></pre>
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A atividade catalítica de enzimas envolve a ligação aos seus substratos para formar o complexo enzima-substrato. O substrato se liga a uma região específica da enzima, chamada sítio ativo. Quando ligado ao sítio ativo, o substrato é convertido em produto da reação, o qual é, então, liberado da enzima. A reação catalisada por enzimas pode ser esquematizada da forma apresentada a seguir.</p>
 
@@ -1026,6 +1054,7 @@ Fim</code></pre>
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Química',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A utilização de filtro de pedras no polimento de lagoas de estabilização vem sendo estudada e apresentada em vários eventos da área ambiental. Em um estudo sobre o tratamento de dejetos suínos, visando-se ao reuso do efluente na irrigação, foi verificada a influência de determinados parâmetros na eficiência do filtro de pedras.</p>
 
