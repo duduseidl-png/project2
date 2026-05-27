@@ -18,6 +18,6 @@
         </form>
     </div>
     <x-modal />
-    <x-sidecard :limite="$totalQuestions ?? ($questoesFG->count() + $questoesCE->count())" />
+    <x-sidecard :limite="$totalQuestions ?? ($questoesFG->count() + $questoesCE->count())" :timeLimit="$timeLimit ?? null" />
     <x-resultados />
 </x-layout>

@@ -9,13 +9,15 @@ use Illuminate\View\Component;
 class sidecard extends Component
 {
     public $limite;
+    public $timeLimit;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($limite = 38)
+    public function __construct($limite = 38, $timeLimit = null)
     {
         $this->limite = $limite;
+        $this->timeLimit = $timeLimit;
     }
 
     /**
