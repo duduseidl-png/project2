@@ -15,6 +15,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir representa um dos tipos mais comuns de furo, o furo cego.</p>
                 <p class="mb-2 text-justify">Na situação representada na figura, tem-se disponível uma broca helicoidal de aço rápido para usinar o furo com diâmetro Ø = 8 mm e profundidade A = 25 mm num aço de baixo carbono. Para essa situação, a velocidade de corte apropriada é de 35 m/min e o avanço é de 0,18 mm/rotação.</p>
@@ -39,6 +40,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que uma indústria metalomecânica queira produzir peças com característica de resistência ao desgaste. A empresa tem experiência na fabricação de peças a partir de dois tipos de materiais para a produção do mesmo tipo de componente, conforme descrito a seguir.</p>
                 <div class="overflow-x-auto mb-3">
@@ -68,6 +70,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que, para abastecer uma cidade de 360 000 habitantes, será construída uma nova estação de tratamento de água (ETA), com vazão total de 3 600 m³/h. O engenheiro responsável pelo projeto da ETA calculou que a bomba hidráulica do tipo centrífuga, responsável pelo processo de filtragem, deve vencer a altura estática de 3 m, a perda de carga deve ser de 42 m e o peso específico da água igual a 10 kN/m³. A bomba escolhida tem modernas características construtivas e, de acordo com informações técnicas obtidas no manual do fabricante, há a garantia de que o conjunto moto-bomba apresenta rendimento global de 50%.</p>
             ',
@@ -85,6 +88,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma empresa foi contratada para obter, experimentalmente, a força de arrasto em uma partícula metálica esférica com diâmetro de 1 mm quando submetida a escoamento de ar a 75 m/s. Diante das dificuldades de se trabalhar com um protótipo de pequenas dimensões, a equipe de engenheiros propôs a construção de um modelo em escala 200 vezes maior, o qual será testado em glicerina. Considere que as viscosidades cinemáticas do ar e da glicerina correspondam, respectivamente, a 1,5×10<sup>-5</sup> m²/s e 1,2×10<sup>-3</sup> m²/s.</p>
             ',
@@ -102,6 +106,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que um engenheiro tenha analisado o isolamento de um tubo fino que evita a condensação do fluido refrigerante conduzido. Usando um paquímetro, ele verificou que o tubo tem 0,54 cm de raio externo, mas esse raio chega a 0,6 cm com o isolamento de lã de vidro.</p>
                 <p class="mb-2 text-justify">Considerou-se que a condutividade térmica da lã de vidro é de 0,038 W/(m °C) e, após consulta na literatura, o engenheiro observou que o raio crítico de isolamento é dado por r<sub>crit</sub> = k/h, em que k é a condutividade térmica, e h = 7,0 W/(m² °C) é o coeficiente de transferência de calor por convecção.</p>
@@ -121,6 +126,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que um sistema de condicionamento de ar é utilizado para manter a temperatura interna de um quarto a 23 °C no verão. Após serem realizadas diversas medidas da temperatura superficial interna de uma parede do quarto, com 5 m de comprimento e 4 m de altura, foi obtido o valor médio de 27 °C.</p>
             ',
@@ -138,6 +144,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Conforme a bibliografia de sistemas de geração de potência a vapor, que inclui a norma API-611, a qual trata de turbinas a vapor, ciclos de geração de potência a vapor requerem um título no interior de qualquer parte da turbina acima de 90%, de forma a serem evitados ou minimizados problemas com a erosão das pás.</p>
                 <p class="mb-2 text-justify">O diagrama T×s apresentado mostra um Ciclo Rankine Irreversível, com vapor saturado na entrada da turbina, tendo a saída um título perto da faixa crítica.</p>
@@ -158,6 +165,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que um reservatório cilíndrico armazena água à pressão e à temperatura ambientes. A área da base do reservatório é de 0,5 m², e seu nível máximo corresponde a 2 m. No instante inicial, o nível da água no interior do reservatório é de 1 m. Após 10 s, o reservatório passa a ser abastecido com a vazão de 5 L/s de água.</p>
             ',
@@ -175,6 +183,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que uma placa plana retangular esteja sujeita à condução de calor bidimensional em regime permanente, imposta pelas condições de contorno em suas extremidades. Suponha, ainda, que a placa foi dividida em seis elementos quadrados, sendo identificados 12 nós, conforme apresentado na figura a seguir.</p>
                 <div class="overflow-x-auto mb-3">
@@ -217,6 +226,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O termo insalubridade tem o seguinte significado: o que é nocivo ou prejudicial à saúde. Um ambiente insalubre é composto por agentes (substâncias ou condições) que podem causar dano ao colaborador. Com base nessas características, a Consolidação das Leis Trabalhistas (CLT) preconiza que as atividades são insalubres quando levam à exposição do colaborador a um nível acima do limite tolerável, predefinidos por normas, conforme sua natureza, intensidade e tempo de exposição. Os parâmetros de insalubridade são definidos pela NR15, em que são apresentadas as disposições gerais acerca das atividades de insalubridade, de acordo com os agentes presentes, sendo eles o químico, o físico, o biológico ou alguma condição adversa.</p>
                 <p class="mb-2 text-right text-sm">Disponível em: https://www.gov.br/trabalho-e-emprego. Acesso em: 8 ago. 2023 (adaptado).</p>
@@ -235,6 +245,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Para serem evitadas falhas estruturais em dimensionamento de máquinas e estruturas, é necessária a análise dos elementos de tensões mais críticas. Para a análise das tensões principais e de cisalhamento, um método simples para os cálculos é a utilização do círculo de Mohr.</p>
                 <p class="mb-2 text-justify">Considere um elemento de tensão que apresente tensão normal de tração σ<sub>x</sub> = 60 MPa e σ<sub>y</sub> = 0 MPa. Sabendo-se que a tensão normal máxima é de 80 MPa.</p>
@@ -254,6 +265,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A flexão ocorre na grande maioria das estruturas e máquinas existentes, sendo que a demanda da sociedade em projetar equipamentos com menor custo e segurança faz com que o projetista analise todos os elementos estruturais, garantindo que os pontos mais críticos da seção mais crítica sejam avaliados. Para isso, é necessário o conhecimento dos esforços internos das estruturas, os quais, no caso de estruturas planas, são momento fletor, força cortante e força normal axial.</p>
                 <p class="mb-2 text-justify">A figura a seguir representa um elemento de máquina sujeito à aplicação de momentos <b>M<sub>1</sub></b> e <b>2M<sub>1</sub></b> em dois pontos específicos, sendo o vão total dividido em três partes iguais de comprimento L/3, com apoio simples em A e apoio duplo em B.</p>
@@ -280,6 +292,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que um momento M de intensidade 180 kN·cm seja aplicado na manivela do motor mostrado na figura a seguir. Na posição mostrada, a força F é necessária para manter o sistema em equilíbrio. As dimensões do mecanismo são: AB = 4,5 cm, BC = 6 cm e a excentricidade = 3 cm. Os pesos são desprezíveis.</p>
             ',
@@ -297,6 +310,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que uma indústria de manufatura tenha encomendado um projeto de uma esteira de transporte para alimentação nas células de produção. A figura a seguir representa o dispositivo mecânico de tração de uma esteira, composto por um motor elétrico, uma caixa de transmissão por engrenagens e uma transmissão por polias e correia. As polias apresentam relação de diâmetros d<sub>2</sub>/d<sub>1</sub> = 5 e o motor acoplado à caixa de redução tem potência nominal de 2 cv e opera com rotação fixa de 880 rpm.</p>
             ',
@@ -314,6 +328,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Nos projetos de máquinas, os conceitos de dinâmica do corpo rígido são fundamentais para o desenvolvimento de modelos matemáticos, evitando-se a construção de protótipos e, consequentemente, minimizando-se custos.</p>
                 <p class="mb-2 text-justify">A figura a seguir representa um disco com um cordão enrolado em torno de seu centro geométrico, simulando o comportamento de um ioiô. O disco tem massa M, raio R e momento de inércia em relação ao centro de massa igual a I = MR²/2. Considere M = 0,2 kg, R = 10 cm e aceleração da gravidade g = 10 m/s².</p>
@@ -332,6 +347,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que um mecanismo do tipo Scotch Yoke tenha sido utilizado em uma mesa de vibração em um processo industrial e que ensaios experimentais determinaram o gráfico do deslocamento do êmbolo do mencionado mecanismo. O gráfico apresenta um movimento senoidal com amplitude de 4 mm e período de 2π segundos (Y em mm × t em s).</p>
             ',
@@ -356,6 +372,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um novo tipo de indústria está nascendo devido à "quarta revolução industrial", o que facilita os processos e as demandas referentes ao setor de manutenção e às atribuições que lhe competem, visto que se favorecem o controle e os acessos remotos, os processos automatizados e os seus dispositivos. Um Planejamento e Controle da Manutenção (PCM) deverá levar a uma configuração por meio da qual se busca a excelência diante dos desafios apresentados, favorecendo-se uma melhor qualidade no processo e na interação entre os setores.</p>
                 <p class="mb-2 text-right text-sm">SILVA, D. S.; LIMA, E. V. O Planejamento e Controle da Manutenção na Indústria 4.0. <b>IX Congresso Brasileiro de Engenharia de Produção</b>. Ponta Grossa, PR, Brasil, 04 a 06 de dezembro de 2019 (adaptado).</p>
@@ -374,6 +391,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Tolerâncias dimensionais são desvios aceitáveis das dimensões nominais e destinam-se a limitar os erros dimensionais na fabricação de peças. A figura a seguir apresenta o desenho de um conjunto com peças montadas com as representações das cotas, tolerâncias e do ajuste adequado: <b>60 H7/p6</b>.</p>
                 <div class="overflow-x-auto mb-3">
@@ -404,6 +422,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A galvanização é uma operação de revestimento, obtida por imersão de uma peça de aço em um banho de zinco, por um determinado período de tempo, em que o aço é trazido até a temperatura do banho. Ao ser alcançada essa temperatura, ou próximo dela, forma-se uma camada aderente de liga de zinco-ferro na superfície do aço e outra de zinco puro. Ambas as camadas contribuem para a capacidade de resistência à corrosão e para a vida útil do revestimento aplicado.</p>
                 <p class="mb-2 text-right text-sm">GENTIL, V. <b>Corrosão</b>. 7. ed. Rio de Janeiro: LTC, 2022 (adaptado).</p>
@@ -422,6 +441,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Atualmente, as bicicletas utilizadas no ciclismo devem ser extremamente leves, para propiciarem melhor desempenho e menor desgaste ao atleta. Nesse sentido, para atender às necessidades dos atletas, diversos materiais foram desenvolvidos em substituição aos materiais metálicos tradicionais (aço e alumínio).</p>
             ',
@@ -445,6 +465,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que uma construtora tenha solicitado um projeto de piscina aquecida que apresente ótima eficiência energética, seja ecologicamente correto e economicamente viável. Para atender essas exigências, foi utilizada uma bomba de calor com COP = 4, fornecendo uma taxa de calor de 4 kW para a água da piscina, e cujo compressor consome uma potência de 1 kW.</p>
                 <p class="mb-2 text-right text-sm">MORAN, M. J.; SHAPIRO, H. N. <b>Princípios de Termodinâmica para Engenharia</b>. Rio de Janeiro: LTC, 2018 (adaptado).</p>
@@ -469,6 +490,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O processo de fabricação por laminação é importante para a fabricação de inúmeros componentes, como, por exemplo, terminais elétricos. Tais componentes são fabricados a partir de chapas laminadas de cobre, que partem de tarugos (espessura de 500 mm) provenientes do processo de lingotamento contínuo. Inicialmente, sofrem processos de laminação a quente e, posteriormente, laminação a frio, até ser atingida a espessura necessária (1,2 mm). Os terminais apresentam encruamento e excelente acabamento superficial, resultantes de processos subsequentes de corte e dobramento.</p>
             ',
@@ -492,6 +514,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O atual cenário empresarial se caracteriza por rápidas transformações nos mercados, nas tecnologias e nos desenhos organizacionais. Diante desse panorama, as empresas buscam inovação para crescerem e se manterem nos mercados.</p>
                 <p class="mb-2 text-right text-sm">POSSOLLI, G. E. <b>Gestão da inovação e do conhecimento</b>. Curitiba: InterSaberes, 2012 (adaptado).</p>
@@ -517,6 +540,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As falhas contribuem para reduzir a confiabilidade das operações produtivas, e isso pode trazer uma série de implicações: ambientes de trabalho inseguros, perdas de produção, redução da qualidade e, por consequência, menor lucratividade para o negócio. Sendo assim, o planejamento, a organização e o controle da manutenção industrial assumem um papel estratégico na organização.</p>
                 <p class="mb-2 text-right text-sm">GREGÓRIO, G. F. P.; SANTOS, D. F.; PRATA, A. B. <b>Engenharia de Manutenção</b>. Porto Alegre: SAGAH, 2018 (adaptado).</p>
@@ -542,6 +566,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A soldagem a arco submerso é usada em uma larga faixa de aplicações industriais, sendo de grande utilidade em estaleiros, caldeirarias, mineradoras, siderúrgicas e fábricas de perfis e estruturas metálicas. É usada, ainda, na fabricação de vasos de pressão, navios, barcos, vagões e no revestimento ou na recuperação de peças que necessitam de ligas, com propriedades específicas como resistência ao desgaste abrasivo e tenacidade.</p>
                 <p class="mb-2 text-justify">Sabe-se que nesse processo de soldagem, o arco elétrico, que aquece e funde o eletrodo nu e a parte do metal de base em contato com o metal de adição, está coberto por uma camada de material granular fusível, conhecido como fluxo.</p>
@@ -569,6 +594,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Quando um desenho de engenharia é passado ao setor de produção, ele deve conter todas as informações necessárias para se construir a peça ou sistema, sendo acompanhado de dimensões e notas explicativas que descrevam o tamanho e a localização de todos os componentes.</p>
                 <p class="mb-2 text-justify">Considere que o sistema a ser fabricado seja o macaco de parafuso, com destaque para a peça 4, denominada corpo do macaco, apresentada em vista em meio corte com as seguintes cotas: Ø45, Ø44, Ø26, Ø35, M20, Ø62, R2, R70, R140, além das cotas lineares 72, 8, 64 e 30.</p>
@@ -594,6 +620,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Com o avanço da tecnologia, os materiais da impressora 3D estão se multiplicando, bem como a necessidade de atender às solicitações específicas de aplicações. O gráfico a seguir ilustra a curva tensão × deformação para três tipos de filamento comuns de impressoras 3D FDM: o ácido poliláctico (PLA), o acrilonitrila-butadieno-estireno (ABS) e o polietileno tereftalato de etileno glicol (PETG).</p>
                 <div class="overflow-x-auto mb-3">
@@ -629,6 +656,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Suponha que uma empresa especializada em fabricação de peças cortadas a laser tenha contabilizado um desperdício anual de 40% de toda a matéria prima utilizada. Após uma análise do seu processo produtivo, constatou-se que grande parte do resíduo gerado era oriundo de partes não aproveitadas das chapas de aço utilizadas na produção das peças. Decidiu-se, então, que a empresa iria buscar alternativas a fim de melhorar sua sustentabilidade e reduzir o impacto ambiental causado pelo resíduo gerado.</p>
             ',
@@ -652,6 +680,7 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Mecânica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Na manutenção dos sistemas mecânicos, é fundamental a análise dos sistemas elétricos, como, por exemplo, do motor de acionamento de sistemas de engrenamento. Caso haja alguma restrição no giro das engrenagens, a potência exigida do motor poderá aumentar, causando danos ao sistema.</p>
                 <p class="mb-2 text-justify">A seguir, é apresentado um motor elétrico com sistema de engrenamento, sendo os raios das engrenagens B e C iguais a 96 mm e 60 mm, respectivamente. O eixo AB gira a 480 rpm e a potência original é de 96 kW. Considere π = 3.</p>
@@ -676,3 +705,4 @@ class Questoes_Engenharia_Mecanica_2023 extends Seeder
         ]);
     }
 }
+

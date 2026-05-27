@@ -12,6 +12,7 @@ class Questao extends Model
         'titulo',
         'questao_id',
         'categoria',
+        'ano',
         'contextualizacao',
         'enunciado',
         'referencia',

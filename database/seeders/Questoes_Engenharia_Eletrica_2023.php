@@ -11,6 +11,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
     {
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A figura a seguir representa o diagrama esquemático de um autotransformador abaixador monofásico, 460:230 V, 10 kVA. O lado de alta tensão é alimentado pelos terminais A e D; e os terminais B e D correspondem ao lado de baixa tensão.</p>
 
@@ -43,6 +44,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">A figura 1 ilustra as curvas de variação dos parâmetros de desempenho de corrente elétrica, o fator de potência, o rendimento e o escorregamento de um motor de indução trifásico de potência nominal de 55 kW em função da potência fornecida pelo motor à carga.</p>
 
@@ -90,6 +92,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Localização, construção, instalação, ampliação, modificação e operação de empreendimentos e atividades utilizadoras de recursos ambientais consideradas efetivas ou potencialmente poluidoras bem como os empreendimentos que são capazes, sob qualquer forma, de causar degradação ambiental, dependerão de prévio licenciamento do órgão ambiental competente, sem prejuízo de outras licenças legalmente exigíveis.</p>
             ',
@@ -116,6 +119,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
 
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao'=> '
                 <p class="mb-2 text-justify">Uma onda eletromagnética possui frequência angular igual a <i>&omega;</i> e se propaga em diferentes meios materiais, de forma ideal, conforme os dados apresentados na tabela a seguir.</p>
 
@@ -155,6 +159,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Seja a saída <span>\(\text{y}(\text{t})\)</span> de um sistema dada por</p>
 
@@ -186,6 +191,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um engenheiro projetou um novo sistema de sensoriamento de temperatura para a linha de produção de uma fábrica. No circuito eletrônico projetado, mostrado na figura a seguir, um sensor, baseado no detector resistivo de temperatura (RTD), foi escolhido e ligado a uma ponte de Wheatstone por meio dos resistores R<sub>2</sub>, R<sub>3</sub> e R<sub>4</sub>. Acerca desse projeto, tem-se as seguintes informações: a ponte é ligada a uma fonte de alimentação de 12 V; uma tensão V<sub>0</sub> é medida na saída da ponte quando o circuito é exposto a uma variação de temperatura; e o RTD apresenta uma resistência de 100 ohms a 0 °C com coeficiente térmico de +0,4 ohm/°C.</p>
 
@@ -223,6 +229,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que o sistema apresentado na figura a seguir possua entrada <span>\(x(t)\)</span>, saída <span>\(y(t)\)</span>, sinal de erro <span>\(e(t)\)</span>, as correspondentes transformadas de Laplace, <span>\(X(s), Y(s), E(s),\)</span> e as constantes <span>\(K\)</span> e <span>\(T\)</span> maiores do que zero.</p>
 
@@ -250,6 +257,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">As figuras a seguir exemplificam aplicações com <i>Strain Gauges</i>, também conhecidos como extensômetros, do tipo banda uniaxial de trama pelicular afixado sobre viga.</p>
 
@@ -291,6 +299,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Um engenheiro precisa construir um sistema de medição do valor eficaz da corrente senoidal de alimentação de um motor, o qual é acionado por meio de um inversor. A frequência de alimentação deve variar de 30 a 80 Hz.</p>
 
@@ -327,6 +336,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Há uma grande variedade de transformadores que funcionam com diferentes tipos de circuitos, mas todos operam sob o mesmo princípio de indução eletromagnética.</p>
 
@@ -357,6 +367,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere o sistema representado pelo diagrama de blocos a seguir, em que <span>\(T\)</span> representa um atraso no tempo e em que <span>\(k{1}\)</span> e <span>\(k{2}\)</span> são constantes reais positivas.</p>
 
@@ -386,6 +397,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Os materiais ferromagnéticos, frequentemente compostos de ferro e de ligas de ferro com cobalto, níquel, alumínio e outros metais, possuem um momento magnético permanente mesmo na ausência de um campo externo e se imantam fortemente se colocados na presença de um campo magnético. Sabe-se que a permeabilidade magnética, grandeza característica de cada material, refere-se à sua capacidade de "permitir" a existência de linhas de indução em seu interior e que, quanto maior for a permeabilidade de um material, mais fácil será a obtenção dessas linhas de indução.</p>
 
@@ -424,6 +436,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O circuito esquematizado na figura 1 tem como entradas os sinais <i>Q<sub>1</sub></i> e <i>Q<sub>2</sub></i>, que são gerados pelo circuito apresentado na figura 2. De acordo com o sinal de <i>clock</i> (CLK), um conjunto de símbolos do painel é "ativado". Cada um dos quatro símbolos do painel está associado a uma saída do circuito lógico, ou seja, o quadrado está associado à letra <b>a</b>, o losango à letra <b>b</b>, o círculo à letra <b>c</b>, e o triângulo à letra <b>d</b>. Sabe-se, também, que os <i>flip-flops</i> (FFs) são inicializados com nível zero.</p>
 
@@ -466,6 +479,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir apresenta um circuito para medir e para indicar a posição angular do eixo <i>θ</i> de um potenciômetro. Esse circuito utiliza fontes de alimentação de +10 V e −5 V, um potenciômetro e os resistores de 4 e 16 ohms para obter uma tensão (V<sub>IN</sub>) na entrada do circuito amplificador. O modelo do potenciômetro utilizado no circuito é linear, com ângulo medido a partir da posição central, conforme os detalhes mostrados a seguir. O amplificador é composto por 2 resistores e uma fonte dependente, de ganho β.</p>
 
@@ -496,6 +510,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere um sistema elétrico de potência representado pelo diagrama unifilar a seguir. A potência injetada na barra 3 e as impedâncias das linhas que conectam a barra 1 à barra 2 bem como a barra 2 à barra 3 são mensuradas por unidade (pu). Tanto a tensão na barra 1 quanto a tensão na barra 3 são iguais a 1,0 pu.</p>
 
@@ -523,6 +538,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Auditoria energética é a análise sistemática dos fluxos de energia em um sistema particular, visando a discriminar as perdas e a orientar um programa de uso racional de insumos energéticos. Uma forma de desenvolver uma auditoria energética na indústria é implementá-la em etapas sequenciadas, sendo:</p>
 
@@ -558,6 +574,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A figura a seguir apresenta um sistema fotovoltaico que visa a suprir uma parcela da demanda energética de uma residência, a qual também possui conexão com a rede pública de fornecimento de energia.</p>
 
@@ -585,6 +602,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A rede <i>Actuator Sensor Interface</i> (AS-I) é um padrão de comunicação industrial concebido para tornar mais simples e rápida a conexão entre sensores e atuadores com os respectivos controladores. O controle de acesso ao meio dessa rede é do tipo <i>polling</i> e, nela, um terminal-mestre pode controlar até 30 terminais-escravos. Um ciclo completo ocorre após todos os escravos terem sido requisitados uma vez. A sequência binária correspondente à comunicação serial entre o terminal-mestre e cada um dos terminais-escravos é mostrada na figura a seguir.</p>
 
@@ -612,6 +630,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">No dia 4 de maio de 2017, o governo brasileiro realizou o lançamento do satélite geoestacionário de defesa e comunicações estratégicas (SGDC), que passou a operar nas bandas de frequência X e Ka. Na banda X, foram disponibilizados recursos de comunicação, tendo em vista o uso exclusivamente militar, para auxiliar a defesa do país. Já na banda Ka, foram disponibilizados canais para o tráfego de dados em alta velocidade, com a finalidade de contribuir para a implementação do Plano Nacional de Banda Larga, o que aumentou a inclusão digital, principalmente em áreas remotas do país.</p>
             ',
@@ -640,6 +659,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Dada a integração cada vez maior de sistemas e de processos industriais, o engenheiro deve ser capaz de lidar com a modelagem e com o controle de sistemas modernos, complexos e interligados.</p>
 
@@ -674,6 +694,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A teoria de controle clássico é fundamentada na relação entrada-saída ou função de transferência; por sua vez, a teoria de controle moderno é baseada na descrição de um sistema de equações em termos de um conjunto de equações diferenciais de primeira ordem, as quais podem ser combinadas em uma equação diferencial vetorial-matricial de primeira ordem. O uso de uma notação vetorial-matricial simplifica bastante a representação matemática do sistema de equações. O aumento no número das variáveis de estado, no número de entradas ou no número de saídas não aumenta a complexidade das equações.</p>
             ',
@@ -704,6 +725,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O diagrama unifilar a seguir pertence a um projeto de instalação elétrica de baixa tensão, no qual o circuito C1 alimenta um fogão elétrico (220 V); o C2 alimenta um chuveiro (220 V); o C3 é um circuito de iluminação (127 V); o C4 é um circuito de tomada de uso geral (127 V); e o C5 é, também, um circuito de tomada de uso geral (127 V). Todos os circuitos estão em eletrodutos exclusivos. Sabe-se que a concessionária de energia elétrica local fornece eletricidade com níveis de tensão linha-linha de 220 V e tensão linha-neutro de 127 V. Considerando-se esses dados e analisando-se o diagrama elaborado, nota-se que ele apresenta alguns erros.</p>
 
@@ -743,6 +765,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Uma indústria, alimentada por uma rede elétrica trifásica de 380 V e 60 Hz, possui dois motores elétricos trifásicos: um de 12 kW com fator de potência de 0,8 atrasado e outro de 9 kW com fator de potência de 0,6 atrasado. A fim de atender à Resolução Normativa n. 1.000/2021, da Agência Nacional de Energia Elétrica (ANEEL), que regula o fator de potência de referência igual a 0,92 para unidades consumidoras conectadas em níveis de tensão inferiores a 69 kV, realizou-se a compensação do fator de potência da referida instalação por meio de um banco de capacitores.</p>
             ',
@@ -773,6 +796,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que seja necessário utilizar um algoritmo para resolver um determinado problema. Diante disso, vários profissionais propõem diferentes soluções. Nesse cenário, um possível critério para a escolha do algoritmo é que ele otimize a necessidade de recursos computacionais, como, por exemplo, de tempo de processamento.</p>
 
@@ -826,6 +850,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Circuitos conversores de energia, os quais são importantes nas mais diversas formas de processamento de energia elétrica, são amplamente encontrados em bens de consumo eletroeletrônicos. Exemplos conhecidos são os conversores DC-DC (corrente contínua para corrente contínua), <i>buck</i> e <i>boost</i>.</p>
 
@@ -854,6 +879,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A análise de oferta e de demanda de produtos é de fundamental importância para o entendimento elementar do funcionamento do mercado consumidor. O preço de um produto na economia de mercado é determinado tanto pela oferta quanto pela procura.</p>
 
@@ -887,6 +913,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">O conversor analógico-digital (A/D) é um dos componentes dos modernos sistemas de processamento digitais de sinais. É essencial em aplicações de comunicações e de controle e automação, pois transforma um sinal analógico em uma sequência digital. A respeito disso, tem-se que a entrada de um conversor A/D, x<sub>a</sub>(t) é uma função real de uma variável contínua, t. A saída do conversor A/D, por sua vez, é um fluxo de bits que corresponde a uma sequência de tempo discreto x[n], em que, para cada valor de n, a amplitude é quantizada com um valor de um conjunto finito de valores possíveis.</p>
 
@@ -918,6 +945,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">A energia fotovoltaica apresenta muitas vantagens, entretanto, para sua ampla utilização, ainda devem ser vencidos alguns desafios, principalmente a baixa eficiência de conversão dos painéis fotovoltaicos. Além do desenvolvimento de novos materiais, continua sendo muito importante aumentar a eficiência de conversão desses painéis por meio da maximização da entrada de radiação solar e da otimização do ponto de operação do painel fotovoltaico.</p>
 
@@ -981,6 +1009,7 @@ class Questoes_Engenharia_Eletrica_2023 extends Seeder
         // =====================================================================
         Questao::create([
             'categoria' => 'Engenharia Elétrica',
+            'ano' => 2023,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Considere que uma cidade possua, em atividade, duas lojas de materiais elétricos, quais sejam, A e B. Estima-se que 50% dos clientes em potencial faz negócios com a loja A, que 40% dos clientes em potencial faz negócios com a loja B e que 20% dos clientes em potencial não faz negócios com nenhuma das duas lojas.</p>
             ',
