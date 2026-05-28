@@ -97,6 +97,7 @@
             var button = document.getElementById('gerar-simulado');
             var form = document.getElementById('simulado-form');
             var formCurso = document.getElementById('form-curso');
+            var formTempo = document.getElementById('form-tempo');
             var useAutomaticTime = false;
 
             button.disabled = true;
@@ -127,27 +128,50 @@
             }
 
             function updateBadgeTempo() {
-                tempoBadge.textContent = tempoInput.value + 'h';
                 if (useAutomaticTime) {
                     tempoBadge.textContent = 'Auto';
+                } else {
+                    tempoBadge.textContent = tempoInput.value + 'h';
                 }
+            }
+
+            function getAutoTime() {
+                var fgValue = parseInt(NQInputFG.value, 10) || 0;
+                var ceValue = parseInt(NQInputCE.value, 10) || 0;
+                return (fgValue + ceValue) * 300;
             }
 
             function setAutomaticTime(value) {
                 useAutomaticTime = value;
-                tempoInput.disabled = value;
-                if (value) {
-                    tempoInput.classList.add('input-disabled');
-                    tempoAutoBtn.classList.remove('btn-outline');
-                    tempoAutoBtn.classList.add('btn-primary');
-                    tempoAutoBtn.textContent = 'Tempo decidido pelo sistema';
-                } else {
-                    tempoInput.classList.remove('input-disabled');
-                    tempoAutoBtn.classList.remove('btn-primary');
-                    tempoAutoBtn.classList.add('btn-outline');
-                    tempoAutoBtn.textContent = 'Deixe que o sistema decida';
-                }
+                tempoInput.disabled = value || !tempoToggle.checked;
+                tempoInput.classList.toggle('input-disabled', value || !tempoToggle.checked);
+                tempoAutoBtn.disabled = !tempoToggle.checked;
+                tempoAutoBtn.classList.toggle('btn-primary', value);
+                tempoAutoBtn.classList.toggle('btn-outline', !value);
+                tempoAutoBtn.textContent = value ? 'Tempo decidido pelo sistema' : 'Deixe que o sistema decida';
                 updateBadgeTempo();
+            }
+
+            function setTempoEnabled(enabled) {
+                tempoToggle.checked = enabled;
+                if (enabled) {
+                    tempoStatusBadge.textContent = 'Ativado';
+                    tempoStatusBadge.classList.add('font-bold');
+                    tempoContainer.classList.remove('hidden');
+                    tempoContainer.classList.remove('opacity-40');
+                    tempoAutoBtn.disabled = false;
+                    setAutomaticTime(false);
+                } else {
+                    tempoStatusBadge.textContent = 'Desativado';
+                    tempoStatusBadge.classList.remove('font-bold');
+                    tempoContainer.classList.add('hidden');
+                    tempoContainer.classList.add('opacity-40');
+                    setAutomaticTime(false);
+                    tempoAutoBtn.disabled = true;
+                    if (formTempo) {
+                        formTempo.value = '0';
+                    }
+                }
             }
 
             function checkSelect() {
@@ -173,27 +197,17 @@
                 updateBadgeTempo();
             });
             tempoAutoBtn.addEventListener('click', function () {
+                if (!tempoToggle.checked) {
+                    return;
+                }
                 setAutomaticTime(!useAutomaticTime);
             });
             tempoToggle.addEventListener('change', function () {
-                if (tempoToggle.checked) {
-                    tempoStatusBadge.textContent = 'Ativado';
-                    tempoStatusBadge.classList.add('font-bold');
-                    tempoContainer.classList.remove('hidden');
-                    tempoContainer.classList.remove('opacity-40');
-                } else {
-                    tempoStatusBadge.textContent = 'Desativado';
-                    tempoStatusBadge.classList.remove('font-bold');
-                    tempoContainer.classList.add('hidden');
-                    tempoContainer.classList.remove('opacity-40');
-                }
+                setTempoEnabled(tempoToggle.checked);
             });
 
             updateColors(); // Aplica estilo inicial
-            updateBadgeTempo();
-            if (!tempoToggle.checked) {
-                tempoContainer.classList.add('hidden');
-            }
+            setTempoEnabled(tempoToggle.checked);
 
             button.addEventListener('click', function () {
                 if (!cursoSelect.value) {
@@ -202,8 +216,10 @@
                 formCurso.value = cursoSelect.value;
                 document.getElementById('form-limite-fg').value = NQInputFG.value;
                 document.getElementById('form-limite-ce').value = NQInputCE.value;
-                if (useAutomaticTime) {
-                    document.getElementById('form-tempo').value = '';
+                if (!tempoToggle.checked) {
+                    document.getElementById('form-tempo').value = '0';
+                } else if (useAutomaticTime) {
+                    document.getElementById('form-tempo').value = getAutoTime();
                 } else {
                     var tempoValue = parseInt(tempoInput.value, 10);
                     if (isNaN(tempoValue) || tempoValue < 1) {

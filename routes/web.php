@@ -43,7 +43,7 @@ Route::post('/simulados/gerar_simulado', function () {
     if ($limitece < 0 || $limitece > 100) {
         $limitece = 38;
     }
-    if ($tempo !== null && ($tempo <= 0 || $tempo > 86400)) {
+    if ($tempo !== null && ($tempo < 0 || $tempo > 86400)) {
         $tempo = null;
     }
 
