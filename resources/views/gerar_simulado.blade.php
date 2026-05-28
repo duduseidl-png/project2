@@ -52,22 +52,24 @@
                 </div>
                 <div class="w-80">
                     <h3 class="text-left mb-2 font-semibold">Tempo limite</h3>
-                    <div class="flex flex-col flex-wrap items-left gap-4 w-80">
+                    <div class="flex flex-col flex-wrap items-start gap-4 w-80">
                         <div class="flex flex-wrap items-center gap-4 w-80">
                             <input id="tempo-toggle" type="checkbox" checked="checked"
-                                class="toggle checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800" />
+                                class="toggle checked:border-orange-500 checked:bg-orange-400 checked:text-orange-800"/>
                             <section id="tempo-status-badge"
                                 class="badge badge-soft badge-lg font-bold min-w-12 flex-shrink-0">Ativado
                             </section>
                         </div>
-                        <div id="tempo-container" class="grid-cols-3 items-center gap-4 w-80 p-4 rounded-lg border-2 border-gray-500 border-transparent">
-                            <section id="tempo-badge"
-                                class="badge badge-soft badge-lg font-bold min-w-12 col-span-3">4h
-                            </section>
-                            <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
-                                class="input input-bordered w-32 col-span-3"/>
-                            <span class="text-sm text-gray-500">horas</span>
-                            <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-3 col-span-3">Deixe que o sistema
+                        <div id="tempo-container" class="grid justify-items-start items-center gap-2 w-80 border-gray-500 border-transparent">
+                            <div class="flex items-center gap-2">
+                                <section id="tempo-badge"
+                                    class="badge badge-soft badge-lg font-bold min-w-12">4h
+                                </section>
+                                <input id="tempo-input" type="number" min="1" max="24" value="4" step="1"
+                                    class="input input-bordered w-20"/>
+                                <span class="text-sm text-gray-500">horas</span>
+                            </div>
+                            <button id="tempo-auto-btn" type="button" class="btn btn-sm btn-outline mt-2">Deixe que o sistema
                                 decida</button>
                         </div>
                     </div>
@@ -95,6 +97,7 @@
             var button = document.getElementById('gerar-simulado');
             var form = document.getElementById('simulado-form');
             var formCurso = document.getElementById('form-curso');
+            var formTempo = document.getElementById('form-tempo');
             var useAutomaticTime = false;
 
             button.disabled = true;
@@ -125,27 +128,50 @@
             }
 
             function updateBadgeTempo() {
-                tempoBadge.textContent = tempoInput.value + 'h';
                 if (useAutomaticTime) {
                     tempoBadge.textContent = 'Auto';
+                } else {
+                    tempoBadge.textContent = tempoInput.value + 'h';
                 }
+            }
+
+            function getAutoTime() {
+                var fgValue = parseInt(NQInputFG.value, 10) || 0;
+                var ceValue = parseInt(NQInputCE.value, 10) || 0;
+                return (fgValue + ceValue) * 300;
             }
 
             function setAutomaticTime(value) {
                 useAutomaticTime = value;
-                tempoInput.disabled = value;
-                if (value) {
-                    tempoInput.classList.add('input-disabled');
-                    tempoAutoBtn.classList.remove('btn-outline');
-                    tempoAutoBtn.classList.add('btn-primary');
-                    tempoAutoBtn.textContent = 'Tempo decidido pelo sistema';
-                } else {
-                    tempoInput.classList.remove('input-disabled');
-                    tempoAutoBtn.classList.remove('btn-primary');
-                    tempoAutoBtn.classList.add('btn-outline');
-                    tempoAutoBtn.textContent = 'Deixe que o sistema decida';
-                }
+                tempoInput.disabled = value || !tempoToggle.checked;
+                tempoInput.classList.toggle('input-disabled', value || !tempoToggle.checked);
+                tempoAutoBtn.disabled = !tempoToggle.checked;
+                tempoAutoBtn.classList.toggle('btn-primary', value);
+                tempoAutoBtn.classList.toggle('btn-outline', !value);
+                tempoAutoBtn.textContent = value ? 'Tempo decidido pelo sistema' : 'Deixe que o sistema decida';
                 updateBadgeTempo();
+            }
+
+            function setTempoEnabled(enabled) {
+                tempoToggle.checked = enabled;
+                if (enabled) {
+                    tempoStatusBadge.textContent = 'Ativado';
+                    tempoStatusBadge.classList.add('font-bold');
+                    tempoContainer.classList.remove('hidden');
+                    tempoContainer.classList.remove('opacity-40');
+                    tempoAutoBtn.disabled = false;
+                    setAutomaticTime(false);
+                } else {
+                    tempoStatusBadge.textContent = 'Desativado';
+                    tempoStatusBadge.classList.remove('font-bold');
+                    tempoContainer.classList.add('hidden');
+                    tempoContainer.classList.add('opacity-40');
+                    setAutomaticTime(false);
+                    tempoAutoBtn.disabled = true;
+                    if (formTempo) {
+                        formTempo.value = '0';
+                    }
+                }
             }
 
             function checkSelect() {
@@ -171,24 +197,17 @@
                 updateBadgeTempo();
             });
             tempoAutoBtn.addEventListener('click', function () {
+                if (!tempoToggle.checked) {
+                    return;
+                }
                 setAutomaticTime(!useAutomaticTime);
             });
             tempoToggle.addEventListener('change', function () {
-                if (tempoToggle.checked) {
-                    tempoStatusBadge.textContent = 'Ativado';
-                    tempoStatusBadge.classList.add('font-bold');
-                    tempoContainer.classList.remove('opacity-40');
-                    tempoContainer.classList.add('border-transparent');
-                } else {
-                    tempoStatusBadge.textContent = 'Desativado';
-                    tempoStatusBadge.classList.remove('font-bold');
-                    tempoContainer.classList.add('opacity-40');
-                    tempoContainer.classList.remove('border-transparent');
-                }
+                setTempoEnabled(tempoToggle.checked);
             });
 
             updateColors(); // Aplica estilo inicial
-            updateBadgeTempo();
+            setTempoEnabled(tempoToggle.checked);
 
             button.addEventListener('click', function () {
                 if (!cursoSelect.value) {
@@ -197,8 +216,10 @@
                 formCurso.value = cursoSelect.value;
                 document.getElementById('form-limite-fg').value = NQInputFG.value;
                 document.getElementById('form-limite-ce').value = NQInputCE.value;
-                if (useAutomaticTime) {
-                    document.getElementById('form-tempo').value = '';
+                if (!tempoToggle.checked) {
+                    document.getElementById('form-tempo').value = '0';
+                } else if (useAutomaticTime) {
+                    document.getElementById('form-tempo').value = getAutoTime();
                 } else {
                     var tempoValue = parseInt(tempoInput.value, 10);
                     if (isNaN(tempoValue) || tempoValue < 1) {

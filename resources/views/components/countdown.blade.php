@@ -10,7 +10,7 @@
         // Variáveis globais para o countdown
         window.countdownStartTime = null;
         window.timerInterval = null;
-        window.timeLimit = {{ $timePerQuestion ?? 'null' }}; // Tempo limite em segundos (14400 = 4 horas, null = ilimitado)
+        window.timeLimit = {{ $timePerQuestion ?? 'null' }}; // Tempo limite em segundos (14400 = 4 horas, 0 = sem cronômetro, null = ilimitado)
 
         // Função para atualizar o contador a cada segundo (tempo regressivo)
         const updateTimer = () => {
@@ -47,6 +47,9 @@
 
         // Função para iniciar o countdown
         window.startCountdown = () => {
+            if (window.timeLimit === 0) {
+                return;
+            }
             if (!window.countdownStartTime) {
                 window.countdownStartTime = new Date().getTime();
                 if (!window.timerInterval) {

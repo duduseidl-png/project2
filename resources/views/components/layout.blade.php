@@ -81,6 +81,7 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/">Início</a></li>
+      <li><a href="/instrucoes">Instruções</a></li>
       <li>
         <details><summary>Simulados</summary>
           <ul class="p-2 bg-base-100 w-50 z-1">
