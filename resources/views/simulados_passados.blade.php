@@ -12,7 +12,7 @@
             font-size: 16px;
             padding: 14px 45px 12px 12px;
             border: none;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #8b8b8b;
             width: 100%;
         }
 
@@ -58,6 +58,7 @@
             border: 1px solid var(--bg-blue);
             z-index: 1;
             max-height: 300px;
+            height: fit-content;
             overflow-y: auto;
         }
 
@@ -77,19 +78,16 @@
 
     <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
         Revisitar provas passadas</h1>
-    <div class="grid grid-cols-4 gap-4">
-        <div role="alert" class="col-start-2 alert alert-vertical sm:alert-horizontal mt-10">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                class="stroke-info h-6 w-6 shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+    <div class="flex flex-col items-center gap-5">
+        <div class="alert h-20 mt-5 w-120 flex-grow md:flex-grow-0">
+            <img class="h-8" src="/img/figuras/info.png" alt="info">
             <div>
-                <h3 class="font-bold">Orientação</h3>
-                <div class="text-xs">Selecione o curso e o ano de prova para realizar um simulado com exatamente as mesmas questões objetivas.</div>
+                <h3 class="font-bold">Orientação:</h3>
+                <div class="text-xs">Selecione o curso e o ano de prova para realizar um simulado com exatamente as
+                    mesmas questões objetivas.</div>
             </div>
         </div>
-        <div id="sb-content" class="searchbar-content col-start-3 mt-10">
+        <div id="sb-content" class="searchbar-content w-120 flex-grow md:flex-grow-0">
             <div class="search-container">
                 <input type="text" placeholder="Encontrar curso" id="inputField" onkeyup="filterFunction()"
                     class="w-auto md:w-100">
@@ -104,12 +102,12 @@
                 @endforeach
             </section>
         </div>
-        <div class="col-start-3">
-            <ul class="menu menu-horizontal rounded-box w-56 hidden" id="yearsList">
+        <div class="flex justify-center">
+            <ul class="hidden " id="yearsList">
                 @foreach ($anos as $cursoId => $yearList)
                     <li class="years-group" data-course-id="{{ $cursoId }}" style="display: none;">
                         @foreach ($yearList as $year)
-                            <a href="#" class="year-option" data-year="{{ $year }}">{{ $year }}</a>
+                            <a href="#" class="year-option join-item btn btn-soft mb-1 mx-1 h-10 w-20" data-year="{{ $year }}">{{ $year }}</a>
                         @endforeach
                     </li>
                 @endforeach

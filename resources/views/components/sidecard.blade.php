@@ -51,7 +51,7 @@
                     <button id="btn-questao-{{ $i }}" class="btn-questao join-item btn mb-1 h-7 w-3" data-questao="{{ $i }}" type="button">{{ $i }}</button>
                 @endfor
             </div>
-            <button type="submit" form="simulado-form" class="btn confirm-btn">Enviar Respostas</button>
+            <button type="submit" form="simulado-form" class="btn confirm-btn text-white">Enviar Respostas</button>
         </div>
     </div>
 
