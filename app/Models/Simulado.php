@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Simulado extends Model
 {
@@ -28,17 +27,7 @@ class Simulado extends Model
     ];
 
     /**
-     * Relação muitos-para-muitos com Questoes
-     */
-    public function questoes(): BelongsToMany
-    {
-        return $this->belongsToMany(Questao::class, 'simulado_questoes')
-            ->withPivot('ordem')
-            ->orderBy('pivot_ordem');
-    }
-
-    /**
-     * Gera um seed único baseado em caracteres aleatórios
+     * Gera um seed único
      */
     public static function gerarSeed(): string
     {
@@ -46,85 +35,156 @@ class Simulado extends Model
     }
 
     /**
-     * Busca questões aleatoriamente usando seed determinístico
+     * Codifica parâmetros em uma string base64 para compartilhamento
      */
-    public function gerarQuestoes(): void
+    public static function codificarParametros(array $parametros): string
     {
-        // Inicializa o gerador de números aleatórios com o seed
-        mt_srand(crc32($this->seed));
+        $seed = $parametros['seed'] ?? self::gerarSeed();
+        
+        $dados = [
+            'seed' => $seed,
+            'curso' => $parametros['curso'],
+            'ano' => $parametros['ano'] ?? null,
+            'limite_fg' => (int) ($parametros['limite_fg'] ?? 10),
+            'limite_ce' => (int) ($parametros['limite_ce'] ?? 30),
+            'tempo_limite' => isset($parametros['tempo_limite']) ? (int) $parametros['tempo_limite'] : null,
+        ];
 
-        $cursoTitulo = $this->obterCursoTitulo($this->curso);
+        $json = json_encode($dados);
+        // Usar URL-safe base64
+        $encoded = base64_encode($json);
+        $encoded = strtr($encoded, '+/', '-_');
+        $encoded = rtrim($encoded, '=');
+        
+        return $encoded;
+    }
+
+    /**
+     * Decodifica uma string base64 para parâmetros
+     */
+    public static function decodificarParametros(string $codigo): ?array
+    {
+        try {
+            // Decodificar URL-safe base64
+            $encoded = $codigo;
+            $encoded = strtr($encoded, '-_', '+/');
+            $encoded .= str_repeat('=', 4 - strlen($encoded) % 4);
+            
+            $json = base64_decode($encoded, true);
+            if ($json === false) {
+                return null;
+            }
+            
+            $dados = json_decode($json, true);
+            
+            if (!isset($dados['seed'], $dados['curso'])) {
+                return null;
+            }
+
+            return $dados;
+        } catch (\Exception $e) {
+            return null;
+        }
+    }
+
+    /**
+     * Regenera questões usando parâmetros (sem precisar salvar no banco)
+     */
+    public static function regenerarQuestoesPorParametros(array $parametros): array
+    {
+        $seed = $parametros['seed'];
+        $curso = $parametros['curso'];
+        $ano = $parametros['ano'] ?? null;
+        $limite_fg = (int) $parametros['limite_fg'];
+        $limite_ce = (int) $parametros['limite_ce'];
+
+        // Inicializa o gerador com seed determinístico
+        mt_srand(crc32($seed));
+
+        $cursoTitulo = self::obterCursoTituloEstatico($curso);
 
         // Query para Formação Geral
         $queryFG = Questao::query()->where('categoria', 'Formação Geral');
-        if ($this->ano) {
-            $queryFG->where('ano', $this->ano);
+        if ($ano) {
+            $queryFG->where('ano', $ano);
         }
-        $allQuestoesFG = $queryFG->pluck('id')->toArray();
-        
-        // Seleciona questões de forma determinística
-        $selectedFG = $this->selecionarAleatororiamente($allQuestoesFG, $this->limite_fg);
+        $allQuestoesFG = $queryFG->get();
+        $questoesFG = self::selecionarAleatororiamenteEstatico($allQuestoesFG, $limite_fg);
 
         // Query para Componente Específico
         $queryCE = Questao::query()->where('categoria', $cursoTitulo);
-        if ($this->ano) {
-            $queryCE->where('ano', $this->ano);
+        if ($ano) {
+            $queryCE->where('ano', $ano);
         }
-        $allQuestoesCE = $queryCE->pluck('id')->toArray();
-        $selectedCE = $this->selecionarAleatororiamente($allQuestoesCE, $this->limite_ce);
+        $allQuestoesCE = $queryCE->get();
+        $questoesCE = self::selecionarAleatororiamenteEstatico($allQuestoesCE, $limite_ce);
 
-        // Combina e embaralha com seed
-        $allSelected = array_merge($selectedFG, $selectedCE);
-        $this->embaralharComSeed($allSelected);
-
-        // Salva no banco
-        $questoesData = [];
-        foreach ($allSelected as $index => $questaoId) {
-            $questoesData[$questaoId] = ['ordem' => $index + 1];
-        }
-
-        $this->questoes()->sync($questoesData);
+        return [
+            'questoesFG' => $questoesFG,
+            'questoesCE' => $questoesCE,
+        ];
     }
 
     /**
      * Seleciona questões aleatoriamente de forma determinística
      */
-    private function selecionarAleatororiamente(array $ids, int $quantidade): array
+    private function selecionarAleatororiamente($questoes, int $quantidade)
     {
-        if (empty($ids)) {
-            return [];
+        if ($questoes->isEmpty()) {
+            return collect([]);
         }
 
-        $quantidade = min($quantidade, count($ids));
-        $selected = [];
-        $available = $ids;
+        $quantidade = min($quantidade, $questoes->count());
+        $ids = $questoes->pluck('id')->toArray();
+        $selectedIds = [];
 
         for ($i = 0; $i < $quantidade; $i++) {
-            $randomIndex = mt_rand(0, count($available) - 1);
-            $selected[] = $available[$randomIndex];
-            unset($available[$randomIndex]);
-            $available = array_values($available);
+            $randomIndex = mt_rand(0, count($ids) - 1);
+            $selectedIds[] = $ids[$randomIndex];
+            unset($ids[$randomIndex]);
+            $ids = array_values($ids);
         }
 
-        return $selected;
+        // Retornar objetos Questao na ordem selecionada
+        return collect($selectedIds)->map(fn($id) => Questao::find($id));
     }
 
     /**
-     * Embaralha array usando seed
+     * Seleciona questões aleatoriamente de forma determinística (versão estática)
      */
-    private function embaralharComSeed(array &$array): void
+    private static function selecionarAleatororiamenteEstatico($questoes, int $quantidade)
     {
-        $n = count($array);
-        for ($i = $n - 1; $i > 0; $i--) {
-            $j = mt_rand(0, $i);
-            [$array[$i], $array[$j]] = [$array[$j], $array[$i]];
+        if ($questoes->isEmpty()) {
+            return collect([]);
         }
+
+        $quantidade = min($quantidade, $questoes->count());
+        $ids = $questoes->pluck('id')->toArray();
+        $selectedIds = [];
+
+        for ($i = 0; $i < $quantidade; $i++) {
+            $randomIndex = mt_rand(0, count($ids) - 1);
+            $selectedIds[] = $ids[$randomIndex];
+            unset($ids[$randomIndex]);
+            $ids = array_values($ids);
+        }
+
+        // Retornar objetos Questao na ordem selecionada
+        return collect($selectedIds)->map(fn($id) => Questao::find($id));
     }
 
     /**
      * Converte slug do curso para título
      */
     private function obterCursoTitulo(string $slug): string
+    {
+        return self::obterCursoTituloEstatico($slug);
+    }
+
+    /**
+     * Converte slug do curso para título (versão estática)
+     */
+    private static function obterCursoTituloEstatico(string $slug): string
     {
         $cursos = [
             'administracao' => 'Administração',
@@ -140,3 +200,4 @@ class Simulado extends Model
         return $cursos[$slug] ?? $slug;
     }
 }
+
