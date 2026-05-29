@@ -1,7 +1,7 @@
 <x-layout :title="'Simulado - ' . ($cursoTitulo ?? 'Curso')">
     @vite(['resources/css/simulado.css', 'resources/js/simulado.js'])
     <x-tela-informativa :curso-titulo="$cursoTitulo ?? 'Curso'" :numeroQuestoesFG="$questoesFG->count()"
-        :numeroQuestoesCE="$questoesCE->count()" :ano-simulado="$ano" />
+        :numeroQuestoesCE="$questoesCE->count()" :ano-simulado="$ano ?? null" />
     <div>
         <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <form id="simulado-form">

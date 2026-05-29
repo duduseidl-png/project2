@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Questao;
+use App\Models\Simulado;
 use App\Http\Controllers\SimPas_Controller;
 
 Route::get('/', function () {
@@ -32,10 +33,6 @@ Route::post('/simulados/gerar_simulado', function () {
     $limitece = intval(request('limitece', 38));
     $tempoInput = request('tempo', null);
     $tempo = is_numeric($tempoInput) ? intval($tempoInput) : null;
-/*
-    if (! $curso) {
-        return redirect('/simulados/gerar_simulado');
-    }*/
 
     if ($limitefg < 0 || $limitefg > 100) {
         $limitefg = 38;
@@ -47,16 +44,25 @@ Route::post('/simulados/gerar_simulado', function () {
         $tempo = null;
     }
 
-    session([
-        'simulado_limite_fg' => $limitefg,
-        'simulado_limite_ce' => $limitece,
-        'simulado_tempo' => $tempo,
+    // Criar novo simulado com seed
+    $seed = Simulado::gerarSeed();
+    $simulado = Simulado::create([
+        'seed' => $seed,
+        'curso' => $curso,
+        'ano' => null,
+        'limite_fg' => $limitefg,
+        'limite_ce' => $limitece,
+        'tempo_limite' => $tempo,
     ]);
 
-    return redirect('/simulado/' . $curso);
+    // Gerar questões usando seed determinístico
+    $simulado->gerarQuestoes();
+
+    return redirect('/simulado/' . $simulado->id);
 });
 
-Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso, $ano = null, $limitefg = 38, $limitece = 38) {
+// Rota antiga para simulados passados (com ano)
+Route::get('/simulado/{curso}/{ano}/{limitefg?}/{limitece?}', function ($curso, $ano, $limitefg = 38, $limitece = 38) {
     $cursos = [
         'administracao' => 'Administração',
         'engenharia-civil' => 'Engenharia Civil',
@@ -72,25 +78,48 @@ Route::get('/simulado/{curso}/{ano?}/{limitefg?}/{limitece?}', function ($curso,
         abort(404);
     }
     
-    $limitefg = session('simulado_limite_fg', $limitefg);
-    $limitece = session('simulado_limite_ce', $limitece);
-    $timeLimit = session('simulado_tempo', null);
-    
     $cursoTitulo = $cursos[$curso];
     
     $queryFG = Questao::query()->where('categoria', 'Formação Geral');
     $queryCE = Questao::query()->where('categoria', $cursoTitulo);
     
-    // Se ano foi fornecido, filtrar por ano
-    if ($ano) {
-        $queryFG->where('ano', $ano);
-        $queryCE->where('ano', $ano);
-    }
+    // Filtrar por ano
+    $queryFG->where('ano', $ano);
+    $queryCE->where('ano', $ano);
     
     $questoesFG = $queryFG->limit($limitefg)->get();
     $questoesCE = $queryCE->limit($limitece)->get();
 
     $totalQuestions = $questoesFG->count() + $questoesCE->count();
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions', 'timeLimit', 'ano'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'limitefg', 'totalQuestions', 'ano'));
 
-})->name('simulado_curso');
+})->name('simulado_curso_ano');
+
+// Rota nova para simulados gerados (com seed)
+Route::get('/simulado/{id}', function ($id) {
+    $simulado = Simulado::findOrFail($id);
+    
+    $cursos = [
+        'administracao' => 'Administração',
+        'engenharia-civil' => 'Engenharia Civil',
+        'engenharia-de-computacao' => 'Engenharia de Computação',
+        'engenharia-de-controle-e-automacao' => 'Engenharia de Controle e Automação',
+        'engenharia-de-producao' => 'Engenharia de Produção',
+        'engenharia-eletrica' => 'Engenharia Elétrica',
+        'engenharia-mecanica' => 'Engenharia Mecânica',
+        'engenharia-quimica' => 'Engenharia Química',
+    ];
+    
+    $cursoTitulo = $cursos[$simulado->curso] ?? $simulado->curso;
+    $questoes = $simulado->questoes()->get();
+    
+    // Separar questões por categoria
+    $questoesFG = $questoes->filter(fn($q) => $q->categoria === 'Formação Geral');
+    $questoesCE = $questoes->filter(fn($q) => $q->categoria !== 'Formação Geral');
+    
+    $totalQuestions = $questoes->count();
+    $timeLimit = $simulado->tempo_limite;
+    
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'totalQuestions', 'timeLimit', 'simulado'));
+
+})->name('simulado_gerado');
