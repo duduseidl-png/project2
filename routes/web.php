@@ -123,3 +123,27 @@ Route::get('/simulado/{id}', function ($id) {
     return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'totalQuestions', 'timeLimit', 'simulado'));
 
 })->name('simulado_gerado');
+
+// Buscar simulado pela seed
+Route::get('/simulado/seed/{seed}', function ($seed) {
+    $simulado = Simulado::where('seed', $seed)->firstOrFail();
+    
+    return redirect('/simulado/' . $simulado->id);
+})->name('simulado_por_seed');
+
+// Recuperar simulado usando seed (POST)
+Route::post('/simulados/recuperar_seed', function () {
+    $seed = request('seed');
+    
+    if (!$seed) {
+        return redirect('/simulados/gerar_simulado')->with('error', 'Seed não fornecida');
+    }
+    
+    $simulado = Simulado::where('seed', $seed)->first();
+    
+    if (!$simulado) {
+        return redirect('/simulados/gerar_simulado')->with('error', 'Simulado não encontrado');
+    }
+    
+    return redirect('/simulado/' . $simulado->id);
+})->name('recuperar_seed');
