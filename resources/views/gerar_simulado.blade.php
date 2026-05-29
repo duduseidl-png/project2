@@ -92,11 +92,11 @@
 
         <div class="flex flex-col items-center justify-center gap-6">
             <div class="w-80">
-                <h3 class="text-left mb-4 font-semibold text-lg">Recuperar simulado por código</h3>
-                <p class="text-left text-sm text-gray-600 mb-4">Insira um código para recuperar um simulado que foi gerado anteriormente</p>
+                <h3 class="text-left mb-4 font-semibold text-lg">Recuperar simulado por seed</h3>
+                <p class="text-left text-sm text-gray-600 mb-4">Insira uma seed para recuperar um simulado que foi gerado anteriormente</p>
                 <form method="POST" action="/simulados/recuperar_seed" class="flex gap-2">
                     @csrf
-                    <input type="text" placeholder="Cole o código aqui" name="seed" class="input input-bordered flex-1" required />
+                    <input type="text" placeholder="Insira a seed" name="seed" class="input input-bordered flex-1" required />
                     <button type="submit" class="btn btn-outline">Recuperar</button>
                 </form>
             </div>

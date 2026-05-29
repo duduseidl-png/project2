@@ -44,17 +44,18 @@ Route::post('/simulados/gerar_simulado', function () {
         $tempo = null;
     }
 
-    // Gerar seed e codificar parâmetros
+    // Criar novo simulado apenas com metadados (SEM salvar questões)
     $seed = Simulado::gerarSeed();
-    $codigo = Simulado::codificarParametros([
+    $simulado = Simulado::create([
         'seed' => $seed,
         'curso' => $curso,
+        'ano' => null,
         'limite_fg' => $limitefg,
         'limite_ce' => $limitece,
         'tempo_limite' => $tempo,
     ]);
 
-    return redirect('/simulado/codigo/' . $codigo);
+    return redirect('/simulado/' . $simulado->id);
 });
 
 // Rota antiga para simulados passados (com ano)
@@ -91,13 +92,9 @@ Route::get('/simulado/{curso}/{ano}/{limitefg?}/{limitece?}', function ($curso, 
 
 })->name('simulado_curso_ano');
 
-// Rota para simulados gerados por código (sem dependência do banco)
-Route::get('/simulado/codigo/{codigo}', function ($codigo) {
-    $parametros = Simulado::decodificarParametros($codigo);
-    
-    if (!$parametros) {
-        abort(404);
-    }
+// Rota nova para simulados gerados (com seed) - regenera questões
+Route::get('/simulado/{id}', function ($id) {
+    $simulado = Simulado::findOrFail($id);
     
     $cursos = [
         'administracao' => 'Administração',
@@ -110,34 +107,40 @@ Route::get('/simulado/codigo/{codigo}', function ($codigo) {
         'engenharia-quimica' => 'Engenharia Química',
     ];
     
-    $cursoTitulo = $cursos[$parametros['curso']] ?? $parametros['curso'];
+    $cursoTitulo = $cursos[$simulado->curso] ?? $simulado->curso;
     
-    // Regenera questões on-the-fly usando parâmetros codificados
-    $resultado = Simulado::regenerarQuestoesPorParametros($parametros);
+    // Regenera questões on-the-fly usando seed (não salva no banco)
+    $resultado = $simulado->regenerarQuestoes();
     $questoesFG = $resultado['questoesFG'];
     $questoesCE = $resultado['questoesCE'];
     
     $totalQuestions = $questoesFG->count() + $questoesCE->count();
-    $timeLimit = $parametros['tempo_limite'] ?? null;
-    $codigo_para_view = $codigo;
+    $timeLimit = $simulado->tempo_limite;
     
-    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'totalQuestions', 'timeLimit', 'codigo_para_view'));
+    return view('simulado_em_andamento', compact('questoesFG', 'questoesCE', 'cursoTitulo', 'totalQuestions', 'timeLimit', 'simulado'));
 
-})->name('simulado_codigo');
+})->name('simulado_gerado');
 
-// Recuperar simulado usando código
+// Buscar simulado pela seed
+Route::get('/simulado/seed/{seed}', function ($seed) {
+    $simulado = Simulado::where('seed', $seed)->firstOrFail();
+    
+    return redirect('/simulado/' . $simulado->id);
+})->name('simulado_por_seed');
+
+// Recuperar simulado usando seed (POST)
 Route::post('/simulados/recuperar_seed', function () {
-    $codigo = request('seed'); // ainda chamamos de 'seed' no form para compatibilidade
-
-    if (!$codigo) {
-        return redirect('/simulados/gerar_simulado')->with('error', 'Código não fornecido');
+    $seed = request('seed');
+    
+    if (!$seed) {
+        return redirect('/simulados/gerar_simulado')->with('error', 'Seed não fornecida');
     }
-
-    $parametros = Simulado::decodificarParametros($codigo);
-
-    if (!$parametros) {
-        return redirect('/simulados/gerar_simulado')->with('error', 'Código inválido');
+    
+    $simulado = Simulado::where('seed', $seed)->first();
+    
+    if (!$simulado) {
+        return redirect('/simulados/gerar_simulado')->with('error', 'Simulado não encontrado');
     }
-
-    return redirect('/simulado/codigo/' . $codigo);
-})->name('recuperar_codigo');
+    
+    return redirect('/simulado/' . $simulado->id);
+})->name('recuperar_seed');
