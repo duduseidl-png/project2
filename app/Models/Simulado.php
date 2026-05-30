@@ -26,12 +26,28 @@ class Simulado extends Model
         'updated_at' => 'datetime',
     ];
 
-    /**
+    /*
      * Gera um seed único
-     */
     public static function gerarSeed(): string
     {
         return uniqid('sim_', true);
+    }
+        */
+
+    /**
+     * Gera um seed de 6 caracteres alfanuméricos
+     */
+    public static function gerarSeed(): string
+    {
+        $caracteres = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $seed = '';
+
+        for ($i = 0; $i < 6; $i++) {
+            // Sorteia um índice aleatório de 0 a 35 e concatena
+            $seed .= $caracteres[random_int(0, 35)];
+        }
+
+        return $seed;
     }
 
     /**

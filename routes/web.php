@@ -84,6 +84,8 @@ Route::get('/simulado/{curso}/{ano}/{limitefg?}/{limitece?}', function ($curso, 
     $queryFG->where('ano', $ano);
     $queryCE->where('ano', $ano);
     
+    $ano = (string) " (".$ano.")";
+
     $questoesFG = $queryFG->limit($limitefg)->get();
     $questoesCE = $queryCE->limit($limitece)->get();
 
