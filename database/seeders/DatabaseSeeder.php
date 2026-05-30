@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             Questoes_Engenharia_de_Computacao_2023::class,
             Questoes_Engenharia_de_Computacao_2019::class,
+            Questoes_Engenharia_de_Computacao_2017::class,
+            Questoes_Engenharia_de_Computacao_2014::class,
             Questoes_Engenharia_Civil_2023::class,
             Questoes_Engenharia_de_Producao_2023::class,
             Questoes_Engenharia_Eletrica_2023::class,

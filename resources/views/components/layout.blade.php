@@ -7,14 +7,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('Laravel.svg.ico') }}?v=2" type="image/x-icon">
 
   <title>{{ $title }}</title>
 
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -57,6 +57,8 @@
     })();
   </script>
 </head>
+
+<body>
 
 <div class="navbar bg-base-100 shadow-sm py-2 px-4" style="z-index: 1000;">
   <div class="navbar-start">
@@ -152,8 +154,6 @@
     </div>-->
   </div>
 </div>
-
-<body>
 
   <main>
     {{ $slot }}
