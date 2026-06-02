@@ -5,7 +5,7 @@
     <div>
         <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
         <form id="simulado-form">
-            <div class="ml-16 mr-76">
+            <div class="ml-16 mr-96 pr-20">
                 @if (!$questoesFG->isEmpty())
                     <h2 class="text-center mb-3 text-2xl">Formação Geral</h2>
                 @endif

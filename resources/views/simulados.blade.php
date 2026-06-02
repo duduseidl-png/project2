@@ -31,7 +31,6 @@
                     <h2 class="card-title">Revisitar provas passadas</h2>
                     <p>Acesse as provas do ENADE de anos anteriores e pratique as questões objetivas.</p>
                     <div class="card-actions">
-
                     </div>
                 </div>
             </div>
