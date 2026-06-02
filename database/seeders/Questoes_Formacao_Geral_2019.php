@@ -13,24 +13,6 @@ class Questoes_Formacao_Geral_2019 extends Seeder
             'categoria' => 'Formação Geral',
             'ano' => 2019,
             'contextualizacao' => '
-                <p class="mb-2 text-justify">O regime internacional de mudanças climáticas, organizado no âmbito do Sistema das Nações Unidas há 24 anos, constitui, em essência, um arranjo institucional dinâmico e de construção permanente. Criado para facilitar o entendimento e promover a cooperação entre as 195 partes signatárias, é dotado de estrutura jurídica e organizacional próprias. A Convenção Quadro das Nações Unidas sobre mudanças climáticas prevê mecanismos para a solução dos conflitos e para promoção da cooperação entre os Estados nacionais.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">A partir do contexto apresentado, é correto afirmar que a Convenção Quadro das Nações Unidas sobre mudanças climáticas objetiva</p>
-            ',
-            'referencia' => 'Disponível em: &lt;http://dx.doi.org/10.18623/rvd.v14i29.996&gt;. Acesso em: 22 jul. 2019 (adaptado).',
-            'opcao_a' => 'estimular atores estatais e não estatais a planejar e a executar conjuntamente programas dedicados a garantir a redução da interferência humana no meio ambiente.',
-            'opcao_b' => 'evitar a propagação do efeito estufa por meio da criação de projetos que visem à redução das emissões a partir de medidas compensatórias, como plantação de árvores e melhor utilização de recursos naturais.',
-            'opcao_c' => 'estabelecer mecanismos flexíveis destinados a permitir que países que não utilizam toda a sua quota prevista de emissões vendam o seu excedente a outros que necessitam de limites maiores.',
-            'opcao_d' => 'promover o princípio da responsabilidade comum e demandas diferenciadas para permitir que os países desenvolvidos alterem a média global de aumento da temperatura acordada.',
-            'opcao_e' => 'assegurar a continuidade dos compromissos para que as metas de redução de emissão mantenham-se regulares e estáveis ao longo dos próximos vinte anos.',
-            'alternativa_correta' => 'ANULADA',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Formação Geral',
-            'ano' => 2019,
-            'contextualizacao' => '
                 <p class="mb-2 text-justify">Augusto de Campos é um artista concretista brasileiro cuja poética estabelece a relação de diálogo entre o aspecto visual, sonoro e tátil do texto verbal.</p>
             ',
             'enunciado' => '
