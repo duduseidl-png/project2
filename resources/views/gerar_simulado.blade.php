@@ -1,9 +1,11 @@
 <x-layout title="Simulados">
-    <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
-        Gerador de Simulados</h1>
+    <div class="shadow-md bg-yellow-500 py-5">
+        <h1 class="text-center text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            Gerador de Simulados</h1>
+    </div>
     <h6 class="text-center text-lg mt-8">Pratique em um simulado personalizado do seu curso
         com o número de questões que preferir.</h6>
-    <p class="text-center text-gray-600 mb-8">As questões de componente específico são
+    <p class="text-center text-gray-500 mb-8">As questões de componente específico são
         selecionadas aleatoriamente com
         base no conteúdo do seu curso.</p>
     
@@ -92,7 +94,7 @@
 
         <div class="flex flex-col items-center justify-center gap-6">
             <div class="w-80">
-                <h3 class="text-left mb-4 font-semibold text-lg">Recuperar simulado por seed</h3>
+                <h3 class="text-left mb-4 font-semibold text-lg">Recuperar simulado por seed ↓</h3>
                 <p class="text-left text-sm text-gray-600 mb-4">Insira uma seed para recuperar um simulado que foi gerado anteriormente</p>
                 <form method="POST" action="/simulados/recuperar_seed" class="flex gap-2">
                     @csrf

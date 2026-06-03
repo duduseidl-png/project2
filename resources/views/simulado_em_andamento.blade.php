@@ -4,6 +4,7 @@
         :numeroQuestoesCE="$questoesCE->count()" :ano-simulado="$ano ?? null" />
     <div>
         <h1 class="text-3xl font-bold text-left mt-7 mb-5" style="margin-left: 5%">{{ $cursoTitulo ?? 'Simulado' }}</h1>
+        <h2 class="text-xl text-left tracking-wider -mt-4" style="margin-left: 5%">{{ $ano ?? null }}</h2>
         @if (isset($simulado))
             <div class="flex items-center gap-3 mb-5" style="margin-left: 5%">
                 <div class="tooltip tooltip-right tooltip-info -mr-2">
