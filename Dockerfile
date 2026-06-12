@@ -27,13 +27,15 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --optimize-autoloader --no-scrip
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Disable conflicting MPM modules and enable prefork
-RUN a2dismod mpm_event || true && \
-    a2enmod mpm_prefork
+# Set document root and configure Virtual Host
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|' /etc/apache2/sites-available/000-default.conf
 
-# Configure Apache document root
-RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|' /etc/apache2/sites-available/000-default.conf && \
-    sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/c\<Directory /var/www/html/public>\n    Options Indexes FollowSymLinks\n    AllowOverride All\n    Require all granted\n</Directory>' /etc/apache2/apache2.conf
+# Configure public directory permissions
+RUN echo '<Directory /var/www/html/public>' >> /etc/apache2/conf-available/default-ssl.conf && \
+    echo '    Options Indexes FollowSymLinks' >> /etc/apache2/conf-available/default-ssl.conf && \
+    echo '    AllowOverride All' >> /etc/apache2/conf-available/default-ssl.conf && \
+    echo '    Require all granted' >> /etc/apache2/conf-available/default-ssl.conf && \
+    echo '</Directory>' >> /etc/apache2/conf-available/default-ssl.conf
 
 EXPOSE 80
 
