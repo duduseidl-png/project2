@@ -22,7 +22,7 @@
             </div>
         @endif
         <form id="simulado-form">
-            <div class="ml-16 mr-76">
+            <div class="ml-16 mr-96 pr-20">
                 <div class="divider"></div>
                 @if (!$questoesFG->isEmpty())
                     <h2 class="text-center mb-3 text-2xl">Formação Geral</h2>
