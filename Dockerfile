@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     curl zip unzip git \
-    libsqlite3-dev \
+    libsqlite3-dev nodejs npm \
     && docker-php-ext-install pdo pdo_sqlite
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -14,6 +14,8 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 RUN cp .env.example .env
+
+RUN npm install && npm run build
 
 RUN touch database/database.sqlite
 
