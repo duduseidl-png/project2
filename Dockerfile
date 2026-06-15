@@ -15,6 +15,8 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN cp .env.example .env
 
+RUN echo "\nAPP_URL=https://simuladoenade.onrender.com\nASSET_URL=https://simuladoenade.onrender.com" >> .env
+
 RUN npm install && npm run build
 
 RUN touch database/database.sqlite
