@@ -1,6 +1,6 @@
 <x-layout title="Simulados">
     <div class="shadow-md bg-yellow-500 py-5">
-        <h1 class="text-center text-4xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+        <h1 class="text-center text-4xl text-black">
             Gerador de Simulados</h1>
     </div>
     <h6 class="text-center text-lg mt-8">Pratique em um simulado personalizado do seu curso
@@ -92,14 +92,14 @@
 
         <div class="divider my-8">OU</div>
 
-        <div class="flex flex-col items-center justify-center gap-6">
+        <div class="flex flex-col items-center justify-center gap-6 mb-10">
             <div class="w-80">
-                <h3 class="text-left mb-4 font-semibold text-lg">Recuperar simulado por seed ↓</h3>
-                <p class="text-left text-sm text-gray-600 mb-4">Insira uma seed para recuperar um simulado que foi gerado anteriormente</p>
+                <h3 class="text-left mb-4 font-semibold text-lg">Acessar simulado por seed ↓</h3>
+                <p class="text-left text-sm text-gray-600 mb-4">Insira o código de 6 caracteres para recuperar um simulado que foi gerado anteriormente.</p>
                 <form method="POST" action="/simulados/recuperar_seed" class="flex gap-2">
                     @csrf
                     <input type="text" placeholder="Insira a seed" name="seed" class="input input-bordered flex-1" required />
-                    <button type="submit" class="btn btn-outline">Recuperar</button>
+                    <button type="submit" class="btn btn-outline">Acessar</button>
                 </form>
             </div>
         </div>

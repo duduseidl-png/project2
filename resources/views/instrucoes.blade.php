@@ -1,9 +1,8 @@
 <x-layout title="Instruções">
   <div class="max-w-3xl mx-auto px-4 py-6 space-y-10">
-    <h1 class="text-center text-4xl font-bold py-4">TUTORIAL</h1>
 
     <section class="space-y-4">
-      <h2 class="text-2xl font-semibold">Bem-vindo ao Guia de Uso do Simulador ENADE</h2>
+      <h2 class="text-3xl font-semibold py-4">Bem-vindo ao Guia de Uso do Simulador ENADE</h2>
       <p class="text-base leading-relaxed">
         Este simulador foi desenvolvido para auxiliar os estudantes da Feevale na preparação para o ENADE. Abaixo, apresentamos as instruções detalhadas para utilizar nossas duas principais ferramentas de estudo: o <strong>Gerador de Simulados</strong> e o acesso a <strong>Provas Passadas</strong>. Siga o passo a passo para familiarizar-se com o simulador.
       </p>
