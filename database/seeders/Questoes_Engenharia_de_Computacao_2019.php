@@ -16,9 +16,9 @@ class Questoes_Engenharia_de_Computacao_2019 extends Seeder
             'categoria' => 'Engenharia de Computação',
             'ano' => 2019,
             'contextualizacao' => '
-                <p class="mb-2 text-justify">O MergeSort é um método de ordenação que combina dois vetores ordenados e cria um terceiro vetor maior também ordenado. O algoritmo abaixo apresenta essa ideia e combina os vetores <code>a[lo..mid]</code> e <code>a[mid+1..hi]</code> no vetor <code>a[lo..hi]</code>.</p>
+                <p class="mb-2 text-justify">O MergeSort é um método de ordenação que combina dois vetores ordenados e cria um terceiro vetor maior também ordenado. O algoritmo abaixo apresenta essa ideia e combina os vetores <code style="color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">a[lo..mid]</code> e <code style="color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">a[mid+1..hi]</code> no vetor <code style="color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">a[lo..hi]</code>.</p>
 
-                <div class="bg-gray-100 rounded p-3 mb-2 text-sm font-mono whitespace-pre-wrap">
+                <div class="bg-gray-100 rounded p-3 mb-2 text-sm font-mono whitespace-pre-wrap" style="color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">
 public class MergeSort {
     private static Comparable[] aux;
     public static void merge(Comparable[] a, int lo, int mid, int hi) {
@@ -50,11 +50,11 @@ public class MergeSort {
                 <p class="mb-2 text-justify">Considerando o código apresentado, a implementação do protótipo do método <code>sort</code> da classe <code>MergeSort</code> é</p>
             ',
             'referencia' => 'SEDGEWICK, R.; WAYNE, K. <b>Algorithms.</b> 4. ed. Boston: Addison-Wesley, 2011 (adaptado).',
-            'opcao_a' => '<code>if (hi == lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
-            'opcao_b' => '<code>if (hi > lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
-            'opcao_c' => '<code>if (hi &lt;= lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
-            'opcao_d' => '<code>if (hi > lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid+1, hi);<br>merge(a, lo, mid, hi);</code>',
-            'opcao_e' => '<code>if (hi &lt;= lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid+1, hi);<br>merge(a, lo, mid, hi);</code>',
+            'opcao_a' => '<code style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">if (hi == lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
+            'opcao_b' => '<code style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">if (hi > lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
+            'opcao_c' => '<code style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">if (hi &lt;= lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid, hi);<br>merge(a, lo, mid, hi);</code>',
+            'opcao_d' => '<code style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">if (hi > lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid+1, hi);<br>merge(a, lo, mid, hi);</code>',
+            'opcao_e' => '<code style="display: inline-block; vertical-align: top; color: var(--text-color); font-family: Courier New, monospace; font-size: inherit; background-color: transparent;">if (hi &lt;= lo) return;<br>int mid = lo + (hi - lo)/2;<br>sort(a, lo, mid);<br>sort(a, mid+1, hi);<br>merge(a, lo, mid, hi);</code>',
             'alternativa_correta' => 'E',
         ]);
 
@@ -139,13 +139,14 @@ public class MergeSort {
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Em um sistema computacional avalia-se o desempenho no uso de dois tipos de memória secundária por meio de programação linear. No gráfico apresentado cada eixo representa a quantidade de posições de memória de cada tipo e a região colorida representa, de forma contínua, o conjunto de soluções viáveis (região viável).</p>
 
-                <div class="mb-3">
-                    <p class="text-sm text-center text-gray-600 italic">Região viável com vértices aproximados: A(0,4), B(2,7), C(5,6), D(8,4), E(9,0), F(0,0).</p>
-                    <p class="text-sm text-center text-gray-600 mt-1">Os vértices relevantes para a função objetivo Z = 30x + 10y são avaliados em cada ponto extremo da região viável.</p>
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-1/2 md:w-1/2">
+                        <img src="/img/questoes/formacao_geral_2019/img6.jpg" class="w-full h-auto mb-2 rounded">
+                    </div>
                 </div>
             ',
             'enunciado' => '
-                <p class="mb-2 text-justify">As arestas da região viável foram definidas pelas diversas restrições observadas para os dois tipos de memória. Com base no gráfico, o máximo desempenho do sistema, representado pela variável <strong>Z = 30x + 10y</strong>, é de</p>
+                <p class="mb-2 text-justify">As arestas da região viável foram definidas pelas diversas restrições observadas para os dois tipos de memória. Com base no gráfico, o máximo desempenho do sistema, representado pela variável <span>\(\text{Z} = 30x + 10y\)</span>, é de</p>
             ',
             'referencia' => '',
             'opcao_a' => '350.',
