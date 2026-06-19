@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
     startButton.addEventListener('click', function () {
         telaInformativa.classList.add('hidden');
         sidecard.classList.remove('modal-active');
+        if (window.innerWidth <= 1024) {
+            sidecard.classList.add('hidden');
+        }
 
         // Inicia o countdown se a função estiver disponível
         if (typeof window.startCountdown === 'function') {
@@ -50,6 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sidecardToggle.addEventListener('click', function () {
         sidecard.classList.toggle('hidden');
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) {
+            sidecard.classList.remove('hidden');
+        }
     });
 
     // Event listener para detectar quando uma alternativa é selecionada

@@ -4,7 +4,6 @@
             .card {
                 position: fixed;
                 top: 12.5%;
-                bottom: 4%;
                 left: 10%;
                 right: 10%;
                 z-index: 900;
@@ -12,6 +11,8 @@
                 border-style: solid;
                 border-color: var(--bg-bluer);
                 border-width: 2px;
+                transition: opacity 0.3s ease;
+                animation: slideIn 0.1s ease-out;
             }
         }
 
@@ -19,7 +20,7 @@
             .card {
                 position: fixed;
                 top: 12.5%;
-                right: 1px;
+                align-self: flex-end;
                 width: 18rem;
                 height: 70%;
                 z-index: 900;
@@ -63,12 +64,12 @@
             <h2 class="card-title flex-1 text-xl md:text-3xl lg:text-xl">Controle do Simulado</h2>
             <div class="">
                 <h5>Tempo restante:</h5>
-                <x-countdown :timePerQuestion="$timeLimit" class=""/>
+                <x-countdown :timePerQuestion="$timeLimit" class="" />
             </div>
             <div class="join-horizontal w-auto lg:w-60">
-                @for ($i = 1; $i <= $limite; $i++)
-                    <button id="btn-questao-{{ $i }}" class="btn-questao join-item btn mb-1 h-10 w-10 md:h-12 md:w-15 lg:h-7 lg:w-3"
-                        data-questao="{{ $i }}" type="button">{{ $i }}</button>
+                @for ($i = 1; $i <= $limite; $i++) <button id="btn-questao-{{ $i }}"
+                    class="btn-questao join-item btn mb-1 h-10 w-10 md:h-12 md:w-14 lg:h-7 lg:w-3"
+                    data-questao="{{ $i }}" type="button">{{ $i }}</button>
                 @endfor
             </div>
             <button type="submit" form="simulado-form" class="btn confirm-btn text-white">Enviar Respostas</button>

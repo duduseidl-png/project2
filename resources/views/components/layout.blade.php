@@ -70,11 +70,13 @@
       </div>
       <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
-          <a>Simulados</a>
+          <a href="/instrucoes">Instruções</a>
+          <a href="/simulados">Simulados</a>
           <ul class="p-2">
-            <li><a>Gerador de Simulados</a></li>
-            <li><a>Revisitar Provas Passadas</a></li>
+            <li><a href="/simulados/gerar_simulado">Gerador de Simulados</a></li>
+            <li><a href="/simulados/simulados_passados">Revisitar Provas Passadas</a></li>
           </ul>
+          <a href="/sobre">Sobre</a>
         </li>
       </ul>
     </div>
