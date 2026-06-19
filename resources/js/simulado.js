@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var confirmBtn = document.getElementById('confirm-btn');
     var submitButton = document.querySelector('button[form="simulado-form"]');
     var sidecard = document.querySelector('.card');
+    var sidecardToggle = document.getElementById('sidecard-toggle');
     var resultPanel = document.getElementById('resultado-panel');
     var resultadoAcertos = document.getElementById('resultado-acertos');
     var resultadoErradas = document.getElementById('resultado-erradas');
@@ -46,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var seconds = totalSeconds % 60;
         return String(hours).padStart(2, '0') + 'h ' + String(minutes).padStart(2, '0') + 'm ' + String(seconds).padStart(2, '0') + 's';
     }
+
+    sidecardToggle.addEventListener('click', function () {
+        sidecard.classList.toggle('hidden');
+    });
 
     // Event listener para detectar quando uma alternativa é selecionada
     questoes.forEach(function (questao, index) {

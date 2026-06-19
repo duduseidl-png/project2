@@ -58,7 +58,7 @@
   </script>
 </head>
 
-<body>
+<body class="mx-auto max-w-[100rem]">
 
 <div class="navbar bg-base-100 shadow-sm py-2 px-4" style="z-index: 1000;">
   <div class="navbar-start">

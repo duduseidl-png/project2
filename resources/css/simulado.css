@@ -1,15 +1,3 @@
-/* Ajuste do layout do simulado para não sobrepor o sidecard */
-#simulado-form > div {
-    margin-right: 25% !important;
-    padding-right: 20px !important;
-}
-
-@media (max-width: 1280px) {
-    #simulado-form > div {
-        margin-right: 30% !important;
-    }
-}
-
 .option-label {
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
