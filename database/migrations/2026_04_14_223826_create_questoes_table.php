@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('questoes', function (Blueprint $table) {
             $table->id();
             $table->string('categoria', 100);
+            $table->integer('ano')->nullable();
             $table->text('contextualizacao');
             $table->text('enunciado');
             $table->string('referencia');

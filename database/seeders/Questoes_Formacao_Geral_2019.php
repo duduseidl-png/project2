@@ -13,25 +13,13 @@ class Questoes_Formacao_Geral_2019 extends Seeder
             'categoria' => 'Formação Geral',
             'ano' => 2019,
             'contextualizacao' => '
-                <p class="mb-2 text-justify">O regime internacional de mudanças climáticas, organizado no âmbito do Sistema das Nações Unidas há 24 anos, constitui, em essência, um arranjo institucional dinâmico e de construção permanente. Criado para facilitar o entendimento e promover a cooperação entre as 195 partes signatárias, é dotado de estrutura jurídica e organizacional próprias. A Convenção Quadro das Nações Unidas sobre mudanças climáticas prevê mecanismos para a solução dos conflitos e para promoção da cooperação entre os Estados nacionais.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">A partir do contexto apresentado, é correto afirmar que a Convenção Quadro das Nações Unidas sobre mudanças climáticas objetiva</p>
-            ',
-            'referencia' => 'Disponível em: &lt;http://dx.doi.org/10.18623/rvd.v14i29.996&gt;. Acesso em: 22 jul. 2019 (adaptado).',
-            'opcao_a' => 'estimular atores estatais e não estatais a planejar e a executar conjuntamente programas dedicados a garantir a redução da interferência humana no meio ambiente.',
-            'opcao_b' => 'evitar a propagação do efeito estufa por meio da criação de projetos que visem à redução das emissões a partir de medidas compensatórias, como plantação de árvores e melhor utilização de recursos naturais.',
-            'opcao_c' => 'estabelecer mecanismos flexíveis destinados a permitir que países que não utilizam toda a sua quota prevista de emissões vendam o seu excedente a outros que necessitam de limites maiores.',
-            'opcao_d' => 'promover o princípio da responsabilidade comum e demandas diferenciadas para permitir que os países desenvolvidos alterem a média global de aumento da temperatura acordada.',
-            'opcao_e' => 'assegurar a continuidade dos compromissos para que as metas de redução de emissão mantenham-se regulares e estáveis ao longo dos próximos vinte anos.',
-            'alternativa_correta' => 'ANULADA',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Formação Geral',
-            'ano' => 2019,
-            'contextualizacao' => '
                 <p class="mb-2 text-justify">Augusto de Campos é um artista concretista brasileiro cuja poética estabelece a relação de diálogo entre o aspecto visual, sonoro e tátil do texto verbal.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-1/2 md:w-1/2">
+                        <img src="/img/questoes/formacao_geral_2019/img1.jpg" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Com base no poema apresentado (Despoesia, Augusto de Campos), avalie as afirmações a seguir.</p>
@@ -89,13 +77,13 @@ class Questoes_Formacao_Geral_2019 extends Seeder
 
                 <p class="mb-2 pl-6 text-justify">I. Em algumas regiões do Brasil, os índices referidos estão abaixo da média nacional, indicando diferenças de acesso de qualidade a abastecimento de água que podem impactar a saúde pública.</p>
 
-                <p class="mb-2 text-justify text-center font-semibold">PORQUE</p>
+                <p class="font-bold my-2" style="text-align: center !important; width: 100%;">PORQUE</p>
 
                 <p class="mb-2 pl-6 text-justify">II. O aumento da eficiência da política pública de abastecimento de água no Brasil contribui para o desenvolvimento nacional, para a redução dos desequilíbrios regionais e para a promoção da inclusão social.</p>
 
                 <p class="mb-2 text-justify">A respeito dessas asserções, assinale a opção correta.</p>
             ',
-            'referencia' => 'Disponível em: &lt;https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=280933&gt;. Acesso em: 01 out. 2019 (adaptado).',
+            'referencia' => 'Disponível em: https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=280933. Acesso em: 01 out. 2019 (adaptado).',
             'opcao_a' => 'As asserções I e II são verdadeiras, e a II é uma justificativa correta da I.',
             'opcao_b' => 'As asserções I e II são verdadeiras, mas a II não é uma justificativa correta da I.',
             'opcao_c' => 'A asserção I é uma proposição verdadeira e a II é uma proposição falsa.',
@@ -108,6 +96,19 @@ class Questoes_Formacao_Geral_2019 extends Seeder
             'categoria' => 'Formação Geral',
             'ano' => 2019,
             'contextualizacao' => '
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 text-sm text-center items-center">
+                    <div>
+                        <p class="mb-2 font-bold">Aldeia Watoriki, Terra Indígena Yanomami, Amazonas/Roraima</p>
+                        <img src="/img/questoes/formacao_geral_2019/img2.jpg" class="w-full h-48 object-cover mb-2 rounded" alt="Aldeia Watoriki, Terra Indígena Yanomami, Amazonas/Roraima">
+                        <p class="-mt-1">Disponível em: http://www.funai.gov.br/. Acesso em: 26 ago. 2019 (adaptado).</p>
+                    </div>
+                    <div>
+                        <p class="mb-2 font-bold">Aldeia Gavião Parkatejê, Terra Indígena Mãe Maria, Pará</p>
+                        <img src="/img/questoes/formacao_geral_2019/img3.jpg" class="w-full h-48 object-cover mb-2 rounded" style="margin-top: 1.05mm;" alt="Aldeia Gavião Parkatejê, Terra Indígena Mãe Maria, Pará">
+                        <p class="-mt-2">Disponível em: http://www.videosnaaldeia.org.br. Acesso em: 27 set. 2019 (adaptado).</p>
+                    </div>
+                </div>
+
                 <p class="mb-2 text-justify">O Supremo Tribunal Federal definiu, em 2009, os critérios para o reconhecimento de determinada terra como território indígena, sendo eles: o marco da tradicionalidade da ocupação; o marco temporal da ocupação; o marco da concreta abrangência e finalidade prática da ocupação tradicional; e, por fim, o marco da proporcionalidade, que consiste na aplicação do princípio da proporcionalidade em matéria indígena. De acordo com o marco da tradicionalidade da ocupação, para que uma terra indígena possa ser considerada tradicional, as comunidades indígenas devem demonstrar o caráter de perdurabilidade de sua relação com a terra, caráter este demonstrado em sentido de continuidade etnográfica.</p>
             ',
             'enunciado' => '
@@ -120,7 +121,7 @@ class Questoes_Formacao_Geral_2019 extends Seeder
 
                 <p class="mb-2 text-justify">É correto apenas o que se afirma em</p>
             ',
-            'referencia' => 'Disponível em: &lt;https://doi.org/10.12957/publicum.2018.37271&gt;. Acesso em: 27 set. 2019 (adaptado).',
+            'referencia' => 'Disponível em: https://doi.org/10.12957/publicum.2018.37271. Acesso em: 27 set. 2019 (adaptado).',
             'opcao_a' => 'I e III.',
             'opcao_b' => 'I e IV.',
             'opcao_c' => 'II e III.',
@@ -134,13 +135,19 @@ class Questoes_Formacao_Geral_2019 extends Seeder
             'ano' => 2019,
             'contextualizacao' => '
                 <p class="mb-2 text-justify">Conforme dados do Atlas da Violência 2019, verifica-se o crescimento no número de homicídios de mulheres no país durante o período de 2007 a 2017. Nesse período, a taxa de homicídios entre as mulheres negras cresceu mais do que a taxa de homicídios entre as mulheres não negras. A classificação de raça/cor do IBGE agrega negras como a soma de pretas e pardas e não negras como a soma de brancas, amarelas e indígenas.</p>
+
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/formacao_geral_2019/img4.jpg" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
             ',
             'enunciado' => '
                 <p class="mb-2 text-justify">Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
 
                 <p class="mb-2 pl-6 text-justify">I. O maior crescimento dos casos de homicídios de mulheres negras em comparação com os casos de mulheres não negras indica a relevância dos estudos a respeito das múltiplas variáveis relacionadas a este fenômeno social.</p>
 
-                <p class="mb-2 text-justify text-center font-semibold">PORQUE</p>
+                <p class="font-bold my-2" style="text-align: center !important; width: 100%;">PORQUE</p>
 
                 <p class="mb-2 pl-6 text-justify">II. A análise do gráfico permite concluir que, no início da série histórica, havia um contexto favorável à superação da situação social de maior vulnerabilidade da mulher negra, em razão da menor diferença entre as taxas de homicídios.</p>
 
@@ -159,6 +166,14 @@ class Questoes_Formacao_Geral_2019 extends Seeder
             'categoria' => 'Formação Geral',
             'ano' => 2019,
             'contextualizacao' => '
+                <div class="flex justify-center mb-4 text-sm text-center">
+                    <div class="w-3/5 md:w-3/5">
+                        <img src="/img/questoes/formacao_geral_2019/img5.jpg" class="w-full h-auto mb-2 rounded">
+                    </div>
+                </div>
+
+                <p class="mb-2 text-right text-sm"> Disponível em: https://publications.iadb.org/en/publication/16231/guia-operacional-de-acessibilidade-para-projetos-emdesenvolvimento-urbano-com. Acesso em: 11 set. 2019 (adaptado).</p>
+
                 <p class="mb-2 text-justify">O princípio da acessibilidade dispõe que na construção de espaços, na formatação de produtos e no planejamento de serviços deve-se considerar que as pessoas com deficiência (PCD) são usuárias legítimas, dignas e independentes. Nenhum serviço pode ser concedido, permitido, autorizado ou delegado sem acessibilidade plena, para não obstaculizar o exercício pleno dos direitos pelas pessoas com deficiência. A acessibilidade é um direito de todos os cidadãos e, por isso, não se limita a propiciar a inclusão de pessoas com deficiência, mas também de pessoas com mobilidade reduzida, idosos, gestantes e em situação vulnerável.</p>
             ',
             'enunciado' => '
@@ -196,7 +211,7 @@ class Questoes_Formacao_Geral_2019 extends Seeder
 
                 <p class="mb-2 text-justify">É correto o que se afirma em</p>
             ',
-            'referencia' => 'Disponível em: &lt;https://noticias.uol.com.br/ultimas-noticias/afp/2019/05/27/oms-inclui-a-sindrome-de-burnout-na-lista-de-doencas.htm&gt;. Acesso em: 06 jul. 2019 (adaptado).',
+            'referencia' => 'Disponível em: https://noticias.uol.com.br/ultimas-noticias/afp/2019/05/27/oms-inclui-a-sindrome-de-burnout-na-lista-de-doencas.htm. Acesso em: 06 jul. 2019 (adaptado).',
             'opcao_a' => 'I, apenas.',
             'opcao_b' => 'II e III, apenas.',
             'opcao_c' => 'III e IV, apenas.',

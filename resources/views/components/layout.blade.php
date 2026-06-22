@@ -5,14 +5,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="{{ asset('Laravel.svg.ico') }}?v=2" type="image/x-icon">
 
   <title>{{ $title }}</title>
 
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -56,6 +58,8 @@
   </script>
 </head>
 
+<body class="mx-auto max-w-[100rem]">
+
 <div class="navbar bg-base-100 shadow-sm py-2 px-4" style="z-index: 1000;">
   <div class="navbar-start">
     <div class="dropdown">
@@ -65,15 +69,15 @@
         </svg>
       </div>
       <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
         <li>
-          <a>Parent</a>
+          <a href="/instrucoes">Instruções</a>
+          <a href="/simulados">Simulados</a>
           <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a href="/simulados/gerar_simulado">Gerador de Simulados</a></li>
+            <li><a href="/simulados/simulados_passados">Revisitar Provas Passadas</a></li>
           </ul>
+          <a href="/sobre">Sobre</a>
         </li>
-        <li><a>Item 3</a></li>
       </ul>
     </div>
     <a class="btn btn-ghost text-base sm:text-lg" href="/">Simulador ENADE</a>
@@ -90,16 +94,6 @@
           </ul>
         </details>
       </li>
-      <!--<li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      -->
       <li><a href="/sobre">Sobre</a></li>
     </ul>
   </div>
@@ -130,28 +124,8 @@
         <img id="feevale-logo" class="mx-5" width="100" height="100" padding="10" src="/img/figuras/Feevale_Black.png" alt="Logo">
       </a>
     </div>
-    <!--<div class="dropdown dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-        <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-        </div>
-      </div>
-      <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>
-          <a class="justify-between">
-            Profile
-            <span class="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>-->
   </div>
 </div>
-
-<body>
 
   <main>
     {{ $slot }}

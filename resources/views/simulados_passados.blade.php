@@ -79,12 +79,13 @@
     <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
         Revisitar provas passadas</h1>
     <div class="flex flex-col items-center gap-5">
-        <div class="alert h-20 mt-5 w-120 flex-grow md:flex-grow-0">
+        <div class="alert h-25 mt-5 w-120 flex-grow md:flex-grow-0">
             <img class="h-8" src="/img/figuras/info.png" alt="info">
             <div>
                 <h3 class="font-bold">Orientação:</h3>
-                <div class="text-xs">Selecione o curso e o ano de prova para realizar um simulado com exatamente as
+                <div class="text-sm">Selecione o curso e o ano de prova para realizar um simulado com exatamente as
                     mesmas questões objetivas.</div>
+                <p class="text-xs text-gray-500">Questões anuladas não estão inclusas.</p>
             </div>
         </div>
         <div id="sb-content" class="searchbar-content w-120 flex-grow md:flex-grow-0">
@@ -94,18 +95,16 @@
                 <button type="button" class="clear-search hidden" id="clearBtn">✕</button>
             </div>
             <section id="optionBox">
-                <input type="hidden" id="selectedCourseId" value="">
                 <input type="hidden" id="selectedCourseSlug" value="">
                 @foreach ($cursos as $curso)
-                    <a href="#" data-id="{{ $curso['id'] }}" data-slug="{{ $curso['slug'] }}"
-                        class="course-option">{{ $curso['nome'] }}</a>
+                    <a href="#" data-slug="{{ $curso['slug'] }}" class="course-option">{{ $curso['nome'] }}</a>
                 @endforeach
             </section>
         </div>
         <div class="flex justify-center">
             <ul class="hidden " id="yearsList">
-                @foreach ($anos as $cursoId => $yearList)
-                    <li class="years-group" data-course-id="{{ $cursoId }}" style="display: none;">
+                @foreach ($anos as $courseSlug => $yearList)
+                    <li class="years-group" data-course-slug="{{ $courseSlug }}" style="display: none;">
                         @foreach ($yearList as $year)
                             <a href="#" class="year-option join-item btn btn-soft mb-1 mx-1 h-10 w-20" data-year="{{ $year }}">{{ $year }}</a>
                         @endforeach
@@ -116,7 +115,7 @@
     </div>
 
     <script>
-        let selectedCourseId = null;
+        let selectedCourseSlug = null;
         const inputField = document.getElementById('inputField');
         const clearBtn = document.getElementById('clearBtn');
 
@@ -133,8 +132,8 @@
         // Limpar o input ao clicar no botão 'x'
         clearBtn.addEventListener('click', function () {
             inputField.value = '';
-            selectedCourseId = null;
-            document.getElementById('selectedCourseId').value = '';
+            selectedCourseSlug = null;
+            document.getElementById('selectedCourseSlug').value = '';
             clearBtn.classList.add('hidden');
             filterFunction();
             document.getElementById("optionBox").classList.remove("hidden");
@@ -162,38 +161,27 @@
             option.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                // Pegar o nome do curso, o ID e o slug
                 const courseName = this.textContent;
-                const courseId = this.getAttribute('data-id');
                 const courseSlug = this.getAttribute('data-slug');
 
-                // Salvar o ID e slug na variável e no input hidden
-                selectedCourseId = courseId;
-                document.getElementById('selectedCourseId').value = courseId;
+                selectedCourseSlug = courseSlug;
                 document.getElementById('selectedCourseSlug').value = courseSlug;
 
-                // Preencher o input com o nome do curso
                 document.getElementById('inputField').value = courseName;
-
-                // Mostrar o botão de limpar
                 clearBtn.classList.remove('hidden');
-
-                // Esconder a caixa de opções
                 document.getElementById("optionBox").classList.add("hidden");
                 document.getElementById("yearsList").classList.remove("hidden");
+                showYearsByEng(courseSlug);
 
-                // Mostrar anos do curso selecionado
-                showYearsByEng(courseId);
-
-                console.log('Curso selecionado:', courseName, 'ID:', courseId, 'Slug:', courseSlug);
+                console.log('Curso selecionado:', courseName, 'Slug:', courseSlug);
             });
         });
 
         // Função para mostrar anos do curso selecionado
-        function showYearsByEng(courseId) {
+        function showYearsByEng(courseSlug) {
             const yearsGroups = document.querySelectorAll('.years-group');
             yearsGroups.forEach(group => {
-                if (group.getAttribute('data-course-id') == courseId) {
+                if (group.getAttribute('data-course-slug') === courseSlug) {
                     group.style.display = 'block';
                 } else {
                     group.style.display = 'none';
@@ -208,9 +196,11 @@
                 const year = this.getAttribute('data-year');
                 const courseSlug = document.getElementById('selectedCourseSlug').value;
 
-                console.log('Ano selecionado:', year, 'Curso slug:', courseSlug);
+                if (!courseSlug) {
+                    return;
+                }
 
-                // Redirecionar para o simulado com o ano
+                console.log('Ano selecionado:', year, 'Curso slug:', courseSlug);
                 window.location.href = `/simulado/${courseSlug}/${year}`;
             });
         });

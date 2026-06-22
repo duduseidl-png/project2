@@ -3,7 +3,7 @@
 <div id="tela-informativa-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1100] backdrop-blur-sm">
     <div class="bg-standard rounded-lg shadow-2xl p-8 max-w-2xl w-full mx-4 transform duration-300">
         <div class="mb-4">
-            <h1 class="text-3xl font-bold mb-4">Simulado de {{ $cursoTitulo }} - {{ $anoSimulado }}</h1>
+            <h1 class="text-3xl font-bold mb-4">Simulado de {{ $cursoTitulo }}{{ $anoSimulado }}</h1>
         </div>
 
         <div class="bg-blue border-l-4 border-blue-500 p-6 mb-8 rounded">

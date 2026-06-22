@@ -1,11 +1,21 @@
 <x-layout title="Simulados">
-    <h1 style="background-color: #b39202; text-align: center; font-size: 200%; padding-top: 15px; padding-bottom: 15px">
-        Gerador de Simulados</h1>
+    <div class="shadow-md bg-yellow-500 py-5">
+        <h1 class="text-center text-4xl text-black">
+            Gerador de Simulados</h1>
+    </div>
     <h6 class="text-center text-lg mt-8">Pratique em um simulado personalizado do seu curso
         com o número de questões que preferir.</h6>
-    <p class="text-center text-gray-600 mb-8">As questões de componente específico são
+    <p class="text-center text-gray-500 mb-8">As questões de componente específico são
         selecionadas aleatoriamente com
         base no conteúdo do seu curso.</p>
+    
+    @if($errors->has('error'))
+        <div class="alert alert-error max-w-md mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l-2-2m0 0l-2-2m2 2l2-2m-2 2l-2 2m2-2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>{{ $errors->first('error') }}</span>
+        </div>
+    @endif
+
     <div style="text-align:center">
         <form id="simulado-form" method="POST" action="/simulados/gerar_simulado" style="display: none;">
             @csrf
@@ -78,6 +88,20 @@
             <button id="gerar-simulado" type="button" class="btn btn-primary mt-4">
                 Gerar simulado
             </button>
+        </div>
+
+        <div class="divider my-8">OU</div>
+
+        <div class="flex flex-col items-center justify-center gap-6 mb-10">
+            <div class="w-80">
+                <h3 class="text-left mb-4 font-semibold text-lg">Acessar simulado por seed ↓</h3>
+                <p class="text-left text-sm text-gray-600 mb-4">Insira o código de 6 caracteres para recuperar um simulado que foi gerado anteriormente.</p>
+                <form method="POST" action="/simulados/recuperar_seed" class="flex gap-2">
+                    @csrf
+                    <input type="text" placeholder="Insira a seed" name="seed" class="input input-bordered flex-1" required />
+                    <button type="submit" class="btn btn-outline">Acessar</button>
+                </form>
+            </div>
         </div>
     </div>
 

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var confirmBtn = document.getElementById('confirm-btn');
     var submitButton = document.querySelector('button[form="simulado-form"]');
     var sidecard = document.querySelector('.card');
+    var sidecardToggle = document.getElementById('sidecard-toggle');
     var resultPanel = document.getElementById('resultado-panel');
     var resultadoAcertos = document.getElementById('resultado-acertos');
     var resultadoErradas = document.getElementById('resultado-erradas');
@@ -19,13 +20,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var resultadoNota = document.getElementById('resultado-nota');
     var resultadoPorcentagem = document.getElementById('resultado-porcentagem');
     var resultadoTempo = document.getElementById('resultado-tempo');
+    var seedDisplay = document.getElementById('seed-display');
+    var copyBtn = document.getElementById('copy-seed-btn');
     var formSubmitted = false;
     var startTime = Date.now();
+
 
     // Tela informativa -> Iniciar simulado ou cancelar
     startButton.addEventListener('click', function () {
         telaInformativa.classList.add('hidden');
         sidecard.classList.remove('modal-active');
+        if (window.innerWidth <= 1024) {
+            sidecard.classList.add('hidden');
+        }
 
         // Inicia o countdown se a função estiver disponível
         if (typeof window.startCountdown === 'function') {
@@ -43,6 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var seconds = totalSeconds % 60;
         return String(hours).padStart(2, '0') + 'h ' + String(minutes).padStart(2, '0') + 'm ' + String(seconds).padStart(2, '0') + 's';
     }
+
+    sidecardToggle.addEventListener('click', function () {
+        sidecard.classList.toggle('hidden');
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) {
+            sidecard.classList.remove('hidden');
+        }
+    });
 
     // Event listener para detectar quando uma alternativa é selecionada
     questoes.forEach(function (questao, index) {
@@ -211,6 +228,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    copyBtn.addEventListener('click', function () {
+        // 1. Try modern API (Requires HTTPS/Localhost)
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(seedDisplay.textContent).then(() => {
+                var originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copiado!';
+                copyBtn.classList.remove('btn-outline');
+                copyBtn.classList.add('btn-success');
+
+                // Reverter após 2 segundos
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.classList.add('btn-outline');
+                    copyBtn.classList.remove('btn-success');
+                }, 2000);
+            }).catch(() => {
+                alert('Erro ao copiar seed');
+            });
+        } else {
+            // 2. Fallback: Create a hidden textarea and use execCommand
+            let textArea = document.createElement("textarea");
+            textArea.value = seedDisplay.textContent;
+            textArea.style.position = "fixed"; // Avoid scrolling to bottom
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            return new Promise((res, rej) => {
+                document.execCommand('copy') ? res() : rej();
+                textArea.remove();
+            });
+        }
+    });
+
     window.addEventListener('load', function () {
         // Inicia no topo da página
         window.scrollTo({ top: 0, behavior: 'auto' });
@@ -222,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.scrollTo({ top: 0, behavior: 'auto' });
             sessionStorage.setItem('pageLoaded', 'true');
         }
-
     });
 });
 

@@ -9,62 +9,9 @@ class Questoes_Formacao_Geral_2023 extends Seeder
 {
     public function run(): void
     {
-        Questao::create([
-            'categoria' => 'Formação Geral',
-            'ano' => 2023,
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injustiças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela significativa da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 text-justify">O atendimento integral e universalizado junto às populações periféricas e em situação de vulnerabilidade constitui um grande desafio, por demandar políticas públicas e investimentos subsidiados e permanentes.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Acerca do saneamento básico no Brasil, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. A grave desigualdade social, evidenciada pela segregação nos espaços urbanos, é uma das barreiras para a universalização do acesso aos serviços de saneamento básico.</p>
-
-                <p class="mb-2 pl-6 text-justify">II. O serviço de abastecimento de água no Brasil situa-se no mesmo patamar de fornecimento e de infraestrutura que o sistema de coleta e tratamento do esgoto.</p>
-
-                <p class="mb-2 pl-6 text-justify">III. A universalização do acesso aos serviços de saneamento básico requer investimentos em políticas públicas e em tecnologias sociais que priorizem a democratização e o atendimento às populações em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 pl-6 text-justify">IV. O aumento da incidência de doenças transmitidas pela água resulta não somente da inadequação dos serviços de saneamento, mas também da precariedade das condições de moradia da população em situação de vulnerabilidade.</p>
-
-                <p class="mb-2 text-justify">É correto apenas o que se afirma em.</p>
-            ',
-            'referencia' => 'Disponível em: https://www.periodicos.unimontes.br/index.php/verdegrande/article/view/6018. Acesso em: 22 jun. 2023 (adaptado).',
-            'opcao_a' => 'I e II.',
-            'opcao_b' => 'I e IV.',
-            'opcao_c' => 'II e III.',
-            'opcao_d' => 'I, III e IV.',
-            'opcao_e' => 'II, III e IV.',
-            'alternativa_correta' => 'D',
-        ]);
-
-        Questao::create([
-            'categoria' => 'Formação Geral',
-            'ano' => 2023,
-            'contextualizacao'=> '
-                <p class="mb-2 text-justify">No Brasil, os idosos têm sido cada vez mais obrigados a permanecer no trabalho formal ou informal, mesmo após a aposentadoria, visto que os recursos provenientes desta, na maioria dos casos, são insuficientes para a manutenção dos indivíduos. Um fator que pode ter agravado essa situação foi a aprovação da reforma previdenciária de 2019, que modificou as regras de idade e contribuição para o acesso ao direito ao benefício da aposentadoria. Tal mudança pode ter resultado em um número ainda maior de idosos que disputam com as populações jovens e com sistemas de automação, no mercado atual, o trabalho precarizado. Essa situação contribui para o acirramento do preconceito contra essa faixa etária, denominado etarismo.</p>
-            ',
-            'enunciado' => '
-                <p class="mb-2 text-justify">Considerando o texto apresentado, avalie as afirmações a seguir.</p>
-
-                <p class="mb-2 pl-6 text-justify">I. O conceito de etarismo fundamenta-se no fato de os idosos terem capacidade de trabalho reduzida e imporem custo elevado à previdência social, o que compromete a sua sustentabilidade econômica.</p>
-
-                <p class="mb-2 pl-6 text-justify">II. As ações legislativas que visem ao prolongamento do tempo de atuação da população idosa no mercado de trabalho devem ser acompanhadas por uma política de promoção da saúde e da qualidade de vida.</p>
-
-                <p class="mb-2 pl-6 text-justify">III. As ações intergeracionais no mercado de trabalho têm como premissa o desenvolvimento de tecnologias que dotem o idoso de capacidade de trabalho equivalente à de seus colegas jovens.</p>
-
-                <p class="mb-2 text-justify">É correto o que se afirma em</p>
-            ',
-            'referencia' => '',
-            'opcao_a' => 'II, apenas.',
-            'opcao_b' => 'III, apenas.',
-            'opcao_c' => 'I e II, apenas.',
-            'opcao_d' => 'I e III, apenas.',
-            'opcao_e' => 'I, II e III.',
-            'alternativa_correta' => 'A',
-        ]);
-
+        // =========================================================
+        // QUESTÃO 01
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
@@ -109,13 +56,49 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'D',
         ]);
 
+        // =========================================================
+        // QUESTÃO 02
+        // =========================================================
+        Questao::create([
+            'categoria' => 'Formação Geral',
+            'ano' => 2023,
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">O crescimento das cidades promove o aumento da demanda por serviços de água tratada, esgotamento sanitário, manejo das águas pluviais, limpeza urbana e coleta de resíduos sólidos. No Brasil, o processo de urbanização ocorreu de forma rápida e desigual, o que resultou no agravamento de injustiças sociais e econômicas. Os serviços de saneamento básico considerados direitos humanos fundamentais não são acessíveis a uma parcela significativa da população, principalmente àquela em que se concentram os segmentos populacionais em situação de vulnerabilidade.</p>
+
+                <p class="mb-2 text-justify">O atendimento integral e universalizado junto às populações periféricas e em situação de vulnerabilidade constitui um grande desafio, por demandar políticas públicas e investimentos subsidiados e permanentes.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Acerca do saneamento básico no Brasil, avalie as afirmações a seguir.</p>
+
+                <p class="mb-2 pl-6 text-justify">I. A grave desigualdade social, evidenciada pela segregação nos espaços urbanos, é uma das barreiras para a universalização do acesso aos serviços de saneamento básico.</p>
+
+                <p class="mb-2 pl-6 text-justify">II. O serviço de abastecimento de água no Brasil situa-se no mesmo patamar de fornecimento e de infraestrutura que o sistema de coleta e tratamento do esgoto.</p>
+
+                <p class="mb-2 pl-6 text-justify">III. A universalização do acesso aos serviços de saneamento básico requer investimentos em políticas públicas e em tecnologias sociais que priorizem a democratização e o atendimento às populações em situação de vulnerabilidade.</p>
+
+                <p class="mb-2 pl-6 text-justify">IV. O aumento da incidência de doenças transmitidas pela água resulta não somente da inadequação dos serviços de saneamento, mas também da precariedade das condições de moradia da população em situação de vulnerabilidade.</p>
+
+                <p class="mb-2 text-justify">É correto apenas o que se afirma em.</p>
+            ',
+            'referencia' => 'Disponível em: https://www.periodicos.unimontes.br/index.php/verdegrande/article/view/6018. Acesso em: 22 jun. 2023 (adaptado).',
+            'opcao_a' => 'I e II.',
+            'opcao_b' => 'I e IV.',
+            'opcao_c' => 'II e III.',
+            'opcao_d' => 'I, III e IV.',
+            'opcao_e' => 'II, III e IV.',
+            'alternativa_correta' => 'D',
+        ]);
+
+        // =========================================================
+        // QUESTÃO 03
+        // =========================================================
          Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
             'contextualizacao'=> '
-                <p class="mb-2 text-justify">Estudos realizados em 2021 pelo Fundo das Nações Unidas para a Infância (Unicef), em parceria com a Organização Mundial da Saúde (OMS), mostraram que, no Brasil, houve uma queda brusca da taxa de vacinação infanti l nos últi mos anos: entre 2017 e 2021, a taxa caiu de 93,1% para 71,49%, considerando-se crianças com menos de um ano de idade.</p>
+                <p class="mb-2 text-justify">Estudos realizados em 2021 pelo Fundo das Nações Unidas para a Infância (Unicef), em parceria com a Organização Mundial da Saúde (OMS), mostraram que, no Brasil, houve uma queda brusca da taxa de vacinação infantil nos últimos anos: entre 2017 e 2021, a taxa caiu de 93,1% para 71,49%, considerando-se crianças com menos de um ano de idade.</p>
                 
-                <p class="mb-2 text-justify">Essa redução da cobertura vacinal deixa a população infanti l muito vulnerável e exposta a doenças que já estavam prati camente erradicadas, tal como o sarampo, que em 2018 voltou a ser uma preocupaçãopara os brasileiros. Além do sarampo, corre-se o risco de outras doenças voltarem a acometer as crianças, como a poliomielite, a meningite, a rubéola e a difteria.</p>
+                <p class="mb-2 text-justify">Essa redução da cobertura vacinal deixa a população infantil muito vulnerável e exposta a doenças que já estavam praticamente erradicadas, tal como o sarampo, que em 2018 voltou a ser uma preocupação para os brasileiros. Além do sarampo, corre-se o risco de outras doenças voltarem a acometer as crianças, como a poliomielite, a meningite, a rubéola e a difteria.</p>
 
                 <p class="mb-2 text-justify">O gráfico a seguir mostra as taxas de vacinação infantil, em crianças menores de um ano de idade, no período de 2017 a 2021.</p>
 
@@ -137,6 +120,9 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'B',
         ]);
 
+        // =========================================================
+        // QUESTÃO 04
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
@@ -161,6 +147,9 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'A',
         ]);
 
+        // =========================================================
+        // QUESTÃO 05
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
@@ -192,6 +181,9 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'E',
         ]);
 
+        // =========================================================
+        // QUESTÃO 06
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
@@ -237,6 +229,38 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'C',
         ]);
 
+        // =========================================================
+        // QUESTÃO 07
+        // =========================================================
+        Questao::create([
+            'categoria' => 'Formação Geral',
+            'ano' => 2023,
+            'contextualizacao'=> '
+                <p class="mb-2 text-justify">No Brasil, os idosos têm sido cada vez mais obrigados a permanecer no trabalho formal ou informal, mesmo após a aposentadoria, visto que os recursos provenientes desta, na maioria dos casos, são insuficientes para a manutenção dos indivíduos. Um fator que pode ter agravado essa situação foi a aprovação da reforma previdenciária de 2019, que modificou as regras de idade e contribuição para o acesso ao direito ao benefício da aposentadoria. Tal mudança pode ter resultado em um número ainda maior de idosos que disputam com as populações jovens e com sistemas de automação, no mercado atual, o trabalho precarizado. Essa situação contribui para o acirramento do preconceito contra essa faixa etária, denominado etarismo.</p>
+            ',
+            'enunciado' => '
+                <p class="mb-2 text-justify">Considerando o texto apresentado, avalie as afirmações a seguir.</p>
+
+                <p class="mb-2 pl-6 text-justify">I. O conceito de etarismo fundamenta-se no fato de os idosos terem capacidade de trabalho reduzida e imporem custo elevado à previdência social, o que compromete a sua sustentabilidade econômica.</p>
+
+                <p class="mb-2 pl-6 text-justify">II. As ações legislativas que visem ao prolongamento do tempo de atuação da população idosa no mercado de trabalho devem ser acompanhadas por uma política de promoção da saúde e da qualidade de vida.</p>
+
+                <p class="mb-2 pl-6 text-justify">III. As ações intergeracionais no mercado de trabalho têm como premissa o desenvolvimento de tecnologias que dotem o idoso de capacidade de trabalho equivalente à de seus colegas jovens.</p>
+
+                <p class="mb-2 text-justify">É correto o que se afirma em</p>
+            ',
+            'referencia' => '',
+            'opcao_a' => 'II, apenas.',
+            'opcao_b' => 'III, apenas.',
+            'opcao_c' => 'I e II, apenas.',
+            'opcao_d' => 'I e III, apenas.',
+            'opcao_e' => 'I, II e III.',
+            'alternativa_correta' => 'A',
+        ]);
+        
+        // =========================================================
+        // QUESTÃO 08
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
@@ -264,6 +288,9 @@ class Questoes_Formacao_Geral_2023 extends Seeder
             'alternativa_correta' => 'B',
         ]);
 
+        // =========================================================
+        // QUESTÃO 09
+        // =========================================================
         Questao::create([
             'categoria' => 'Formação Geral',
             'ano' => 2023,
